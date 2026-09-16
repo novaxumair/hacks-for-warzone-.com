@@ -1,0 +1,14 @@
+---
+import LocalizedHome from '../../components/LocalizedHome.astro';
+import { localeCodes, defaultLocale } from '../../data/i18n/locales';
+
+export function getStaticPaths() {
+	return localeCodes
+		.filter((code) => code !== defaultLocale)
+		.map((lang) => ({ params: { lang }, props: { locale: lang } }));
+}
+
+const { locale } = Astro.props;
+---
+
+<LocalizedHome locale={locale} />

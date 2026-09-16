@@ -1,0 +1,76 @@
+---
+description: Locked SEO template rules — must follow when rebranding or editing any page for another game
+alwaysApply: true
+---
+
+# Locked SEO Template Rules
+
+This site is a **reusable game-cheat template**. SEO structure is locked. When retargeting another game (e.g. Fortnite, Apex), keep the same system — only swap brand/game tokens.
+
+## Language (locked)
+
+- Use **simple, short English**. One idea per sentence.
+- Prefer plain words: buy, setup, status, features, store — not jargon walls.
+- No keyword stuffing. Primary keyword appears naturally in title, H1, intro, and once in body.
+- Avoid long dashes of SEO filler (“also searched as…”, map laundry lists) unless the page truly needs it.
+
+## Page formula (locked)
+
+Every product page must follow:
+
+1. **Title** (~50–60 chars): `{Game} {Topic} | {Brand}` — use `seoTitle()` from `src/data/brand.ts`
+2. **Meta description** (~140–160 chars): benefit + what’s included + platform — use `seoDescription()` / tokens
+3. **H1**: short label matching nav when possible (`Features`, `Store`, `Status`, `Preview`)
+4. **Intro**: 1–2 short sentences
+5. **Sections**: 2–4 max; each has one H2, one short paragraph, optional bullet list
+6. **CTA**: Buy now + one secondary link
+
+## Nav / IA labels (locked meaning)
+
+| Nav label | Purpose | Do not rename meaning |
+|-----------|---------|------------------------|
+| Preview | What the product is | Not a blog |
+| Features | What’s included | Not pricing |
+| Store | Plans / buy | Not feature list |
+| Status | Patch / undetected updates | Not changelog essay |
+| Reviews | Social proof | Keep real reviews |
+
+## Tokens to swap for a new game
+
+**Single source of truth:** `src/data/brand.ts` (or Brand Studio at `/brand-studio/` during `astro dev`)
+
+Then run `npm run sync:brand` (also runs on `prebuild`). Brand Studio does this automatically on Save.
+
+Also update as needed:
+
+- FAQs / reviews meta in `src/data/site.ts` (keep `{brand}` `{game}` `{antiCheat}` `{email}` tokens)
+- EN copy in `src/data/i18n/simple-pages.ts`
+- Images + `src/data/rust.ts` paths
+- Sitemap labels in `brand.sitemap` (or Brand Studio → Sitemap) — domain is always `brand.url` (Site URL); XML regenerates from routes + that domain
+- Site colors in `brand.theme` (or Brand Studio → Colors) — accent + bg; soft/deep/panels auto-derive
+- Keyword landing hrefs if slugs change
+
+Do **not** hardcode brand/domain in components — use `siteConfig`, `productInfo`, `blogLabel`, or `fillBrandTokens()`.
+
+Do **not** invent a new SEO architecture, title pattern, or dense paragraph style.
+
+## Schema / technical (locked)
+
+- Keep FAQPage, Product / AggregateRating, BreadcrumbList patterns.
+- One canonical URL per page; trailing slash convention unchanged.
+- Homepage FAQ uses short answers; each question can have its own URL.
+- Sitemaps stay generated the same way.
+- `brand.url` must match Astro `site`, robots.txt Sitemap, and webmanifest (via sync-brand).
+
+## Bad vs good
+
+```text
+❌ BAD H1: Ultimate Undetected Valorant Cheats Feature Control List 2026
+✅ GOOD H1: Features
+
+❌ BAD intro: Valorant Cheats is the undetected valorant cheats package also searched as valorant cheats…
+✅ GOOD intro: Everything included in one license for Valorant on Windows PC.
+
+❌ BAD: Hardcode "Valorant Cheats" in Hero.astro
+✅ GOOD: {siteConfig.name}
+```

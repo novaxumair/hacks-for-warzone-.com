@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { getSelfHreflangAlternates } from '../data/i18n/routing';
+import { fillBrandTokens, productInfo, siteConfig } from '../data/site';
+
+const title = fillBrandTokens('Page Not Found | {brand}');
+const description = fillBrandTokens(
+	'That {brand} page is missing. Return home or browse features, store, setup, reviews, and the blog.',
+);
+const canonicalPath = Astro.url.pathname;
+const hreflangAlternates = getSelfHreflangAlternates(canonicalPath);
+---
+
+<Layout
+	title={title}
+	description={description}
+	canonicalPath={canonicalPath}
+	hreflangAlternates={hreflangAlternates}
+	noindex={true}
+>
+	<Navbar />
+	<main class="missing">
+		<div class="shell">
+			<div class="shell-content missing__inner">
+			<p class="missing__code">404</p>
+			<h1 class="missing__title">Page not found</h1>
+			<p class="missing__text">
+				The URL you opened is not on {siteConfig.name}. Use the links below for ESP, aimbot, store, and setup
+				for {productInfo.game} on Windows PC.
+			</p>
+			<div class="missing__actions">
+				<a class="btn-buy" href="/">Back to {siteConfig.name} home</a>
+				<a class="missing__ghost" href="/">{productInfo.game} preview</a>
+				<a class="missing__ghost" href="/pricing/">Store</a>
+				<a class="missing__ghost" href="/reviews/">Reviews</a>
+				<a class="missing__ghost" href="/blog/">Blog</a>
+				<a class="missing__ghost" href="/support/">Support</a>
+			</div>
+			</div>
+		</div>
+	</main>
+	<SiteFooter />
+</Layout>
+
+<style>
+	.missing {
+		min-height: 58vh;
+		display: grid;
+		align-items: center;
+		padding-block: clamp(2.5rem, 8vw, 5rem);
+	}
+
+	.missing__inner {
+		display: grid;
+		gap: 0.85rem;
+	}
+
+	.missing__code {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(2.5rem, 8vw, 4rem);
+		font-weight: 800;
+		letter-spacing: 0.04em;
+		color: color-mix(in srgb, var(--magenta-soft) 55%, transparent);
+		line-height: 1;
+	}
+
+	.missing__title {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(1.6rem, 4vw, 2.2rem);
+		font-weight: 800;
+		color: var(--ink);
+	}
+
+	.missing__text {
+		margin: 0;
+		color: var(--ink-muted);
+		line-height: 1.65;
+		max-width: 36rem;
+	}
+
+	.missing__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem;
+		margin-top: 0.75rem;
+	}
+
+	.missing__ghost {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 2.5rem;
+		padding: 0.55rem 0.95rem;
+		border-radius: 0.7rem;
+		border: 1px solid var(--line-strong);
+		background: var(--bg-elevated);
+		color: var(--ink);
+		font-size: 0.9rem;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.missing__ghost:hover {
+		border-color: color-mix(in srgb, var(--magenta) 40%, var(--line-strong));
+		color: var(--magenta-soft);
+	}
+
+	@media (max-width: 720px) {
+		.missing__actions {
+			flex-direction: column;
+		}
+
+		.missing__ghost,
+		.missing__actions :global(.btn-buy) {
+			width: 100%;
+		}
+	}
+</style>

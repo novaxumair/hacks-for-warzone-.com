@@ -1,0 +1,271 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { getPageContent, getUi, type PageId } from '../data/i18n';
+import { getLocalizedPath, localizeInternalHref } from '../data/i18n/routing';
+import type { LocaleCode } from '../data/i18n/locales';
+import { getLocalizedFaqs } from '../data/localized-faq';
+import { productInfo, siteConfig } from '../data/site';
+import { absoluteFaqUrl, getFaqPath } from '../data/faq';
+import { getT } from '../i18n/server';
+import { getPageCrawlImage, getPageGalleryImages } from '../data/page-images';
+import { screenshotImageObjects } from '../data/product-images';
+
+interface Props {
+	locale: LocaleCode;
+	pageId: PageId;
+}
+
+const { locale, pageId } = Astro.props;
+const page = getPageContent(locale, pageId);
+const ui = getUi(locale);
+const t = getT(locale);
+const crawl = getPageCrawlImage(pageId);
+
+function localizeParagraphHtml(html: string): string {
+	return html
+		.replace(/\{checkout\}/g, siteConfig.checkoutUrl)
+		.replace(/href="(\/[^"]+)"/g, (_, path: string) => `href="${localizeInternalHref(path, locale)}"`);
+}
+
+const heading = page.h1;
+const intro = page.intro;
+const sections = page.sections;
+const isGuidePage = pageId === 'hacks';
+const ctaPrimaryLabel = page.ctaPrimary;
+const galleryTitle = page.galleryTitle ?? t('common.inGameLook');
+const pageTitle = page.title;
+const pageDescription = page.description;
+
+const introEditByPage: Partial<Record<PageId, string>> = {
+	features: 'featuresIntro',
+	pricing: 'storeIntro',
+	updates: 'statusIntro',
+	hacks: 'previewIntro',
+	setup: 'setupIntro',
+	support: 'supportIntro',
+	faq: 'faqIntro',
+};
+const introEdit = introEditByPage[pageId];
+const gallery = getPageGalleryImages(pageId);
+
+const pageUrl = new URL(getLocalizedPath(pageId, locale), siteConfig.url).href;
+
+const localizedFaqs = getLocalizedFaqs(locale);
+
+const faqSchema =
+	pageId === 'faq'
+		? {
+				'@type': 'FAQPage',
+				'@id': `${pageUrl}#faq`,
+				mainEntity: localizedFaqs.map((item) => ({
+					'@type': 'Question',
+					name: item.question,
+					url: absoluteFaqUrl(item.slug),
+					acceptedAnswer: { '@type': 'Answer', text: item.answer },
+				})),
+			}
+		: null;
+
+const howToSchema =
+	pageId === 'setup'
+		? {
+				'@type': 'HowTo',
+				'@id': `${pageUrl}#howto`,
+				name: `${heading} — ${siteConfig.name}`,
+				description: intro,
+				step: sections.map((section, index) => ({
+					'@type': 'HowToStep',
+					position: index + 1,
+					name: section.h2,
+					text: [...section.paragraphs, ...(section.list ?? [])].join(' '),
+				})),
+			}
+		: null;
+
+const extraGraph = [
+	...(faqSchema ? [faqSchema] : []),
+	...(howToSchema ? [howToSchema] : []),
+	...screenshotImageObjects(4),
+] as Record<string, unknown>[];
+
+const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo.plans[0];
+const lifetime = productInfo.plans.find((p) => p.id === 'lifetime') ?? productInfo.plans[1];
+const showStorePlans = pageId === 'pricing';
+
+const eyebrowByPage: Partial<Record<PageId, string>> = {
+	features: ui.nav.features,
+	pricing: ui.nav.pricing,
+	updates: ui.nav.updates,
+	hacks: t('nav.preview'),
+	'warzone-esp': ui.nav.esp,
+	'warzone-aimbot': ui.nav.aimbot,
+	radar: t('categoryRow.radar'),
+	setup: ui.nav.setup,
+	faq: ui.nav.faq,
+	support: t('common.support'),
+	undetected: t('categoryRow.undetected'),
+	wallhack: t('categoryRow.wallhack'),
+	ricochet: 'Ricochet',
+	'cheats-2026': '2026',
+	'cheat-download': t('common.readGuide'),
+	'mod-menu': 'Mod Menu',
+	'soft-aim': ui.nav.aimbot,
+	'best-cheats': t('categoryRow.hacks'),
+	'aimbot-hack': ui.nav.aimbot,
+	'esp-hack': ui.nav.esp,
+	'unlock-all': ui.nav.features,
+	privacy: t('common.privacy'),
+	refund: t('homeSeo.linkRefunds'),
+	terms: t('common.terms'),
+};
+const breadcrumbLabel = eyebrowByPage[pageId];
+---
+
+<PageLayout
+	title={pageTitle}
+	description={pageDescription}
+	canonicalPath={getLocalizedPath(pageId, locale)}
+	heading={heading}
+	breadcrumbLabel={breadcrumbLabel}
+	intro={intro}
+	introEdit={introEdit}
+	eyebrow={eyebrowByPage[pageId]}
+	heroImage={crawl.src}
+	heroAlt={page.imageAlt || crawl.caption}
+	gallery={gallery}
+	galleryTitle={galleryTitle}
+	locale={locale}
+	pageId={pageId}
+	extraGraph={extraGraph}
+	showExternalResources={!['privacy', 'refund', 'terms'].includes(pageId)}
+	ctaPrimary={
+		pageId === 'support'
+			? {
+					href: `mailto:${siteConfig.supportEmail}`,
+					label: 'Email support',
+				}
+			: { href: siteConfig.checkoutUrl, label: ctaPrimaryLabel, edit: 'ctaBuy' }
+	}
+>
+	{/* JSON-LD is emitted via PageLayout → Layout extraGraph */}
+
+	{
+		showStorePlans && (
+			<section class="card-panel">
+				<h2>{t('product.plans')}</h2>
+				<div class="price-grid">
+					<a class="price-card" href={siteConfig.checkoutUrl} rel="noopener noreferrer">
+						<span class="price-card__label">{t('product.monthly')}</span>
+						<span class="price-card__price">${monthly.price}</span>
+						<span class="price-card__meta">{t('product.days30')}</span>
+					</a>
+					<a class="price-card is-featured" href={siteConfig.checkoutUrl} rel="noopener noreferrer">
+						<span class="price-card__label">{t('product.lifetime')}</span>
+						<span class="price-card__price">${lifetime.price}</span>
+						<span class="price-card__meta">{t('product.oneTime')}</span>
+					</a>
+				</div>
+			</section>
+		)
+	}
+
+	{
+		sections.map((section, index) => (
+			<section
+				class:list={[
+					'card-panel',
+					isGuidePage && index === 0 && 'card-panel--intro',
+					isGuidePage && index === 1 && 'card-panel--features',
+					!isGuidePage && section.list && section.list.length >= 4 && 'card-panel--features',
+				]}
+			>
+				<h2 class:list={[isGuidePage && index <= 1 && 'guide-heading']}>
+					{isGuidePage && index <= 1 && (
+						<span class="guide-heading__index" aria-hidden="true">
+							{String(index + 1).padStart(2, '0')}
+						</span>
+					)}
+					{section.h2}
+				</h2>
+				<div class="card-panel__body">
+					{section.paragraphs.map((p, pi) => (
+						<p
+							class:list={[
+								isGuidePage && index === 0 && pi === 0 && 'guide-lead',
+								isGuidePage && index === 0 && pi === 1 && 'guide-bundle',
+								isGuidePage && index === 1 && pi === 0 && 'guide-stack',
+								isGuidePage && index === 1 && pi === 1 && 'guide-plans',
+							]}
+							set:html={localizeParagraphHtml(p)}
+						/>
+					))}
+					{section.list && (
+						<ul
+							class:list={[
+								isGuidePage && index === 1 && 'feature-grid',
+								isGuidePage && index === 1 && 'guide-feature-grid',
+							]}
+						>
+							{section.list.map((item) => (
+								<li set:html={localizeParagraphHtml(item)} />
+							))}
+						</ul>
+					)}
+				</div>
+			</section>
+		))
+	}
+
+	{
+		pageId === 'faq' && (
+			<section class="card-panel faq-index">
+				<h2>{t('common.allQuestions')}</h2>
+				<p>{t('common.openAnyQuestion')}</p>
+				<ul class="faq-index__list">
+					{localizedFaqs.map((item) => (
+						<li>
+							<a href={localizeInternalHref(getFaqPath(item.slug), locale)}>
+								<span>{item.question}</span>
+								<span aria-hidden="true">→</span>
+							</a>
+						</li>
+					))}
+				</ul>
+			</section>
+		)
+	}
+</PageLayout>
+
+<style>
+	.faq-index__list {
+		margin: 1rem 0 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 0.55rem;
+	}
+
+	.faq-index__list a {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 1rem 1.1rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md, 0.75rem);
+		background: var(--bg-elevated);
+		color: var(--ink);
+		font-size: 1.0625rem;
+		font-weight: 600;
+		line-height: 1.4;
+		text-decoration: none;
+		transition:
+			border-color 0.2s ease,
+			color 0.2s ease;
+	}
+
+	.faq-index__list a:hover {
+		border-color: color-mix(in srgb, var(--magenta) 35%, var(--line));
+		color: var(--accent-hover);
+	}
+</style>

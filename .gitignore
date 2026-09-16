@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+*.log
+public/images/finals-screenshot-new-*.png
+tmp/finals-screenshots/
+tmp/

@@ -1,0 +1,59 @@
+{
+	"name": "cheats-for-warzone",
+	"type": "module",
+	"version": "1.0.0",
+	"engines": {
+		"node": ">=22.12.0"
+	},
+	"scripts": {
+		"localhost": "npm run build && astro preview --host 0.0.0.0 --port 5173",
+		"dev": "astro dev --host 0.0.0.0 --port 4321",
+		"dev:3000": "astro dev --host 0.0.0.0 --port 3000",
+		"serve:3000": "npx --yes serve dist -l 3000 --no-port-switching",
+		"sync:brand": "node scripts/sync-brand.mjs && node scripts/sync-cannibal-redirects.mjs",
+		"prebuild": "node scripts/log-build-info.mjs && node scripts/sync-brand.mjs && node scripts/sync-cannibal-redirects.mjs && node scripts/sync-guide-images.mjs && node scripts/validate-cloudflare-redirects.mjs",
+		"build": "astro build",
+		"postbuild": "node scripts/strip-brand-studio.mjs && node scripts/fix-sitemap-domains.mjs && node scripts/validate-cloudflare-redirects.mjs && node scripts/validate-checkout-links.mjs && node scripts/validate-image-paths.mjs && node scripts/validate-sitemap-canonical-domain.mjs",
+		"build:validate": "npm run sync:brand && astro build && node scripts/strip-brand-studio.mjs && npm run validate:sitemaps && node scripts/check-seo-meta-lengths.mjs && node scripts/complete-seo-audit.mjs && node scripts/audit-on-page-seo.mjs",
+		"dev:stop": "astro dev stop",
+		"dev:status": "astro dev status",
+		"dev:logs": "astro dev logs",
+		"optimize:images": "node scripts/optimize-responsive-images.mjs",
+		"fetch:images": "node scripts/fetch-warzone-images.mjs",
+		"fetch:hero": "node scripts/fetch-warzone-hero.mjs",
+		"import:hero-video": "node scripts/import-hero-webm.mjs",
+		"fetch:steam-hero": "node scripts/fetch-steam-hero.mjs",
+		"fetch:screenshots": "node scripts/import-warzone-screenshots.mjs",
+		"generate:brand": "node scripts/generate-brand-assets.mjs",
+		"preview": "astro preview --host 0.0.0.0 --port 3000",
+		"preview:4321": "astro preview --host 0.0.0.0 --port 4321",
+		"validate:sitemaps": "node scripts/validate-sitemaps.mjs && node scripts/audit-sitemap-deep.mjs",
+		"generate:i18n": "node scripts/generate-i18n-content.mjs && node scripts/generate-locale-translations.mjs",
+		"postinstall": "node scripts/ensure-dist-for-workers-ci.mjs && node scripts/sync-fonts.mjs",
+		"deploy": "npm run build && wrangler deploy",
+		"pages:deploy": "wrangler pages deploy dist --project-name=cheatsforwarzone",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/react": "^6.0.2",
+		"@fontsource-variable/inter": "^5.3.0",
+		"@fontsource-variable/syne": "^5.2.7",
+		"@fontsource/barlow": "^5.3.0",
+		"@fontsource/bebas-neue": "^5.3.0",
+		"@tailwindcss/vite": "^4.3.2",
+		"astro": "^7.0.9",
+		"i18next": "^26.3.6",
+		"i18next-browser-languagedetector": "^8.2.1",
+		"react": "^19.2.8",
+		"react-dom": "^19.2.8",
+		"react-i18next": "^17.0.11",
+		"tailwindcss": "^4.3.2"
+	},
+	"devDependencies": {
+		"@types/react": "^19.2.18",
+		"@types/react-dom": "^19.2.4",
+		"sharp": "^0.35.3",
+		"terser": "^5.49.0",
+		"wrangler": "^4.30.0"
+	}
+}

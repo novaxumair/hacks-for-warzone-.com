@@ -1,0 +1,36 @@
+---
+import LocalizedPage from '../../../components/LocalizedPage.astro';
+import { localeCodes, defaultLocale, isLocaleCode, type LocaleCode } from '../../../data/i18n/locales';
+import { localizedSlugs, pageIds, type PageId } from '../../../data/i18n/routing';
+import { sitemapExcludedPageIds } from '../../../data/seo-canonical';
+
+type PathProps = { locale: LocaleCode; pageId: PageId };
+
+export function getStaticPaths() {
+	const paths: {
+		params: { lang: string; slug: string };
+		props: PathProps;
+	}[] = [];
+
+	for (const lang of localeCodes) {
+		if (lang === defaultLocale) continue;
+		for (const pageId of pageIds) {
+			if (pageId === 'home') continue;
+			if (sitemapExcludedPageIds.has(pageId)) continue;
+			const slug = localizedSlugs[pageId][lang];
+			if (!slug) continue;
+			paths.push({ params: { lang, slug }, props: { locale: lang, pageId } });
+		}
+	}
+
+	return paths;
+}
+
+const props = Astro.props as PathProps;
+
+if (!isLocaleCode(Astro.params.lang ?? '')) {
+	return Astro.redirect('/');
+}
+---
+
+<LocalizedPage locale={props.locale} pageId={props.pageId} />

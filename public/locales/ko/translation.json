@@ -1,0 +1,426 @@
+{
+  "nav": {
+    "home": "홈",
+    "hacks": "Cheats",
+    "aimbot": "Aimbot",
+    "esp": "ESP",
+    "features": "기능",
+    "pricing": "가격",
+    "setup": "설치",
+    "updates": "업데이트",
+    "faq": "FAQ",
+    "buyNow": "구매하기",
+    "preview": "Cheats",
+    "store": "가격",
+    "status": "업데이트",
+    "reviews": "플레이어 후기",
+    "primaryAria": "Primary",
+    "mobileAria": "Mobile",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "accent": "Undetected Call of Duty: Warzone 치트",
+    "accentShort": "Warzone Cheats",
+    "title": "Warzone Cheats",
+    "subtitle": "Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Aimbot — Ricochet 유지보수 포함.",
+    "subtitleShort": "Call of Duty: Warzone PC용 ESP, radar, Aimbot",
+    "buyNow": "지금 구매",
+    "seeFeatures": "기능 보기",
+    "priceFrom": "from",
+    "imageAlt": "{{brand}} — Call of Duty: Warzone ESP and aimbot overlay",
+    "chipEsp": "ESP / wallhack",
+    "chipAim": "Soft aim",
+    "chipRadar": "2D radar",
+    "chipUpdates": "업데이트"
+  },
+  "cta": {
+    "buy": "지금 구매",
+    "buyShort": "구매하기"
+  },
+  "trust": {
+    "status": "온라인",
+    "statusNote": "Warzone Cheats 패키지는 Call of Duty: Warzone Windows PC에서 이용 가능합니다.",
+    "statusShort": "가동 중",
+    "delivery": "즉시 디지털 배송",
+    "platform": "Windows 10 & 11",
+    "antiCheat": "Ricochet 유지보수 지원",
+    "antiCheatShort": "Ricochet 지원"
+  },
+  "product": {
+    "title": "Warzone Cheats",
+    "addToCart": "장바구니에 추가",
+    "monthly": "월간",
+    "lifetime": "평생",
+    "available": "지금 이용 가능",
+    "gameBadge": "Call of Duty: Warzone",
+    "platformBadge": "Windows PC",
+    "statusBadge": "Undetected 패키지",
+    "days30": "30",
+    "oneTime": "평생",
+    "plans": "가격",
+    "perMonth": "/",
+    "once": "",
+    "buyMonthly": "월간",
+    "buyLifetime": "평생"
+  },
+  "reviews": {
+    "title": "플레이어 후기",
+    "subtitle": "Warzone Cheats 구매자 최근 피드백",
+    "outOf": "/5",
+    "countLabel": "리뷰",
+    "eyebrow": "플레이어 후기",
+    "homeTitle": "Warzone Cheats 플레이어 후기",
+    "buyerReviews": "리뷰",
+    "averageAria": "플레이어 후기",
+    "outOfFiveAria": "/5",
+    "readAll": "→"
+  },
+  "common": {
+    "buyNow": "Buy Warzone Cheats",
+    "readGuide": "Read guide",
+    "language": "Language",
+    "officialLanguageNote": "English is official; other locales are translated.",
+    "relatedPages": "Related pages",
+    "selectLanguage": "언어",
+    "englishOfficial": "영어가 공식 언어입니다",
+    "englishIsOfficial": "영어가 공식 언어입니다. 다른 언어는 글로벌 SEO를 위해 번역되었습니다.",
+    "languageSuggestion": "언어",
+    "dismiss": "Dismiss",
+    "localeVersion": "{{name}} version",
+    "localeSuggestLead": "{{nativeName}} ({{region}}) — ",
+    "breadcrumb": "Breadcrumb",
+    "gallery": "Gallery",
+    "inGameLook": "In-game look",
+    "allQuestions": "FAQ",
+    "openAnyQuestion": "가이드 읽기",
+    "packageStatus": "업데이트",
+    "productDetails": "기능",
+    "browse": "관련 페이지",
+    "featured": "Featured",
+    "share": "Share",
+    "shareX": "Share on X",
+    "shareReddit": "Share on Reddit",
+    "shareFacebook": "Share on Facebook",
+    "blog": "Blog",
+    "guides": "Guides",
+    "home": "Home",
+    "support": "Support",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "featureList": "기능",
+    "pricingPlans": "가격",
+    "buyerReviewsNav": "플레이어 후기",
+    "copyright": "© {{year}} {{brand}}",
+    "refundPolicy": "Refund policy"
+  },
+  "footer": {
+    "explore": "탐색",
+    "help": "도움말 및 법적",
+    "tagline": "Call of Duty: Warzone용 undetected ESP, wallhack, radar, Aimbot — checkout 결제."
+  },
+  "home": {
+    "aboutTitle": "Call of Duty: Warzone용 undetected 치트",
+    "aboutP1": "Call of Duty: Warzone Windows PC undetected 패키지: ESP wallhack, radar, Aimbot, Ricochet 유지보수 포함. 가격 · 업데이트.",
+    "aboutPricingCta": "가격 비교",
+    "aboutP2Before": "먼저",
+    "aboutPillar": "Warzone Cheats 가이드",
+    "aboutEsp": "ESP 가이드",
+    "aboutAimbot": "에임봇 컨트롤",
+    "aboutUndetected": "undetected 상태",
+    "aboutP2Mid": ", ",
+    "aboutP2Or": ", 또는 ",
+    "aboutP2After": "부터 시작하세요.",
+    "playDemoVideo": "Play Warzone cheats demo video",
+    "pauseDemoVideo": "Pause Warzone cheats demo video",
+    "demoVideoCaption": "Warzone Cheats — ESP, aimbot & radar in match",
+    "volumeLabel": "Volume",
+    "muteVideo": "Mute video",
+    "unmuteVideo": "Unmute video",
+    "seekLabel": "Video progress"
+  },
+  "homeSeo": {
+    "eyebrow": "Guides",
+    "title": "관련 페이지 by category",
+    "lede": "기능, 업데이트, 가격, FAQ.",
+    "catFeatures": "기능",
+    "catFeaturesHint": "기능",
+    "catStatus": "업데이트",
+    "catStatusHint": "업데이트",
+    "catStore": "가격",
+    "catStoreHint": "가격",
+    "catHelp": "FAQ",
+    "catHelpHint": "FAQ",
+    "linkAllFeatures": "기능",
+    "linkEsp": "ESP",
+    "linkAimbot": "Aimbot",
+    "linkRadar": "Radar",
+    "linkLiveStatus": "업데이트",
+    "linkUndetected": "Undetected 패키지",
+    "linkRicochet": "Ricochet",
+    "linkSetup": "설치",
+    "linkPlans": "가격",
+    "linkReviews": "플레이어 후기",
+    "linkFinalsCheats": "Warzone Cheats",
+    "linkFaq": "FAQ",
+    "linkSupport": "Support",
+    "linkSetupGuide": "설치",
+    "linkBlog": "Blog",
+    "linkRefunds": "Refunds",
+    "faqEyebrow": "FAQ",
+    "faqTitle": "FAQ",
+    "faqLede": "즉시 디지털 배송",
+    "allAnswers": "FAQ",
+    "openFullPage": "가이드 읽기"
+  },
+  "deals": {
+    "pricing": "가격",
+    "chooseLicense": "가격",
+    "features": "기능",
+    "featEsp": "ESP / wallhack",
+    "featAim": "Aimbot",
+    "featRadar": "2D radar",
+    "featUpdates": "업데이트"
+  },
+  "trustStrip": {
+    "instantDelivery": "즉시 디지털 배송",
+    "secureCheckout": "구매하기",
+    "support247": "24/7"
+  },
+  "categoryRow": {
+    "hacks": "Cheats",
+    "esp": "ESP",
+    "aimbot": "Aimbot",
+    "radar": "Radar",
+    "wallhack": "Wallhack",
+    "undetected": "Undetected 패키지",
+    "features": "기능",
+    "pricing": "가격",
+    "setup": "설치",
+    "blog": "Blog"
+  },
+  "internalLinks": {
+    "relatedLede": "Warzone Cheats — 관련 페이지.",
+    "topicsTitle": "기능",
+    "topicsLabel": "기능",
+    "topicsLede": "ESP, Aimbot, 가격, 설치, 업데이트.",
+    "overview": "Warzone Cheats",
+    "esp": "ESP & wallhack",
+    "aimbot": "Aimbot",
+    "radar": "Radar",
+    "features": "기능",
+    "pricing": "가격",
+    "setup": "설치",
+    "status": "업데이트",
+    "faq": "FAQ",
+    "support": "Support",
+    "blog": "Blog",
+    "reviews": "플레이어 후기",
+    "hacks": "Cheats",
+    "undetected": "Undetected 패키지"
+  },
+  "externalResources": {
+    "title": "Guías oficiales del juego y recursos",
+    "lede": "Enlazamos fuentes de confianza para verificar parches, estadísticas y mapas fuera de nuestro sitio.",
+    "pillsTitle": "Guías oficiales del juego y recursos",
+    "pillsLabel": "Guías oficiales del juego y recursos",
+    "steam": {
+      "label": "Call of Duty: Warzone en PC",
+      "note": "Página oficial de la tienda, requisitos y reseñas."
+    },
+    "patch": {
+      "label": "Parches y noticias de Call of Duty: Warzone",
+      "note": "Lee actualizaciones oficiales antes de cambiar tu loadout."
+    },
+    "official": {
+      "label": "Sitio oficial de Call of Duty: Warzone",
+      "note": "Resumen del juego de Activision."
+    },
+    "wiki": {
+      "label": "Wiki de Call of Duty: Warzone (Fandom)",
+      "note": "Estadísticas, mapas y mecánicas de supervivencia."
+    },
+    "community": {
+      "label": "Hub de Call of Duty: Warzone community",
+      "note": "Anuncios y debates de la comunidad."
+    }
+  },
+  "images": {
+    "hero": "Warzone Cheats overlay — ESP and aimbot in Call of Duty: Warzone",
+    "espWallhack": "Wallhack outlines showing players through walls",
+    "aimbotCombat": "Soft aim assist overlay during a Call of Duty: Warzone match",
+    "squadFight": "Warzone Cheats combat overlay during a team fight",
+    "playerEsp": "Player ESP boxes and distance readouts in a Call of Duty: Warzone match",
+    "headerArt": "Aimbot view and bone priority controls for Call of Duty: Warzone",
+    "hacksPackage": "2D radar threat overlay for Call of Duty: Warzone",
+    "raidFight": "Aimbot assist during a Call of Duty: Warzone competitive fight",
+    "battleRoyale": "Warzone Cheats in-session overview for Windows PC",
+    "raidMap": "ESP markers for operator loadouts and POIs in Call of Duty: Warzone"
+  },
+  "guides": {
+    "hubTitle": "Game Guides Hub",
+    "hubIntro": "Warzone Cheats product guides sit at the top. Scroll down for dedicated PC game cheat guides — ESP, aimbot, radar, and undetected setup for other titles.",
+    "nativeTitle": "Warzone Cheats guides",
+    "nativeLede": "Our primary guides for ESP, aimbot, radar, setup, and pricing on cheatsforwarzone.com.",
+    "gameTitle": "Other Game Cheat Guides",
+    "gameLede": "Cheat guides for Fortnite, Tarkov, Valorant, Marvel Rivals, and more — ESP, aimbot, wallhack, and undetected tips per title below.",
+    "readGuide": "Read guide",
+    "published": "Published",
+    "updated": "Updated"
+  },
+  "blog": {
+    "blogTitle": "Warzone Cheats Blog | Guides & Patch Tips",
+    "blogDescription": "Call of Duty: Warzone guides — competitive tips, ESP, aimbot notes, loadout drop routes, and Ricochet update coverage. English blog at cheatsforwarzone.com/blog/.",
+    "blogH1": "Warzone Cheats Intel",
+    "blogIntro": "Actionable Call of Duty: Warzone guides for Battle Royale and Resurgence — meta breakdowns, loadout routes, weapon tiers, and warmup routines. Pair these tips with our Warzone Cheats pages for ESP, soft aim, and radar when you need in-match tools.",
+    "readMore": "Read guide",
+    "published": "Published",
+    "updated": "Updated",
+    "relatedPosts": "Related Call of Duty: Warzone guides",
+    "allPosts": "All blog posts",
+    "home": "Warzone Cheats home",
+    "language": "Language",
+    "label": "Warzone Intel"
+  },
+  "gallery": {
+    "eyebrow": "Warzone Cheats",
+    "title": "Warzone Cheats gallery",
+    "subtitle": "Warzone Cheats visuals — ESP, wallhack, aimbot, and radar for Call of Duty: Warzone on PC.",
+    "lead": "Warzone Cheats helps you spot enemy operators, weapon drops, and high-traffic POIs with ESP, aimbot, and radar in one license.",
+    "highlightEspTitle": "Warzone Cheats ESP",
+    "highlightEspCopy": "See enemy operators through walls with Warzone Cheats ESP and wallhack overlays.",
+    "highlightRadarTitle": "Warzone Cheats radar",
+    "highlightRadarCopy": "Track nearby threats with Warzone Cheats radar before you push or rotate.",
+    "highlightAimbotTitle": "Warzone Cheats aimbot",
+    "highlightAimbotCopy": "Use soft aim and aimbot controls tuned for Call of Duty: Warzone matches on Windows PC.",
+    "updatesLabel": "Warzone Cheats updates",
+    "updatesShort": "Updates"
+  },
+  "faq": {
+    "items": {
+      "what-are-warzone-cheats": {
+        "q": "¿Qué es Warzone Cheats?",
+        "a": "Warzone Cheats es un paquete de cheats undetected para Call of Duty: Warzone en PC Windows. Incluye ESP wallhack, radar 2D y controles de aimbot, con mantenimiento Ricochet y soporte de instalación."
+      },
+      "are-warzone-cheats-undetected-in-2026": {
+        "q": "¿Los Warzone Cheats son undetected en 2026?",
+        "a": "Warzone Cheats se mantiene para Call of Duty: Warzone con reconstrucciones tras parches de Ricochet y del juego. Revisa la 상태 antes de entrar en match. Ningún cheat puede garantizar indetectabilidad permanente."
+      },
+      "solo-farmer-and-raider-sessions": {
+        "q": "배틀로얄 라운드와 랭크 매치에서 작동하나요?",
+        "a": "예. ESP, 레이더, 에임봇은 Call of Duty: Warzone 매치 흐름용입니다 — 적 영웅 읽기, 루트와 utility placements 추적, Resurgence와 Ranked에서 POI 및 전투 구역 인지."
+      },
+      "esp-wallhack-radar-or-aimbot": {
+        "q": "¿Qué incluye: ESP, wallhack, radar o Aimbot?",
+        "a": "Warzone Cheats agrupa ESP wallhack, marcadores de weapon drops, radar 2D y Aimbot configurable en una licencia. Consulta 기능 para la lista completa."
+      },
+      "how-are-licenses-delivered": {
+        "q": "¿Cómo se entregan las licencias?",
+        "a": "Tras confirmar el pago, los datos de la licencia se entregan digitalmente en el checkout. El tiempo puede variar según el método de pago. Guarda la confirmación del pedido si contactas soporte."
+      },
+      "where-to-check-updates": {
+        "q": "¿Dónde reviso actualizaciones tras un parche de Call of Duty: Warzone o Ricochet?",
+        "a": "Las notas de mantenimiento se publican en la 상태 cuando un parche afecta al paquete. Es el lugar más rápido para confirmar si hay una nueva build."
+      },
+      "how-to-contact-support": {
+        "q": "¿Cómo contacto soporte?",
+        "a": "Usa la página de 지원 o escribe a support@cheatsforwarzone.com. Incluye los datos del pedido y una descripción clara del problema de instalación."
+      },
+      "what-is-a-warzone-wallhack": {
+        "q": "Call of Duty: Warzone wallhack이란?",
+        "a": "Call of Duty: Warzone wallhack은 지형 너머 적 영웅을 보여주는 ESP 오버레이입니다. Warzone Cheats는 거리 표시, 그래플 및 궁극기 신호, 전환 가능한 카테고리를 포함합니다."
+      },
+      "does-warzone-cheats-include-radar-hack": {
+        "q": "¿Warzone Cheats incluye radar hack?",
+        "a": "Sí. Warzone Cheats incluye overlays de radar 2D que resaltan amenazas cercanas fuera de tu campo de visión, útil para flancos y zonas de zone."
+      },
+      "ricochet-anti-cheat-and-warzone-cheats": {
+        "q": "¿Cómo afecta Ricochet a los Warzone Cheats?",
+        "a": "Ricochet monitoriza Call of Duty: Warzone en PC Windows. Warzone Cheats publica notas de mantenimiento tras parches que pueden requerir una nueva build. Revisa Estado antes de jugar."
+      },
+      "buy-undetected-warzone-cheats-windows-pc": {
+        "q": "¿Puedo comprar trucos undetected de Call of Duty: Warzone para PC Windows?",
+        "a": "Sí: Warzone Cheats vende licencias mensuales y de por vida para PC Windows con ESP, radar y aimbot en un solo paquete. Compara planes en la 스토어 antes del checkout."
+      },
+      "how-much-do-warzone-cheats-cost": {
+        "q": "How much do warzone cheats cost in 2026?",
+        "a": "Warzone Cheats is $35 per month or $150 lifetime USD on Windows PC. Both plans include ESP wallhack, 2D radar, soft aim, and Ricochet maintenance rebuilds. See Pricing for the latest plan details before checkout."
+      },
+      "what-is-warzone-esp-hack": {
+        "q": "Call of Duty: Warzone ESP hack이란?",
+        "a": "Call of Duty: Warzone ESP hack은 벽 너머 적 영웅, 무기, 루트를 보여주는 시야 오버레이입니다. Warzone Cheats ESP는 플레이어 박스, 거리 태그, 그래플 및 궁극기 신호, Resurgence와 Ranked용 카테고리를 포함합니다."
+      },
+      "what-is-warzone-aimbot-hack": {
+        "q": "Call of Duty: Warzone aimbot hack이란?",
+        "a": "Call of Duty: Warzone aimbot hack은 설정 가능한 FOV, 스무딩, 뼈 우선순위로 에임 어시스트를 제공합니다. Warzone Cheats는 팀 전투와 결투에서 자연스러운 소프트 에임 프로필을 사용합니다 — Ranked 큐 전 mod 메뉴에서 조정하세요."
+      },
+      "how-to-install-warzone-cheats": {
+        "q": "How do I install warzone cheats on Windows PC?",
+        "a": "After checkout, follow the Setup guide: download the loader, disable conflicting overlays, launch Warzone Cheats, and enable ESP, radar, or aimbot toggles in the mod menu. Most buyers finish first launch in under 15 minutes. Email support@cheatsforwarzone.com if activation fails."
+      },
+      "best-warzone-cheats-in-2026": {
+        "q": "What are the best warzone cheats in 2026?",
+        "a": "Top warzone cheats in 2026 combine undetected ESP, soft aim, 2D radar, and fast Ricochet maintenance after patches. Warzone Cheats bundles all three in one license with status notes, setup support, and monthly or lifetime pricing — compare Features and Reviews before you buy."
+      },
+      "monthly-vs-lifetime-warzone-cheats": {
+        "q": "Should I buy monthly or lifetime warzone cheats?",
+        "a": "Choose monthly ($35) if you want a lower entry cost or only play a few seasons. Choose lifetime ($150) if you plan long-term Call of Duty: Warzone play and want one payment for ESP, radar, aimbot, and future maintenance rebuilds. Both plans ship the same feature set."
+      },
+      "warzone-cheats-windows-11": {
+        "q": "Do warzone cheats work on Windows 11?",
+        "a": "Yes. Warzone Cheats supports Windows 10 and Windows 11 on PC. Use a clean install path from the Setup guide, keep Ricochet status green on the Updates page, and avoid running outdated builds after major patches."
+      },
+      "what-is-warzone-soft-aim": {
+        "q": "Call of Duty: Warzone soft aim이란?",
+        "a": "Call of Duty: Warzone soft aim은 즉시 스냅 대신 설정된 FOV 안의 목표로 부드럽게 조준을 안내합니다. Warzone Cheats는 Resurgence와 Ranked에서 스무딩, 뼈 우선순위, 무기 유형별 프로필을 조정할 수 있습니다."
+      },
+      "free-warzone-cheat-download": {
+        "q": "Is there a free Call of Duty: Warzone hack download?",
+        "a": "Warzone Cheats is a paid license — there is no official free download. Avoid random “free warzone cheat” sites; they often ship malware or detected loaders. Compare monthly and lifetime plans on Pricing for legitimate ESP, radar, and aimbot access with support."
+      },
+      "warzone-ricochet-bypass": {
+        "q": "warzone cheats Ricochet bypass는 어떻게 작동하나요?",
+        "a": "영구 Ricochet bypass는 없습니다. Warzone Cheats는 Call of Duty: Warzone 및 Ricochet 패치 후 리빌드로 유지됩니다 — 큐 전 업데이트 페이지를 확인하세요. 책임 있는 설정과 최신 빌드가 “bypass” 주장보다 중요합니다."
+      },
+      "warzone-cheats-for-ranked": {
+        "q": "warzone cheats는 랭크 경쟁에서 작동하나요?",
+        "a": "예. ESP, 레이더, 소프트 에임은 Windows PC Call of Duty: Warzone Ranked와 Resurgence용입니다. 보수적인 오버레이 설정, 패치 후 유지보수 확인, 경쟁 큐 전 업데이트 페이지에서 undetected 상태 확인을 하세요."
+      },
+      "what-is-warzone-mod-menu": {
+        "q": "What is a Call of Duty: Warzone mod menu?",
+        "a": "A Call of Duty: Warzone mod menu is an in-game overlay to toggle ESP wallhack, radar, aimbot, and visual settings without alt-tabbing. Warzone Cheats ships a lightweight mod menu for Windows PC — see Features for the full toggle list."
+      },
+      "external-vs-internal-warzone-cheats": {
+        "q": "What is the difference between external and internal warzone cheats?",
+        "a": "External hacks read game memory from outside the client; internal hooks run inside the process. Warzone Cheats is built as an external-style package for easier setup on Windows PC, bundling ESP, radar, and soft aim with Ricochet maintenance after patches."
+      },
+      "how-long-warzone-cheat-setup-takes": {
+        "q": "How long does warzone cheats setup take?",
+        "a": "Most buyers finish Warzone Cheats setup in 10–20 minutes on Windows PC: install the loader, activate the license, and enable ESP or aimbot in the mod menu. If Windows Defender or another AV blocks the loader, follow Setup troubleshooting or email support@cheatsforwarzone.com with your order ID."
+      },
+      "does-warzone-cheats-include-triggerbot": {
+        "q": "Does Warzone Cheats include triggerbot?",
+        "a": "Warzone Cheats focuses on ESP wallhack, 2D radar, and soft aim profiles. Triggerbot is not advertised as a standalone module — review the Features page for the current toggle list before checkout."
+      }
+    }
+  },
+  "media": {
+    "demoVideoTitle": "Warzone Cheats ESP, Aimbot demo",
+    "playVideo": "Play video"
+  },
+  "agent": {
+    "accent": "2026 — Undetected ESP, Aimbot & Wallhack",
+    "accentShort": "Undetected warzone cheats 2026",
+    "title": "Warzone Cheats",
+    "subtitle": "Undetected ESP, aimbot, and wallhack for Call of Duty: Warzone on Windows PC — Ricochet maintenance included.",
+    "subtitleShort": "ESP, aimbot & wallhack for Warzone PC",
+    "buyNow": "Buy Warzone Cheats",
+    "seeFeatures": "See Features",
+    "priceFrom": "from",
+    "imageAlt": "{{brand}} — Call of Duty: Warzone ESP and aimbot overlay",
+    "chipEsp": "ESP / wallhack",
+    "chipAim": "Soft aim",
+    "chipRadar": "2D radar",
+    "chipUpdates": "Patch updates"
+  }
+}

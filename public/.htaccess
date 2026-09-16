@@ -1,0 +1,36 @@
+# Canonical host: HTTPS + non-www
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	# www → apex HTTPS (non-www canonical)
+	RewriteCond %{HTTP_HOST} ^www\.valoranthacks\.org$ [NC]
+	RewriteRule ^ https://valoranthacks.org%{REQUEST_URI} [L,R=301,NE]
+
+	# http → https apex (direct or via proxy)
+	RewriteCond %{HTTPS} !=on [OR]
+	RewriteCond %{HTTP:X-Forwarded-Proto} !https
+	RewriteRule ^ https://valoranthacks.org%{REQUEST_URI} [L,R=301,NE]
+</IfModule>
+
+<IfModule mod_headers.c>
+	Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+	Header set X-Content-Type-Options "nosniff"
+	Header set Referrer-Policy "strict-origin-when-cross-origin"
+	<FilesMatch "\.(html|htm)$">
+		Header set Content-Type "text/html; charset=utf-8"
+	</FilesMatch>
+	<FilesMatch "\.(webp|png|jpg|jpeg|gif|svg|ico|woff2|woff|ttf)$">
+		Header set Cache-Control "public, max-age=31536000, immutable"
+	</FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType image/webp "access plus 1 year"
+	ExpiresByType image/png "access plus 1 year"
+	ExpiresByType image/jpeg "access plus 1 year"
+	ExpiresByType image/svg+xml "access plus 1 year"
+	ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+AddDefaultCharset utf-8

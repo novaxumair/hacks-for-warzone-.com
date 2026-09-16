@@ -1,0 +1,153 @@
+---
+import { getUi } from '../data/i18n';
+import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import { customerReviewStats, customerReviews } from '../data/site';
+import { getReviewPath, reviewsBasePath } from '../data/reviews';
+import { getT } from '../i18n/server';
+
+interface Props {
+	locale?: LocaleCode;
+}
+
+const locale = Astro.props.locale ?? defaultLocale;
+const ui = getUi(locale);
+const t = getT(locale);
+const reviewsUi = ui.reviews;
+
+function stars(rating: number): string {
+	return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+}
+
+const reviewDateFormatter = new Intl.DateTimeFormat(locale, {
+	month: 'short',
+	year: 'numeric',
+	timeZone: 'UTC',
+});
+
+function formatReviewDate(isoDate: string): string {
+	return reviewDateFormatter.format(new Date(`${isoDate}T00:00:00Z`));
+}
+
+const previewReviews = customerReviews.slice(0, 4);
+---
+
+<section class="reviews shell" aria-labelledby="reviews-title">
+	<div class="reviews__header">
+		<h2 id="reviews-title">{reviewsUi.title}</h2>
+		<p class="reviews__rating">
+			{customerReviewStats.averageRating.toFixed(1)} {reviewsUi.outOf}
+			· {customerReviewStats.reviewCountLabel} {reviewsUi.countLabel}
+		</p>
+	</div>
+
+	<div class="reviews__list">
+		{
+			previewReviews.map((review) => (
+				<article class="reviews__card">
+					<div class="reviews__top">
+						<span class="reviews__handle">@{review.handle}</span>
+						<span class="reviews__stars" aria-label={t('reviews.outOfFiveAria', { rating: review.rating })}>
+							{stars(review.rating)}
+						</span>
+					</div>
+					<p class="reviews__text">{review.short}</p>
+					<time class="reviews__date" datetime={review.date}>{formatReviewDate(review.date)}</time>
+				</article>
+			))
+		}
+	</div>
+
+	<p class="reviews__more">
+		<a href={reviewsBasePath}>
+			{reviewsUi.title} →
+		</a>
+	</p>
+</section>
+
+<style>
+	.reviews {
+		padding-block: var(--section-space);
+	}
+
+	.reviews__header {
+		margin-bottom: 1.25rem;
+	}
+
+	.reviews h2 {
+		margin: 0;
+		font-size: 1.25rem;
+		font-weight: 700;
+	}
+
+	.reviews__rating {
+		margin: 0.35rem 0 0;
+		font-size: 0.875rem;
+		color: var(--color-muted);
+	}
+
+	.reviews__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.75rem;
+	}
+
+	.reviews__card {
+		padding: 1rem;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-card);
+		background: var(--color-surface-raised);
+	}
+
+	.reviews__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.reviews__handle {
+		font-size: 0.8125rem;
+		font-weight: 600;
+	}
+
+	.reviews__stars {
+		font-size: 0.75rem;
+		color: #fbbf24;
+	}
+
+	.reviews__text {
+		margin: 0;
+		font-size: 0.875rem;
+		line-height: 1.55;
+		color: var(--color-muted);
+	}
+
+	.reviews__date {
+		display: block;
+		margin-top: 0.5rem;
+		font-size: 0.75rem;
+		color: var(--color-faint);
+	}
+
+	.reviews__more {
+		margin: 1.25rem 0 0;
+		text-align: center;
+	}
+
+	.reviews__more a {
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: var(--color-orchid);
+	}
+
+	.reviews__more a:hover {
+		color: var(--color-ink);
+	}
+
+	@media (max-width: 640px) {
+		.reviews__list {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

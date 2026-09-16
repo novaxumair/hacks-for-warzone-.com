@@ -1,0 +1,2 @@
+# Redirects are handled by src/worker.ts — never upload _redirects (Cloudflare 100-rule limit).
+_redirects

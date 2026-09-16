@@ -1,0 +1,162 @@
+---
+import { productInfo, siteConfig } from '../data/site';
+import type { LocaleCode } from '../data/i18n/locales';
+import { getT } from '../i18n/server';
+
+interface Props {
+	locale: LocaleCode;
+}
+
+const { locale } = Astro.props;
+const t = getT(locale);
+const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo.plans[0];
+const lifetime = productInfo.plans.find((p) => p.id === 'lifetime') ?? productInfo.plans[1];
+---
+
+<aside class="home__about-pricing" aria-label={t('product.plans')}>
+	<div class="home__about-pricing-panel">
+		<div class="home__about-pricing-grid price-grid">
+			<article class="home__price-card price-card">
+				<p class="home__price-card-label">{t('product.monthly')}</p>
+				<p class="home__price-card-price">
+					<span class="home__price-card-amount">${monthly.price}</span>
+				</p>
+				<p class="home__price-card-note">{t('product.days30')}</p>
+				<a class="home__price-card-cta" href={siteConfig.checkoutUrl} rel="noopener noreferrer">
+					{t('product.buyMonthly')}
+				</a>
+			</article>
+
+			<article class="home__price-card price-card is-featured">
+				<p class="home__price-card-label">{t('product.lifetime')}</p>
+				<p class="home__price-card-price">
+					<span class="home__price-card-amount">${lifetime.price}</span>
+				</p>
+				<p class="home__price-card-note">{t('product.oneTime')}</p>
+				<a class="home__price-card-cta home__price-card-cta--solid" href={siteConfig.checkoutUrl} rel="noopener noreferrer">
+					{t('product.buyLifetime')}
+				</a>
+			</article>
+		</div>
+	</div>
+</aside>
+
+<style>
+	.home__about-pricing {
+		margin: 0;
+		width: 100%;
+		max-width: 19.5rem;
+		justify-self: end;
+		align-self: start;
+	}
+
+	.home__about-pricing-panel {
+		display: flex;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md, 0.75rem);
+		background: var(--bg-panel);
+		box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+		overflow: hidden;
+	}
+
+	.home__about-pricing-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.45rem;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0.45rem;
+		box-sizing: border-box;
+	}
+
+	.home__price-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		min-height: 0;
+		padding: 0.45rem 0.35rem 0.4rem;
+		margin: 0;
+		border: 1px solid var(--line);
+		border-radius: calc(var(--radius-md, 0.75rem) - 2px);
+		background: var(--bg-elevated);
+		text-align: center;
+	}
+
+	.home__price-card.is-featured {
+		border-color: color-mix(in srgb, var(--magenta) 42%, var(--line));
+		background: color-mix(in srgb, var(--magenta) 10%, var(--bg-elevated));
+	}
+
+	.home__price-card-label {
+		margin: 0;
+		font-size: 0.58rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--ink-faint);
+	}
+
+	.home__price-card-price {
+		margin: 0.1rem 0 0;
+		display: flex;
+		align-items: baseline;
+		justify-content: center;
+	}
+
+	.home__price-card-amount {
+		font-family: var(--font-display);
+		font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		line-height: 1;
+		color: var(--ink);
+	}
+
+	.home__price-card.is-featured .home__price-card-amount {
+		color: var(--magenta-soft);
+	}
+
+	.home__price-card-note {
+		margin: 0.08rem 0 0;
+		font-size: 0.62rem;
+		line-height: 1.25;
+		color: var(--ink-muted);
+	}
+
+	.home__price-card-cta {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		min-height: 1.75rem;
+		margin-top: auto;
+		padding: 0 0.2rem;
+		border-radius: 0.45rem;
+		font-size: 0.65rem;
+		font-weight: 700;
+		line-height: 1.15;
+		text-decoration: none;
+	}
+
+	.home__price-card-cta--solid {
+		border-color: transparent;
+	}
+
+	@media (max-width: 768px) {
+		.home__about-pricing {
+			max-width: 100%;
+			width: 100%;
+			justify-self: stretch;
+		}
+
+		.home__price-card-cta {
+			min-height: var(--touch-min, 2.75rem);
+			font-size: 0.7rem;
+		}
+	}
+</style>

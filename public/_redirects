@@ -1,0 +1,2 @@
+# Redirects are handled by src/worker.ts (path + locale cannibal 301s, brand-studio 404).
+# Cloudflare _redirects allows max 100 dynamic rules — do not add redirect lines here.

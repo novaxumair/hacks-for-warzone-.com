@@ -1,0 +1,18 @@
+---
+import { type LocaleCode } from '../data/i18n/locales';
+import { getHreflangAlternates, type PageId } from '../data/i18n/routing';
+
+interface Props {
+	pageId: PageId;
+	locale?: LocaleCode;
+}
+
+const { pageId, locale = 'en' } = Astro.props;
+const alternates = getHreflangAlternates(pageId, locale);
+---
+
+{
+	alternates.map((alt) => (
+		<link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+	))
+}

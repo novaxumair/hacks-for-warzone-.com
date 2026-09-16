@@ -1,0 +1,477 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from './Navbar.astro';
+import SiteFooter from './SiteFooter.astro';
+import { customerReviews, productInfo, siteConfig } from '../data/site';
+import { getLocalizedPath, buildCanonicalUrl } from '../data/i18n/routing';
+import { getReviewPath, getReviewCrawlImage, getReviewsBasePath } from '../data/reviews';
+import { getLocalizedReviewBySlug, getReviewHreflangAlternates } from '../data/localized-reviews';
+import type { LocaleCode } from '../data/i18n/locales';
+import { contentSrcSet, productMainSizes } from '../lib/responsive-images';
+import RelatedPages from './RelatedPages.astro';
+import ExternalResources from './ExternalResources.astro';
+import { getT } from '../i18n/server';
+
+interface Props {
+	locale: LocaleCode;
+	slug: string;
+}
+
+const { locale, slug } = Astro.props;
+const review = getLocalizedReviewBySlug(slug, locale);
+if (!review) {
+	throw new Error(`Review not found: ${slug}`);
+}
+
+const t = getT(locale);
+const homeHref = getLocalizedPath('home', locale);
+const reviewsHref = getReviewsBasePath(locale);
+const pricingHref = getLocalizedPath('pricing', locale);
+const canonicalPath = getReviewPath(review.slug, locale);
+const canonicalURL = buildCanonicalUrl(canonicalPath);
+const hreflangAlternates = getReviewHreflangAlternates(review.slug, locale);
+const photo = getReviewCrawlImage(review.slug, review.handle, review.seoDescription);
+
+function stars(rating: number): string {
+	return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+}
+
+const dateLabel = new Intl.DateTimeFormat(locale === 'en' ? 'en' : locale, {
+	day: 'numeric',
+	month: 'long',
+	year: 'numeric',
+	timeZone: 'UTC',
+}).format(new Date(`${review.date}T00:00:00Z`));
+
+// Neighbouring reviews for internal linking between review pages.
+const currentIndex = customerReviews.findIndex((r) => r.slug === review.slug);
+const moreReviews = [1, 2, 3].map((offset) => {
+	const other = customerReviews[(currentIndex + offset) % customerReviews.length];
+	return getLocalizedReviewBySlug(other.slug, locale) ?? other;
+});
+
+const extraGraph: Record<string, unknown>[] = [
+	{
+		'@type': 'Review',
+		'@id': `${canonicalURL}#review`,
+		url: canonicalURL,
+		image: photo.url,
+		author: { '@type': 'Person', name: review.handle },
+		datePublished: review.date,
+		reviewRating: {
+			'@type': 'Rating',
+			ratingValue: String(review.rating),
+			bestRating: '5',
+			worstRating: '1',
+		},
+		reviewBody: review.text,
+		inLanguage: locale,
+		itemReviewed: { '@id': `${siteConfig.url}/#product` },
+		publisher: { '@id': `${siteConfig.url}/#organization` },
+	},
+];
+---
+
+<Layout
+	title={review.seoTitle}
+	description={review.seoDescription}
+	canonicalPath={canonicalPath}
+	hreflangAlternates={hreflangAlternates}
+	ogImage={photo.src}
+	ogImageAlt={`${siteConfig.name} review — @${review.handle}`}
+	type="article"
+	locale={locale}
+	breadcrumbs={[
+		{ label: t('common.home'), href: homeHref },
+		{ label: t('nav.reviews'), href: reviewsHref },
+		{ label: `@${review.handle}` },
+	]}
+	extraGraph={extraGraph}
+>
+	<Navbar locale={locale} />
+	<main class="review-page">
+		<div class="shell">
+			<div class="shell-content review-page__wrap">
+			<nav class="review-page__crumbs" aria-label={t('common.breadcrumb')}>
+				<a href={homeHref}>{t('common.home')}</a>
+				<span aria-hidden="true">/</span>
+				<a href={reviewsHref}>{t('nav.reviews')}</a>
+				<span aria-hidden="true">/</span>
+				<span aria-current="page">@{review.handle}</span>
+			</nav>
+
+			<article class="review-detail">
+				<figure class="review-detail__media">
+					<img
+						src={photo.src}
+						{...(contentSrcSet(photo.src)
+							? { srcset: contentSrcSet(photo.src), sizes: productMainSizes }
+							: {})}
+						alt={`${siteConfig.name} review by @${review.handle}`}
+						width="960"
+						height="530"
+						loading="lazy"
+						decoding="async"
+					/>
+				</figure>
+				<header class="review-detail__head">
+					<span class="review-detail__avatar" aria-hidden="true">{review.handle.charAt(0).toUpperCase()}</span>
+					<div class="review-detail__meta">
+						<h1 class="review-detail__title">{siteConfig.name} review by @{review.handle}</h1>
+						<p class="review-detail__stars" aria-label={`${review.rating} out of 5 stars`}>
+							<span aria-hidden="true">{stars(review.rating)}</span>
+							<span class="review-detail__rating">{review.rating}/5</span>
+						</p>
+						<p class="review-detail__date">
+							<time datetime={review.date}>{dateLabel}</time>
+							{review.tag ? <span class="review-detail__tag">{review.tag}</span> : null}
+							<span class="review-detail__verified">{t('reviews.verifiedBuyer')}</span>
+						</p>
+					</div>
+				</header>
+
+				<blockquote class="review-detail__body">
+					<p>{review.text}</p>
+				</blockquote>
+
+				<div class="review-detail__ctas">
+					<a href={siteConfig.checkoutUrl} class="review-detail__buy" rel="noopener noreferrer">
+						{t('cta.buy')} {siteConfig.name} — ${productInfo.plans[0].price}
+					</a>
+					<a href={pricingHref} class="review-detail__link-btn">{t('nav.store')}</a>
+					<a href={homeHref} class="review-detail__link-btn">{siteConfig.name}</a>
+				</div>
+			</article>
+
+			<section class="review-detail__more" aria-labelledby="more-reviews-title">
+				<h2 id="more-reviews-title">{t('reviews.title')}</h2>
+				<div class="review-detail__more-grid">
+					{
+						moreReviews.map((other) => (
+							<a class="review-detail__more-card" href={getReviewPath(other.slug, locale)}>
+								<span class="review-detail__more-top">
+									<span class="review-detail__more-handle">@{other.handle}</span>
+									<span class="review-detail__more-stars" aria-label={`${other.rating} out of 5 stars`}>
+										{stars(other.rating)}
+									</span>
+								</span>
+								<span class="review-detail__more-text">{other.short}</span>
+							</a>
+						))
+					}
+				</div>
+				<p class="review-detail__all-link">
+					<a href={reviewsHref}>{t('reviews.readAll')}</a>
+				</p>
+			</section>
+
+			<RelatedPages locale={locale} variant="topics" class="review-detail__topics" />
+			<ExternalResources locale={locale} class="review-detail__external" />
+			</div>
+		</div>
+	</main>
+	<SiteFooter locale={locale} />
+</Layout>
+
+<style>
+	.review-page {
+		overflow-x: clip;
+		padding-block: 2rem 3rem;
+	}
+
+	.review-page__wrap {
+		display: grid;
+		gap: 1.75rem;
+	}
+
+	.review-page__crumbs {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.45rem;
+		font-size: 0.8rem;
+		color: var(--ink-faint);
+	}
+
+	.review-page__crumbs a {
+		color: var(--ink-muted);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.review-page__crumbs a:hover {
+		color: var(--accent-hover);
+	}
+
+	.review-detail {
+		display: grid;
+		gap: 1.25rem;
+		padding: clamp(1.25rem, 3vw, 1.85rem);
+		border-radius: var(--radius-lg, 1rem);
+		border: 1px solid var(--line);
+		background:
+			radial-gradient(ellipse 80% 60% at 0% 0%, color-mix(in srgb, var(--magenta) 12%, transparent), transparent 55%),
+			var(--bg-panel);
+	}
+
+	.review-detail__media {
+		margin: 0 0 1rem;
+		max-width: 22rem;
+		border-radius: var(--radius-md, 0.75rem);
+		overflow: hidden;
+		border: 1px solid var(--line-soft);
+		background: var(--bg-elevated);
+	}
+
+	.review-detail__media img {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: 140px;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+	}
+
+	.review-detail__head {
+		display: flex;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	.review-detail__avatar {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 auto;
+		width: 3.25rem;
+		height: 3.25rem;
+		border-radius: 999px;
+		border: 1px solid var(--line-strong);
+		background: var(--bg-elevated);
+		color: var(--magenta-soft);
+		font-family: var(--font-display);
+		font-size: 1.35rem;
+		font-weight: 800;
+	}
+
+	.review-detail__meta {
+		display: grid;
+		gap: 0.4rem;
+		min-width: 0;
+	}
+
+	.review-detail__title {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(1.35rem, 3vw, 1.8rem);
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		line-height: 1.2;
+		color: var(--ink);
+		overflow-wrap: anywhere;
+	}
+
+	.review-detail__stars {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 0.55rem;
+		font-size: 1.05rem;
+		letter-spacing: 0.06em;
+		color: var(--accent-amber);
+	}
+
+	.review-detail__rating {
+		font-size: 0.85rem;
+		font-weight: 700;
+		color: var(--ink);
+		letter-spacing: 0;
+	}
+
+	.review-detail__date {
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.55rem;
+		font-size: 0.82rem;
+		color: var(--ink-faint);
+	}
+
+	.review-detail__tag,
+	.review-detail__verified {
+		display: inline-flex;
+		padding: 0.2rem 0.55rem;
+		border-radius: 999px;
+		font-size: 0.66rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+
+	.review-detail__tag {
+		border: 1px solid color-mix(in srgb, var(--magenta) 28%, var(--line));
+		background: var(--bg);
+		color: var(--magenta-soft);
+	}
+
+	.review-detail__verified {
+		border: 1px solid color-mix(in srgb, var(--ok) 35%, var(--line));
+		background: var(--bg);
+		color: var(--ok);
+	}
+
+	.review-detail__body {
+		margin: 0;
+		padding: 1.15rem 1.25rem;
+		border-left: 2px solid color-mix(in srgb, var(--magenta) 55%, var(--line));
+		border-radius: 0 0.65rem 0.65rem 0;
+		background: var(--bg-elevated);
+	}
+
+	.review-detail__body p {
+		margin: 0;
+		color: var(--ink-muted);
+		font-size: 1.02rem;
+		line-height: 1.75;
+	}
+
+	.review-detail__ctas {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem;
+	}
+
+	.review-detail__buy {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.8rem 1.35rem;
+		border-radius: 0.75rem;
+		font-size: 0.95rem;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.review-detail__link-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.8rem 1.1rem;
+		border-radius: 0.75rem;
+		font-size: 0.9rem;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.review-detail__more {
+		display: grid;
+		gap: 0.85rem;
+	}
+
+	.review-detail__more h2 {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: 1.2rem;
+		font-weight: 800;
+		color: var(--ink);
+	}
+
+	.review-detail__more-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0.75rem;
+	}
+
+	.review-detail__more-card {
+		display: grid;
+		gap: 0.45rem;
+		padding: 0.9rem 0.95rem;
+		border-radius: var(--radius-md, 0.75rem);
+		border: 1px solid var(--line);
+		background: var(--bg-panel);
+		color: inherit;
+		text-decoration: none;
+		transition:
+			border-color 0.2s ease,
+			transform 0.2s ease;
+	}
+
+	.review-detail__more-card:hover {
+		border-color: color-mix(in srgb, var(--magenta) 35%, var(--line));
+		transform: translateY(-2px);
+	}
+
+	.review-detail__more-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+	}
+
+	.review-detail__more-handle {
+		font-size: 0.8rem;
+		font-weight: 700;
+		color: var(--ink);
+		overflow-wrap: anywhere;
+	}
+
+	.review-detail__more-stars {
+		font-size: 0.72rem;
+		color: var(--accent-amber);
+		white-space: nowrap;
+	}
+
+	.review-detail__more-text {
+		font-size: 0.82rem;
+		line-height: 1.55;
+		color: var(--ink-muted);
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.review-detail__all-link {
+		margin: 0;
+		font-size: 0.88rem;
+	}
+
+	.review-detail__all-link a {
+		color: var(--link);
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.review-detail__all-link a:hover {
+		color: var(--ink);
+	}
+
+	.review-detail__topics {
+		margin-top: 0.5rem;
+	}
+
+	@media (max-width: 720px) {
+		.review-page {
+			padding-block: 1.35rem max(2.5rem, var(--safe-bottom));
+		}
+
+		.review-detail {
+			padding: 1rem 1.05rem;
+		}
+
+		.review-detail__more-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.review-detail__ctas {
+			flex-direction: column;
+		}
+
+		.review-detail__buy,
+		.review-detail__link-btn {
+			width: 100%;
+			min-height: var(--touch-min, 2.75rem);
+		}
+	}
+</style>

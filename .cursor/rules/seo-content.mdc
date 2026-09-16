@@ -1,0 +1,37 @@
+---
+description: SEO copy rules for content, FAQs, and simple page text
+globs: src/data/**/*.{ts,tsx},src/components/{HomeSeo,LocalizedPage,LocalizedHome,Hero}.astro,src/pages/**/*.astro
+alwaysApply: false
+---
+
+# SEO Content Writing Rules
+
+When editing copy in `src/data/` or homepage / page components:
+
+## Required shape
+
+- **Titles**: `{Game} {Page} | {Brand}` — under ~60 characters
+- **Descriptions**: one clear benefit + platform; under ~160 characters
+- **Body**: short paragraphs; lists over walls of text
+- **Internal links**: use nav labels (Features, Store, Status, FAQ) — few, purposeful
+
+## Homepage
+
+- Hero: brand name + one short line + Buy CTA
+- Categories: Features / Status / Store / Help — short link labels only
+- FAQ: simple questions employees would ask before buying
+
+## Rebrand checklist (copy)
+
+1. Edit `src/data/brand.ts` (name, url, game, keywords, plans) → `npm run sync:brand`
+2. Rewrite EN simple pages + FAQs with `{brand}` / `{game}` tokens
+3. Keep section count and heading style the same
+4. Keep “simple English” — no denser copy for “more SEO”
+5. Do not hardcode the old brand in Hero, footer, reviews, or 404
+
+## Forbidden
+
+- Rewriting pages into long SEO essays
+- Adding keyword piles in H1s
+- Changing URL architecture without an explicit product decision
+- Scraping third-party site images for SEO assets

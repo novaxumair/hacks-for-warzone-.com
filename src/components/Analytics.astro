@@ -1,0 +1,34 @@
+---
+/**
+ * Privacy-friendly analytics — enabled when PUBLIC_GA_ID or PUBLIC_PLAUSIBLE_DOMAIN is set at build time.
+ * Checkout clicks are tracked via data-analytics="checkout" on CTA anchors.
+ */
+const gaId = import.meta.env.PUBLIC_GA_ID?.trim();
+const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN?.trim();
+const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION?.trim();
+---
+
+{gscVerification ? <meta name="google-site-verification" content={gscVerification} /> : null}
+
+{
+	gaId ? (
+		<>
+			<script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
+			<script
+				is:inline
+				define:vars={{ gaId }}
+				set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaId}',{anonymize_ip:true});document.addEventListener('click',function(e){var t=e.target&&e.target.closest?e.target.closest('[data-analytics="checkout"]'):null;if(!t)return;gtag('event','begin_checkout',{event_category:'cta',event_label:t.getAttribute('href')||''});});`}
+			/>
+		</>
+	) : null
+}
+
+{
+	plausibleDomain ? (
+		<script
+			defer
+			data-domain={plausibleDomain}
+			src="https://plausible.io/js/script.js"
+		/>
+	) : null
+}

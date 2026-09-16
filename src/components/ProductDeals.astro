@@ -1,0 +1,225 @@
+---
+import { getLocalizedPath } from '../data/i18n/routing';
+import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import { productInfo, siteConfig } from '../data/site';
+import { getT } from '../i18n/server';
+
+interface Props {
+	locale?: LocaleCode;
+}
+
+const locale = Astro.props.locale ?? defaultLocale;
+const t = getT(locale);
+const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo.plans[0];
+const lifetime = productInfo.plans.find((p) => p.id === 'lifetime') ?? productInfo.plans[1];
+
+const included = [
+	t('deals.featEsp'),
+	t('deals.featAim'),
+	t('deals.featRadar'),
+	t('deals.featUpdates'),
+];
+---
+
+<section class="shop" aria-labelledby="shop-title">
+	<div class="shell">
+		<header class="shop__head">
+			<div>
+				<p class="shop__eyebrow">{t('deals.pricing')}</p>
+				<h2 id="shop-title">{t('deals.chooseLicense')}</h2>
+			</div>
+			<a class="shop__features" href={getLocalizedPath('features', locale)}>{t('deals.features')}</a>
+		</header>
+
+		<div class="shop__grid">
+			<article class="plan plan--featured">
+				<p class="plan__name">{t('product.monthly')}</p>
+				<p class="plan__price">
+					<span>${monthly.price}</span>
+					<small>{t('product.perMonth')}</small>
+				</p>
+				<ul class="plan__list">
+					{included.map((item) => <li>{item}</li>)}
+				</ul>
+				<a class="plan__cta plan__cta--solid" href={siteConfig.checkoutUrl} rel="noopener noreferrer">
+					{t('product.buyMonthly')}
+				</a>
+			</article>
+
+			<article class="plan">
+				<p class="plan__name">{t('product.lifetime')}</p>
+				<p class="plan__price">
+					<span>${lifetime.price}</span>
+					<small>{t('product.once')}</small>
+				</p>
+				<ul class="plan__list">
+					{included.map((item) => <li>{item}</li>)}
+				</ul>
+				<a class="plan__cta" href={siteConfig.checkoutUrl} rel="noopener noreferrer">
+					{t('product.buyLifetime')}
+				</a>
+			</article>
+		</div>
+	</div>
+</section>
+
+<style>
+	.shop {
+		padding-block: clamp(2.5rem, 5vw, 3.5rem);
+		background: var(--bg);
+		border-top: 1px solid var(--line-soft);
+	}
+
+	.shop__head {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 1rem;
+		margin-bottom: 1.35rem;
+	}
+
+	.shop__eyebrow {
+		margin: 0 0 0.4rem;
+		font-size: 0.75rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--magenta-soft);
+	}
+
+	.shop__head h2 {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(1.5rem, 2.8vw, 1.9rem);
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		color: var(--ink);
+	}
+
+	.shop__features {
+		font-size: 0.875rem;
+		font-weight: 500;
+		color: var(--ink-muted);
+	}
+
+	.shop__features:hover {
+		color: var(--magenta-soft);
+	}
+
+	.shop__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.85rem;
+	}
+
+	.plan {
+		display: flex;
+		flex-direction: column;
+		padding: 1.35rem 1.25rem 1.2rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md);
+		background: var(--bg-panel);
+	}
+
+	.plan--featured {
+		border-color: color-mix(in srgb, var(--magenta) 40%, var(--line));
+	}
+
+	.plan__name {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: 1.15rem;
+		font-weight: 700;
+		color: var(--ink);
+	}
+
+	.plan__price {
+		margin: 0.75rem 0 0;
+		display: flex;
+		align-items: baseline;
+		gap: 0.35rem;
+	}
+
+	.plan__price span {
+		font-family: var(--font-display);
+		font-size: 2.1rem;
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		color: var(--ink);
+	}
+
+	.plan--featured .plan__price span {
+		color: var(--magenta-soft);
+	}
+
+	.plan__price small {
+		font-size: 0.875rem;
+		color: var(--ink-faint);
+	}
+
+	.plan__list {
+		display: grid;
+		gap: 0.4rem;
+		margin: 1rem 0 0;
+		padding: 0;
+		list-style: none;
+		flex: 1;
+	}
+
+	.plan__list li {
+		padding-left: 0.9rem;
+		position: relative;
+		font-size: 0.875rem;
+		color: var(--ink-muted);
+	}
+
+	.plan__list li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.45em;
+		width: 0.35rem;
+		height: 0.35rem;
+		border-radius: 999px;
+		background: var(--magenta-soft);
+	}
+
+	.plan__cta {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		min-height: 2.75rem;
+		margin-top: 1.2rem;
+		border-radius: var(--radius-sm);
+		font-size: 0.9375rem;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.plan__cta--solid {
+		border-color: transparent;
+	}
+
+	@media (max-width: 720px) {
+		.shop__head {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.65rem;
+		}
+
+		.shop__features {
+			display: inline-flex;
+			align-items: center;
+			min-height: var(--touch-min, 2.75rem);
+		}
+
+		.shop__grid {
+			grid-template-columns: 1fr;
+		}
+
+		.plan--featured {
+			order: -1;
+		}
+	}
+</style>

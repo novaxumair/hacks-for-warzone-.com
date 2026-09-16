@@ -1,0 +1,16 @@
+# CI Workers Builds project (repo: warzone-cheats-org)
+name = "cheats-for-warzone"
+compatibility_date = "2026-01-01"
+main = "src/worker.ts"
+
+# Custom domains (cheatsforwarzone.com) are attached in the Cloudflare dashboard — not here.
+
+[build]
+command = "npm run build"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "404-page"
+# Worker serves sitemaps with a single Content-Type (avoids _headers rule stacking on static XML).
+run_worker_first = true

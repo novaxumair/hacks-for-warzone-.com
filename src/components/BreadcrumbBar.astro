@@ -1,0 +1,190 @@
+---
+import { getUi } from '../data/i18n';
+import { getGalleryUi } from '../data/i18n/gallery-ui';
+import { getLocalizedPath } from '../data/i18n/routing';
+import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import { getT } from '../i18n/server';
+
+interface Crumb {
+	label: string;
+	href?: string;
+}
+
+interface Props {
+	items?: Crumb[];
+	locale?: LocaleCode;
+}
+
+const locale = Astro.props.locale ?? defaultLocale;
+const ui = getUi(locale);
+const gallery = getGalleryUi(locale);
+const t = getT(locale);
+
+const {
+	items = [
+		{ label: ui.nav.home, href: getLocalizedPath('home', locale) },
+		{ label: ui.product.title },
+	],
+} = Astro.props;
+
+const updatesHref = getLocalizedPath('updates', locale);
+---
+
+<nav class="crumb-bar" aria-label={t('common.breadcrumb')}>
+	<div class="crumb-bar__inner">
+		<ol class="crumb-bar__list">
+			{
+				items.map((item, index) => (
+					<li class="crumb-bar__item">
+						{index > 0 && (
+							<span class="crumb-bar__sep" aria-hidden="true">
+								/
+							</span>
+						)}
+						{item.href ? (
+							<a href={item.href} class="crumb-bar__link">
+								{item.label}
+							</a>
+						) : (
+							<span class="crumb-bar__current" aria-current="page">
+								{item.label}
+							</span>
+						)}
+					</li>
+				))
+			}
+		</ol>
+
+		<a href={updatesHref} class="activity-btn" aria-label={gallery.updatesLabel}>
+			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+				<path
+					d="M4 6h16M4 12h10M4 18h14"
+					stroke="currentColor"
+					stroke-width="1.8"
+					stroke-linecap="round"></path>
+			</svg>
+			<span class="activity-btn__label activity-btn__label--full">{gallery.updatesLabel}</span>
+			<span class="activity-btn__label activity-btn__label--short">{gallery.updatesShort}</span>
+		</a>
+	</div>
+</nav>
+
+<style>
+	.crumb-bar {
+		border-block: 1px solid var(--line-soft);
+		background: color-mix(in srgb, var(--bg) 94%, transparent);
+		content-visibility: auto;
+		contain-intrinsic-size: 1px 64px;
+	}
+
+	@media (min-width: 761px) {
+		.crumb-bar {
+			background: color-mix(in srgb, var(--bg) 86%, transparent);
+			backdrop-filter: blur(12px);
+		}
+	}
+
+	.crumb-bar__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		width: min(100% - (var(--page-gutter) * 2), var(--page-max));
+		margin: 0 auto;
+		padding: 0.85rem 0;
+	}
+
+	.crumb-bar__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.35rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0.875rem;
+		color: var(--color-faint);
+	}
+
+	.crumb-bar__item {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+	}
+
+	.crumb-bar__sep {
+		opacity: 0.45;
+	}
+
+	.crumb-bar__link {
+		color: var(--color-muted);
+		transition: color 0.2s ease;
+	}
+
+	.crumb-bar__link:hover {
+		color: var(--accent-hover);
+	}
+
+	.crumb-bar__current {
+		color: var(--ink);
+		font-weight: 500;
+	}
+
+	.activity-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		flex-shrink: 0;
+		padding: 0.55rem 1rem;
+		border-radius: 0.65rem;
+		border: 1px solid var(--line-strong);
+		background: var(--bg-elevated);
+		color: var(--ink);
+		font-size: 0.875rem;
+		font-weight: 600;
+		transition:
+			border-color 0.2s ease,
+			background 0.2s ease;
+	}
+
+	.activity-btn:hover {
+		border-color: color-mix(in srgb, var(--magenta) 40%, var(--line-strong));
+		background: var(--bg-hover);
+	}
+
+	.activity-btn__label--short {
+		display: none;
+	}
+
+	@media (max-width: 640px) {
+		.crumb-bar__inner {
+			flex-direction: column;
+			align-items: stretch;
+			gap: 0.65rem;
+			padding-block: 0.7rem;
+		}
+
+		.activity-btn {
+			justify-content: center;
+			min-height: var(--touch-min);
+			width: 100%;
+		}
+
+		.activity-btn__label--full {
+			display: none;
+		}
+
+		.activity-btn__label--short {
+			display: inline;
+		}
+
+		.crumb-bar__list {
+			row-gap: 0.35rem;
+			font-size: 0.82rem;
+		}
+
+		.crumb-bar__current {
+			overflow-wrap: anywhere;
+		}
+	}
+</style>

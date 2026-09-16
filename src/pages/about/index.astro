@@ -1,0 +1,187 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import TrustBar from '../../components/TrustBar.astro';
+import { fillBrandTokens, productInfo, siteConfig } from '../../data/site';
+import { getSelfHreflangAlternates } from '../../data/i18n/routing';
+
+const title = 'About Warzone Cheats | Team & Editorial Standards';
+const description =
+	'About Warzone Cheats at cheatsforwarzone.com — who we are, how we test ESP, aimbot & radar tools, and our editorial standards for undetected Warzone cheats on PC.';
+const canonicalPath = '/about/';
+const hreflangAlternates = getSelfHreflangAlternates(canonicalPath);
+
+const extraGraph = [
+	{
+		'@type': 'AboutPage',
+		'@id': `${siteConfig.url}${canonicalPath}#about`,
+		name: title,
+		description,
+		url: `${siteConfig.url}${canonicalPath}`,
+		mainEntity: {
+			'@type': 'Organization',
+			'@id': `${siteConfig.url}/#organization`,
+			name: siteConfig.name,
+			url: siteConfig.url,
+			description: fillBrandTokens('{brand} maintains undetected {primaryKeyword} for {game} on Windows PC.'),
+		},
+	},
+];
+---
+
+<Layout
+	title={title}
+	description={description}
+	canonicalPath={canonicalPath}
+	hreflangAlternates={hreflangAlternates}
+	ogLocaleAlternates={false}
+	ogImage={siteConfig.defaultOgImage}
+	ogImageAlt="About Warzone Cheats"
+	locale="en"
+	breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]}
+	extraGraph={extraGraph}
+>
+	<Navbar />
+	<TrustBar />
+	<main class="standalone-page">
+		<div class="shell standalone-page__wrap">
+			<header>
+				<p class="standalone-page__eyebrow">About us</p>
+				<h1>About {siteConfig.name}</h1>
+				<p class="standalone-page__lede">
+					{siteConfig.name} is the official home for undetected Warzone cheats on Windows PC — ESP wallhack,
+					soft aim, 2D radar, and Ricochet maintenance after every patch.
+				</p>
+			</header>
+
+			<section>
+				<h2>What we publish</h2>
+				<p>
+					We maintain product pages, setup guides, buyer reviews, FAQs, and blog posts that explain how ESP,
+					aimbot, and radar behave in real Call of Duty: Warzone matches. Our goal is accurate, dated information — not
+					hype.
+				</p>
+			</section>
+
+			<section>
+				<h2>How we review tools</h2>
+				<ul>
+					<li>Check <a href="/updates/">live status</a> after Ricochet and Call of Duty: Warzone patches.</li>
+					<li>Verify ESP categories, aimbot smoothing, and radar cues on Windows 10 &amp; 11.</li>
+					<li>Document delivery, support response times, and refund eligibility clearly.</li>
+					<li>Compare alternatives honestly on our <a href="/compare/">comparison hub</a>.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Editorial policy</h2>
+				<p>
+					We label comparison posts and buyer reviews as editorial content. Affiliate checkout links are
+					disclosed. We do not guarantee undetected status or account safety — using cheats may violate Riot
+					Games terms. Read our <a href="/terms/">Terms of Use</a> and <a href="/privacy-policy/">Privacy Policy</a>.
+				</p>
+			</section>
+
+			<section>
+				<h2>Contact</h2>
+				<p>
+					Questions about licenses, setup, or billing: <a href={`mailto:${siteConfig.supportEmail}`}>{siteConfig.supportEmail}</a>
+					or the <a href="/support/">Support page</a>. Want to contribute? See <a href="/write-for-us/">Write for us</a>.
+				</p>
+			</section>
+
+			<p class="standalone-page__cta">
+				<a href={siteConfig.checkoutUrl} data-analytics="checkout">Get {productInfo.name}</a>
+				<a class="standalone-page__cta-secondary" href="/compare/">Compare plans &amp; competitors</a>
+			</p>
+		</div>
+	</main>
+	<SiteFooter />
+</Layout>
+
+<style>
+	.standalone-page {
+		padding: 2rem 0 3.5rem;
+	}
+
+	.standalone-page__wrap {
+		max-width: 46rem;
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.standalone-page__eyebrow {
+		margin: 0 0 0.35rem;
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--magenta-soft);
+	}
+
+	.standalone-page h1 {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+		font-weight: 800;
+		color: var(--ink);
+	}
+
+	.standalone-page__lede {
+		margin: 0.75rem 0 0;
+		color: var(--ink-muted);
+		line-height: 1.65;
+	}
+
+	.standalone-page h2 {
+		margin: 0 0 0.5rem;
+		font-size: 1.15rem;
+		font-weight: 700;
+		color: var(--ink);
+	}
+
+	.standalone-page p,
+	.standalone-page li {
+		margin: 0;
+		color: var(--ink-muted);
+		line-height: 1.65;
+	}
+
+	.standalone-page ul {
+		margin: 0;
+		padding-left: 1.2rem;
+		display: grid;
+		gap: 0.45rem;
+	}
+
+	.standalone-page a {
+		color: var(--link);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.standalone-page a:hover {
+		color: var(--accent-hover);
+	}
+
+	.standalone-page__cta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 0.5rem;
+	}
+
+	.standalone-page__cta a {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.75rem 1.2rem;
+		border-radius: 0.75rem;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.standalone-page__cta-secondary {
+		border-color: transparent;
+	}
+</style>

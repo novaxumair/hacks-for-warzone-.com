@@ -1,0 +1,282 @@
+---
+import '../styles/global.css';
+import Analytics from '../components/Analytics.astro';
+import { productInfo, siteConfig } from '../data/site';
+import { brandTheme, brandThemeInlineStyle, brandThemeRootCss } from '../data/brand-theme';
+import I18nHead from '../components/I18nHead.astro';
+import LocaleSuggest from '../components/LocaleSuggest.astro';
+import InlineBrandEditor from '../components/InlineBrandEditor.astro';
+import { defaultLocale, localeMap, locales, type LocaleCode } from '../data/i18n/locales';
+import type { PageId } from '../data/i18n/content.generated';
+import { buildCanonicalUrl, type HreflangAlternate } from '../data/i18n/routing';
+import { heroHeight, heroWidth } from '../lib/responsive-images';
+import { seoDescription, seoPageTitle } from '../data/site-core';
+
+interface Crumb {
+	label: string;
+	href?: string;
+}
+
+interface Props {
+	title: string;
+	description: string;
+	canonicalPath?: string;
+	ogImage?: string;
+	ogImageAlt?: string;
+	noindex?: boolean;
+	type?: 'website' | 'article';
+	breadcrumbs?: Crumb[];
+	locale?: LocaleCode;
+	pageId?: PageId;
+	hreflangAlternates?: HreflangAlternate[];
+	extraGraph?: Record<string, unknown>[];
+	lcpImage?: string;
+	lcpImageSrcSet?: string;
+	lcpImageSizes?: string;
+	/** When false, omits og:locale:alternate tags (EN-only pages like guides). */
+	ogLocaleAlternates?: boolean;
+}
+
+const {
+	title,
+	description,
+	canonicalPath = Astro.url.pathname,
+	ogImage = siteConfig.defaultOgImage,
+	ogImageAlt = title,
+	noindex = false,
+	type = 'website',
+	breadcrumbs,
+	locale = defaultLocale,
+	pageId,
+	hreflangAlternates,
+	extraGraph = [],
+	lcpImage,
+	lcpImageSrcSet,
+	lcpImageSizes = '100vw',
+	ogLocaleAlternates = true,
+} = Astro.props;
+
+/** Normalize SERP title/description on every indexable page. */
+const pageTitle = seoPageTitle(title);
+const pageDescription = seoDescription(description);
+
+const canonicalURL = buildCanonicalUrl(canonicalPath);
+const ogImageURL = new URL(ogImage, siteConfig.url).href;
+const logoURL = new URL(siteConfig.logoRaster, siteConfig.url).href;
+const ogImageIsLogo = ogImage === siteConfig.logo;
+const ogImageType = ogImage.endsWith('.webp') ? 'image/webp' : 'image/png';
+const ogImageWidth = ogImageIsLogo ? '512' : String(heroWidth);
+const ogImageHeight = ogImageIsLogo ? '512' : String(heroHeight);
+const twitterCard = ogImageIsLogo ? 'summary' : 'summary_large_image';
+const robots = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
+const siteDescription = `${productInfo.tagline}. ${productInfo.summary}`;
+const localeMeta = localeMap[locale];
+const ogLocaleAlternateLocales = ogLocaleAlternates ? locales.filter((l) => l.code !== locale) : [];
+const schemaLanguage = localeMeta.ogLocale.replace('_', '-');
+const schemaLanguages = locales.map((l) => l.ogLocale.replace('_', '-'));
+const worldwidePlace = { '@type': 'Place' as const, name: siteConfig.market };
+
+const graph: Record<string, unknown>[] = [
+	{
+		'@type': 'WebPage',
+		'@id': `${canonicalURL}#webpage`,
+		url: canonicalURL,
+		name: pageTitle,
+		description: pageDescription,
+		isPartOf: { '@id': `${siteConfig.url}/#website` },
+		inLanguage: schemaLanguage,
+		primaryImageOfPage: {
+			'@type': 'ImageObject',
+			url: ogImageURL,
+			name: ogImageAlt,
+			description: ogImageAlt,
+			width: Number(ogImageWidth),
+			height: Number(ogImageHeight),
+		},
+	},
+	{
+		'@type': 'WebSite',
+		'@id': `${siteConfig.url}/#website`,
+		url: siteConfig.url,
+		name: siteConfig.name,
+		description: siteDescription,
+		inLanguage: schemaLanguages,
+		publisher: { '@id': `${siteConfig.url}/#organization` },
+		logo: {
+			'@type': 'ImageObject',
+			url: logoURL,
+			width: siteConfig.logoRasterWidth,
+			height: siteConfig.logoRasterHeight,
+		},
+	},
+	{
+		'@type': 'Organization',
+		'@id': `${siteConfig.url}/#organization`,
+		name: siteConfig.name,
+		url: siteConfig.url,
+		email: siteConfig.supportEmail,
+		...(siteConfig.socialSameAs.length > 0 ? { sameAs: siteConfig.socialSameAs } : {}),
+		areaServed: worldwidePlace,
+		logo: {
+			'@type': 'ImageObject',
+			url: logoURL,
+			width: siteConfig.logoRasterWidth,
+			height: siteConfig.logoRasterHeight,
+		},
+		image: logoURL,
+		contactPoint: {
+			'@type': 'ContactPoint',
+			contactType: 'customer support',
+			email: siteConfig.supportEmail,
+			areaServed: worldwidePlace,
+			availableLanguage: locales.map((l) => l.name),
+		},
+	},
+];
+
+if (breadcrumbs && breadcrumbs.length > 0) {
+	graph.push({
+		'@type': 'BreadcrumbList',
+		'@id': `${canonicalURL}#breadcrumb`,
+		itemListElement: breadcrumbs.map((crumb, index) => ({
+			'@type': 'ListItem',
+			position: index + 1,
+			name: crumb.label,
+			...(crumb.href
+				? { item: new URL(crumb.href, siteConfig.url).href }
+				: { item: canonicalURL }),
+		})),
+	});
+}
+
+if (extraGraph.length > 0) {
+	// Nodes must not carry a nested @context inside @graph (invalid JSON-LD).
+	graph.push(
+		...extraGraph.map((node) => {
+			const { ['@context']: _ignored, ...rest } = node as Record<string, unknown> & {
+				'@context'?: unknown;
+			};
+			return rest;
+		}),
+	);
+}
+
+const softwareNode = extraGraph.find((node) => node['@type'] === 'SoftwareApplication');
+const productNode = extraGraph.find((node) => node['@type'] === 'Product');
+const aboutNode = softwareNode ?? productNode;
+if (aboutNode) {
+	const webpage = graph.find((node) => node['@type'] === 'WebPage') as Record<string, unknown> | undefined;
+	if (webpage) {
+		webpage.about = { '@id': aboutNode['@id'] };
+	}
+}
+---
+
+<!doctype html>
+<html lang={locale} dir={localeMeta.dir} style={brandThemeInlineStyle()}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<meta name="color-scheme" content="dark" />
+		<meta name="theme-color" content={brandTheme.bg} />
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href="/fonts/barlow-latin-400-normal.woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href="/fonts/bebas-neue-latin-400-normal.woff2"
+			crossorigin
+		/>
+		{/* Self-hosted Bebas Neue + Barlow (latin) — no Google Fonts. */}
+		<script is:inline src="/trusted-types-policy.js"></script>
+		<script is:inline src="/nav-menu.js"></script>
+		<meta name="robots" content={robots} />
+		<meta name="googlebot" content={robots} />
+		<meta name="description" content={pageDescription} />
+		<meta name="author" content={siteConfig.name} />
+		<link rel="canonical" href={canonicalURL} />
+		{
+			lcpImageSrcSet ? (
+				<link
+					rel="preload"
+					as="image"
+					href={lcpImage ?? lcpImageSrcSet.split(' ')[0]}
+					type="image/webp"
+					fetchpriority="high"
+					imagesrcset={lcpImageSrcSet}
+					imagesizes={lcpImageSizes}
+				/>
+			) : (
+				lcpImage && (
+					<link
+						rel="preload"
+						as="image"
+						href={lcpImage}
+						type="image/webp"
+						fetchpriority="high"
+					/>
+				)
+			)
+		}
+		{pageId && <I18nHead pageId={pageId} locale={locale} />}
+		{
+			!pageId &&
+				hreflangAlternates?.map((alt) => (
+					<link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+				))
+		}
+
+		<meta property="og:type" content={type} />
+		<meta property="og:site_name" content={siteConfig.name} />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={pageDescription} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:image" content={ogImageURL} />
+		<meta property="og:image:secure_url" content={ogImageURL} />
+		<meta property="og:image:type" content={ogImageType} />
+		<meta property="og:image:width" content={ogImageWidth} />
+		<meta property="og:image:height" content={ogImageHeight} />
+		<meta property="og:image:alt" content={ogImageAlt} />
+		<meta property="og:locale" content={localeMeta.ogLocale} />
+		{ogLocaleAlternateLocales.map((alt) => (
+			<meta property="og:locale:alternate" content={alt.ogLocale} />
+		))}
+
+		<meta name="twitter:card" content={twitterCard} />
+		{siteConfig.twitterSite ? <meta name="twitter:site" content={siteConfig.twitterSite} /> : null}
+		<meta name="twitter:title" content={pageTitle} />
+		<meta name="twitter:description" content={pageDescription} />
+		<meta name="twitter:image" content={ogImageURL} />
+		<meta name="twitter:image:alt" content={ogImageAlt} />
+
+		{!noindex && (
+			<script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />
+		)}
+
+		<title>{pageTitle}</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+		<Analytics />
+	</head>
+	<body>
+		<div class="site-atmosphere" aria-hidden="true">
+			<div class="site-atmosphere__shade"></div>
+		</div>
+		{pageId && <LocaleSuggest currentLocale={locale} pageId={pageId} />}
+		<slot />
+		<InlineBrandEditor />
+		{/* After Vite/Tailwind CSS so brand tokens win over @theme defaults */}
+		<style id="brand-theme-vars" set:html={brandThemeRootCss()}></style>
+	</body>
+</html>

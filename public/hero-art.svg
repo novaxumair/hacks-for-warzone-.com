@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" fill="none">
+  <defs>
+    <linearGradient id="splash" x1="200" y1="40" x2="900" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c3aed"/>
+      <stop offset="0.4" stop-color="#a855f7"/>
+      <stop offset="0.75" stop-color="#d946ef"/>
+      <stop offset="1" stop-color="#581c87"/>
+    </linearGradient>
+    <radialGradient id="mist" cx="70%" cy="45%" r="55%">
+      <stop stop-color="#c084fc" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fig" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#1e1033"/>
+      <stop offset="1" stop-color="#0a0612"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <ellipse cx="620" cy="280" rx="340" ry="260" fill="url(#mist)"/>
+  <path d="M380 40 C520 -20 780 40 880 180 C960 320 840 520 620 540 C420 560 300 420 320 280 C330 180 300 80 380 40Z" fill="url(#splash)" opacity="0.95"/>
+  <path d="M480 80 C610 40 780 90 840 200 C900 320 780 460 600 470 C460 478 400 360 420 250 C435 170 400 105 480 80Z" fill="#c084fc" opacity="0.35" filter="url(#blur)"/>
+  <!-- left figure -->
+  <g opacity="0.92">
+    <path d="M430 170 C450 120 510 115 535 165 L555 250 C560 280 545 300 520 305 L500 520 L400 520 L410 310 C390 295 385 250 400 220 Z" fill="url(#fig)"/>
+    <ellipse cx="490" cy="145" rx="32" ry="38" fill="#140a22"/>
+    <path d="M455 200 L575 210 L560 250 L465 245 Z" fill="#2a1845"/>
+    <rect x="505" y="175" width="10" height="120" rx="3" fill="#c084fc" opacity="0.7"/>
+  </g>
+  <!-- right figure -->
+  <g opacity="0.95">
+    <path d="M610 150 C640 95 720 100 745 165 L770 260 C780 295 755 320 725 325 L710 520 L590 520 L600 320 C575 300 575 250 595 215 Z" fill="url(#fig)"/>
+    <ellipse cx="690" cy="130" rx="34" ry="40" fill="#140a22"/>
+    <path d="M640 185 L770 200 L755 250 L650 240 Z" fill="#3b1d63"/>
+    <path d="M720 165 L735 165 L795 280 L775 290 Z" fill="#a855f7" opacity="0.55"/>
+  </g>
+  <circle cx="760" cy="120" r="40" fill="#f0abfc" opacity="0.15" filter="url(#blur)"/>
+</svg>

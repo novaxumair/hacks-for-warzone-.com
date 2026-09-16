@@ -1,0 +1,841 @@
+---
+import Layout from './Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { getUi } from '../data/i18n';
+import { getLocalizedPath, resolvePageContextFromPath, type PageId } from '../data/i18n/routing';
+import { warzoneImages } from '../data/warzone';
+import { isHeroMarketingImage } from '../data/product-images';
+import {
+	heroPreloadSrc,
+	heroSizes,
+	heroSrcSet,
+	heroWidth,
+	heroHeight,
+	contentSrcSet,
+	galleryTileSizes,
+} from '../lib/responsive-images';
+import { getPageGalleryImages } from '../data/page-images';
+import { defaultLocale } from '../data/i18n/locales';
+import { siteConfig } from '../data/site';
+import { getT } from '../i18n/server';
+import { absoluteImageUrl } from '../data/page-images';
+import RelatedPages from '../components/RelatedPages.astro';
+import CategoryRow from '../components/CategoryRow.astro';
+import TrustStrip from '../components/TrustStrip.astro';
+import ExternalResources from '../components/ExternalResources.astro';
+
+type GalleryInput = string | { src: string; alt: string };
+
+interface Props {
+	title: string;
+	description: string;
+	canonicalPath?: string;
+	heading: string;
+	intro: string;
+	/** Short label for breadcrumb trail — defaults to `heading` when omitted. */
+	breadcrumbLabel?: string;
+	eyebrow?: string;
+	heroImage?: string;
+	heroAlt?: string;
+	gallery?: ReadonlyArray<GalleryInput>;
+	galleryTitle?: string;
+	ctaPrimary?: { href: string; label: string; edit?: string };
+	introEdit?: string;
+	showGallery?: boolean;
+	showRelatedPages?: boolean;
+	showExternalResources?: boolean;
+	showCategoryRow?: boolean;
+	locale?: import('../data/i18n/locales').LocaleCode;
+	pageId?: import('../data/i18n/content.generated').PageId;
+	extraGraph?: Record<string, unknown>[];
+}
+
+const {
+	title,
+	description,
+	canonicalPath = '/',
+	heading,
+	intro,
+	breadcrumbLabel,
+	eyebrow,
+	heroImage = warzoneImages.hero,
+	heroAlt,
+	gallery: galleryProp,
+	galleryTitle,
+	ctaPrimary,
+	introEdit,
+	showGallery = true,
+	showRelatedPages = true,
+	showExternalResources = true,
+	showCategoryRow = true,
+	locale = defaultLocale,
+	pageId: pageIdProp,
+	extraGraph = [],
+} = Astro.props;
+
+const t = getT(locale);
+const resolvedHeroAlt =
+	(heroAlt && heroAlt.trim()) ||
+	t('images.hero') ||
+	`${siteConfig.name} — Call of Duty: Warzone ESP and aimbot`;
+const resolvedGalleryTitle = galleryTitle ?? t('common.inGameLook');
+
+function resolvePageId(path: string): PageId | undefined {
+	return resolvePageContextFromPath(path).pageId;
+}
+
+const pageId = pageIdProp ?? resolvePageId(canonicalPath);
+const gallery =
+	galleryProp ??
+	(pageId ? getPageGalleryImages(pageId) : warzoneImages.product.slice(0, 3));
+const ui = getUi(locale);
+const homeHref = getLocalizedPath('home', locale);
+const breadcrumbCurrent = breadcrumbLabel?.trim() || heading;
+const resolvedEyebrow = eyebrow?.trim();
+const showEyebrow =
+	resolvedEyebrow &&
+	resolvedEyebrow.toLowerCase() !== breadcrumbCurrent.toLowerCase() &&
+	resolvedEyebrow.toLowerCase() !== heading.trim().toLowerCase();
+
+const normalizedGallery = gallery
+	.map((item) => {
+		if (typeof item !== 'string') {
+			const alt = item.alt?.trim() || resolvedHeroAlt;
+			const src = item.src;
+			const url = 'url' in item && item.url ? item.url : absoluteImageUrl(src);
+			return { src, alt, url };
+		}
+		return { src: item, alt: resolvedHeroAlt, url: absoluteImageUrl(item) };
+	})
+	.filter((item) => Boolean(item.src));
+
+const breadcrumbs = [
+	{ label: ui.nav.home, href: homeHref },
+	{ label: breadcrumbCurrent },
+];
+
+const useHomeAgent = isHeroMarketingImage(heroImage);
+---
+
+<Layout
+	title={title}
+	description={description}
+	canonicalPath={canonicalPath}
+	ogImage={heroImage}
+	ogImageAlt={resolvedHeroAlt}
+	breadcrumbs={breadcrumbs}
+	locale={locale}
+	pageId={pageId}
+	extraGraph={extraGraph}
+	lcpImage={useHomeAgent ? heroPreloadSrc : heroImage.endsWith('.webp') ? heroImage : undefined}
+	lcpImageSrcSet={useHomeAgent ? heroSrcSet : contentSrcSet(heroImage)}
+	lcpImageSizes={useHomeAgent ? heroSizes : '100vw'}
+>
+	<Navbar locale={locale} pageId={pageId} />
+	{pageId === 'pricing' || pageId === 'setup' || pageId === 'features' ? (
+		<TrustStrip locale={locale} />
+	) : null}
+	<main class="page">
+		<section class="banner">
+			<div class="banner__media">
+				{
+					useHomeAgent ? (
+						<img
+							src={heroPreloadSrc}
+							srcset={heroSrcSet}
+							sizes={heroSizes}
+							alt={resolvedHeroAlt}
+							width={heroWidth}
+							height={heroHeight}
+							class="banner__img"
+							fetchpriority="high"
+							loading="eager"
+							decoding="async"
+						/>
+					) : (
+						<img
+							src={heroImage}
+							{...(contentSrcSet(heroImage)
+								? { srcset: contentSrcSet(heroImage), sizes: '100vw' }
+								: {})}
+							alt={resolvedHeroAlt}
+							width="1280"
+							height="720"
+							class="banner__img"
+							fetchpriority="high"
+							loading="eager"
+							decoding="async"
+						/>
+					)
+				}
+				<div class="banner__scrim" aria-hidden="true"></div>
+			</div>
+
+			<div class="shell banner__shell">
+				<div class="banner__content">
+					<nav class="banner__crumbs" aria-label={t('common.breadcrumb')}>
+						<a href={homeHref}>{ui.nav.home}</a>
+						<span aria-hidden="true">/</span>
+						<span aria-current="page">{breadcrumbCurrent}</span>
+					</nav>
+					{showEyebrow && <p class="banner__eyebrow">{resolvedEyebrow}</p>}
+					<h1 class="banner__title">{heading}</h1>
+					<p class="banner__intro" data-edit={introEdit || undefined}>{intro}</p>
+					{
+						ctaPrimary && (
+							<div class="banner__actions">
+								<a
+									class="btn-buy"
+									href={ctaPrimary.href}
+									rel={ctaPrimary.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+								>
+									<span data-edit={ctaPrimary.edit || undefined}>{ctaPrimary.label}</span>
+								</a>
+							</div>
+						)
+					}
+				</div>
+			</div>
+		</section>
+
+		<div class="shell page__wrap">
+			<article class:list={['article', pageId === 'hacks' && 'article--guide']}>
+				<slot />
+				{showRelatedPages && pageId && (
+					<RelatedPages locale={locale} pageId={pageId} />
+				)}
+				{showExternalResources && <ExternalResources locale={locale} />}
+			</article>
+
+			{
+				showGallery && normalizedGallery.length > 0 && (
+					<section class="gallery-block" aria-labelledby="page-gallery-title">
+						<header class="gallery-block__head">
+							<p class="gallery-block__eyebrow">{t('common.gallery')}</p>
+							<h2 id="page-gallery-title">{resolvedGalleryTitle}</h2>
+						</header>
+						<div class="gallery-block__grid">
+							{normalizedGallery.map((image) => (
+								<figure
+									class="gallery-block__item"
+									itemscope
+									itemtype="https://schema.org/ImageObject"
+								>
+									<link itemprop="url" href={image.url} />
+									<meta itemprop="contentUrl" content={image.url} />
+									<img
+										src={image.src}
+										srcset={contentSrcSet(image.src)}
+										sizes={galleryTileSizes}
+										alt={image.alt}
+										itemprop="contentUrl"
+										width="800"
+										height="500"
+										loading="lazy"
+										decoding="async"
+									/>
+									<meta itemprop="name" content={image.alt} />
+								</figure>
+							))}
+						</div>
+					</section>
+				)
+			}
+		</div>
+	</main>
+	{showCategoryRow && pageId && <CategoryRow locale={locale} />}
+	<SiteFooter locale={locale} />
+</Layout>
+
+<style>
+	.page {
+		overflow-x: clip;
+		padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px));
+	}
+
+	.banner {
+		position: relative;
+		isolation: isolate;
+		min-height: clamp(16rem, 32vw, 22rem);
+		display: grid;
+		align-items: end;
+		border-bottom: 1px solid var(--line-soft);
+		background: transparent;
+	}
+
+	.banner__media {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		overflow: hidden;
+	}
+
+	.banner__media picture,
+	.banner__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	.banner__scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			90deg,
+			rgba(8, 9, 10, 0.94) 0%,
+			rgba(8, 9, 10, 0.72) 42%,
+			rgba(8, 9, 10, 0.25) 100%
+		);
+	}
+
+	.banner__shell {
+		position: relative;
+		z-index: 1;
+		padding-block: clamp(2.25rem, 4.5vw, 3.25rem) clamp(1.5rem, 3vw, 2.25rem);
+	}
+
+	.banner__content {
+		width: min(100%, 34rem);
+	}
+
+	.banner__crumbs {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.4rem;
+		margin: 0 0 0.75rem;
+		font-size: 0.8rem;
+		color: color-mix(in srgb, var(--ink-heading) 68%, transparent);
+	}
+
+	.banner__crumbs a {
+		color: color-mix(in srgb, var(--ink-heading) 88%, transparent);
+		font-weight: 600;
+	}
+
+	.banner__crumbs a:hover {
+		color: #fff;
+	}
+
+	.banner__eyebrow {
+		margin: 0 0 0.4rem;
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--magenta-soft);
+	}
+
+	.banner__title {
+		margin: 0;
+		font-family: var(--font-warzone);
+		font-size: clamp(2rem, 4.2vw, 3rem);
+		font-weight: 400;
+		letter-spacing: 0.06em;
+		line-height: 0.98;
+		color: var(--ink-heading);
+		text-transform: uppercase;
+		text-wrap: balance;
+		text-shadow:
+			0 2px 6px rgba(0, 0, 0, 0.38),
+			0 6px 20px rgba(0, 0, 0, 0.22);
+	}
+
+	.banner__intro {
+		margin: 0.7rem 0 0;
+		color: color-mix(in srgb, var(--ink-heading) 78%, transparent);
+		font-size: 0.975rem;
+		line-height: 1.55;
+	}
+
+	.banner__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem;
+		margin-top: 1.2rem;
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 2.5rem;
+		padding: 0.65rem 1.15rem;
+		border-radius: 999px;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.btn--ghost {
+		border: none;
+	}
+
+	.page__wrap {
+		display: grid;
+		gap: 2rem;
+		padding-block: clamp(1.5rem, 3vw, 2.25rem) 3rem;
+	}
+
+	.article {
+		width: min(100%, var(--content-max));
+		display: grid;
+		gap: 1.15rem;
+		color: var(--ink-muted);
+		line-height: 1.65;
+	}
+
+	.article :global(.card-panel) {
+		padding: 1.35rem 1.4rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md);
+		background: var(--bg-panel);
+	}
+
+	.article :global(h2) {
+		margin: 0 0 0.9rem;
+		font-family: var(--font-display);
+		font-size: 1.35rem;
+		font-weight: 400;
+		line-height: 1.05;
+		letter-spacing: 0.05em;
+		color: var(--ink);
+		text-transform: uppercase;
+	}
+
+	.article :global(p) {
+		margin: 0;
+		font-size: 0.975rem;
+		line-height: 1.65;
+		color: var(--ink-secondary);
+	}
+
+	.article :global(p + p) {
+		margin-top: 0.75rem;
+	}
+
+	.article :global(ul) {
+		margin: 1rem 0 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 0.55rem;
+	}
+
+	.article :global(.card-panel--features ul) {
+		margin-top: 0.85rem;
+		padding-top: 0.85rem;
+		border-top: 1px solid var(--line-soft);
+	}
+
+	@media (min-width: 640px) {
+		.article :global(.card-panel--features ul) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			column-gap: 1.25rem;
+			row-gap: 0.65rem;
+		}
+	}
+
+	.article--guide {
+		gap: 1.5rem;
+	}
+
+	.article--guide :global(.card-panel) {
+		padding: clamp(1.35rem, 2.5vw, 1.85rem) clamp(1.4rem, 2.5vw, 1.9rem);
+		box-shadow: 0 1px 0 color-mix(in srgb, var(--ink) 4%, transparent);
+	}
+
+	.article--guide :global(.card-panel__body) {
+		display: grid;
+		gap: 0;
+	}
+
+	.article--guide :global(.guide-heading) {
+		display: flex;
+		align-items: baseline;
+		gap: 0.65rem;
+		margin-bottom: 1rem;
+	}
+
+	.article--guide :global(.guide-heading__index) {
+		flex: 0 0 auto;
+		font-family: var(--font-display);
+		font-size: 0.72rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		color: var(--magenta);
+		opacity: 0.9;
+	}
+
+	.article--guide :global(.card-panel--intro) {
+		border-left: 4px solid var(--magenta);
+		background: linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--magenta) 8%, var(--bg-panel)),
+			var(--bg-panel) 55%
+		);
+	}
+
+	.article--guide :global(.card-panel--intro h2),
+	.article--guide :global(.card-panel--features h2) {
+		font-size: clamp(1.15rem, 2.2vw, 1.32rem);
+	}
+
+	.article--guide :global(.guide-lead) {
+		font-size: clamp(1rem, 1.8vw, 1.05rem);
+		line-height: 1.75;
+		color: var(--ink);
+	}
+
+	.article--guide :global(.guide-bundle) {
+		margin-top: 1rem;
+		padding: 0.85rem 1rem;
+		border-radius: var(--radius-sm);
+		border: 1px solid color-mix(in srgb, var(--magenta) 20%, var(--line));
+		background: color-mix(in srgb, var(--magenta) 5%, var(--bg-elevated));
+		font-size: 0.95rem;
+		line-height: 1.65;
+		color: var(--ink-secondary);
+	}
+
+	.article--guide :global(.card-panel--features) {
+		border-color: color-mix(in srgb, var(--magenta) 28%, var(--line));
+		background: linear-gradient(
+			180deg,
+			color-mix(in srgb, var(--magenta) 6%, var(--bg-panel)),
+			var(--bg-panel) 45%
+		);
+	}
+
+	.article--guide :global(.guide-stack) {
+		font-size: clamp(1rem, 1.8vw, 1.05rem);
+		line-height: 1.75;
+		color: var(--ink);
+	}
+
+	.article--guide :global(.guide-plans) {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.55rem;
+		margin-top: 0.85rem;
+		padding: 0.7rem 0.9rem;
+		border-radius: var(--radius-sm);
+		border: 1px dashed color-mix(in srgb, var(--magenta) 25%, var(--line));
+		background: var(--bg-elevated);
+		font-size: 0.9rem;
+		line-height: 1.6;
+		color: var(--ink-secondary);
+	}
+
+	.article--guide :global(.guide-plans::before) {
+		content: '✓';
+		flex: 0 0 auto;
+		font-size: 0.8rem;
+		font-weight: 800;
+		color: var(--magenta);
+		line-height: 1.6;
+	}
+
+	.article--guide :global(.guide-feature-grid) {
+		margin-top: 1.25rem;
+		padding-top: 1.15rem;
+		border-top: 1px solid var(--line-soft);
+		grid-template-columns: 1fr;
+		gap: 0.65rem;
+	}
+
+	@media (min-width: 560px) {
+		.article--guide :global(.guide-feature-grid) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			column-gap: 0.75rem;
+		}
+	}
+
+	.article--guide :global(.guide-feature-grid li) {
+		padding: 0.9rem 1rem 0.9rem 2.4rem;
+		border: 1px solid color-mix(in srgb, var(--magenta) 12%, var(--line));
+		border-radius: var(--radius-sm);
+		background: var(--bg-elevated);
+		font-size: 0.9375rem;
+		font-weight: 500;
+		line-height: 1.45;
+		color: var(--ink);
+		transition:
+			border-color 0.2s ease,
+			background 0.2s ease,
+			transform 0.2s ease;
+	}
+
+	.article--guide :global(.guide-feature-grid li:hover) {
+		border-color: color-mix(in srgb, var(--magenta) 40%, var(--line));
+		background: color-mix(in srgb, var(--magenta) 6%, var(--bg-elevated));
+		transform: translateY(-1px);
+	}
+
+	.article--guide :global(.guide-feature-grid li::before) {
+		top: 1.1rem;
+		left: 1.05rem;
+		width: 0.5rem;
+		height: 0.5rem;
+		box-shadow: 0 0 0 3px color-mix(in srgb, var(--magenta) 20%, transparent);
+	}
+
+	.article--guide :global(.card-panel--intro p + p) {
+		margin-top: 0;
+	}
+
+	.article--guide :global(.card-panel--features p + p) {
+		margin-top: 0;
+		padding-top: 0;
+		border-top: none;
+	}
+
+	.article :global(li) {
+		position: relative;
+		padding-left: 1.15rem;
+		font-size: 0.925rem;
+		line-height: 1.5;
+		color: var(--ink);
+	}
+
+	.article :global(li::before) {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.5em;
+		width: 0.4rem;
+		height: 0.4rem;
+		border-radius: 999px;
+		background: var(--magenta);
+	}
+
+	.article :global(a) {
+		color: var(--link);
+		font-weight: 500;
+	}
+
+	.article :global(a:hover) {
+		color: var(--ink);
+	}
+
+	.article :global(.price-grid) {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.65rem;
+		margin-top: 0.55rem;
+	}
+
+	.article :global(.price-card) {
+		display: grid;
+		gap: 0.2rem;
+		justify-items: center;
+		padding: 1.2rem 0.9rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md);
+		background: var(--bg-elevated);
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		transition: border-color 0.2s ease;
+	}
+
+	.article :global(.price-card:hover) {
+		border-color: color-mix(in srgb, var(--magenta) 40%, var(--line));
+	}
+
+	.article :global(.price-card.is-featured) {
+		border-color: color-mix(in srgb, var(--magenta) 45%, var(--line));
+		background: color-mix(in srgb, var(--magenta) 12%, var(--bg-panel));
+	}
+
+	.article :global(.price-card__label) {
+		font-size: 0.7rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--ink-faint);
+	}
+
+	.article :global(.price-card__price) {
+		font-family: var(--font-display);
+		font-size: 1.85rem;
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		color: var(--ink);
+	}
+
+	.article :global(.price-card.is-featured .price-card__price) {
+		color: var(--magenta-soft);
+	}
+
+	.article :global(.price-card__meta) {
+		font-size: 0.8rem;
+		color: var(--ink-muted);
+	}
+
+	.gallery-block {
+		width: 100%;
+		display: grid;
+		gap: 0.85rem;
+		content-visibility: auto;
+		contain-intrinsic-size: 1px 420px;
+	}
+
+	.gallery-block__head h2 {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: 1.15rem;
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		color: var(--ink);
+	}
+
+	.gallery-block__eyebrow {
+		margin: 0 0 0.3rem;
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--magenta-soft);
+	}
+
+	.gallery-block__grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0.65rem;
+	}
+
+	.gallery-block__item {
+		margin: 0;
+		overflow: hidden;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md);
+		background: var(--bg-elevated);
+		aspect-ratio: 16 / 10;
+	}
+
+	.gallery-block__item img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@media (max-width: 800px) {
+		.article :global(.price-grid) {
+			grid-template-columns: 1fr;
+		}
+
+		.gallery-block__grid {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (max-width: 760px) {
+		.banner {
+			min-height: min(52svh, 22rem);
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+
+		.banner__shell {
+			padding-block: 1.75rem 1.35rem;
+			padding-bottom: max(1.35rem, var(--safe-bottom, env(safe-area-inset-bottom, 0px)));
+		}
+
+		.banner__scrim {
+			background: linear-gradient(
+				180deg,
+				rgba(8, 9, 10, 0.35) 0%,
+				rgba(8, 9, 10, 0.82) 62%,
+				rgba(8, 9, 10, 0.96) 100%
+			);
+		}
+
+		.banner__content {
+			width: 100%;
+			max-width: 100%;
+			min-width: 0;
+		}
+
+		.banner__title {
+			font-size: clamp(1.55rem, 7.5vw, 2rem);
+			overflow-wrap: anywhere;
+		}
+
+		.banner__intro {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			overflow: hidden;
+		}
+
+		.banner__actions {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.banner__actions :global(.btn-buy),
+		.banner__actions .btn {
+			width: 100%;
+			min-height: var(--touch-min);
+		}
+
+		.article {
+			width: 100%;
+			min-width: 0;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.gallery-block__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.page__wrap {
+			padding-block: 1.15rem max(2rem, var(--safe-bottom));
+			gap: 1.35rem;
+		}
+
+		.article :global(.card-panel) {
+			padding: 1rem 1.05rem;
+		}
+
+		.article--guide :global(.card-panel) {
+			padding: 1.05rem 1.1rem;
+		}
+
+		.article--guide :global(.guide-plans) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.banner__crumbs {
+			font-size: 0.8rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.page__wrap {
+			gap: 1.15rem;
+		}
+
+		.article :global(h2) {
+			font-size: 1.08rem;
+		}
+
+		.gallery-block__head h2 {
+			font-size: 1.05rem;
+		}
+	}
+
+	@media (hover: none) {
+		.article--guide :global(.guide-feature-grid li:hover) {
+			transform: none;
+		}
+	}
+</style>

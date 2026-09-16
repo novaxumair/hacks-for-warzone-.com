@@ -1,0 +1,350 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from './Navbar.astro';
+import SiteFooter from './SiteFooter.astro';
+import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import {
+	absoluteForumUrl,
+	getForumBasePath,
+	getForumThreadHreflangAlternates,
+	getRelatedThreadsByCategory,
+} from '../data/forums/helpers';
+import type { ResolvedForumThread } from '../data/forums/types';
+import { forumLabel, siteConfig } from '../data/site';
+import { getLocalizedPath, localizeInternalHref } from '../data/i18n/routing';
+
+interface Props {
+	locale: LocaleCode;
+	thread: ResolvedForumThread;
+}
+
+const { locale, thread } = Astro.props;
+const t = thread.translation;
+const homeHref = getLocalizedPath('home', locale);
+const forumHref = getForumBasePath(locale);
+const related = getRelatedThreadsByCategory(thread, 3);
+
+function stripHtml(html: string): string {
+	return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function countWords(...parts: string[]): number {
+	return parts.join(' ').split(/\s+/).filter(Boolean).length;
+}
+
+const bodyText = [
+	t.intro,
+	...t.sections.flatMap((section) => [section.h2, ...section.paragraphs.map(stripHtml)]),
+	...t.comments.map((c) => c.body),
+].join(' ');
+const wordCount = countWords(bodyText);
+
+const threadUrl = absoluteForumUrl(locale, t.slug);
+const hreflangAlternates = getForumThreadHreflangAlternates(thread, locale);
+
+const discussionSchema = {
+	'@type': 'DiscussionForumPosting',
+	'@id': `${threadUrl}#thread`,
+	url: threadUrl,
+	headline: t.h1,
+	description: t.metaDescription,
+	datePublished: thread.published,
+	dateModified: thread.updated,
+	image: new URL(thread.imageSrc, siteConfig.url).href,
+	inLanguage: locale,
+	wordCount,
+	isAccessibleForFree: true,
+	author: { '@type': 'Organization', name: siteConfig.name, url: siteConfig.url },
+	publisher: {
+		'@type': 'Organization',
+		name: siteConfig.name,
+		url: siteConfig.url,
+		logo: { '@type': 'ImageObject', url: new URL(siteConfig.logoRaster, siteConfig.url).href },
+	},
+	mainEntityOfPage: { '@type': 'WebPage', '@id': `${threadUrl}#webpage` },
+	isPartOf: { '@id': `${absoluteForumUrl(locale)}#collection` },
+	keywords: t.keywords.join(', '),
+	articleSection: thread.category,
+	comment: t.comments.map((comment, i) => ({
+		'@type': 'Comment',
+		'@id': `${threadUrl}#comment-${i + 1}`,
+		author: { '@type': 'Person', name: comment.author },
+		datePublished: comment.date,
+		text: comment.body,
+	})),
+};
+
+function localizeParagraphHtml(html: string): string {
+	return html.replace(/href="(\/[^"]+)"/g, (_, path: string) => {
+		return `href="${localizeInternalHref(path, locale)}"`;
+	});
+}
+
+function pageTitle(headline: string): string {
+	const suffix = ` | Forums`;
+	if (headline.length + suffix.length <= 60) return `${headline}${suffix}`;
+	if (headline.length <= 60) return headline;
+	const trimmed = headline.slice(0, 57);
+	const cut = trimmed.lastIndexOf(' ');
+	return `${(cut > 40 ? trimmed.slice(0, cut) : trimmed).replace(/[|:–—-]+$/, '').trim()}…`;
+}
+---
+
+<Layout
+	title={pageTitle(t.title)}
+	description={t.metaDescription}
+	canonicalPath={thread.canonicalPath}
+	hreflangAlternates={hreflangAlternates}
+	ogImage={thread.imageSrc}
+	ogImageAlt={t.imageAlt}
+	type="article"
+	locale={locale}
+	breadcrumbs={[
+		{ label: 'Home', href: homeHref },
+		{ label: 'Forums', href: forumHref },
+		{ label: t.h1 },
+	]}
+	extraGraph={[discussionSchema]}
+>
+	<Navbar locale={locale} />
+	<main class="forum-post">
+		<div class="shell">
+			<div class="forum-post__inner">
+				<article>
+					<header class="forum-post__header">
+						<p class="forum-post__cat">{thread.category}</p>
+						<h1>{t.h1}</h1>
+						<p class="forum-post__intro">{t.intro}</p>
+						<p class="forum-post__meta">
+							Started {thread.published} · Updated {thread.updated} · {t.comments.length} replies
+						</p>
+					</header>
+
+					<img
+						class="forum-post__hero"
+						src={thread.imageSrc}
+						alt={t.imageAlt}
+						width="1200"
+						height="675"
+						loading="eager"
+						decoding="async"
+					/>
+
+					{
+						t.sections.map((section) => (
+							<section class="forum-post__section">
+								<h2>{section.h2}</h2>
+								{section.paragraphs.map((paragraph) => (
+									<p set:html={localizeParagraphHtml(paragraph)} />
+								))}
+							</section>
+						))
+					}
+				</article>
+
+				<section class="forum-post__comments" aria-label="Thread replies">
+					<h2>Community replies</h2>
+					<p class="forum-post__login-note">
+						Preview replies below. <a href={siteConfig.checkoutUrl} rel="noopener noreferrer">Get access</a> to post and vote in full forum threads.
+					</p>
+					<ul class="forum-post__comment-list">
+						{
+							t.comments.map((comment) => (
+								<li class:list={['forum-post__comment', comment.sentiment && `forum-post__comment--${comment.sentiment}`]}>
+									<div class="forum-post__comment-head">
+										<strong>{comment.author}</strong>
+										<time datetime={comment.date}>{comment.date}</time>
+									</div>
+									<p>{comment.body}</p>
+								</li>
+							))
+						}
+					</ul>
+				</section>
+
+				{
+					related.length > 0 && (
+						<section class="forum-post__related" aria-label="Related threads">
+							<h2>Related discussions</h2>
+							<ul>
+								{related.map((item) => (
+									<li>
+										<a href={item.canonicalPath}>{item.translation.title}</a>
+									</li>
+								))}
+							</ul>
+						</section>
+					)
+				}
+			</div>
+		</div>
+	</main>
+	<SiteFooter locale={locale} />
+</Layout>
+
+<style>
+	.forum-post {
+		padding: 2.5rem 0 4rem;
+		background: transparent;
+	}
+
+	.forum-post__inner {
+		max-width: 48rem;
+	}
+
+	.forum-post__cat {
+		display: inline-flex;
+		margin: 0 0 0.65rem;
+		padding: 0.22rem 0.5rem;
+		border-radius: 999px;
+		border: 1px solid color-mix(in srgb, var(--magenta) 28%, var(--line));
+		background: color-mix(in srgb, var(--magenta) 10%, transparent);
+		color: var(--magenta-soft);
+		font-size: 0.72rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.forum-post__header h1 {
+		margin: 0 0 0.75rem;
+		font-family: var(--font-display);
+		font-size: clamp(1.9rem, 4vw, 2.8rem);
+		font-weight: 800;
+		line-height: 1.1;
+		color: var(--ink);
+	}
+
+	.forum-post__intro {
+		margin: 0;
+		color: var(--ink-muted);
+		font-size: 1.08rem;
+		line-height: 1.65;
+	}
+
+	.forum-post__meta {
+		margin: 0.85rem 0 0;
+		color: var(--ink-faint);
+		font-size: 0.85rem;
+	}
+
+	.forum-post__hero {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		margin: 1.5rem 0 2rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md);
+	}
+
+	.forum-post__section {
+		margin-bottom: 2rem;
+	}
+
+	.forum-post__section h2 {
+		margin: 0 0 0.85rem;
+		font-family: var(--font-display);
+		font-size: 1.35rem;
+		color: var(--ink);
+	}
+
+	.forum-post__section p {
+		margin: 0 0 0.95rem;
+		color: var(--ink-muted);
+		line-height: 1.75;
+	}
+
+	.forum-post__section p a {
+		color: var(--link);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.forum-post__comments {
+		margin-top: 2.5rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--line-soft);
+	}
+
+	.forum-post__comments h2 {
+		margin: 0 0 0.5rem;
+		font-family: var(--font-display);
+		font-size: 1.25rem;
+		color: var(--ink);
+	}
+
+	.forum-post__login-note {
+		margin: 0 0 1.25rem;
+		font-size: 0.9rem;
+		color: var(--ink-muted);
+	}
+
+	.forum-post__login-note a {
+		color: var(--link);
+		font-weight: 600;
+	}
+
+	.forum-post__comment-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 1rem;
+	}
+
+	.forum-post__comment {
+		padding: 1rem 1.1rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md);
+		background: var(--bg-panel);
+	}
+
+	.forum-post__comment--negative {
+		border-color: color-mix(in srgb, var(--warn) 35%, var(--line));
+	}
+
+	.forum-post__comment--positive {
+		border-color: color-mix(in srgb, var(--ok) 30%, var(--line));
+	}
+
+	.forum-post__comment-head {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 0.35rem;
+		margin-bottom: 0.5rem;
+		font-size: 0.85rem;
+	}
+
+	.forum-post__comment-head time {
+		color: var(--ink-faint);
+	}
+
+	.forum-post__comment p {
+		margin: 0;
+		color: var(--ink-secondary);
+		line-height: 1.6;
+		font-size: 0.95rem;
+	}
+
+	.forum-post__related {
+		margin-top: 2.5rem;
+		padding: 1.25rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md);
+		background: var(--bg-panel);
+	}
+
+	.forum-post__related ul {
+		margin: 0.75rem 0 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 0.5rem;
+	}
+
+	.forum-post__related a {
+		color: var(--link);
+		font-weight: 600;
+		text-decoration: none;
+	}
+</style>

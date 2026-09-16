@@ -1,0 +1,14 @@
+---
+import FaqDetailPage from '../../../components/FaqDetailPage.astro';
+import { seoFaqs } from '../../../data/site';
+
+export function getStaticPaths() {
+	return seoFaqs.map((faq) => ({
+		params: { slug: faq.slug },
+	}));
+}
+
+const slug = Astro.params.slug ?? '';
+---
+
+<FaqDetailPage locale="en" slug={slug} />

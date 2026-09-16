@@ -1,0 +1,109 @@
+/**
+ * Warzone Hacks canvas — dark violet base + layered purple grid depth.
+ * Static only. No white noise, no animation.
+ */
+
+html {
+	background-color: var(--bg);
+	background-image:
+		radial-gradient(
+			ellipse 110% 75% at 50% -15%,
+			color-mix(in srgb, var(--magenta-deep) 26%, var(--bg)),
+			var(--bg) 62%
+		),
+		radial-gradient(
+			ellipse 52% 46% at 0% 78%,
+			color-mix(in srgb, var(--magenta-deep) 14%, transparent),
+			transparent 70%
+		),
+		radial-gradient(
+			ellipse 48% 44% at 100% 72%,
+			color-mix(in srgb, var(--magenta) 11%, transparent),
+			transparent 68%
+		),
+		linear-gradient(
+			180deg,
+			color-mix(in srgb, var(--tone-void) 40%, transparent) 0%,
+			transparent 18%,
+			transparent 82%,
+			color-mix(in srgb, var(--tone-void) 35%, transparent) 100%
+		);
+	background-attachment: fixed;
+}
+
+body {
+	background: transparent;
+}
+
+.site-atmosphere {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+/* Dual-scale grid — fine lines + faint major blocks, deep violet only */
+.site-atmosphere::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	--grid-line: color-mix(in srgb, var(--magenta-deep) 24%, transparent);
+	--grid-major: color-mix(in srgb, var(--magenta-deep) 14%, transparent);
+	background-image:
+		linear-gradient(var(--grid-line) 1px, transparent 1px),
+		linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+		linear-gradient(var(--grid-major) 1px, transparent 1px),
+		linear-gradient(90deg, var(--grid-major) 1px, transparent 1px);
+	background-size: 48px 48px, 48px 48px, 192px 192px, 192px 192px;
+	opacity: 0.62;
+	mask-image: radial-gradient(
+		ellipse 94% 90% at 50% 40%,
+		#000 15%,
+		transparent 94%
+	);
+	-webkit-mask-image: radial-gradient(
+		ellipse 94% 90% at 50% 40%,
+		#000 15%,
+		transparent 94%
+	);
+}
+
+/* Dark see-through veil — sits on top of grid, texture still visible beneath */
+.site-atmosphere__shade {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: color-mix(in srgb, var(--tone-void) 62%, transparent);
+}
+
+/* Center bloom + edge vignette — rich depth without washing out to white */
+.site-atmosphere::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 2;
+	background:
+		radial-gradient(
+			ellipse 68% 50% at 50% 36%,
+			color-mix(in srgb, var(--magenta) 9%, transparent),
+			transparent 74%
+		),
+		radial-gradient(
+			ellipse 100% 100% at 50% 50%,
+			transparent 38%,
+			color-mix(in srgb, var(--tone-void) 62%, transparent) 100%
+		);
+}
+
+@media (max-width: 720px) {
+	.site-atmosphere::before {
+		background-size: 40px 40px, 40px 40px, 160px 160px, 160px 160px;
+		opacity: 0.52;
+	}
+
+	.site-atmosphere__shade {
+		background: color-mix(in srgb, var(--tone-void) 68%, transparent);
+	}
+}

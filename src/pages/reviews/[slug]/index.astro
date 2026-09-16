@@ -1,0 +1,14 @@
+---
+import ReviewDetailPage from '../../../components/ReviewDetailPage.astro';
+import { customerReviews } from '../../../data/site';
+
+export function getStaticPaths() {
+	return customerReviews.map((review) => ({
+		params: { slug: review.slug },
+	}));
+}
+
+const slug = Astro.params.slug ?? '';
+---
+
+<ReviewDetailPage locale="en" slug={slug} />

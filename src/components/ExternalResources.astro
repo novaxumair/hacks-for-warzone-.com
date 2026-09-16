@@ -1,0 +1,116 @@
+---
+import { externalResources } from '../data/external-resources';
+import type { LocaleCode } from '../data/i18n/locales';
+import { getT } from '../i18n/server';
+
+interface Props {
+	locale: LocaleCode;
+	class?: string;
+	omitHrefs?: string[];
+}
+
+const { locale, class: className, omitHrefs = [] } = Astro.props;
+const t = getT(locale);
+const items = externalResources.filter((item) => !omitHrefs.includes(item.href));
+---
+
+<section
+	class:list={['ext-resources', className]}
+	aria-labelledby="ext-resources-title"
+>
+	<h2 id="ext-resources-title">{t('externalResources.title')}</h2>
+	<p class="ext-resources__lede">{t('externalResources.lede')}</p>
+	<ul class="ext-resources__list">
+		{
+			items.map((item) => (
+				<li>
+					<a href={item.href} target="_blank" rel="noopener noreferrer">
+						<span class="ext-resources__label">{t(`externalResources.${item.id}.label`)}</span>
+						{item.note ? <span class="ext-resources__note">{t(`externalResources.${item.id}.note`)}</span> : null}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</section>
+
+<style>
+	.ext-resources {
+		margin-top: 2rem;
+		padding: 1.25rem 1.35rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md, 0.75rem);
+		background: color-mix(in srgb, var(--bg-panel) 88%, transparent);
+	}
+
+	.ext-resources h2 {
+		margin: 0 0 0.35rem;
+		font-size: 1.15rem;
+	}
+
+	.ext-resources__lede {
+		margin: 0 0 1rem;
+		color: var(--ink-muted);
+		font-size: 0.92rem;
+		line-height: 1.55;
+	}
+
+	.ext-resources__list {
+		display: grid;
+		gap: 0.55rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.ext-resources__list a {
+		display: grid;
+		gap: 0.15rem;
+		padding: 0.75rem 0.9rem;
+		border: 1px solid var(--line-soft);
+		border-radius: var(--radius-sm, 0.5rem);
+		background: var(--bg-elevated);
+		color: var(--ink);
+		text-decoration: none;
+		transition:
+			border-color 0.2s ease,
+			color 0.2s ease;
+	}
+
+	.ext-resources__list a:hover {
+		border-color: color-mix(in srgb, var(--magenta) 35%, var(--line));
+		color: var(--accent-hover);
+	}
+
+	.ext-resources__label {
+		font-size: 0.9rem;
+		font-weight: 700;
+	}
+
+	.ext-resources__note {
+		font-size: 0.8rem;
+		color: var(--ink-muted);
+		line-height: 1.45;
+	}
+
+	@media (max-width: 720px) {
+		.ext-resources {
+			margin-top: 1.35rem;
+			padding: 1rem 1rem 1.05rem;
+		}
+
+		.ext-resources h2 {
+			font-size: 1.05rem;
+		}
+
+		.ext-resources__lede {
+			font-size: 0.875rem;
+			margin-bottom: 0.85rem;
+		}
+
+		.ext-resources__list a {
+			min-height: var(--touch-min, 2.75rem);
+			padding: 0.7rem 0.85rem;
+		}
+	}
+</style>

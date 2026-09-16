@@ -1,0 +1,91 @@
+---
+import { getUi } from '../data/i18n';
+import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import { getT } from '../i18n/server';
+
+interface Props {
+	locale?: LocaleCode;
+	/** Float over agent image with no panel background */
+	overlay?: boolean;
+}
+
+const locale = Astro.props.locale ?? defaultLocale;
+const overlay = Astro.props.overlay ?? false;
+const trust = getUi(locale).trust;
+const t = getT(locale);
+---
+
+<section
+	class:list={['trust-bar', 'shell', overlay && 'trust-bar--overlay']}
+	aria-label={t('common.packageStatus')}
+>
+	<p class="trust-bar__text">
+		<strong>{trust.status}</strong>
+		<span aria-hidden="true">·</span>
+		{trust.delivery}
+		<span aria-hidden="true">·</span>
+		{trust.platform}
+		<span aria-hidden="true">·</span>
+		{trust.antiCheatShort ?? trust.antiCheat}
+	</p>
+</section>
+
+<style>
+	.trust-bar {
+		padding-block: 0.75rem;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.trust-bar--overlay {
+		position: absolute;
+		inset-inline: 0;
+		bottom: 0;
+		z-index: 3;
+		padding-block: 0.65rem;
+		border: none;
+		background: none;
+		pointer-events: none;
+	}
+
+	.trust-bar__text {
+		margin: 0;
+		font-size: 0.875rem;
+		color: var(--color-muted);
+		text-align: center;
+		line-height: 1.5;
+	}
+
+	.trust-bar--overlay .trust-bar__text {
+		color: color-mix(in srgb, #fff 84%, transparent);
+		text-shadow: 0 1px 10px rgba(0, 0, 0, 0.65);
+	}
+
+	.trust-bar__text strong {
+		color: var(--ok);
+		font-weight: 600;
+	}
+
+	.trust-bar--overlay .trust-bar__text strong {
+		color: #4ade80;
+	}
+
+	.trust-bar__text span {
+		margin-inline: 0.35rem;
+		opacity: 0.4;
+	}
+
+	.trust-bar--overlay .trust-bar__text span {
+		opacity: 0.55;
+	}
+
+	@media (max-width: 480px) {
+		.trust-bar {
+			padding-block: 0.6rem;
+		}
+
+		.trust-bar__text {
+			font-size: 0.78rem;
+			line-height: 1.45;
+		}
+	}
+</style>

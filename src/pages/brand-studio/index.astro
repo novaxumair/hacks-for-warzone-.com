@@ -1,0 +1,3521 @@
+---
+/**
+ * Brand Studio -- local employee tool.
+ * Write API exists only during `astro dev` (Vite plugin).
+ */
+import Layout from '../../layouts/Layout.astro';
+import { brand } from '../../data/brand';
+import { brandSitemap, sitemapDefaults } from '../../data/brand-sitemap';
+import {
+	brandTheme,
+	deriveBrandTheme,
+	themePresets,
+} from '../../data/brand-theme';
+
+const isDev = import.meta.env.DEV;
+const title = 'Brand Studio';
+const description = 'Local-only template brand editor. Not available in production.';
+
+type Field = {
+	name: string;
+	label: string;
+	tip: string;
+	value?: string | number;
+	type?: string;
+	required?: boolean;
+	maxlength?: number;
+	min?: number;
+	max?: number;
+	placeholder?: string;
+	rows?: number;
+	textarea?: boolean;
+	span?: boolean;
+};
+
+const seoDefaults = {
+	homeTitle: '{brand} | Undetected {primaryKeyword}',
+	homeDescription:
+		'{primaryKeyword} for Windows PC -- ESP, aimbot, and radar with {antiCheat} maintenance. Compare plans and buy.',
+	featuresTitle: '{game} Features | {brand}',
+	featuresDescription:
+		'Everything in one {game} license for Windows PC -- ESP, aimbot, radar, and patch updates.',
+	storeTitle: '{game} Store | {brand}',
+	storeDescription: 'Monthly and lifetime {game} plans. Same features. Instant delivery after payment.',
+	statusTitle: '{game} Status | {brand}',
+	statusDescription:
+		'Live status for {brand} after {game} or {antiCheat} patches. Check before you queue.',
+	previewTitle: '{game} Preview | {brand}',
+	previewDescription:
+		'Quick preview of {brand} -- ESP, aimbot, radar, and updates after {game} patches.',
+	setupTitle: '{game} Setup | {brand}',
+	setupDescription: 'Install and launch {brand} on Windows PC. Short setup steps after you buy.',
+	supportTitle: '{game} Support | {brand}',
+	supportDescription: 'Get help with {brand}. Email {email} with your order ID.',
+	faqTitle: '{game} FAQ | {brand}',
+	faqDescription: 'Short answers about {brand} — delivery, setup, updates, and refunds.',
+	reviewsTitle: '{brand} Reviews | Buyer Feedback',
+	reviewsDescription:
+		'Real buyer reviews for {brand} — ESP, soft aim, radar, and patch updates on Windows PC.',
+	blogTitle: '{game} Intel | {brand}',
+	blogDescription: 'Guides and notes for {game} — meta tips, ESP, aimbot, and {antiCheat} updates.',
+};
+
+const copyDefaults = {
+	tagline: 'Undetected {primaryKeyword} -- ESP, aimbot, and radar for PC',
+	summary:
+		'{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, soft aim, and radar, with {antiCheat} maintenance after patches.',
+	heroLede: 'Hacks and cheats available -- 0% detection.',
+	blogLabel: '{game} Intel',
+	ctaBuy: 'Buy now',
+	ctaBuyShort: 'Buy',
+	featuresIntro: 'Everything included in one license for {game} on Windows PC.',
+	storeIntro: 'Pick a plan. Same features on both. Instant delivery after payment.',
+	statusIntro: 'Check here after a {game} or {antiCheat} patch before you play.',
+	previewIntro: 'A quick look at {brand} — ESP, aimbot, radar, and updates after patches.',
+	setupIntro: 'Install {brand} on Windows PC after you buy. Follow these short steps.',
+	supportIntro: 'Need help with {brand}? Email {email} with your order ID.',
+	faqIntro: 'Short answers about delivery, setup, updates, and refunds.',
+	reviewsIntro: 'Real feedback from {brand} buyers — ESP, soft aim, radar, and support.',
+	chipEsp: 'ESP / wallhack',
+	chipAim: 'Soft aim',
+	chipRadar: '2D radar',
+	chipUpdates: 'Patch updates',
+	navPreview: 'Preview',
+	navFeatures: 'Features',
+	navStore: 'Store',
+	navStatus: 'Status',
+	navReviews: 'Reviews',
+};
+
+type BrandRecord = typeof brand & {
+	seo?: typeof seoDefaults;
+	copy?: typeof copyDefaults;
+	sitemap?: typeof brandSitemap;
+	theme?: { accent?: string; bg?: string; soft?: string; deep?: string; hover?: string; panel?: string };
+};
+
+const b = brand as BrandRecord;
+const seo = { ...seoDefaults, ...b.seo };
+const copy = { ...copyDefaults, ...b.copy };
+const sitemap = {
+	...sitemapDefaults,
+	...b.sitemap,
+	images: b.sitemap?.images?.length ? [...b.sitemap.images] : [...brandSitemap.images],
+};
+const theme = deriveBrandTheme({
+	accent: b.theme?.accent ?? brandTheme.accent,
+	bg: b.theme?.bg ?? brandTheme.bg,
+	soft: b.theme?.soft ?? brandTheme.accentSoft,
+	deep: b.theme?.deep ?? brandTheme.accentDeep,
+	hover: b.theme?.hover ?? brandTheme.accentHover,
+	panel: b.theme?.panel ?? brandTheme.bgPanel,
+});
+
+const identity: Field[] = [
+	{
+		name: 'name',
+		label: 'Brand name',
+		tip: 'What: The public name of this site. | Why: Shows in the hero, footer, browser tab titles, and Google schema. | Example: Fortnite Hacks, Apex Cheats, Marathon Hacks',
+		value: brand.name,
+		required: true,
+		maxlength: 80,
+	},
+	{
+		name: 'shortName',
+		label: 'Short name',
+		tip: 'What: A shorter label if the full brand is long. | Why: Used where space is tight (manifest / compact UI). | Example: Same as brand name, or "FN Hacks"',
+		value: brand.shortName,
+		required: true,
+		maxlength: 80,
+	},
+	{
+		name: 'url',
+		label: 'Site URL (domain)',
+		tip: 'What: Your live domain (https, no slash at the end). | Why: Instantly drives sitemap XML, robots.txt Sitemap line, canonicals, and Open Graph. Change this once — Sitemap section mirrors it live. | Example: https://fortnitehacks.com',
+		value: brand.url,
+		type: 'url',
+		required: true,
+		maxlength: 200,
+		placeholder: 'https://example.com',
+	},
+	{
+		name: 'supportEmail',
+		label: 'Support email',
+		tip: 'What: The inbox customers use for help. | Why: Shown in FAQ / support copy via the {email} token. Auto-updates to support@yourdomain when Site URL changes (unless you uncheck Match email). | Example: support@yourdomain.com',
+		value: brand.supportEmail,
+		type: 'email',
+		required: true,
+		maxlength: 120,
+	},
+	{
+		name: 'checkoutUrl',
+		label: 'Checkout URL',
+		tip: 'What: Where "Buy now" sends people. | Why: Every Buy button on the site uses this link. | Example: https://seller.com/go/PRODUCT',
+		value: brand.checkoutUrl,
+		type: 'url',
+		required: true,
+		maxlength: 400,
+	},
+	{
+		name: 'market',
+		label: 'Market',
+		tip: 'What: Who you sell to (region label). | Why: Used in structured data as the service area. | Example: Worldwide, EU, US',
+		value: brand.market,
+		maxlength: 80,
+	},
+	{
+		name: 'locale',
+		label: 'Default locale',
+		tip: 'What: Main language code for the English site root. | Why: Sets the default language metadata. Keep "en" unless you know you need another. | Example: en',
+		value: brand.locale,
+		maxlength: 12,
+	},
+];
+
+const product: Field[] = [
+	{
+		name: 'game',
+		label: 'Game',
+		tip: 'What: The game this template instance is for. | Why: Fills {game} in titles, FAQs, Status copy, and SEO titles like "Call of Duty: Warzone Features | Brand". | Example: Fortnite, Apex Legends, Marathon',
+		value: brand.game,
+		required: true,
+		maxlength: 80,
+	},
+	{
+		name: 'antiCheat',
+		label: 'Anti-cheat',
+		tip: 'What: The game anti-cheat system name. | Why: Status / FAQ text mentions rebuilds after this anti-cheat patches. Use {antiCheat} token. | Example: Ricochet, Ricochet, Ricochet',
+		value: brand.antiCheat,
+		required: true,
+		maxlength: 80,
+	},
+	{
+		name: 'platforms',
+		label: 'Platforms',
+		tip: 'What: Where the product runs (one per line). | Why: Listed in product info / schema-style copy. | Example: Windows PC (then Controllers on the next line)',
+		value: brand.platforms.join('\n'),
+		textarea: true,
+		rows: 3,
+		required: true,
+		maxlength: 200,
+		span: true,
+	},
+	{
+		name: 'monthlyLabel',
+		label: 'Monthly plan label',
+		tip: 'What: Name of the short plan on the Store page. | Why: Shown on pricing cards next to the price. | Example: Monthly, 30 days',
+		value: brand.plans[0].label,
+		required: true,
+		maxlength: 40,
+	},
+	{
+		name: 'lifetimeLabel',
+		label: 'Lifetime plan label',
+		tip: 'What: Name of the long plan on the Store page. | Why: Shown on pricing cards next to the price. | Example: Lifetime, Forever',
+		value: brand.plans[1].label,
+		required: true,
+		maxlength: 40,
+	},
+	{
+		name: 'monthlyPrice',
+		label: 'Monthly price',
+		tip: 'What: Price number for the monthly plan (whole dollars). | Why: Buy buttons and Store cards show this amount. | Example: 35',
+		value: brand.plans[0].price,
+		type: 'number',
+		required: true,
+		min: 1,
+		max: 99999,
+	},
+	{
+		name: 'lifetimePrice',
+		label: 'Lifetime price',
+		tip: 'What: Price number for the lifetime plan (whole dollars). | Why: Buy buttons and Store cards show this amount. | Example: 150',
+		value: brand.plans[1].price,
+		type: 'number',
+		required: true,
+		min: 1,
+		max: 99999,
+	},
+	{
+		name: 'currency',
+		label: 'Currency',
+		tip: 'What: Currency code for prices. | Why: Product schema / pricing context. Site still displays $ in most UI. | Example: USD, EUR',
+		value: brand.currency,
+		maxlength: 8,
+		span: true,
+	},
+];
+
+const seoFields: Field[] = [
+	{
+		name: 'homeTitle',
+		label: 'Home title',
+		tip: 'What: Google title for the homepage. | Why: First line in search results. Aim for 50-60 characters after tokens resolve. | Example: Marathon Hacks | Undetected marathon hacks',
+		value: seo.homeTitle,
+		required: true,
+		maxlength: 70,
+		span: true,
+	},
+	{
+		name: 'homeDescription',
+		label: 'Home description',
+		tip: 'What: Meta description for the homepage. | Why: Snippet under the blue link in Google. Aim for 140-160 characters. | Example: marathon hacks for Windows PC -- ESP, aimbot, and radar...',
+		value: seo.homeDescription,
+		textarea: true,
+		rows: 2,
+		required: true,
+		maxlength: 160,
+		span: true,
+	},
+	{
+		name: 'featuresTitle',
+		label: 'Features title',
+		tip: 'What: Title for the Features page. | Why: Locked pattern is {game} Features | {brand}. | Example: Marathon Features | Marathon Hacks',
+		value: seo.featuresTitle,
+		required: true,
+		maxlength: 70,
+		span: true,
+	},
+	{
+		name: 'featuresDescription',
+		label: 'Features description',
+		tip: 'What: Meta description for Features. | Why: Tells searchers what is included before they click. | Example: Everything in one Marathon license for Windows PC...',
+		value: seo.featuresDescription,
+		textarea: true,
+		rows: 2,
+		required: true,
+		maxlength: 160,
+		span: true,
+	},
+	{
+		name: 'storeTitle',
+		label: 'Store title',
+		tip: 'What: Title for the Store / pricing page. | Why: Drives clicks from "buy" searches. | Example: Marathon Store | Marathon Hacks',
+		value: seo.storeTitle,
+		required: true,
+		maxlength: 70,
+		span: true,
+	},
+	{
+		name: 'storeDescription',
+		label: 'Store description',
+		tip: 'What: Meta description for Store. | Why: Mention plans and instant delivery. | Example: Monthly and lifetime Marathon plans. Same features...',
+		value: seo.storeDescription,
+		textarea: true,
+		rows: 2,
+		required: true,
+		maxlength: 160,
+		span: true,
+	},
+	{
+		name: 'statusTitle',
+		label: 'Status title',
+		tip: 'What: Title for the Status page. | Why: Users search patch / undetected status. | Example: Marathon Status | Marathon Hacks',
+		value: seo.statusTitle,
+		required: true,
+		maxlength: 70,
+		span: true,
+	},
+	{
+		name: 'statusDescription',
+		label: 'Status description',
+		tip: 'What: Meta description for Status. | Why: Mention {antiCheat} and patch checks. | Example: Live status for Marathon Hacks after Marathon or Ricochet patches...',
+		value: seo.statusDescription,
+		textarea: true,
+		rows: 2,
+		required: true,
+		maxlength: 160,
+		span: true,
+	},
+	{
+		name: 'previewTitle',
+		label: 'Preview title',
+		tip: 'What: Title for the Preview page. | Why: Explains what the product looks like. | Example: Marathon Preview | Marathon Hacks',
+		value: seo.previewTitle,
+		required: true,
+		maxlength: 70,
+		span: true,
+	},
+	{
+		name: 'previewDescription',
+		label: 'Preview description',
+		tip: 'What: Meta description for Preview. | Why: Short product overview for search. | Example: Quick preview of Marathon Hacks -- ESP, aimbot, radar...',
+		value: seo.previewDescription,
+		textarea: true,
+		rows: 2,
+		required: true,
+		maxlength: 160,
+		span: true,
+	},
+	{
+		name: 'setupTitle',
+		label: 'Setup title',
+		tip: 'What: Title for the Setup page. | Why: Install searches. | Example: {game} Setup | {brand}',
+		value: seo.setupTitle,
+		maxlength: 70,
+		span: true,
+	},
+	{
+		name: 'setupDescription',
+		label: 'Setup description',
+		tip: 'What: Meta description for Setup. | Why: Short install promise. | Example: Install and launch {brand} on Windows PC...',
+		value: seo.setupDescription,
+		textarea: true,
+		rows: 2,
+		maxlength: 160,
+		span: true,
+	},
+	{
+		name: 'supportTitle',
+		label: 'Support title',
+		tip: 'What: Title for Support. | Why: Help searches. | Example: {game} Support | {brand}',
+		value: seo.supportTitle,
+		maxlength: 70,
+		span: true,
+	},
+	{
+		name: 'supportDescription',
+		label: 'Support description',
+		tip: 'What: Meta description for Support. | Why: Mention {email}. | Example: Get help with {brand}. Email {email}...',
+		value: seo.supportDescription,
+		textarea: true,
+		rows: 2,
+		maxlength: 160,
+		span: true,
+	},
+	{
+		name: 'faqTitle',
+		label: 'FAQ title',
+		tip: 'What: Title for FAQ. | Why: Question searches. | Example: {game} FAQ | {brand}',
+		value: seo.faqTitle,
+		maxlength: 70,
+		span: true,
+	},
+	{
+		name: 'faqDescription',
+		label: 'FAQ description',
+		tip: 'What: Meta description for FAQ. | Why: Delivery, setup, refunds. | Example: Short answers about {brand}...',
+		value: seo.faqDescription,
+		textarea: true,
+		rows: 2,
+		maxlength: 160,
+		span: true,
+	},
+	{
+		name: 'reviewsTitle',
+		label: 'Reviews title',
+		tip: 'What: Title for Reviews index. | Why: Social proof searches. | Example: {brand} Reviews | Buyer Feedback',
+		value: seo.reviewsTitle,
+		maxlength: 70,
+		span: true,
+	},
+	{
+		name: 'reviewsDescription',
+		label: 'Reviews description',
+		tip: 'What: Meta description for Reviews. | Why: Buyer feedback snippet. | Example: Real buyer reviews for {brand}...',
+		value: seo.reviewsDescription,
+		textarea: true,
+		rows: 2,
+		maxlength: 160,
+		span: true,
+	},
+	{
+		name: 'blogTitle',
+		label: 'Blog title',
+		tip: 'What: Title for Blog / Intel index. | Why: Content hub searches. | Example: {game} Intel | {brand}',
+		value: seo.blogTitle,
+		maxlength: 70,
+		span: true,
+	},
+	{
+		name: 'blogDescription',
+		label: 'Blog description',
+		tip: 'What: Meta description for Blog. | Why: Guides and patch notes. | Example: Guides and notes for {game}...',
+		value: seo.blogDescription,
+		textarea: true,
+		rows: 2,
+		maxlength: 160,
+		span: true,
+	},
+];
+
+const keywords: Field[] = [
+	{
+		name: 'primaryKeyword',
+		label: 'Primary keyword',
+		tip: 'What: The #1 phrase you want to rank for. | Why: Used as {primaryKeyword} in taglines and light SEO. Put this phrase in titles naturally -- do not stuff it. | Example: fortnite hacks, apex cheats',
+		value: brand.keywords.primary,
+		required: true,
+		maxlength: 80,
+		span: true,
+	},
+	{
+		name: 'keywords',
+		label: 'Keyword list',
+		tip: 'What: 5-8 related searches (one per line). | Why: Feeds the meta keywords tag and keeps targeting consistent when you rebrand. | Example: fortnite cheats, fortnite hacks, fortnite esp (one phrase per line)',
+		value: brand.keywords.list.join('\n'),
+		textarea: true,
+		rows: 6,
+		required: true,
+		maxlength: 900,
+		span: true,
+	},
+];
+
+const copyFields: Field[] = [
+	{
+		name: 'tagline',
+		label: 'Tagline',
+		tip: 'What: Short marketing line under the brand. | Why: Used in schema and compact promos. Tokens allowed. | Example: Undetected marathon hacks -- ESP, aimbot, and radar for PC',
+		value: copy.tagline,
+		required: true,
+		maxlength: 160,
+		span: true,
+	},
+	{
+		name: 'summary',
+		label: 'Summary',
+		tip: 'What: One paragraph about the product. | Why: About-style copy and structured data context. | Example: Marathon Hacks is an undetected Marathon cheat package...',
+		value: copy.summary,
+		textarea: true,
+		rows: 3,
+		required: true,
+		maxlength: 320,
+		span: true,
+	},
+	{
+		name: 'heroLede',
+		label: 'Agent lede',
+		tip: 'What: Second line under the agent brand name. | Why: First thing visitors read on the homepage. Keep it short. | Example: Hacks and cheats available -- 0% detection.',
+		value: copy.heroLede,
+		required: true,
+		maxlength: 160,
+		span: true,
+	},
+	{
+		name: 'blogLabel',
+		label: 'Blog / intel label',
+		tip: 'What: Nav label for blog or intel section. | Why: Shown in navigation when blog is enabled. | Example: Marathon Intel, Warzone Intel',
+		value: copy.blogLabel,
+		required: true,
+		maxlength: 80,
+		span: true,
+	},
+	{
+		name: 'ctaBuy',
+		label: 'Buy CTA',
+		tip: 'What: Primary buy button label. | Why: Agent and page CTAs. | Example: Buy now',
+		value: copy.ctaBuy,
+		maxlength: 40,
+	},
+	{
+		name: 'ctaBuyShort',
+		label: 'Buy CTA (short)',
+		tip: 'What: Compact buy label in the header. | Why: Nav tool button. | Example: Buy',
+		value: copy.ctaBuyShort,
+		maxlength: 20,
+	},
+	{
+		name: 'featuresIntro',
+		label: 'Features intro',
+		tip: 'What: Intro under Features H1. | Why: First paragraph on Features. Tokens ok. | Example: Everything included in one license for {game}...',
+		value: copy.featuresIntro,
+		textarea: true,
+		rows: 2,
+		maxlength: 220,
+		span: true,
+	},
+	{
+		name: 'storeIntro',
+		label: 'Store intro',
+		tip: 'What: Intro under Store H1. | Why: Pricing page lede. | Example: Pick a plan. Same features on both...',
+		value: copy.storeIntro,
+		textarea: true,
+		rows: 2,
+		maxlength: 220,
+		span: true,
+	},
+	{
+		name: 'statusIntro',
+		label: 'Status intro',
+		tip: 'What: Intro under Status H1. | Why: Patch-day reminder. | Example: Check here after a {game} or {antiCheat} patch...',
+		value: copy.statusIntro,
+		textarea: true,
+		rows: 2,
+		maxlength: 220,
+		span: true,
+	},
+	{
+		name: 'previewIntro',
+		label: 'Preview intro',
+		tip: 'What: Intro under Preview H1. | Why: Product overview lede. | Example: A quick look at {brand}...',
+		value: copy.previewIntro,
+		textarea: true,
+		rows: 2,
+		maxlength: 220,
+		span: true,
+	},
+	{
+		name: 'setupIntro',
+		label: 'Setup intro',
+		tip: 'What: Intro under Setup H1. | Why: Install page lede. | Example: Install {brand} on Windows PC...',
+		value: copy.setupIntro,
+		textarea: true,
+		rows: 2,
+		maxlength: 220,
+		span: true,
+	},
+	{
+		name: 'supportIntro',
+		label: 'Support intro',
+		tip: 'What: Intro under Support H1. | Why: Help page lede. | Example: Need help with {brand}? Email {email}...',
+		value: copy.supportIntro,
+		textarea: true,
+		rows: 2,
+		maxlength: 220,
+		span: true,
+	},
+	{
+		name: 'faqIntro',
+		label: 'FAQ intro',
+		tip: 'What: Intro under FAQ H1. | Why: FAQ page lede. | Example: Short answers about delivery...',
+		value: copy.faqIntro,
+		textarea: true,
+		rows: 2,
+		maxlength: 220,
+		span: true,
+	},
+	{
+		name: 'reviewsIntro',
+		label: 'Reviews intro',
+		tip: 'What: Intro on Reviews index. | Why: Social proof lede. | Example: Real feedback from {brand} buyers...',
+		value: copy.reviewsIntro,
+		textarea: true,
+		rows: 2,
+		maxlength: 220,
+		span: true,
+	},
+	{
+		name: 'chipEsp',
+		label: 'Agent chip: ESP',
+		tip: 'What: Homepage feature chip. | Why: Agent bullets. | Example: ESP / wallhack',
+		value: copy.chipEsp,
+		maxlength: 40,
+	},
+	{
+		name: 'chipAim',
+		label: 'Agent chip: Aim',
+		tip: 'What: Homepage feature chip. | Why: Agent bullets. | Example: Soft aim',
+		value: copy.chipAim,
+		maxlength: 40,
+	},
+	{
+		name: 'chipRadar',
+		label: 'Agent chip: Radar',
+		tip: 'What: Homepage feature chip. | Why: Agent bullets. | Example: 2D radar',
+		value: copy.chipRadar,
+		maxlength: 40,
+	},
+	{
+		name: 'chipUpdates',
+		label: 'Agent chip: Updates',
+		tip: 'What: Homepage feature chip. | Why: Agent bullets. | Example: Patch updates',
+		value: copy.chipUpdates,
+		maxlength: 40,
+	},
+	{
+		name: 'navPreview',
+		label: 'Nav: Preview',
+		tip: 'What: Nav label (meaning locked). | Why: Keep meaning = product preview. | Example: Preview',
+		value: copy.navPreview,
+		maxlength: 24,
+	},
+	{
+		name: 'navFeatures',
+		label: 'Nav: Features',
+		tip: 'What: Nav label (meaning locked). | Why: Keep meaning = what is included. | Example: Features',
+		value: copy.navFeatures,
+		maxlength: 24,
+	},
+	{
+		name: 'navStore',
+		label: 'Nav: Store',
+		tip: 'What: Nav label (meaning locked). | Why: Keep meaning = buy / plans. | Example: Store',
+		value: copy.navStore,
+		maxlength: 24,
+	},
+	{
+		name: 'navStatus',
+		label: 'Nav: Status',
+		tip: 'What: Nav label (meaning locked). | Why: Keep meaning = patch status. | Example: Status',
+		value: copy.navStatus,
+		maxlength: 24,
+	},
+	{
+		name: 'navReviews',
+		label: 'Nav: Reviews',
+		tip: 'What: Nav label (meaning locked). | Why: Keep meaning = social proof. | Example: Reviews',
+		value: copy.navReviews,
+		maxlength: 24,
+	},
+];
+
+const images: Field[] = [
+	{
+		name: 'logo',
+		label: 'Logo (webp)',
+		tip: 'What: Path to the webp logo in /public. | Why: Site logo asset. Must live under /images/. | Example: /images/my-brand-logo.webp',
+		value: brand.logo,
+		maxlength: 300,
+	},
+	{
+		name: 'logoRaster',
+		label: 'Logo (png)',
+		tip: 'What: PNG version of the logo. | Why: Used for schema / favicon-style raster needs. | Example: /images/my-brand-logo.png',
+		value: brand.logoRaster,
+		maxlength: 300,
+	},
+	{
+		name: 'logoAlt',
+		label: 'Logo alt text',
+		tip: 'What: Accessibility text for the logo image. | Why: Screen readers and image SEO. | Example: Marathon Hacks logo',
+		value: brand.logoAlt,
+		maxlength: 120,
+	},
+	{
+		name: 'logoRasterWidth',
+		label: 'Logo width (px)',
+		tip: 'What: Raster logo pixel width. | Why: Schema ImageObject. | Example: 512',
+		value: brand.logoRasterWidth,
+		type: 'number',
+		min: 16,
+		max: 4096,
+	},
+	{
+		name: 'logoRasterHeight',
+		label: 'Logo height (px)',
+		tip: 'What: Raster logo pixel height. | Why: Schema ImageObject. | Example: 512',
+		value: brand.logoRasterHeight,
+		type: 'number',
+		min: 16,
+		max: 4096,
+	},
+	{
+		name: 'defaultOgImage',
+		label: 'Default OG image',
+		tip: 'What: Default image when the site is shared on Discord / Twitter / Facebook. | Why: Open Graph preview. Put a real in-game or brand shot under /images/. | Example: /images/fortnite-combat.webp',
+		value: brand.defaultOgImage,
+		maxlength: 300,
+	},
+	{
+		name: 'heroImage',
+		label: 'Agent image',
+		tip: 'What: Big homepage banner image path. | Why: First thing visitors see. Keep file in /public/images/. | Example: /images/fortnite-hero-banner.webp',
+		value: brand.heroImage,
+		maxlength: 300,
+	},
+];
+
+const sitemapMetaFields: Field[] = [
+	{
+		name: 'contentLastmod',
+		label: 'Content lastmod (YYYY-MM-DD)',
+		tip: 'What: Brand-level sitemap date. | Why: When this is newer than a page date, sitemaps use it so Google sees a refresh after rebrand. | Example: 2026-08-10',
+		value: sitemap.contentLastmod,
+		maxlength: 12,
+		placeholder: '2026-08-10',
+	},
+	{
+		name: 'blogImageTitle',
+		label: 'Blog sitemap image title',
+		tip: 'What: Title for the blog index image in sitemaps. | Why: Image sitemap / urlset labels. Tokens work. | Example: {brand} blog',
+		value: sitemap.blogImageTitle,
+		maxlength: 160,
+	},
+	{
+		name: 'blogImageCaption',
+		label: 'Blog sitemap image caption',
+		tip: 'What: Caption under the blog index image. | Why: Helps image search context. | Example: {game} tips and {antiCheat} notes',
+		value: sitemap.blogImageCaption,
+		maxlength: 220,
+		span: true,
+	},
+	{
+		name: 'reviewsImageTitle',
+		label: 'Reviews sitemap image title',
+		tip: 'What: Title for the reviews index image. | Why: EN reviews urlset image label. | Example: {brand} reviews',
+		value: sitemap.reviewsImageTitle,
+		maxlength: 160,
+	},
+	{
+		name: 'reviewsImageCaption',
+		label: 'Reviews sitemap image caption',
+		tip: 'What: Caption for reviews image. | Why: EN reviews urlset. | Example: What buyers say about {primaryKeyword}',
+		value: sitemap.reviewsImageCaption,
+		maxlength: 220,
+		span: true,
+	},
+];
+
+const seoCoreFields = seoFields.filter((f) =>
+	/^(home|features|store|status|preview)(Title|Description)$/.test(f.name),
+);
+const seoMoreFields = seoFields.filter((f) =>
+	/^(setup|support|faq|reviews|blog)(Title|Description)$/.test(f.name),
+);
+
+const seoAuditRows = [
+	{ page: 'Home', path: '/', fields: 'homeTitle / homeDescription', status: 'Live · permanent' },
+	{ page: 'Features', path: '/features/', fields: 'featuresTitle / Description + intro', status: 'Live · permanent' },
+	{ page: 'Store', path: '/pricing/', fields: 'storeTitle / Description + intro', status: 'Live · permanent' },
+	{ page: 'Status', path: '/updates/', fields: 'statusTitle / Description + intro', status: 'Live · permanent' },
+	{ page: 'Preview', path: '/warzone-cheats/', fields: 'previewTitle / Description + intro', status: 'Live · permanent' },
+	{ page: 'Setup', path: '/setup/', fields: 'setupTitle / Description + intro', status: 'Live · permanent' },
+	{ page: 'Support', path: '/support/', fields: 'supportTitle / Description + intro', status: 'Live · permanent' },
+	{ page: 'FAQ index', path: '/faq/', fields: 'faqTitle / Description + intro', status: 'Live · permanent' },
+	{ page: 'Reviews index', path: '/reviews/', fields: 'reviewsTitle / Description + intro', status: 'Live · permanent' },
+	{ page: 'Blog index', path: '/blog/', fields: 'blogTitle / blogDescription', status: 'Live · EN permanent' },
+	{ page: 'Keyword landings', path: '/warzone-esp/ …', fields: 'content.generated.ts', status: 'Manual file' },
+	{ page: 'FAQ answers', path: '/faq/[slug]/', fields: 'site.ts faqs', status: 'Manual file' },
+	{ page: 'Review posts', path: '/reviews/[slug]/', fields: 'site.ts reviews', status: 'Manual file' },
+] as const;
+
+const sections = [
+	{ id: 'identity', label: 'Identity', hint: '1', desc: 'Brand name, domain, and support contact.' },
+	{ id: 'product', label: 'Product', hint: '2', desc: 'Game, anti-cheat, platforms, and pricing.' },
+	{ id: 'colors', label: 'Colors', hint: '3', desc: 'Accent, soft, deep, hover, canvas, panel.' },
+	{ id: 'seo', label: 'SEO', hint: '4', desc: 'Page titles and meta descriptions for Google.' },
+	{ id: 'keywords', label: 'Keywords', hint: '5', desc: 'Primary phrase and related search terms.' },
+	{ id: 'copy', label: 'Copy', hint: '6', desc: 'Homepage tagline, summary, and agent text.' },
+	{ id: 'images', label: 'Images', hint: '7', desc: 'Logo, OG, and agent asset paths.' },
+	{ id: 'sitemap', label: 'Sitemap', hint: '8', desc: 'Domain-locked URLs + optional labels.' },
+] as const;
+---
+
+<Layout title={title} description={description} noindex={true} canonicalPath="/brand-studio/">
+	<main class="studio">
+		{
+			isDev ? (
+				<div class="studio__shell" id="studio-root">
+					<header class="studio__head">
+						<p class="studio__eyebrow">Localhost · permanent writes to brand.ts</p>
+						<h1>Brand Studio</h1>
+						<p class="studio__lede">
+							Rebrand identity, SEO, colors, and assets in one place. Every Save writes{' '}
+							<code>src/data/brand.ts</code> and syncs domain / robots. Hover{' '}
+							<span class="studio__q-demo" aria-hidden="true">?</span> for field help.
+						</p>
+						<ol class="studio__checklist">
+							<li><a href="#section-identity">1. Identity + domain</a></li>
+							<li><a href="#section-product">2. Product</a></li>
+							<li><a href="#section-seo">3. SEO titles</a></li>
+							<li><a href="#section-copy">4. Page copy</a></li>
+							<li><a href="#section-colors">5. Colors</a></li>
+							<li><strong>6. Save</strong> (Ctrl+S)</li>
+						</ol>
+						<p class="studio__scope">
+							<strong>Permanent in Studio:</strong> EN hub pages (Home, Features, Store, Status, Preview,
+							Setup, Support, FAQ, Reviews, Blog), nav, hero, theme, sitemap labels, domain.
+							<strong> Still manual after rebrand:</strong> keyword landing bodies in
+							<code>content.generated.ts</code>, FAQ/review item text in <code>site.ts</code>.
+						</p>
+					</header>
+
+					<div class="studio__layout">
+						<nav class="studio__nav" aria-label="Sections">
+							<ul>
+								{sections.map((s) => (
+									<li>
+										<a href={`#section-${s.id}`} data-section={s.id}>
+											<span>{s.label}</span>
+											<kbd>{s.hint}</kbd>
+										</a>
+									</li>
+								))}
+							</ul>
+						</nav>
+
+						<div class="studio__main">
+							<form class="studio__form" id="studio-form" autocomplete="off">
+								<section class="studio__block" id="section-identity">
+									<h2>Identity</h2>
+									<p class="studio__block-desc">
+										Brand name, domain, and support contact. Change <strong>Site URL</strong> once —
+										sitemaps and robots follow it automatically.
+									</p>
+									<div class="studio__row-actions">
+										<button type="button" class="studio__mini" id="sync-short-btn">
+											Sync short name
+										</button>
+										<button type="button" class="studio__mini" id="sync-email-btn">
+											Match email to domain
+										</button>
+									</div>
+									<div class="studio__grid">
+										{identity.map((f) => (
+											<label class:list={['studio__field', f.span && 'is-span']}>
+												<span class="studio__lab">
+													{f.label}
+													<button type="button" class="studio__q" aria-label={`Help: ${f.label}`} data-tip={f.tip}>?</button>
+												</span>
+												{f.textarea ? (
+													<textarea name={f.name} rows={f.rows ?? 4} required={f.required} maxlength={f.maxlength} placeholder={f.placeholder}>{f.value}</textarea>
+												) : (
+													<input name={f.name} type={f.type ?? 'text'} required={f.required} maxlength={f.maxlength} min={f.min} max={f.max} step={f.type === 'number' ? 1 : undefined} value={f.value} placeholder={f.placeholder} />
+												)}
+											</label>
+										))}
+										<label class="studio__field is-span studio__check">
+											<span class="studio__lab">
+												Keep support email matched to domain
+												<button
+													type="button"
+													class="studio__q"
+													aria-label="Help: Match email"
+													data-tip="What: When Site URL changes, set support@yourdomain automatically. | Why: One less field to fix on rebrand. | Example: https://apexcheats.com → support@apexcheats.com"
+												>
+													?
+												</button>
+											</span>
+											<input name="syncEmailToDomain" type="checkbox" value="1" checked />
+										</label>
+									</div>
+									<p class="studio__domain-live" id="identity-domain-live" aria-live="polite">
+										Sitemap / robots will use: <code id="identity-domain-code">{brand.url}/sitemap.xml</code>
+									</p>
+								</section>
+
+								<section class="studio__block" id="section-product">
+									<h2>Product</h2>
+									<p class="studio__block-desc">Game, anti-cheat, platforms, and pricing.</p>
+									<div class="studio__grid">
+										{product.map((f) => (
+											<label class:list={['studio__field', f.span && 'is-span']}>
+												<span class="studio__lab">
+													{f.label}
+													<button type="button" class="studio__q" aria-label={`Help: ${f.label}`} data-tip={f.tip}>?</button>
+												</span>
+												{f.textarea ? (
+													<textarea name={f.name} rows={f.rows ?? 4} required={f.required} maxlength={f.maxlength}>{f.value}</textarea>
+												) : (
+													<input name={f.name} type={f.type ?? 'text'} required={f.required} maxlength={f.maxlength} min={f.min} max={f.max} step={f.type === 'number' ? 1 : undefined} value={f.value} />
+												)}
+											</label>
+										))}
+									</div>
+								</section>
+
+								<section class="studio__block studio__block--colors" id="section-colors">
+									<h2>Colors</h2>
+									<p class="studio__block-desc">
+										Every tone is editable. Soft / deep / hover / panel start from accent + canvas, then you
+										can override them. Save writes all six into <code>brand.theme</code>.
+									</p>
+
+									<div class="studio__theme" id="color-preview">
+										<div class="studio__theme-stage" id="theme-stage">
+											<div class="studio__theme-nav">
+												<span class="studio__theme-logo" id="theme-logo">{brand.name}</span>
+												<span class="studio__theme-nav-link">Features</span>
+												<span class="studio__theme-nav-link is-active">Store</span>
+												<span class="studio__theme-pill" id="theme-pill">Buy</span>
+											</div>
+											<div class="studio__theme-hero">
+												<p class="studio__theme-kicker" id="theme-kicker">Accent preview</p>
+												<p class="studio__theme-title" id="theme-title">{brand.name}</p>
+												<p class="studio__theme-lede" id="theme-lede">
+													Links use soft. Buttons use accent. Panels use panel.
+												</p>
+												<div class="studio__theme-actions">
+													<span class="studio__theme-cta" id="theme-cta">Buy now</span>
+													<a class="studio__theme-link" id="theme-link" href="/" target="_blank" rel="noopener">
+														Open live site
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="studio__row-actions">
+											<button type="button" class="studio__mini" id="theme-derive-btn">
+												Re-derive soft / deep / hover / panel
+											</button>
+										</div>
+
+										<div class="studio__theme-controls studio__theme-controls--six">
+											{
+												[
+													{
+														id: 'accent',
+														name: 'themeaccent',
+														label: 'Accent',
+														tip: 'What: Main brand color. | Why: CTAs, focus, highlights. | Example: #ff4655',
+														value: theme.accent,
+													},
+													{
+														id: 'soft',
+														name: 'themeSoft',
+														label: 'Soft',
+														tip: 'What: Lighter accent for links and labels. | Why: --magenta-soft site-wide. | Example: #ffa0a8',
+														value: theme.accentSoft,
+													},
+													{
+														id: 'deep',
+														name: 'themeDeep',
+														label: 'Deep',
+														tip: 'What: Darker accent for depth. | Why: --magenta-deep. | Example: #9a1f2a',
+														value: theme.accentDeep,
+													},
+													{
+														id: 'hover',
+														name: 'themeHover',
+														label: 'Hover',
+														tip: 'What: Accent hover state. | Why: --accent-hover on interactive elements. | Example: #ff6b75',
+														value: theme.accentHover,
+													},
+													{
+														id: 'bg',
+														name: 'themeBg',
+														label: 'Canvas',
+														tip: 'What: Page background. | Why: --bg and browser theme-color. Keep near-black. | Example: #08090a',
+														value: theme.bg,
+													},
+													{
+														id: 'panel',
+														name: 'themePanel',
+														label: 'Panel',
+														tip: 'What: Card / section surface. | Why: --bg-panel. | Example: #12141a',
+														value: theme.bgPanel,
+													},
+												].map((f) => (
+													<label class="studio__theme-field">
+														<span class="studio__theme-field-lab">
+															{f.label}
+															<button
+																type="button"
+																class="studio__q"
+																aria-label={`Help: ${f.label}`}
+																data-tip={f.tip}
+															>
+																?
+															</button>
+														</span>
+														<div class="studio__theme-well">
+															<input
+																name={f.name}
+																type="color"
+																value={f.value}
+																id={`theme-${f.id}-picker`}
+															/>
+															<input
+																name={`${f.name}Text`}
+																type="text"
+																maxlength={7}
+																value={f.value}
+																id={`theme-${f.id}-text`}
+																spellcheck="false"
+																autocomplete="off"
+																aria-label={`${f.label} hex`}
+															/>
+														</div>
+													</label>
+												))
+											}
+										</div>
+
+										<p class="studio__presets-label">Presets</p>
+										<div class="studio__theme-presets" id="theme-presets">
+											{themePresets.map((p) => (
+												<button
+													type="button"
+													class="studio__theme-preset"
+													data-accent={p.accent}
+													data-bg={p.bg}
+													aria-label={p.label}
+													title={p.label}
+												>
+													<span class="studio__theme-preset-swatch" style={`background:${p.accent}`} />
+													<span class="studio__theme-preset-bg" style={`background:${p.bg}`} />
+													<span class="studio__theme-preset-name">{p.label}</span>
+												</button>
+											))}
+										</div>
+									</div>
+								</section>
+
+<section class="studio__block studio__block--seo" id="section-seo">
+									<h2>SEO</h2>
+									<p class="studio__block-desc">
+										Google titles (max 70) and descriptions (max 160) for every hub page. SERP preview
+										matches live clamps. Save writes permanently — long text is truncated with a
+										warning, never silently reverted. Yellow rows in the audit still need manual file
+										edits.
+									</p>
+
+									<div class="studio__audit">
+										<p class="studio__audit-title">SEO coverage audit</p>
+										<table class="studio__audit-table">
+											<thead>
+												<tr>
+													<th>Page</th>
+													<th>URL</th>
+													<th>Brand fields</th>
+													<th>Status</th>
+												</tr>
+											</thead>
+											<tbody>
+												{seoAuditRows.map((row) => (
+													<tr>
+														<td>{row.page}</td>
+														<td>
+															<a href={row.path} target="_blank" rel="noopener">
+																{row.path}
+															</a>
+														</td>
+														<td>{row.fields}</td>
+														<td>
+															<span
+																class:list={[
+																	'studio__audit-status',
+																	row.status.includes('Manual')
+																		? 'is-manual'
+																		: 'is-live',
+																]}
+															>
+																{row.status}
+															</span>
+														</td>
+													</tr>
+												))}
+											</tbody>
+										</table>
+									</div>
+
+									<div class="studio__previews">
+										<div class="studio__serp">
+											<div class="studio__serp-tabs" role="tablist" aria-label="SERP preview page">
+												{[
+													'home',
+													'features',
+													'store',
+													'status',
+													'preview',
+													'setup',
+													'support',
+													'faq',
+													'reviews',
+													'blog',
+												].map((id, i) => (
+													<button
+														type="button"
+														class:list={['studio__serp-tab', i === 0 && 'is-active']}
+														data-serp={id}
+													>
+														{id.charAt(0).toUpperCase() + id.slice(1)}
+													</button>
+												))}
+											</div>
+											<div class="studio__serp-card">
+												<p class="studio__serp-url" id="serp-url">
+													{brand.url.replace(/^https?:\/\//, '')}
+												</p>
+												<p class="studio__serp-title" id="serp-title">
+													{seo.homeTitle}
+												</p>
+												<p class="studio__serp-desc" id="serp-desc">
+													{seo.homeDescription}
+												</p>
+											</div>
+											<div class="studio__serp-counts">
+												<span id="serp-title-count">Title: 0 chars</span>
+												<span id="serp-desc-count">Description: 0 chars</span>
+											</div>
+										</div>
+
+										<div class="studio__hero-preview">
+											<p class="studio__hero-preview-label">Agent preview</p>
+											<p class="studio__hero-preview-body">
+												<strong id="hero-preview-name">{brand.name}</strong>
+												<span id="hero-preview-lede">{copy.heroLede}</span>
+											</p>
+										</div>
+									</div>
+
+									<div class="studio__tokens">
+										<span class="studio__tokens-label">Insert token:</span>
+										<button type="button" class="studio__chip" data-token="{brand}">
+											{'{brand}'}
+										</button>
+										<button type="button" class="studio__chip" data-token="{game}">
+											{'{game}'}
+										</button>
+										<button type="button" class="studio__chip" data-token="{antiCheat}">
+											{'{antiCheat}'}
+										</button>
+										<button type="button" class="studio__chip" data-token="{email}">
+											{'{email}'}
+										</button>
+										<button type="button" class="studio__chip" data-token="{primaryKeyword}">
+											{'{primaryKeyword}'}
+										</button>
+									</div>
+
+									<div class="studio__row-actions">
+										<button type="button" class="studio__mini" id="autofill-seo-btn">
+											Autofill SEO
+										</button>
+									</div>
+
+									<h3 class="studio__subhead">Core pages</h3>
+									<p class="studio__block-desc">Home + Preview / Features / Store / Status.</p>
+									<div class="studio__grid">
+										{seoCoreFields.map((f) => (
+											<label class:list={['studio__field', f.span && 'is-span']}>
+												<span class="studio__lab">
+													{f.label}
+													<button type="button" class="studio__q" aria-label={`Help: ${f.label}`} data-tip={f.tip}>
+														?
+													</button>
+												</span>
+												{f.textarea ? (
+													<textarea name={f.name} rows={f.rows ?? 2} required={f.required} maxlength={f.maxlength}>{f.value}</textarea>
+												) : (
+													<input name={f.name} type="text" required={f.required} maxlength={f.maxlength} value={f.value} />
+												)}
+											</label>
+										))}
+									</div>
+
+									<h3 class="studio__subhead">More pages</h3>
+									<p class="studio__block-desc">Setup, Support, FAQ, Reviews, Blog.</p>
+									<div class="studio__grid">
+										{seoMoreFields.map((f) => (
+											<label class:list={['studio__field', f.span && 'is-span']}>
+												<span class="studio__lab">
+													{f.label}
+													<button type="button" class="studio__q" aria-label={`Help: ${f.label}`} data-tip={f.tip}>
+														?
+													</button>
+												</span>
+												{f.textarea ? (
+													<textarea name={f.name} rows={f.rows ?? 2} required={f.required} maxlength={f.maxlength}>{f.value}</textarea>
+												) : (
+													<input name={f.name} type="text" required={f.required} maxlength={f.maxlength} value={f.value} />
+												)}
+											</label>
+										))}
+									</div>
+								</section>
+
+								<section class="studio__block" id="section-keywords">
+									<h2>Keywords</h2>
+									<p class="studio__block-desc">Primary phrase and related search terms.</p>
+									<div class="studio__row-actions">
+										<button type="button" class="studio__mini" id="add-primary-btn">
+											Add primary to list
+										</button>
+									</div>
+									<div class="studio__grid">
+										{keywords.map((f) => (
+											<label class:list={['studio__field', f.span && 'is-span']}>
+												<span class="studio__lab">
+													{f.label}
+													<button type="button" class="studio__q" aria-label={`Help: ${f.label}`} data-tip={f.tip}>?</button>
+												</span>
+												{f.textarea ? (
+													<textarea name={f.name} rows={f.rows ?? 4} required={f.required} maxlength={f.maxlength}>{f.value}</textarea>
+												) : (
+													<input name={f.name} type="text" required={f.required} maxlength={f.maxlength} value={f.value} />
+												)}
+											</label>
+										))}
+									</div>
+								</section>
+
+								<section class="studio__block" id="section-copy">
+									<h2>Copy</h2>
+									<p class="studio__block-desc">Homepage tagline, summary, and agent text.</p>
+									<div class="studio__grid">
+										{copyFields.map((f) => (
+											<label class:list={['studio__field', f.span && 'is-span']}>
+												<span class="studio__lab">
+													{f.label}
+													<button type="button" class="studio__q" aria-label={`Help: ${f.label}`} data-tip={f.tip}>?</button>
+												</span>
+												{f.textarea ? (
+													<textarea name={f.name} rows={f.rows ?? 3} required={f.required} maxlength={f.maxlength}>{f.value}</textarea>
+												) : (
+													<input name={f.name} type="text" required={f.required} maxlength={f.maxlength} value={f.value} />
+												)}
+											</label>
+										))}
+									</div>
+								</section>
+
+								<section class="studio__block" id="section-images">
+									<h2>Images</h2>
+									<p class="studio__block-desc">Logo, OG, and agent asset paths in /public/images/.</p>
+									<div class="studio__grid">
+										{images.map((f) => (
+											<label class:list={['studio__field', f.span && 'is-span']}>
+												<span class="studio__lab">
+													{f.label}
+													<button
+														type="button"
+														class="studio__q"
+														aria-label={`Help: ${f.label}`}
+														data-tip={f.tip}
+													>
+														?
+													</button>
+												</span>
+												<input
+													name={f.name}
+													type={f.type ?? 'text'}
+													maxlength={f.maxlength}
+													min={f.min}
+													max={f.max}
+													step={f.type === 'number' ? 1 : undefined}
+													value={f.value}
+												/>
+											</label>
+										))}
+									</div>
+								</section>
+
+								<section class="studio__block" id="section-sitemap">
+									<h2>Sitemap</h2>
+									<p class="studio__block-desc">
+										XML is generated from your routes. Domain is locked to <strong>Site URL</strong> —
+										change it in Identity and this panel updates instantly. Save writes robots.txt + Astro
+										<code>site</code>.
+									</p>
+
+									<div class="studio__sitemap-domain" id="sitemap-domain-card">
+										<div class="studio__sitemap-domain-top">
+											<p class="studio__sitemap-domain-label">Live domain (from Site URL)</p>
+											<a class="studio__mini" href="#section-identity">Edit domain</a>
+										</div>
+										<p class="studio__sitemap-domain-host" id="sitemap-domain-host">
+											{brand.url.replace(/^https?:\/\//, '').replace(/\/$/, '') || 'example.com'}
+										</p>
+										<ul class="studio__sitemap-preview" id="sitemap-url-preview">
+											<li>
+												<span>Index</span>
+												<code id="sitemap-preview-index">{brand.url}/sitemap.xml</code>
+											</li>
+											<li>
+												<span>English</span>
+												<code id="sitemap-preview-en">{brand.url}/sitemap-en.xml</code>
+											</li>
+											<li>
+												<span>Images</span>
+												<code id="sitemap-preview-images">{brand.url}/sitemap-images.xml</code>
+											</li>
+											<li>
+												<span>robots.txt</span>
+												<code id="sitemap-preview-robots">Sitemap: {brand.url}/sitemap.xml</code>
+											</li>
+										</ul>
+										<div class="studio__sitemap-links">
+											<a href="/sitemap.xml" target="_blank" rel="noopener">Open /sitemap.xml</a>
+											<a href="/sitemap-en.xml" target="_blank" rel="noopener">Open /sitemap-en.xml</a>
+											<a href="/sitemap-images.xml" target="_blank" rel="noopener">Open /sitemap-images.xml</a>
+										</div>
+										<p class="studio__sitemap-note">
+											Absolute <code>&lt;loc&gt;</code> URLs inside XML use this domain after Save (no
+											manual sitemap domain field).
+										</p>
+									</div>
+
+									<div class="studio__row-actions">
+										<button type="button" class="studio__mini" id="autofill-sitemap-btn">
+											Reset labels to tokens
+										</button>
+										<button type="button" class="studio__mini" id="bump-lastmod-btn">
+											Set lastmod to today
+										</button>
+									</div>
+
+									<details class="studio__details" open>
+										<summary>Labels &amp; lastmod</summary>
+										<div class="studio__grid studio__grid--tight">
+											{sitemapMetaFields.map((f) => (
+												<label class:list={['studio__field', f.span && 'is-span']}>
+													<span class="studio__lab">
+														{f.label}
+														<button type="button" class="studio__q" aria-label={`Help: ${f.label}`} data-tip={f.tip}>
+															?
+														</button>
+													</span>
+													<input
+														name={f.name}
+														type="text"
+														maxlength={f.maxlength}
+														value={f.value}
+														placeholder={f.placeholder}
+													/>
+												</label>
+											))}
+											<label class="studio__field is-span studio__check">
+												<span class="studio__lab">
+													Bump lastmod to today on save
+													<button
+														type="button"
+														class="studio__q"
+														aria-label="Help: Bump lastmod"
+														data-tip="What: Sets content lastmod to today's date when you save. | Why: Tells crawlers the brand refresh is new without editing every page date. | Example: Check this after a full rebrand"
+													>
+														?
+													</button>
+												</span>
+												<input name="bumpLastmodOnSave" type="checkbox" value="1" checked />
+											</label>
+										</div>
+									</details>
+
+									<details class="studio__details" open>
+										<summary>Image sitemap entries (6)</summary>
+										<p class="studio__details-lede">
+											Paths stay relative (<code>/images/…</code>). Full image URLs = Site URL + path,
+											updated when the domain changes.
+										</p>
+										<div class="studio__sitemap-images">
+											{sitemap.images.map((img, idx) => {
+												const n = idx + 1;
+												return (
+													<div class="studio__sitemap-card">
+														<p class="studio__sitemap-card-title">Image {n}</p>
+														<label class="studio__field">
+															<span class="studio__lab">Path</span>
+															<input
+																name={`sitemapImage${n}Src`}
+																type="text"
+																maxlength={300}
+																value={img.src}
+																placeholder="/images/example.webp"
+															/>
+														</label>
+														<p class="studio__sitemap-abs" data-sitemap-abs-for={`sitemapImage${n}Src`}>
+															{brand.url}
+															{img.src}
+														</p>
+														<label class="studio__field">
+															<span class="studio__lab">Title</span>
+															<input
+																name={`sitemapImage${n}Title`}
+																type="text"
+																maxlength={160}
+																value={img.title}
+															/>
+														</label>
+														<label class="studio__field">
+															<span class="studio__lab">Caption</span>
+															<input
+																name={`sitemapImage${n}Caption`}
+																type="text"
+																maxlength={220}
+																value={img.caption}
+															/>
+														</label>
+													</div>
+												);
+											})}
+										</div>
+									</details>
+
+									<label class="studio__field is-span" id="token-field" hidden>
+										<span class="studio__lab">
+											Studio token
+											<button
+												type="button"
+												class="studio__q"
+												aria-label="Help: Studio token"
+												data-tip="What: Optional password set on your PC. | Why: Extra lock so only people with the token can save. | Example: Set BRAND_STUDIO_TOKEN before npm run dev"
+											>
+												?
+											</button>
+										</span>
+										<input name="studioToken" type="password" maxlength="200" autocomplete="off" />
+									</label>
+								</section>
+							</form>
+						</div>
+					</div>
+
+					<div class="studio__bar" id="studio-bar">
+						<button type="submit" form="studio-form" class="studio__save" id="save-btn">
+							Save permanently <span class="studio__kbd-hint">Ctrl+S</span>
+						</button>
+						<a class="studio__link" href="/" target="_blank" rel="noopener">
+							Open site
+						</a>
+						<p class="studio__bar-msg" id="studio-banner" hidden />
+					</div>
+
+					<div class="studio__popup" id="studio-tip" hidden role="tooltip" />
+				</div>
+			) : (
+				<div class="studio__locked">
+					<h1>Brand Studio locked</h1>
+					<p>
+						Only available on localhost during <code>astro dev</code>.
+					</p>
+				</div>
+			)
+		}
+	</main>
+</Layout>
+
+{
+	isDev && (
+		<script is:inline>
+			(() => {
+				const root = document.getElementById('studio-root');
+				const form = document.getElementById('studio-form');
+				const banner = document.getElementById('studio-banner');
+				const saveBtn = document.getElementById('save-btn');
+				const tokenField = document.getElementById('token-field');
+				const tipEl = document.getElementById('studio-tip');
+				if (!root || !form || !banner || !saveBtn || !tipEl) return;
+
+				const serpTitle = document.getElementById('serp-title');
+				const serpDesc = document.getElementById('serp-desc');
+				const serpUrl = document.getElementById('serp-url');
+				const serpTitleCount = document.getElementById('serp-title-count');
+				const serpDescCount = document.getElementById('serp-desc-count');
+				const heroName = document.getElementById('hero-preview-name');
+				const heroLede = document.getElementById('hero-preview-lede');
+
+				const host = location.hostname;
+				const local = host === 'localhost' || host === '127.0.0.1' || host === '[::1]';
+				if (!local) {
+					form.hidden = true;
+					banner.hidden = false;
+					banner.className = 'studio__bar-msg is-err';
+					banner.textContent = 'Open this page on http://localhost -- remote hosts are blocked.';
+					return;
+				}
+
+				let activeSerp = 'home';
+				let lastFocus = null;
+				let tipTimer = null;
+				let tipOverBtn = false;
+				let tipOverPopup = false;
+
+				const sectionIds = ['identity', 'product', 'colors', 'seo', 'keywords', 'copy', 'images', 'sitemap'];
+
+				const seoTemplates = {
+					homeTitle: '{brand} | Undetected {primaryKeyword}',
+					homeDescription:
+						'{primaryKeyword} for Windows PC -- ESP, aimbot, and radar with {antiCheat} maintenance. Compare plans and buy.',
+					featuresTitle: '{game} Features | {brand}',
+					featuresDescription:
+						'Everything in one {game} license for Windows PC -- ESP, aimbot, radar, and patch updates.',
+					storeTitle: '{game} Store | {brand}',
+					storeDescription: 'Monthly and lifetime {game} plans. Same features. Instant delivery after payment.',
+					statusTitle: '{game} Status | {brand}',
+					statusDescription:
+						'Live status for {brand} after {game} or {antiCheat} patches. Check before you queue.',
+					previewTitle: '{game} Preview | {brand}',
+					previewDescription:
+						'Quick preview of {brand} -- ESP, aimbot, radar, and updates after {game} patches.',
+					setupTitle: '{game} Setup | {brand}',
+					setupDescription: 'Install and launch {brand} on Windows PC. Short setup steps after you buy.',
+					supportTitle: '{game} Support | {brand}',
+					supportDescription: 'Get help with {brand}. Email {email} with your order ID.',
+					faqTitle: '{game} FAQ | {brand}',
+					faqDescription: 'Short answers about {brand} — delivery, setup, updates, and refunds.',
+					reviewsTitle: '{brand} Reviews | Buyer Feedback',
+					reviewsDescription:
+						'Real buyer reviews for {brand} — ESP, soft aim, radar, and patch updates on Windows PC.',
+					blogTitle: '{game} Intel | {brand}',
+					blogDescription: 'Guides and notes for {game} — meta tips, ESP, aimbot, and {antiCheat} updates.',
+				};
+
+				const copyTemplates = {
+					tagline: 'Undetected {primaryKeyword} -- ESP, aimbot, and radar for PC',
+					summary:
+						'{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, soft aim, and radar, with {antiCheat} maintenance after patches.',
+					heroLede: 'Hacks and cheats available -- 0% detection.',
+					blogLabel: '{game} Intel',
+					ctaBuy: 'Buy now',
+					ctaBuyShort: 'Buy',
+					featuresIntro: 'Everything included in one license for {game} on Windows PC.',
+					storeIntro: 'Pick a plan. Same features on both. Instant delivery after payment.',
+					statusIntro: 'Check here after a {game} or {antiCheat} patch before you play.',
+					previewIntro: 'A quick look at {brand} — ESP, aimbot, radar, and updates after patches.',
+					setupIntro: 'Install {brand} on Windows PC after you buy. Follow these short steps.',
+					supportIntro: 'Need help with {brand}? Email {email} with your order ID.',
+					faqIntro: 'Short answers about delivery, setup, updates, and refunds.',
+					reviewsIntro: 'Real feedback from {brand} buyers — ESP, soft aim, radar, and support.',
+				};
+
+				function show(msg, ok) {
+					banner.hidden = false;
+					banner.className = 'studio__bar-msg ' + (ok ? 'is-ok' : 'is-err');
+					banner.textContent = msg;
+				}
+
+				function formatTip(raw) {
+					return String(raw || '')
+						.split(' | ')
+						.map((line) => {
+							const m = line.match(/^(What|Why|Example):\s*(.*)$/i);
+							if (!m) return line;
+							return '<strong>' + m[1] + ':</strong> ' + m[2];
+						})
+						.join('<br />');
+				}
+
+				function hideTip() {
+					tipEl.hidden = true;
+					tipEl.innerHTML = '';
+				}
+
+				function scheduleHideTip() {
+					clearTimeout(tipTimer);
+					tipTimer = setTimeout(() => {
+						if (!tipOverBtn && !tipOverPopup) hideTip();
+					}, 180);
+				}
+
+				function positionTip(x, y) {
+					const pad = 14;
+					const maxX = window.innerWidth - tipEl.offsetWidth - 8;
+					const maxY = window.innerHeight - tipEl.offsetHeight - 8;
+					tipEl.style.left = Math.min(Math.max(8, x + pad), maxX) + 'px';
+					tipEl.style.top = Math.min(Math.max(8, y + pad), maxY) + 'px';
+				}
+
+				function openTip(btn, x, y) {
+					tipEl.innerHTML = formatTip(btn.getAttribute('data-tip'));
+					tipEl.hidden = false;
+					positionTip(x, y);
+				}
+
+				root.addEventListener(
+					'mouseover',
+					(e) => {
+						const btn = e.target.closest('.studio__q');
+						if (!btn || !root.contains(btn)) return;
+						tipOverBtn = true;
+						clearTimeout(tipTimer);
+						openTip(btn, e.clientX, e.clientY);
+					},
+					true
+				);
+
+				root.addEventListener(
+					'mouseout',
+					(e) => {
+						const btn = e.target.closest('.studio__q');
+						if (!btn || !root.contains(btn)) return;
+						tipOverBtn = false;
+						scheduleHideTip();
+					},
+					true
+				);
+
+				root.addEventListener('click', (e) => {
+					const btn = e.target.closest('.studio__q');
+					if (!btn || !root.contains(btn)) return;
+					e.preventDefault();
+					openTip(btn, e.clientX, e.clientY);
+				});
+
+				tipEl.addEventListener('mouseenter', () => {
+					tipOverPopup = true;
+					clearTimeout(tipTimer);
+				});
+
+				tipEl.addEventListener('mouseleave', () => {
+					tipOverPopup = false;
+					scheduleHideTip();
+				});
+
+				document.addEventListener('mousemove', (e) => {
+					if (tipEl.hidden) return;
+					positionTip(e.clientX, e.clientY);
+				});
+
+				document.addEventListener('keydown', (e) => {
+					if (e.key === 'Escape') hideTip();
+				});
+
+				function val(name) {
+					const el = form.elements.namedItem(name);
+					return el && 'value' in el ? String(el.value) : '';
+				}
+
+				function normalizeSiteUrl(raw) {
+					let u = String(raw || '').trim();
+					if (!u) return '';
+					if (!/^https?:\/\//i.test(u)) u = 'https://' + u;
+					u = u.replace(/\/+$/, '');
+					try {
+						const parsed = new URL(u);
+						if (!parsed.hostname) return u;
+						return parsed.origin;
+					} catch {
+						return u;
+					}
+				}
+
+				function siteHost(raw) {
+					const origin = normalizeSiteUrl(raw);
+					if (!origin) return '';
+					try {
+						return new URL(origin).hostname;
+					} catch {
+						return origin.replace(/^https?:\/\//i, '').split('/')[0];
+					}
+				}
+
+				function syncEmailFromDomain() {
+					const host = siteHost(val('url'));
+					if (!host) return;
+					const emailEl = form.elements.namedItem('supportEmail');
+					if (!emailEl || !('value' in emailEl)) return;
+					emailEl.value = 'support@' + host;
+				}
+
+				function maybeSyncEmailFromDomain() {
+					const box = form.elements.namedItem('syncEmailToDomain');
+					const enabled = box && 'checked' in box ? box.checked : true;
+					if (!enabled) return;
+					const host = siteHost(val('url'));
+					if (!host) return;
+					const emailEl = form.elements.namedItem('supportEmail');
+					if (!emailEl || !('value' in emailEl)) return;
+					const current = String(emailEl.value || '').trim();
+					const local = current.includes('@') ? current.split('@')[0] : 'support';
+					const next = (local || 'support') + '@' + host;
+					if (current !== next) emailEl.value = next;
+				}
+
+				function updateSitemapDomain() {
+					const origin = normalizeSiteUrl(val('url')) || 'https://example.com';
+					const host = siteHost(origin) || 'example.com';
+					const setText = (id, text) => {
+						const el = document.getElementById(id);
+						if (el) el.textContent = text;
+					};
+					setText('sitemap-domain-host', host);
+					setText('sitemap-preview-index', origin + '/sitemap.xml');
+					setText('sitemap-preview-en', origin + '/sitemap-en.xml');
+					setText('sitemap-preview-images', origin + '/sitemap-images.xml');
+					setText('sitemap-preview-robots', 'Sitemap: ' + origin + '/sitemap.xml');
+					setText('identity-domain-code', origin + '/sitemap.xml');
+
+					root.querySelectorAll('[data-sitemap-abs-for]').foreach((el) => {
+						const name = el.getAttribute('data-sitemap-abs-for');
+						const path = val(name) || '/images/…';
+						const clean = path.startsWith('/') ? path : '/' + path;
+						el.textContent = origin + clean;
+					});
+				}
+
+				function fillTokens(input) {
+					return String(input || '')
+						.replaceAll('{brand}', val('name'))
+						.replaceAll('{game}', val('game'))
+						.replaceAll('{antiCheat}', val('antiCheat'))
+						.replaceAll('{email}', val('supportEmail'))
+						.replaceAll('{primaryKeyword}', val('primaryKeyword'))
+						.replaceAll('{checkout}', val('checkoutUrl'));
+				}
+
+				function serpFields() {
+					return {
+						title: activeSerp + 'Title',
+						desc: activeSerp + 'Description',
+					};
+				}
+
+				function updateSerp() {
+					const { title: titleKey, desc: descKey } = serpFields();
+					const titleEl = form.elements.namedItem(titleKey);
+					const descEl = form.elements.namedItem(descKey);
+					const rawTitle = titleEl && 'value' in titleEl ? titleEl.value : '';
+					const rawDesc = descEl && 'value' in descEl ? descEl.value : '';
+					let title = fillTokens(rawTitle);
+					let desc = fillTokens(rawDesc);
+					// Match live seoDescription() clamp so SERP is accurate
+					if (desc.length > 160) desc = desc.slice(0, 157).trim() + '…';
+					if (title.length > 70) title = title.slice(0, 67).trim() + '…';
+
+					if (serpTitle) serpTitle.textContent = title || 'Title preview';
+					if (serpDesc) serpDesc.textContent = desc || 'Description preview';
+					if (serpUrl) {
+						const u = val('url').replace(/^https?:\/\//, '').replace(/\/$/, '');
+						const paths = {
+							home: '/',
+							features: '/features/',
+							store: '/pricing/',
+							status: '/updates/',
+							preview: '/warzone-cheats/',
+							setup: '/setup/',
+							support: '/support/',
+							faq: '/faq/',
+							reviews: '/reviews/',
+							blog: '/blog/',
+						};
+						const path = paths[activeSerp] || '/';
+						serpUrl.textContent = (u || 'example.com') + path;
+					}
+
+					const tLen = fillTokens(rawTitle).length;
+					const dLen = fillTokens(rawDesc).length;
+					if (serpTitleCount) {
+						serpTitleCount.textContent = 'Title: ' + tLen + ' chars (ideal 50–60, max 70)';
+						serpTitleCount.className = tLen >= 45 && tLen <= 60 ? 'is-ok' : tLen <= 70 ? 'is-warn' : 'is-bad';
+					}
+					if (serpDescCount) {
+						serpDescCount.textContent = 'Description: ' + dLen + ' chars (ideal 140–160, max 160)';
+						serpDescCount.className = dLen >= 140 && dLen <= 160 ? 'is-ok' : dLen < 140 ? 'is-warn' : 'is-bad';
+					}
+				}
+
+				function updateHero() {
+					if (heroName) heroName.textContent = fillTokens(val('name')) || 'Brand name';
+					if (heroLede) heroLede.textContent = fillTokens(val('heroLede')) || 'Agent lede';
+				}
+
+				root.querySelectorAll('.studio__serp-tab').foreach((tab) => {
+					tab.addEventListener('click', () => {
+						root.querySelectorAll('.studio__serp-tab').foreach((t) => t.classList.remove('is-active'));
+						tab.classList.add('is-active');
+						activeSerp = tab.getAttribute('data-serp') || 'home';
+						updateSerp();
+					});
+				});
+
+				form.addEventListener('input', (e) => {
+					const t = e.target;
+					if (t && t.name === 'url') {
+						maybeSyncEmailFromDomain();
+					}
+					document.getElementById('studio-bar')?.classList.add('is-dirty');
+					updateSerp();
+					updateHero();
+					updateThemePreview();
+					updateSitemapDomain();
+				});
+
+				const urlField = form.elements.namedItem('url');
+				if (urlField && 'addEventListener' in urlField) {
+					urlField.addEventListener('blur', () => {
+						const next = normalizeSiteUrl(val('url'));
+						if (next && 'value' in urlField && urlField.value !== next) {
+							urlField.value = next;
+							maybeSyncEmailFromDomain();
+							updateSerp();
+							updateSitemapDomain();
+						}
+					});
+				}
+
+				document.getElementById('sync-email-btn')?.addEventListener('click', () => {
+					const box = form.elements.namedItem('syncEmailToDomain');
+					if (box && 'checked' in box) box.checked = true;
+					syncEmailFromDomain();
+					updateSerp();
+					updateSitemapDomain();
+				});
+
+				document.getElementById('bump-lastmod-btn')?.addEventListener('click', () => {
+					const dateEl = form.elements.namedItem('contentLastmod');
+					if (dateEl && 'value' in dateEl) dateEl.value = new Date().toISOString().slice(0, 10);
+				});
+
+				function clamp01(n) {
+					return Math.min(1, Math.max(0, n));
+				}
+				function normHex(v) {
+					const t = String(v || '').trim();
+					const m = t.match(/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/);
+					if (!m) return null;
+					let h = m[1].toLowerCase();
+					if (h.length === 3) h = h.split('').map((c) => c + c).join('');
+					return '#' + h;
+				}
+				function hexToRgb(hex) {
+					const h = normHex(hex) || '#000000';
+					return {
+						r: parseInt(h.slice(1, 3), 16),
+						g: parseInt(h.slice(3, 5), 16),
+						b: parseInt(h.slice(5, 7), 16),
+					};
+				}
+				function rgbToHex(r, g, b) {
+					const to = (n) =>
+						Math.round(clamp01(n / 255) * 255)
+							.toString(16)
+							.padStart(2, '0');
+					return '#' + to(r) + to(g) + to(b);
+				}
+				function hexToHsl(hex) {
+					const { r, g, b } = hexToRgb(hex);
+					const R = r / 255,
+						G = g / 255,
+						B = b / 255;
+					const max = Math.max(R, G, B),
+						min = Math.min(R, G, B);
+					const l = (max + min) / 2;
+					if (max === min) return { h: 0, s: 0, l };
+					const d = max - min;
+					const s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+					let h = 0;
+					if (max === R) h = ((G - B) / d + (G < B ? 6 : 0)) / 6;
+					else if (max === G) h = ((B - R) / d + 2) / 6;
+					else h = ((R - G) / d + 4) / 6;
+					return { h, s, l };
+				}
+				function hslToHex(h, s, l) {
+					const H = ((h % 1) + 1) % 1;
+					const S = clamp01(s);
+					const L = clamp01(l);
+					if (S === 0) {
+						const v = L * 255;
+						return rgbToHex(v, v, v);
+					}
+					const hue2rgb = (p, q, t) => {
+						let T = t;
+						if (T < 0) T += 1;
+						if (T > 1) T -= 1;
+						if (T < 1 / 6) return p + (q - p) * 6 * T;
+						if (T < 1 / 2) return q;
+						if (T < 2 / 3) return p + (q - p) * (2 / 3 - T) * 6;
+						return p;
+					};
+					const q = L < 0.5 ? L * (1 + S) : L + S - L * S;
+					const p = 2 * L - q;
+					return rgbToHex(
+						hue2rgb(p, q, H + 1 / 3) * 255,
+						hue2rgb(p, q, H) * 255,
+						hue2rgb(p, q, H - 1 / 3) * 255,
+					);
+				}
+				function mixHex(a, b, t) {
+					const A = hexToRgb(a);
+					const B = hexToRgb(b);
+					const u = clamp01(t);
+					return rgbToHex(A.r + (B.r - A.r) * u, A.g + (B.g - A.g) * u, A.b + (B.b - A.b) * u);
+				}
+				function autoTones(accentIn, bgIn) {
+					const accent = normHex(accentIn) || '#c026d3';
+					const bg = normHex(bgIn) || '#08090a';
+					const a = hexToHsl(accent);
+					return {
+						soft: hslToHex(a.h, clamp01(Math.min(1, a.s * 0.85)), clamp01(Math.min(0.82, Math.max(0.55, a.l + 0.22)))),
+						deep: hslToHex(a.h, clamp01(Math.min(1, a.s * 1.05)), clamp01(Math.max(0.22, Math.min(0.45, a.l - 0.18)))),
+						hover: hslToHex(a.h, clamp01(Math.min(1, a.s * 0.95)), clamp01(Math.min(0.72, Math.max(0.45, a.l + 0.1)))),
+						panel: mixHex(bg, '#ffffff', 0.035),
+					};
+				}
+
+				function colorVal(id) {
+					const picker = document.getElementById('theme-' + id + '-picker');
+					const text = document.getElementById('theme-' + id + '-text');
+					return normHex(picker?.value) || normHex(text?.value) || null;
+				}
+
+				function setColorVal(id, hex) {
+					const n = normHex(hex);
+					if (!n) return;
+					const picker = document.getElementById('theme-' + id + '-picker');
+					const text = document.getElementById('theme-' + id + '-text');
+					if (picker) picker.value = n;
+					if (text) text.value = n;
+				}
+
+				function deriveTheme() {
+					const accent = colorVal('accent') || '#c026d3';
+					const bg = colorVal('bg') || '#08090a';
+					const auto = autoTones(accent, bg);
+					const soft = colorVal('soft') || auto.soft;
+					const deep = colorVal('deep') || auto.deep;
+					const hover = colorVal('hover') || auto.hover;
+					const panel = colorVal('panel') || auto.panel;
+					const bgElevated = mixHex(bg, '#ffffff', 0.07);
+					const bgHover = mixHex(bg, '#ffffff', 0.1);
+					const lineSoft = mixHex(bg, '#ffffff', 0.08);
+					const line = mixHex(bg, '#ffffff', 0.12);
+					const lineStrong = mixHex(bg, '#ffffff', 0.18);
+					return {
+						accent,
+						bg,
+						accentSoft: soft,
+						accentDeep: deep,
+						accentHover: hover,
+						bgPanel: panel,
+						bgElevated,
+						bgHover,
+						line,
+						lineSoft,
+						lineStrong,
+						ink: '#f5f5f7',
+						inkMuted: '#a1a1aa',
+						inkFaint: '#8b8b93',
+						ok: '#34d399',
+						warn: '#f43f5e',
+						toneVoid: mixHex(bg, '#000000', 0.35),
+					};
+				}
+
+				function syncColorPair(pickerId, textId, fallback) {
+					const picker = document.getElementById(pickerId);
+					const text = document.getElementById(textId);
+					if (!picker || !text) return;
+					picker.addEventListener('input', () => {
+						text.value = picker.value;
+						updateThemePreview();
+					});
+					text.addEventListener('input', () => {
+						const n = normHex(text.value);
+						if (n) picker.value = n;
+						updateThemePreview();
+					});
+					text.addEventListener('blur', () => {
+						const n = normHex(text.value) || fallback;
+						text.value = n;
+						picker.value = n;
+						updateThemePreview();
+					});
+				}
+
+				function themeCssMap(t) {
+					return {
+						'--bg': t.bg,
+						'--bg-panel': t.bgPanel,
+						'--bg-elevated': t.bgElevated,
+						'--bg-hover': t.bgHover,
+						'--line': t.line,
+						'--line-soft': t.lineSoft,
+						'--line-strong': t.lineStrong,
+						'--ink': t.ink,
+						'--ink-muted': t.inkMuted,
+						'--ink-faint': t.inkFaint,
+						'--magenta': t.accent,
+						'--magenta-soft': t.accentSoft,
+						'--magenta-deep': t.accentDeep,
+						'--accent': t.accent,
+						'--accent-hover': t.accentHover,
+						'--ok': t.ok,
+						'--warn': t.warn,
+						'--tone-void': t.toneVoid,
+						'--tone-night': t.bg,
+						'--tone-body': t.bg,
+						'--tone-surface': t.bgPanel,
+						'--accent-magenta': t.accent,
+						'--accent-violet': t.accentDeep,
+						'--accent-indigo': t.accent,
+						'--accent-sky': t.accentSoft,
+						'--accent-orange': t.accent,
+						'--accent-coral': t.accent,
+						'--g2a-magenta': t.accent,
+						'--g2a-blue': t.accentSoft,
+						'--g2a-purple': t.accentDeep,
+						'--plum-link': t.accentSoft,
+						'--color-violet': t.accent,
+						'--color-orchid': t.accentSoft,
+						'--color-midnight': t.bg,
+						'--color-surface': t.bgPanel,
+						'--color-border': t.line,
+						'--color-ink': t.ink,
+						'--color-muted': t.inkMuted,
+					};
+				}
+
+				function applySitePreview(t) {
+					const map = themeCssMap(t);
+					const root = document.documentElement;
+					Object.entries(map).foreach(([k, v]) => root.style.setProperty(k, v));
+
+					let tag = document.getElementById('brand-theme-vars');
+					if (!tag) {
+						tag = document.createElement('style');
+						tag.id = 'brand-theme-vars';
+						document.head.appendChild(tag);
+					}
+					tag.textContent =
+						':root,html{' +
+						Object.entries(map)
+							.map(([k, v]) => k + ':' + v)
+							.join(';') +
+						'}';
+
+					const metaTheme = document.querySelector('meta[name="theme-color"]');
+					if (metaTheme) metaTheme.setAttribute('content', t.bg);
+				}
+
+				function updateThemePreview() {
+					const stage = document.getElementById('theme-stage');
+					if (!stage) return;
+					const t = deriveTheme();
+
+					stage.style.background = t.bg;
+					stage.style.borderColor = t.line;
+					stage.style.setProperty('--theme-accent', t.accent);
+					stage.style.setProperty('--theme-soft', t.accentSoft);
+					stage.style.setProperty('--theme-ink', t.ink);
+					stage.style.setProperty('--theme-muted', t.inkMuted);
+					stage.style.setProperty('--theme-panel', t.bgPanel);
+					stage.style.setProperty('--theme-line', t.line);
+
+					const logo = document.getElementById('theme-logo');
+					if (logo) logo.textContent = val('name') || 'Brand';
+					const title = document.getElementById('theme-title');
+					if (title) title.textContent = val('name') || 'Brand';
+
+					applySitePreview(t);
+				}
+
+				function fillDerivedTones() {
+					const accent = colorVal('accent') || '#c026d3';
+					const bg = colorVal('bg') || '#08090a';
+					const auto = autoTones(accent, bg);
+					setColorVal('soft', auto.soft);
+					setColorVal('deep', auto.deep);
+					setColorVal('hover', auto.hover);
+					setColorVal('panel', auto.panel);
+					updateThemePreview();
+				}
+
+				['accent', 'soft', 'deep', 'hover', 'bg', 'panel'].foreach((id) => {
+					const fallback =
+						id === 'accent'
+							? '#c026d3'
+							: id === 'bg'
+								? '#08090a'
+								: colorVal(id) || '#888888';
+					syncColorPair('theme-' + id + '-picker', 'theme-' + id + '-text', fallback);
+				});
+
+				document.getElementById('theme-derive-btn')?.addEventListener('click', fillDerivedTones);
+
+				document.getElementById('theme-presets')?.addEventListener('click', (e) => {
+					const btn = e.target.closest('.studio__theme-preset');
+					if (!btn) return;
+					const accent = btn.getAttribute('data-accent');
+					const bg = btn.getAttribute('data-bg');
+					if (accent) setColorVal('accent', accent);
+					if (bg) setColorVal('bg', bg);
+					fillDerivedTones();
+					document.querySelectorAll('.studio__theme-preset').foreach((el) => el.classList.remove('is-active'));
+					btn.classList.add('is-active');
+				});
+
+				updateThemePreview();
+
+				form.addEventListener('focusin', (e) => {
+					if (e.target.matches('input, textarea')) lastFocus = e.target;
+				});
+
+				root.querySelectorAll('.studio__chip').foreach((chip) => {
+					chip.addEventListener('click', () => {
+						const el = lastFocus || document.activeElement;
+						if (!el || !el.matches('input, textarea')) return;
+						const token = chip.getAttribute('data-token') || '';
+						const start = el.selectionStart ?? el.value.length;
+						const end = el.selectionEnd ?? el.value.length;
+						el.value = el.value.slice(0, start) + token + el.value.slice(end);
+						el.focus();
+						el.selectionStart = el.selectionEnd = start + token.length;
+						el.dispatchEvent(new Event('input', { bubbles: true }));
+					});
+				});
+
+				document.getElementById('sync-short-btn')?.addEventListener('click', () => {
+					const shortEl = form.elements.namedItem('shortName');
+					if (shortEl && 'value' in shortEl) shortEl.value = val('name');
+				});
+
+				document.getElementById('add-primary-btn')?.addEventListener('click', () => {
+					const primary = val('primaryKeyword').trim();
+					if (!primary) return;
+					const kwEl = form.elements.namedItem('keywords');
+					if (!kwEl || !('value' in kwEl)) return;
+					const lines = kwEl.value
+						.split(/\n/)
+						.map((s) => s.trim())
+						.filter(Boolean);
+					const rest = lines.filter((l) => l.toLowerCase() !== primary.toLowerCase());
+					kwEl.value = [primary, ...rest].join('\n');
+				});
+
+				document.getElementById('autofill-seo-btn')?.addEventListener('click', () => {
+					if (!confirm('Reset all SEO titles/descriptions and page intros to templates? Custom SEO will be overwritten.')) {
+						return;
+					}
+					Object.entries(seoTemplates).foreach(([key, tpl]) => {
+						const el = form.elements.namedItem(key);
+						if (el && 'value' in el) el.value = tpl;
+					});
+					Object.entries(copyTemplates).foreach(([key, tpl]) => {
+						const el = form.elements.namedItem(key);
+						if (el && 'value' in el) el.value = tpl;
+					});
+					const pk = val('primaryKeyword').trim();
+					if (pk) {
+						const kwEl = form.elements.namedItem('keywords');
+						if (kwEl && 'value' in kwEl && !kwEl.value.trim()) {
+							kwEl.value = [pk, pk.replace(/\s+hacks?$/, ' cheats'), pk.replace(/\s+cheats?$/, ' hacks')]
+								.filter((v, i, a) => v && a.indexOf(v) === i)
+								.join('\n');
+						}
+					}
+					updateSerp();
+					updateHero();
+				});
+
+				document.getElementById('autofill-sitemap-btn')?.addEventListener('click', () => {
+					const defaults = {
+						blogImageTitle: '{brand} blog',
+						blogImageCaption: 'Tips and updates for {primaryKeyword}',
+						reviewsImageTitle: '{brand} reviews',
+						reviewsImageCaption: 'What buyers say about {primaryKeyword}',
+					};
+					Object.entries(defaults).foreach(([key, tpl]) => {
+						const el = form.elements.namedItem(key);
+						if (el && 'value' in el) el.value = tpl;
+					});
+					const titleTpls = [
+						'{primaryKeyword} ESP',
+						'{primaryKeyword} wallhack',
+						'{primaryKeyword} aimbot',
+						'{primaryKeyword} aimbot view',
+						'{primaryKeyword} radar',
+						'{primaryKeyword} in a fight',
+					];
+					const capTpls = [
+						'See players with {primaryKeyword}',
+						'See through walls with {primaryKeyword}',
+						'Aimbot in {primaryKeyword}',
+						'Aimbot bone view in {primaryKeyword}',
+						'Radar map in {primaryKeyword}',
+						'Fight view with {primaryKeyword}',
+					];
+					for (let i = 1; i <= 6; i++) {
+						const t = form.elements.namedItem('sitemapImage' + i + 'Title');
+						const c = form.elements.namedItem('sitemapImage' + i + 'Caption');
+						if (t && 'value' in t) t.value = titleTpls[i - 1];
+						if (c && 'value' in c) c.value = capTpls[i - 1];
+					}
+					const dateEl = form.elements.namedItem('contentLastmod');
+					if (dateEl && 'value' in dateEl) dateEl.value = new Date().toISOString().slice(0, 10);
+				});
+
+				const gameEl = form.elements.namedItem('game');
+				if (gameEl && 'addEventListener' in gameEl) {
+					gameEl.addEventListener('blur', () => {
+						const pkEl = form.elements.namedItem('primaryKeyword');
+						if (!pkEl || !('value' in pkEl) || pkEl.value.trim()) return;
+						const g = val('game').trim();
+						if (g) pkEl.value = g.toLowerCase() + ' hacks';
+					});
+				}
+
+				function jumpSection(index) {
+					const id = sectionIds[index];
+					if (!id) return;
+					const el = document.getElementById('section-' + id);
+					if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				}
+
+				document.addEventListener('keydown', (e) => {
+					if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+						e.preventDefault();
+						form.requestSubmit();
+						return;
+					}
+					if ((e.ctrlKey || e.metaKey) && /^[1-8]$/.test(e.key)) {
+						e.preventDefault();
+						jumpSection(Number(e.key) - 1);
+					}
+				});
+
+				const API = {
+					status: '/brand-studio/api/status/',
+					save: '/brand-studio/api/save/',
+					patch: '/brand-studio/api/patch/',
+					inline: '/brand-studio/api/inline/',
+				};
+
+				async function studioFetch(path, options = {}) {
+					const headers = {
+						'X-Brand-Studio': '1',
+						...(options.headers || {}),
+					};
+					const res = await fetch(path, { ...options, headers });
+					let data = null;
+					const text = await res.text();
+					try {
+						data = text ? JSON.parse(text) : null;
+					} catch {
+						throw new Error(
+							res.ok
+								? 'Brand Studio returned non-JSON. Restart: npm run dev'
+								: 'Brand Studio API unavailable. Restart: npm run dev',
+						);
+					}
+					if (!data || typeof data !== 'object') {
+						throw new Error('Empty Brand Studio response. Restart: npm run dev');
+					}
+					return { res, data };
+				}
+
+				async function loadStatus() {
+					try {
+						const { res, data } = await studioFetch(API.status);
+						if (!res.ok || !data.ok) {
+							show(data.error || 'API unavailable. Run astro dev.', false);
+							return;
+						}
+						if (data.tokenRequired && tokenField) tokenField.hidden = false;
+					} catch (err) {
+						show(err instanceof Error ? err.message : 'API offline. Start with: npm run dev', false);
+					}
+				}
+
+				form.addEventListener('submit', async (e) => {
+					e.preventDefault();
+					saveBtn.disabled = true;
+					const fd = new FormData(form);
+					const splitLines = (key) =>
+						String(fd.get(key) || '')
+							.split(/\n/)
+							.map((s) => s.trim())
+							.filter(Boolean);
+					const payload = {
+						name: fd.get('name'),
+						shortName: fd.get('shortName'),
+						url: fd.get('url'),
+						supportEmail: fd.get('supportEmail'),
+						checkoutUrl: fd.get('checkoutUrl'),
+						market: fd.get('market'),
+						locale: fd.get('locale'),
+						game: fd.get('game'),
+						antiCheat: fd.get('antiCheat'),
+						platforms: splitLines('platforms'),
+						monthlyLabel: fd.get('monthlyLabel'),
+						lifetimeLabel: fd.get('lifetimeLabel'),
+						monthlyPrice: Number(fd.get('monthlyPrice')),
+						lifetimePrice: Number(fd.get('lifetimePrice')),
+						currency: fd.get('currency'),
+						primaryKeyword: fd.get('primaryKeyword'),
+						keywords: splitLines('keywords'),
+						homeTitle: fd.get('homeTitle'),
+						homeDescription: fd.get('homeDescription'),
+						featuresTitle: fd.get('featuresTitle'),
+						featuresDescription: fd.get('featuresDescription'),
+						storeTitle: fd.get('storeTitle'),
+						storeDescription: fd.get('storeDescription'),
+						statusTitle: fd.get('statusTitle'),
+						statusDescription: fd.get('statusDescription'),
+						previewTitle: fd.get('previewTitle'),
+						previewDescription: fd.get('previewDescription'),
+						setupTitle: fd.get('setupTitle'),
+						setupDescription: fd.get('setupDescription'),
+						supportTitle: fd.get('supportTitle'),
+						supportDescription: fd.get('supportDescription'),
+						faqTitle: fd.get('faqTitle'),
+						faqDescription: fd.get('faqDescription'),
+						reviewsTitle: fd.get('reviewsTitle'),
+						reviewsDescription: fd.get('reviewsDescription'),
+						blogTitle: fd.get('blogTitle'),
+						blogDescription: fd.get('blogDescription'),
+						tagline: fd.get('tagline'),
+						summary: fd.get('summary'),
+						heroLede: fd.get('heroLede'),
+						blogLabel: fd.get('blogLabel'),
+						ctaBuy: fd.get('ctaBuy'),
+						ctaBuyShort: fd.get('ctaBuyShort'),
+						featuresIntro: fd.get('featuresIntro'),
+						storeIntro: fd.get('storeIntro'),
+						statusIntro: fd.get('statusIntro'),
+						previewIntro: fd.get('previewIntro'),
+						setupIntro: fd.get('setupIntro'),
+						supportIntro: fd.get('supportIntro'),
+						faqIntro: fd.get('faqIntro'),
+						reviewsIntro: fd.get('reviewsIntro'),
+						chipEsp: fd.get('chipEsp'),
+						chipAim: fd.get('chipAim'),
+						chipRadar: fd.get('chipRadar'),
+						chipUpdates: fd.get('chipUpdates'),
+						navPreview: fd.get('navPreview'),
+						navFeatures: fd.get('navFeatures'),
+						navStore: fd.get('navStore'),
+						navStatus: fd.get('navStatus'),
+						navReviews: fd.get('navReviews'),
+						logo: fd.get('logo'),
+						logoRaster: fd.get('logoRaster'),
+						logoAlt: fd.get('logoAlt'),
+						logoRasterWidth: Number(fd.get('logoRasterWidth')),
+						logoRasterHeight: Number(fd.get('logoRasterHeight')),
+						defaultOgImage: fd.get('defaultOgImage'),
+						heroImage: fd.get('heroImage'),
+						themeaccent: fd.get('themeaccent'),
+						themeBg: fd.get('themeBg'),
+						themeSoft: fd.get('themeSoft'),
+						themeDeep: fd.get('themeDeep'),
+						themeHover: fd.get('themeHover'),
+						themePanel: fd.get('themePanel'),
+						contentLastmod: fd.get('contentLastmod'),
+						blogImageTitle: fd.get('blogImageTitle'),
+						blogImageCaption: fd.get('blogImageCaption'),
+						reviewsImageTitle: fd.get('reviewsImageTitle'),
+						reviewsImageCaption: fd.get('reviewsImageCaption'),
+						bumpLastmodOnSave: fd.get('bumpLastmodOnSave') === '1',
+						sitemapImage1Src: fd.get('sitemapImage1Src'),
+						sitemapImage1Title: fd.get('sitemapImage1Title'),
+						sitemapImage1Caption: fd.get('sitemapImage1Caption'),
+						sitemapImage2Src: fd.get('sitemapImage2Src'),
+						sitemapImage2Title: fd.get('sitemapImage2Title'),
+						sitemapImage2Caption: fd.get('sitemapImage2Caption'),
+						sitemapImage3Src: fd.get('sitemapImage3Src'),
+						sitemapImage3Title: fd.get('sitemapImage3Title'),
+						sitemapImage3Caption: fd.get('sitemapImage3Caption'),
+						sitemapImage4Src: fd.get('sitemapImage4Src'),
+						sitemapImage4Title: fd.get('sitemapImage4Title'),
+						sitemapImage4Caption: fd.get('sitemapImage4Caption'),
+						sitemapImage5Src: fd.get('sitemapImage5Src'),
+						sitemapImage5Title: fd.get('sitemapImage5Title'),
+						sitemapImage5Caption: fd.get('sitemapImage5Caption'),
+						sitemapImage6Src: fd.get('sitemapImage6Src'),
+						sitemapImage6Title: fd.get('sitemapImage6Title'),
+						sitemapImage6Caption: fd.get('sitemapImage6Caption'),
+					};
+					const token = String(fd.get('studioToken') || '').trim();
+
+					try {
+						const { res, data } = await studioFetch(API.save, {
+							method: 'POST',
+							headers: {
+								'Content-Type': 'application/json',
+								...(token ? { 'X-Brand-Studio-Token': token } : {}),
+							},
+							body: JSON.stringify(payload),
+						});
+						if (!res.ok || !data.ok) {
+							show(data.error || 'Save failed', false);
+						} else {
+							const brand = data.brand || {};
+							const apply = (name, value) => {
+								if (value == null) return;
+								const el = form.elements.namedItem(name);
+								if (el && 'value' in el) el.value = String(value);
+							};
+							// Hydrate from what was actually written (truthful permanence)
+							Object.keys(brand).foreach((k) => {
+								if (k === 'keywords' || k === 'platforms' || k === 'sitemapImages' || k === 'tokenRequired') {
+									return;
+								}
+								apply(k, brand[k]);
+							});
+							if (Array.isArray(brand.keywords)) {
+								const kw = form.elements.namedItem('keywords');
+								if (kw && 'value' in kw) kw.value = brand.keywords.join('\n');
+							}
+							if (Array.isArray(brand.platforms)) {
+								const pl = form.elements.namedItem('platforms');
+								if (pl && 'value' in pl) pl.value = brand.platforms.join('\n');
+							}
+							updateSerp();
+							updateHero();
+							updateThemePreview();
+							updateSitemapDomain();
+							const warns = Array.isArray(data.warnings) ? data.warnings : [];
+							const msg =
+								(data.message || data.sync || 'Saved permanently to brand.ts.') +
+								(warns.length ? ' · Notes: ' + warns.slice(0, 4).join('; ') : '');
+							show(msg, true);
+							document.getElementById('studio-bar')?.classList.remove('is-dirty');
+						}
+					} catch (err) {
+						show(err instanceof Error ? err.message : 'Network error -- is astro dev running?', false);
+					} finally {
+						saveBtn.disabled = false;
+					}
+				});
+
+				updateSerp();
+				updateHero();
+				updateSitemapDomain();
+				loadStatus();
+			})();
+		</script>
+	)
+}
+
+<style>
+	.studio {
+		min-height: 100dvh;
+		padding: 1.5rem 1rem 5rem;
+		background: #050505;
+		color: #e4e4e7;
+	}
+
+	.studio__shell {
+		width: min(100%, 56rem);
+		margin-inline: auto;
+	}
+
+	.studio__head {
+		margin-bottom: 1.25rem;
+	}
+
+	.studio__eyebrow {
+		margin: 0 0 0.35rem;
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: #71717a;
+	}
+
+	.studio__checklist {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.45rem 0.85rem;
+		margin: 0.85rem 0 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0.8rem;
+	}
+
+	.studio__checklist a {
+		color: #9ecbff;
+		text-underline-offset: 2px;
+	}
+
+	.studio__checklist strong {
+		color: #86efac;
+	}
+
+	.studio__scope {
+		margin: 0.85rem 0 0;
+		padding: 0.75rem 0.85rem;
+		border: 1px solid #27272a;
+		border-radius: 0.55rem;
+		background: #0a0a0a;
+		font-size: 0.8rem;
+		line-height: 1.5;
+		color: #a1a1aa;
+	}
+
+	.studio__scope code {
+		font-size: 0.75rem;
+		color: #e4e4e7;
+	}
+
+	.studio__scope strong {
+		color: #d4d4d8;
+	}
+
+	.studio h1 {
+		margin: 0;
+		font-size: 1.45rem;
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		color: #fafafa;
+	}
+
+	.studio__lede {
+		margin: 0.4rem 0 0;
+		font-size: 0.84rem;
+		line-height: 1.5;
+		color: #a1a1aa;
+	}
+
+	.studio__lede code,
+	.studio__locked code {
+		font-size: 0.8em;
+		padding: 0.1em 0.35em;
+		border-radius: 0.3rem;
+		background: #111;
+		border: 1px solid #27272a;
+		color: #e4e4e7;
+	}
+
+	.studio__q-demo {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1rem;
+		height: 1rem;
+		border-radius: 999px;
+		border: 1px solid #3f3f46;
+		color: #a1a1aa;
+		font-size: 0.65rem;
+		font-weight: 800;
+		vertical-align: middle;
+	}
+
+	.studio__layout {
+		display: grid;
+		grid-template-columns: 11rem minmax(0, 1fr);
+		gap: 1.5rem;
+		align-items: start;
+	}
+
+	.studio__nav {
+		position: sticky;
+		top: 1rem;
+	}
+
+	.studio__nav ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		gap: 0.25rem;
+	}
+
+	.studio__nav a {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		padding: 0.45rem 0.55rem;
+		border-radius: 0.4rem;
+		font-size: 0.78rem;
+		font-weight: 600;
+		color: #a1a1aa;
+		text-decoration: none;
+		border: 1px solid transparent;
+	}
+
+	.studio__nav a:hover {
+		color: #fafafa;
+		background: #0a0a0a;
+		border-color: #27272a;
+	}
+
+	.studio__nav kbd {
+		font-size: 0.62rem;
+		font-family: inherit;
+		padding: 0.1rem 0.35rem;
+		border-radius: 0.25rem;
+		background: #111;
+		border: 1px solid #27272a;
+		color: #71717a;
+	}
+
+	.studio__main {
+		min-width: 0;
+	}
+
+	.studio__form {
+		display: grid;
+		gap: 1.75rem;
+	}
+
+	.studio__block h2 {
+		margin: 0;
+		font-size: 0.95rem;
+		font-weight: 700;
+		color: #fafafa;
+	}
+
+	.studio__block-desc {
+		margin: 0.25rem 0 0.75rem;
+		font-size: 0.78rem;
+		color: #71717a;
+	}
+
+	.studio__block--seo {
+		padding: 1rem;
+		border: 1px solid #27272a;
+		border-radius: 0.6rem;
+		background: #0a0a0a;
+	}
+
+	.studio__row-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 0.65rem;
+	}
+
+	.studio__sitemap-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem 1rem;
+		margin: 0.85rem 0 0.35rem;
+	}
+
+	.studio__sitemap-links a {
+		color: #9ecbff;
+		font-size: 0.85rem;
+		text-underline-offset: 2px;
+	}
+
+	.studio__domain-live {
+		margin: 0.85rem 0 0;
+		padding: 0.65rem 0.8rem;
+		border: 1px solid #27272a;
+		border-radius: 0.55rem;
+		background: #0a0a0a;
+		font-size: 0.82rem;
+		color: #a1a1aa;
+	}
+
+	.studio__domain-live code {
+		color: #e4e4e7;
+		font-size: 0.8rem;
+		word-break: break-all;
+	}
+
+	.studio__sitemap-domain {
+		margin-bottom: 1rem;
+		padding: 1rem 1.05rem;
+		border: 1px solid #3f3f46;
+		border-radius: 0.75rem;
+		background:
+			linear-gradient(135deg, rgba(158, 203, 255, 0.06), transparent 55%),
+			#0a0a0a;
+	}
+
+	.studio__sitemap-domain-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+		margin-bottom: 0.35rem;
+	}
+
+	.studio__sitemap-domain-label {
+		margin: 0;
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #71717a;
+	}
+
+	.studio__sitemap-domain-host {
+		margin: 0 0 0.85rem;
+		font-size: clamp(1.15rem, 3vw, 1.45rem);
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		color: #fafafa;
+		word-break: break-all;
+	}
+
+	.studio__sitemap-preview {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 0.45rem;
+	}
+
+	.studio__sitemap-preview li {
+		display: grid;
+		grid-template-columns: 5.5rem minmax(0, 1fr);
+		gap: 0.5rem;
+		align-items: start;
+		font-size: 0.8rem;
+	}
+
+	.studio__sitemap-preview span {
+		color: #71717a;
+		font-weight: 600;
+		padding-top: 0.1rem;
+	}
+
+	.studio__sitemap-preview code {
+		display: block;
+		padding: 0.35rem 0.5rem;
+		border-radius: 0.4rem;
+		background: #111113;
+		border: 1px solid #27272a;
+		color: #d4d4d8;
+		font-size: 0.75rem;
+		word-break: break-all;
+	}
+
+	.studio__sitemap-note {
+		margin: 0.65rem 0 0;
+		font-size: 0.78rem;
+		line-height: 1.45;
+		color: #71717a;
+	}
+
+	.studio__details {
+		margin: 0.85rem 0;
+		border: 1px solid #27272a;
+		border-radius: 0.65rem;
+		padding: 0.55rem 0.85rem 0.85rem;
+		background: #09090b;
+	}
+
+	.studio__details summary {
+		cursor: pointer;
+		font-weight: 650;
+		font-size: 0.92rem;
+		padding: 0.35rem 0;
+		color: #f4f4f5;
+	}
+
+	.studio__details-lede {
+		margin: 0.35rem 0 0.75rem;
+		font-size: 0.8rem;
+		color: #a1a1aa;
+		line-height: 1.45;
+	}
+
+	.studio__grid--tight {
+		margin-top: 0.65rem;
+	}
+
+	.studio__sitemap-images {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.75rem;
+	}
+
+	.studio__sitemap-card {
+		display: grid;
+		gap: 0.45rem;
+		padding: 0.75rem;
+		border: 1px solid #27272a;
+		border-radius: 0.55rem;
+		background: #0c0c0e;
+	}
+
+	.studio__sitemap-card-title {
+		margin: 0;
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #71717a;
+	}
+
+	.studio__sitemap-abs {
+		margin: -0.15rem 0 0.25rem;
+		font-size: 0.7rem;
+		color: #9ecbff;
+		word-break: break-all;
+		line-height: 1.35;
+	}
+
+	@media (max-width: 720px) {
+		.studio__sitemap-preview li {
+			grid-template-columns: 1fr;
+			gap: 0.2rem;
+		}
+
+		.studio__sitemap-images {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.studio__block--colors .studio__theme {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.studio__theme-stage {
+		border: 1px solid var(--theme-line, #27272a);
+		border-radius: 14px;
+		overflow: hidden;
+		background: #08090a;
+		padding: 0;
+	}
+
+	.studio__theme-nav {
+		display: flex;
+		align-items: center;
+		gap: 0.85rem;
+		padding: 0.85rem 1.1rem;
+		border-bottom: 1px solid color-mix(in srgb, #fff 8%, transparent);
+		background: color-mix(in srgb, #fff 3%, transparent);
+	}
+
+	.studio__theme-logo {
+		font-weight: 700;
+		font-size: 0.92rem;
+		color: var(--theme-ink, #f5f5f7);
+		margin-right: auto;
+		letter-spacing: 0.05em;
+	}
+
+	.studio__theme-nav-link {
+		font-size: 0.78rem;
+		color: var(--theme-muted, #a1a1aa);
+	}
+
+	.studio__theme-nav-link.is-active {
+		color: var(--theme-soft, #e879f9);
+	}
+
+	.studio__theme-pill {
+		font-size: 0.72rem;
+		font-weight: 700;
+		padding: 0.28rem 0.65rem;
+		border-radius: 999px;
+		background: var(--theme-accent, #c026d3);
+		color: #0a0a0a;
+	}
+
+	.studio__theme-agent {
+		padding: 1.35rem 1.15rem 1.4rem;
+	}
+
+	.studio__theme-kicker {
+		margin: 0 0 0.35rem;
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--theme-soft, #e879f9);
+	}
+
+	.studio__theme-title {
+		margin: 0;
+		font-size: 1.45rem;
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		color: var(--theme-ink, #f5f5f7);
+	}
+
+	.studio__theme-lede {
+		margin: 0.45rem 0 0;
+		max-width: 28rem;
+		font-size: 0.9rem;
+		line-height: 1.45;
+		color: var(--theme-muted, #a1a1aa);
+	}
+
+	.studio__theme-actions {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem;
+		margin-top: 1rem;
+	}
+
+	.studio__theme-cta {
+		display: inline-flex;
+		align-items: center;
+		min-height: 2.4rem;
+		padding: 0 1rem;
+		border-radius: 999px;
+		background: var(--theme-accent, #c026d3);
+		color: #0a0a0a;
+		font-size: 0.85rem;
+		font-weight: 700;
+	}
+
+	.studio__theme-link {
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--theme-soft, #e879f9);
+		text-underline-offset: 3px;
+	}
+
+	.studio__theme-controls {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.75rem;
+	}
+
+	.studio__theme-controls--six {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.studio__theme-field {
+		display: grid;
+		gap: 0.4rem;
+		padding: 0.85rem 0.9rem;
+		border: 1px solid #27272a;
+		border-radius: 12px;
+		background: #0a0a0a;
+	}
+
+	.studio__theme-field-lab {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-size: 0.78rem;
+		font-weight: 650;
+		color: #d4d4d8;
+	}
+
+	.studio__theme-well {
+		display: grid;
+		grid-template-columns: 3rem minmax(0, 1fr);
+		gap: 0.55rem;
+		align-items: center;
+	}
+
+	.studio__theme-well input[type='color'] {
+		width: 3rem;
+		height: 3rem;
+		padding: 0;
+		border: 1px solid #3f3f46;
+		border-radius: 10px;
+		background: transparent;
+		cursor: pointer;
+	}
+
+	.studio__theme-well input[type='text'] {
+		width: 100%;
+		min-height: 2.75rem;
+		border: 1px solid #3f3f46;
+		border-radius: 10px;
+		background: #111113;
+		color: #fafafa;
+		font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+		font-size: 0.95rem;
+		padding: 0 0.75rem;
+		letter-spacing: 0.02em;
+	}
+
+	.studio__theme-well input[type='text']:focus {
+		outline: none;
+		border-color: #71717a;
+	}
+
+	.studio__theme-derived {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 0.55rem;
+	}
+
+	.studio__theme-tone {
+		display: grid;
+		gap: 0.3rem;
+		justify-items: start;
+		padding: 0.65rem 0.7rem;
+		border: 1px solid #27272a;
+		border-radius: 10px;
+		background: #09090b;
+		font-size: 0.72rem;
+		color: #a1a1aa;
+	}
+
+	.studio__theme-tone-swatch {
+		width: 100%;
+		height: 1.65rem;
+		border-radius: 6px;
+	}
+
+	.studio__theme-tone code {
+		font-size: 0.68rem;
+		color: #d4d4d8;
+	}
+
+	.studio__presets-label {
+		margin: 0.15rem 0 0;
+		font-size: 0.72rem;
+		color: #71717a;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		font-weight: 700;
+	}
+
+	.studio__theme-presets {
+		display: grid;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 0.5rem;
+	}
+
+	.studio__theme-preset {
+		display: grid;
+		gap: 0.35rem;
+		padding: 0.45rem;
+		border: 1px solid #27272a;
+		border-radius: 10px;
+		background: #0a0a0a;
+		cursor: pointer;
+		text-align: left;
+		color: #a1a1aa;
+	}
+
+	.studio__theme-preset:hover,
+	.studio__theme-preset.is-active {
+		border-color: #52525b;
+		color: #fafafa;
+	}
+
+	.studio__theme-preset-swatch {
+		display: block;
+		height: 1.35rem;
+		border-radius: 6px 6px 0 0;
+	}
+
+	.studio__theme-preset-bg {
+		display: block;
+		height: 0.55rem;
+		border-radius: 0 0 6px 6px;
+		margin-top: -0.35rem;
+		border: 1px solid color-mix(in srgb, #fff 10%, transparent);
+	}
+
+	.studio__theme-preset-name {
+		font-size: 0.72rem;
+		font-weight: 600;
+		padding: 0 0.1rem;
+	}
+
+	@media (max-width: 720px) {
+		.studio__theme-controls,
+		.studio__theme-controls--six {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.studio__theme-presets {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.studio__theme-nav-link {
+			display: none;
+		}
+	}
+
+	.studio__check input[type='checkbox'] {
+		width: 1.1rem;
+		height: 1.1rem;
+		accent-color: #c8f06a;
+		margin-top: 0.35rem;
+	}
+
+	.studio__mini {
+		appearance: none;
+		border: 1px solid #3f3f46;
+		border-radius: 0.35rem;
+		padding: 0.35rem 0.6rem;
+		font: inherit;
+		font-size: 0.72rem;
+		font-weight: 600;
+		color: #d4d4d8;
+		background: #111;
+		cursor: pointer;
+	}
+
+	.studio__mini:hover {
+		border-color: #52525b;
+		color: #fafafa;
+	}
+
+	.studio__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.65rem 0.6rem;
+	}
+
+	.studio__field {
+		display: grid;
+		gap: 0.28rem;
+		align-content: start;
+		font-size: 0.74rem;
+		font-weight: 600;
+		color: #a1a1aa;
+	}
+
+	.studio__field.is-span {
+		grid-column: 1 / -1;
+	}
+
+	.studio__lab {
+		display: flex;
+		align-items: center;
+		gap: 0.35rem;
+		min-height: 1.2rem;
+	}
+
+	.studio__q {
+		appearance: none;
+		flex: 0 0 auto;
+		width: 1.1rem;
+		height: 1.1rem;
+		padding: 0;
+		border-radius: 999px;
+		border: 1px solid #3f3f46;
+		background: #111;
+		color: #a1a1aa;
+		font: inherit;
+		font-size: 0.65rem;
+		font-weight: 800;
+		line-height: 1;
+		cursor: help;
+	}
+
+	.studio__q:hover {
+		border-color: #52525b;
+		color: #fafafa;
+		background: #18181b;
+	}
+
+	.studio input,
+	.studio textarea {
+		width: 100%;
+		padding: 0.5rem 0.6rem;
+		border-radius: 0.4rem;
+		border: 1px solid #27272a;
+		background: #050505;
+		color: #fafafa;
+		font: inherit;
+		font-size: 0.86rem;
+		font-weight: 500;
+	}
+
+	.studio input:focus,
+	.studio textarea:focus {
+		outline: none;
+		border-color: #52525b;
+		box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.06);
+	}
+
+	.studio textarea {
+		resize: vertical;
+		min-height: 3.5rem;
+		line-height: 1.45;
+	}
+
+	.studio__previews {
+		display: grid;
+		gap: 0.75rem;
+		margin-bottom: 0.85rem;
+	}
+
+	.studio__serp-tabs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.studio__subhead {
+		margin: 1.25rem 0 0.35rem;
+		font-size: 0.95rem;
+		color: #fafafa;
+	}
+
+	.studio__audit {
+		margin: 0 0 1rem;
+		border: 1px solid #27272a;
+		border-radius: 10px;
+		overflow: auto;
+		background: #0a0a0a;
+	}
+
+	.studio__audit-title {
+		margin: 0;
+		padding: 0.65rem 0.85rem;
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: #a1a1aa;
+		border-bottom: 1px solid #27272a;
+	}
+
+	.studio__audit-table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.8rem;
+		min-width: 520px;
+	}
+
+	.studio__audit-table th,
+	.studio__audit-table td {
+		padding: 0.45rem 0.75rem;
+		text-align: left;
+		border-top: 1px solid #1f1f23;
+		color: #d4d4d8;
+	}
+
+	.studio__audit-table th {
+		color: #71717a;
+		font-weight: 600;
+	}
+
+	.studio__audit-table a {
+		color: #9ecbff;
+	}
+
+	.studio__audit-status.is-live {
+		color: #86efac;
+		font-weight: 600;
+	}
+
+	.studio__audit-status.is-manual {
+		color: #fcd34d;
+		font-weight: 600;
+	}
+
+	.studio__bar.is-dirty {
+		border-top-color: #fcd34d;
+		box-shadow: 0 -8px 24px rgba(252, 211, 77, 0.08);
+	}
+
+	.studio__bar.is-dirty .studio__save {
+		border-color: #fcd34d;
+		background: #fcd34d;
+	}
+
+	.studio__serp-tab {
+		appearance: none;
+		border: 1px solid #27272a;
+		border-radius: 0.35rem;
+		padding: 0.25rem 0.5rem;
+		font: inherit;
+		font-size: 0.7rem;
+		font-weight: 600;
+		color: #a1a1aa;
+		background: #050505;
+		cursor: pointer;
+	}
+
+	.studio__serp-tab.is-active,
+	.studio__serp-tab:hover {
+		color: #fafafa;
+		border-color: #52525b;
+		background: #111;
+	}
+
+	.studio__serp-card {
+		padding: 0.75rem 0.85rem;
+		border-radius: 0.45rem;
+		border: 1px solid #27272a;
+		background: #050505;
+	}
+
+	.studio__serp-url {
+		margin: 0 0 0.15rem;
+		font-size: 0.72rem;
+		color: #86efac;
+	}
+
+	.studio__serp-title {
+		margin: 0 0 0.2rem;
+		font-size: 1.05rem;
+		line-height: 1.25;
+		color: #93c5fd;
+	}
+
+	.studio__serp-desc {
+		margin: 0;
+		font-size: 0.78rem;
+		line-height: 1.45;
+		color: #a1a1aa;
+	}
+
+	.studio__serp-counts {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 0.45rem;
+		font-size: 0.68rem;
+		color: #71717a;
+	}
+
+	.studio__serp-counts .is-ok {
+		color: #86efac;
+	}
+
+	.studio__serp-counts .is-warn {
+		color: #fcd34d;
+	}
+
+	.studio__serp-counts .is-bad {
+		color: #fca5a5;
+	}
+
+	.studio__hero-preview {
+		padding: 0.65rem 0.75rem;
+		border-radius: 0.45rem;
+		border: 1px solid #27272a;
+		background: #050505;
+	}
+
+	.studio__hero-preview-label {
+		margin: 0 0 0.35rem;
+		font-size: 0.65rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #71717a;
+	}
+
+	.studio__hero-preview-body {
+		margin: 0;
+		display: grid;
+		gap: 0.2rem;
+	}
+
+	.studio__hero-preview-body strong {
+		font-size: 1.1rem;
+		color: #fafafa;
+	}
+
+	.studio__hero-preview-body span {
+		font-size: 0.82rem;
+		color: #a1a1aa;
+	}
+
+	.studio__tokens {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.35rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.studio__tokens-label {
+		font-size: 0.68rem;
+		font-weight: 600;
+		color: #71717a;
+		margin-right: 0.15rem;
+	}
+
+	.studio__chip {
+		appearance: none;
+		border: 1px solid #27272a;
+		border-radius: 999px;
+		padding: 0.2rem 0.5rem;
+		font: inherit;
+		font-size: 0.68rem;
+		font-weight: 600;
+		color: #d4d4d8;
+		background: #111;
+		cursor: pointer;
+	}
+
+	.studio__chip:hover {
+		border-color: #52525b;
+		color: #fafafa;
+	}
+
+	.studio__bar {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 40;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.65rem 1rem;
+		background: rgba(5, 5, 5, 0.92);
+		border-top: 1px solid #27272a;
+		backdrop-filter: blur(8px);
+	}
+
+	.studio__save {
+		appearance: none;
+		border: 1px solid #fafafa;
+		border-radius: 0.4rem;
+		padding: 0.5rem 0.9rem;
+		font: inherit;
+		font-size: 0.84rem;
+		font-weight: 700;
+		color: #050505;
+		background: #fafafa;
+		cursor: pointer;
+	}
+
+	.studio__save:hover {
+		background: #e4e4e7;
+	}
+
+	.studio__save:disabled {
+		opacity: 0.5;
+		cursor: wait;
+	}
+
+	.studio__kbd-hint {
+		font-size: 0.68rem;
+		font-weight: 600;
+		opacity: 0.65;
+		margin-left: 0.25rem;
+	}
+
+	.studio__link {
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: #a1a1aa;
+		text-decoration: none;
+	}
+
+	.studio__link:hover {
+		color: #fafafa;
+	}
+
+	.studio__bar-msg {
+		margin: 0;
+		flex: 1 1 12rem;
+		font-size: 0.78rem;
+		line-height: 1.35;
+	}
+
+	.studio__bar-msg.is-ok {
+		color: #86efac;
+	}
+
+	.studio__bar-msg.is-err {
+		color: #fca5a5;
+	}
+
+	.studio__popup {
+		position: fixed;
+		z-index: 100;
+		max-width: 16rem;
+		padding: 0.55rem 0.65rem;
+		border-radius: 0.45rem;
+		border: 1px solid #3f3f46;
+		background: #0a0a0a;
+		color: #d4d4d8;
+		font-size: 0.74rem;
+		font-weight: 500;
+		line-height: 1.45;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+		pointer-events: auto;
+	}
+
+	.studio__popup :global(strong) {
+		color: #fafafa;
+		font-weight: 700;
+	}
+
+	.studio__locked {
+		width: min(100%, 34rem);
+		margin-inline: auto;
+		padding-top: 18vh;
+		text-align: center;
+	}
+
+	.studio__locked h1 {
+		font-size: 1.35rem;
+		color: #fafafa;
+	}
+
+	.studio__locked p {
+		margin: 0.5rem 0 0;
+		color: #a1a1aa;
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 720px) {
+		.studio__layout {
+			grid-template-columns: 1fr;
+		}
+
+		.studio__nav {
+			position: static;
+		}
+
+		.studio__nav ul {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.studio__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

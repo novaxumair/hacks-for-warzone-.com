@@ -1,0 +1,121 @@
+/**
+ * Site-wide mobile adjustments — loaded after global base styles.
+ */
+
+@media (max-width: 720px) {
+	main {
+		overflow-x: clip;
+	}
+
+	/* Standalone pages: about, compare, write-for-us, policies, etc. */
+	.standalone-page {
+		padding: 1.35rem 0 max(2.5rem, var(--safe-bottom));
+	}
+
+	.standalone-page__wrap {
+		gap: 1.25rem;
+	}
+
+	.standalone-page h1 {
+		font-size: clamp(1.5rem, 6.5vw, 2rem);
+		line-height: 1.12;
+	}
+
+	.standalone-page__lede {
+		font-size: 0.95rem;
+	}
+
+	.standalone-page h2 {
+		font-size: 1.05rem;
+	}
+
+	.standalone-page__cta {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0.55rem;
+	}
+
+	.standalone-page__cta a {
+		width: 100%;
+		min-height: var(--touch-min, 2.75rem);
+		justify-content: center;
+	}
+
+	.compare-table {
+		font-size: 0.82rem;
+	}
+
+	.compare-table th,
+	.compare-table td {
+		padding: 0.65rem 0.75rem;
+		min-width: 7.5rem;
+	}
+
+	/* Home SEO block */
+	.home-seo {
+		padding-block: 1.75rem 2rem;
+	}
+
+	.home-seo__head h2 {
+		font-size: clamp(1.35rem, 5vw, 1.65rem);
+	}
+
+	.home-seo__lede {
+		font-size: 0.92rem;
+	}
+
+	.home-seo__cat {
+		padding: 0.95rem 1rem;
+	}
+
+	.home-seo__cat a {
+		min-height: var(--touch-min, 2.75rem);
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.home-seo__faq {
+		padding: 1.1rem 1rem 1.15rem;
+		margin-top: 1.75rem;
+	}
+
+	/* Review cards — disable hover lift on touch */
+	.review-card:hover {
+		transform: none;
+	}
+
+	.faq-page,
+	.review-page {
+		padding-block: 1.35rem max(2.5rem, var(--safe-bottom));
+	}
+}
+
+@media (max-width: 560px) {
+	.faq-detail,
+	.review-detail {
+		padding: 1rem 1.05rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.standalone-page {
+		padding-top: 1.15rem;
+	}
+
+	.standalone-page__wrap {
+		gap: 1.1rem;
+	}
+
+	.trust-bar__text {
+		font-size: 0.78rem;
+		line-height: 1.45;
+	}
+}
+
+@media (hover: none) {
+	.guides-hub__card:hover,
+	.review-card:hover,
+	.reviews-index__card:hover {
+		transform: none;
+	}
+}

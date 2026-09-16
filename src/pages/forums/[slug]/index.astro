@@ -1,0 +1,21 @@
+---
+import ForumPostPage from '../../../components/ForumPostPage.astro';
+import { forumThreads, getThreadBySlug } from '../../../data/forums/helpers';
+import { defaultLocale } from '../../../data/i18n/locales';
+
+export function getStaticPaths() {
+	return forumThreads.map((thread) => ({
+		params: { slug: thread.translations.en.slug },
+		props: { locale: defaultLocale as const },
+	}));
+}
+
+const slug = Astro.params.slug ?? '';
+const thread = getThreadBySlug(defaultLocale, slug);
+
+if (!thread) {
+	return Astro.redirect('/forums/', 404);
+}
+---
+
+<ForumPostPage locale={defaultLocale} thread={thread} />

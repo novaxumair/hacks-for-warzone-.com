@@ -1,0 +1,15 @@
+file '/home/ubuntu/.cursor/projects/workspace/assets/3e36d5e4-d1c4-4ff3-947c-e41b4ae1cf80.png'
+duration 2
+file '/home/ubuntu/.cursor/projects/workspace/assets/ace63d75-06af-4d7d-9b64-ef8f1925c151.png'
+duration 2
+file '/home/ubuntu/.cursor/projects/workspace/assets/d925dde6-ad3b-45b2-9eb4-0d6c587ab1b3.png'
+duration 2
+file '/home/ubuntu/.cursor/projects/workspace/assets/3cf41d37-4773-4409-bccd-d263e80f96a2.png'
+duration 2
+file '/home/ubuntu/.cursor/projects/workspace/assets/5ba69f8d-1d6b-4968-b0b3-bc3173645d58.png'
+duration 2
+file '/home/ubuntu/.cursor/projects/workspace/assets/ae869fa9-6b43-4d11-9799-5fadcdb40118.png'
+duration 2
+file '/home/ubuntu/.cursor/projects/workspace/assets/40ca9d7c-2cfe-461e-943d-53964a6e8765.png'
+duration 2
+file '/home/ubuntu/.cursor/projects/workspace/assets/3e36d5e4-d1c4-4ff3-947c-e41b4ae1cf80.png'

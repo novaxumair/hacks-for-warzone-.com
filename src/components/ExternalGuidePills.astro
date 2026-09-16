@@ -1,0 +1,97 @@
+---
+import { featuredGuidePills } from '../data/external-resources';
+import type { LocaleCode } from '../data/i18n/locales';
+import { getT } from '../i18n/server';
+
+interface Props {
+	locale: LocaleCode;
+	class?: string;
+}
+
+const { locale, class: className } = Astro.props;
+const t = getT(locale);
+---
+
+<nav class:list={['guide-pills', className]} aria-label={t('externalResources.pillsLabel')}>
+	<p class="guide-pills__label">{t('externalResources.pillsTitle')}</p>
+	<ul class="guide-pills__list">
+		{
+			featuredGuidePills.map((item) => (
+				<li>
+					<a href={item.href} target="_blank" rel="noopener noreferrer">
+						{item.label}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
+
+<style>
+	.guide-pills {
+		margin: 1.25rem 0 0;
+	}
+
+	.guide-pills__label {
+		margin: 0 0 0.55rem;
+		color: var(--ink-muted);
+		font-size: 0.78rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+
+	.guide-pills__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.45rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.guide-pills__list a {
+		display: inline-flex;
+		align-items: center;
+		min-height: var(--touch-min, 2.75rem);
+		padding: 0.45rem 0.85rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-pill);
+		background: var(--bg-elevated);
+		color: var(--ink-muted);
+		font-size: 0.8125rem;
+		font-weight: 600;
+		text-decoration: none;
+		transition:
+			color 0.15s ease,
+			border-color 0.15s ease,
+			background 0.15s ease;
+	}
+
+	.guide-pills__list a:hover {
+		color: var(--ink);
+		border-color: color-mix(in srgb, var(--magenta) 40%, var(--line));
+		background: color-mix(in srgb, var(--magenta) 8%, var(--bg-elevated));
+	}
+
+	@media (max-width: 720px) {
+		.guide-pills__list {
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			scrollbar-width: none;
+			margin-inline: calc(var(--page-gutter) * -1);
+			padding-inline: var(--page-gutter);
+			padding-bottom: 0.15rem;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		.guide-pills__list::-webkit-scrollbar {
+			display: none;
+		}
+
+		.guide-pills__list a {
+			white-space: nowrap;
+			flex-shrink: 0;
+		}
+	}
+</style>

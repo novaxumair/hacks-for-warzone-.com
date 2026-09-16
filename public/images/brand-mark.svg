@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Naraka Cheats">
+  <!-- Simplified NC monogram matching brand mark (fallback / vector reference) -->
+  <rect width="64" height="64" fill="none"/>
+  <!-- C (dark, behind) -->
+  <path fill="#2A2A2A" stroke="#C41E2A" stroke-width="1.2" d="M50 18 40 8H24L14 18v28l10 10h16l10-10V36H42v8l-4 4H26l-4-4V18l4-4h12l4 4v8h8V18z"/>
+  <!-- N (red, front) -->
+  <path fill="#C41E2A" d="M18 6 12 12v40l6 6 4-4V28l16 26 6 6 6-6V12l-6-6-4 4v26L18 12 18 6z"/>
+</svg>

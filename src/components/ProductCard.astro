@@ -1,0 +1,118 @@
+---
+import { warzoneImages } from '../data/warzone';
+import { getUi } from '../data/i18n';
+import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import { productInfo, siteConfig } from '../data/site';
+import { contentSrcSet, productMainSizes } from '../lib/responsive-images';
+import { getT } from '../i18n/server';
+
+interface Props {
+	name?: string;
+	locale?: LocaleCode;
+}
+
+const locale = Astro.props.locale ?? defaultLocale;
+const ui = getUi(locale);
+const t = getT(locale);
+const { name = ui.product.title } = Astro.props;
+
+const productAlts = [
+	ui.images.espWallhack,
+	ui.images.aimbotCombat,
+	ui.images.headerArt,
+	ui.images.playerEsp,
+	ui.images.squadFight,
+	ui.images.hacksPackage,
+] as const;
+
+const mainImage = warzoneImages.product[0];
+const mainAlt = productAlts[0] ?? mainImage.alt;
+const monthlyPlan = productInfo.plans.find((plan) => plan.id === 'monthly') ?? productInfo.plans[0];
+---
+
+<section class="product surface-card" id="product" aria-label={t('common.productDetails')}>
+	<figure class="product__figure media-frame">
+		<img
+			src={mainImage.src}
+			srcset={contentSrcSet(mainImage.src)}
+			sizes={productMainSizes}
+			alt={mainAlt}
+			width="1280"
+			height="720"
+			loading="lazy"
+			decoding="async"
+		/>
+	</figure>
+
+	<div class="product__details">
+		<h2 class="product__title">{name}</h2>
+		<p class="product__meta">
+			{ui.product.gameBadge} · {ui.product.platformBadge} · {ui.product.statusBadge}
+		</p>
+		<p class="product__price">
+			${monthlyPlan.price}
+			<span>{ui.product.monthly}</span>
+		</p>
+		<a
+			href={siteConfig.checkoutUrl}
+			class="btn-buy product__buy"
+			rel="noopener noreferrer"
+		>
+			{ui.common.buyNow} — ${monthlyPlan.price}
+		</a>
+	</div>
+</section>
+
+<style>
+	.product {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+		padding: 1.25rem;
+		border-radius: var(--radius-card);
+	}
+
+	.product__figure {
+		margin: 0;
+		aspect-ratio: 16 / 10;
+	}
+
+	.product__title {
+		margin: 0;
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 1.2;
+	}
+
+	.product__meta {
+		margin: 0.5rem 0 0;
+		font-size: 0.8125rem;
+		color: var(--color-muted);
+	}
+
+	.product__price {
+		margin: 1rem 0 0;
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	.product__price span {
+		display: block;
+		margin-top: 0.25rem;
+		font-size: 0.8125rem;
+		font-weight: 500;
+		color: var(--color-muted);
+	}
+
+	.product__buy {
+		width: 100%;
+		margin-top: 1.25rem;
+	}
+
+	@media (max-width: 720px) {
+		.product {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

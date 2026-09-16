@@ -1,0 +1,437 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import { customerReviewStats, customerReviews, fillBrandTokens, productInfo, siteConfig } from '../../data/site';
+import { brandCopy, brandSeo, seoPageTitle } from '../../data/site-core';
+import { seoDescription } from '../../data/brand';
+import { getSelfHreflangAlternates } from '../../data/i18n/routing';
+import { getReviewPath, reviewsBasePath } from '../../data/reviews';
+import { reviewsImageSrc } from '../../data/page-images';
+
+const title = seoPageTitle(brandSeo.reviewsTitle);
+const description = seoDescription(brandSeo.reviewsDescription);
+const reviewsIntro = fillBrandTokens(brandCopy.reviewsIntro);
+
+function stars(rating: number): string {
+	return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+}
+
+const dateFormatter = new Intl.DateTimeFormat('en', {
+	day: 'numeric',
+	month: 'short',
+	year: 'numeric',
+	timeZone: 'UTC',
+});
+
+function formatDate(isoDate: string): string {
+	return dateFormatter.format(new Date(`${isoDate}T00:00:00Z`));
+}
+
+const sortedReviews = [...customerReviews].sort((a, b) => (a.date < b.date ? 1 : -1));
+
+const canonicalURL = new URL(reviewsBasePath, siteConfig.url).href;
+const hreflangAlternates = getSelfHreflangAlternates(reviewsBasePath);
+
+const extraGraph: Record<string, unknown>[] = [
+	{
+		'@type': 'Product',
+		'@id': `${siteConfig.url}/#product`,
+		name: productInfo.name,
+		description: productInfo.summary,
+		image: new URL(reviewsImageSrc, siteConfig.url).href,
+		brand: { '@type': 'Brand', name: productInfo.brand },
+		url: new URL('/', siteConfig.url).href,
+		aggregateRating: {
+			'@type': 'AggregateRating',
+			ratingValue: customerReviewStats.averageRating.toFixed(1),
+			reviewCount: String(customerReviewStats.totalCount),
+			bestRating: '5',
+			worstRating: '1',
+		},
+	},
+	{
+		'@type': 'ItemList',
+		'@id': `${canonicalURL}#list`,
+		name: title,
+		description,
+		itemListElement: sortedReviews.map((review, index) => ({
+			'@type': 'ListItem',
+			position: index + 1,
+			url: new URL(getReviewPath(review.slug), siteConfig.url).href,
+			name: review.seoTitle,
+		})),
+	},
+];
+---
+
+<Layout
+	title={title}
+	description={description}
+	canonicalPath={reviewsBasePath}
+	hreflangAlternates={hreflangAlternates}
+	ogImage={reviewsImageSrc}
+	ogImageAlt={fillBrandTokens('{brand} — Warzone cheats & Call of Duty: Warzone hacks reviews')}
+	locale="en"
+	breadcrumbs={[
+		{ label: 'Home', href: '/' },
+		{ label: 'Reviews' },
+	]}
+	extraGraph={extraGraph}
+>
+	<Navbar />
+	<main class="reviews-index">
+		<div class="shell reviews-index__wrap">
+			<nav class="reviews-index__crumbs" aria-label="Breadcrumb">
+				<a href="/">Home</a>
+				<span aria-hidden="true">/</span>
+				<span aria-current="page">Reviews</span>
+			</nav>
+
+			<header class="reviews-index__head">
+				<div>
+					<h1 data-edit="navReviews">Warzone cheats reviews — Call of Duty: Warzone hacks & cheats</h1>
+					<p class="reviews-index__intro" data-edit="reviewsIntro">{reviewsIntro}</p>
+				</div>
+				<div class="reviews-index__summary" aria-label={`${customerReviewStats.averageRating} out of 5 average rating`}>
+					<p class="reviews-index__avg">{customerReviewStats.averageRating.toFixed(1)}</p>
+					<p class="reviews-index__avg-stars" aria-hidden="true">{stars(Math.round(customerReviewStats.averageRating))}</p>
+					<p class="reviews-index__count">{customerReviewStats.reviewCountLabel} buyer reviews · out of 5</p>
+				</div>
+			</header>
+
+			<div class="reviews-index__grid">
+				{
+					sortedReviews.map((review) => (
+						<article class="reviews-index__card">
+							<div class="reviews-index__card-top">
+								<div class="reviews-index__who">
+									<span class="reviews-index__avatar" aria-hidden="true">{review.handle.charAt(0).toUpperCase()}</span>
+									<div>
+										<p class="reviews-index__handle">@{review.handle}</p>
+										<p class="reviews-index__date"><time datetime={review.date}>{formatDate(review.date)}</time></p>
+									</div>
+								</div>
+								<p class="reviews-index__stars" aria-label={`${review.rating} out of 5 stars`}>
+									{stars(review.rating)}
+								</p>
+							</div>
+							{review.tag ? <p class="reviews-index__tag">{review.tag}</p> : null}
+							<p class="reviews-index__text">{review.text}</p>
+							<a class="reviews-index__more" href={getReviewPath(review.slug)}>
+								Read full review
+								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+									<path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</a>
+						</article>
+					))
+				}
+			</div>
+
+			<section class="reviews-index__cta" aria-label={`Buy ${siteConfig.name}`}>
+				<h2>Ready to try Warzone cheats?</h2>
+				<p>
+					Call of Duty: Warzone hacks and cheats in one package — ESP, soft aim, and radar for Windows PC, with
+					{productInfo.game} patch maintenance after updates.
+				</p>
+				<div class="reviews-index__cta-row">
+					<a href={siteConfig.checkoutUrl} class="reviews-index__buy" rel="noopener noreferrer">
+						Buy Now — ${productInfo.plans[0].price}
+					</a>
+					<a href="/pricing/" class="reviews-index__link-btn">Compare pricing</a>
+				</div>
+			</section>
+		</div>
+	</main>
+	<SiteFooter />
+</Layout>
+
+<style>
+	.reviews-index {
+		overflow-x: clip;
+		padding-block: 2rem 3rem;
+	}
+
+	.reviews-index__wrap {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.reviews-index__crumbs {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.45rem;
+		font-size: 0.8rem;
+		color: var(--ink-faint);
+	}
+
+	.reviews-index__crumbs a {
+		color: var(--ink-muted);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.reviews-index__crumbs a:hover {
+		color: var(--accent-hover);
+	}
+
+	.reviews-index__head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 1rem 1.5rem;
+		padding-bottom: 1.15rem;
+		border-bottom: 1px solid var(--line-soft);
+	}
+
+	.reviews-index__head h1 {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		color: var(--ink);
+	}
+
+	.reviews-index__intro {
+		margin: 0.55rem 0 0;
+		color: var(--ink-muted);
+		font-size: 0.96rem;
+		line-height: 1.6;
+		max-width: 40rem;
+	}
+
+	.reviews-index__summary {
+		display: grid;
+		gap: 0.15rem;
+		justify-items: end;
+		text-align: right;
+		padding: 0.85rem 1.1rem;
+		border-radius: var(--radius-md, 0.75rem);
+		border: 1px solid var(--line);
+		background: var(--bg-panel);
+	}
+
+	.reviews-index__avg {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: 1.85rem;
+		font-weight: 800;
+		line-height: 1;
+		color: var(--magenta-soft);
+	}
+
+	.reviews-index__avg-stars {
+		margin: 0;
+		font-size: 0.85rem;
+		letter-spacing: 0.08em;
+		color: var(--accent-amber);
+	}
+
+	.reviews-index__count {
+		margin: 0;
+		font-size: 0.78rem;
+		color: var(--ink-faint);
+	}
+
+	.reviews-index__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.85rem;
+	}
+
+	.reviews-index__card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+		padding: 1.05rem 1.1rem;
+		border-radius: var(--radius-md, 0.75rem);
+		border: 1px solid var(--line);
+		background: var(--bg-panel);
+		transition:
+			border-color 0.2s ease,
+			transform 0.2s ease;
+	}
+
+	.reviews-index__card:hover {
+		border-color: color-mix(in srgb, var(--magenta) 35%, var(--line));
+		transform: translateY(-2px);
+	}
+
+	.reviews-index__card-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+	}
+
+	.reviews-index__who {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		min-width: 0;
+	}
+
+	.reviews-index__avatar {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 auto;
+		width: 2.15rem;
+		height: 2.15rem;
+		border-radius: 999px;
+		border: 1px solid var(--line-strong);
+		background: var(--bg-elevated);
+		color: var(--magenta-soft);
+		font-size: 0.9rem;
+		font-weight: 800;
+	}
+
+	.reviews-index__handle {
+		margin: 0;
+		font-size: 0.88rem;
+		font-weight: 700;
+		color: var(--ink);
+		overflow-wrap: anywhere;
+	}
+
+	.reviews-index__date {
+		margin: 0.1rem 0 0;
+		font-size: 0.72rem;
+		color: var(--ink-faint);
+	}
+
+	.reviews-index__stars {
+		margin: 0;
+		font-size: 0.82rem;
+		letter-spacing: 0.04em;
+		color: var(--accent-amber);
+		white-space: nowrap;
+	}
+
+	.reviews-index__tag {
+		margin: 0;
+		display: inline-flex;
+		align-self: start;
+		padding: 0.2rem 0.55rem;
+		border-radius: 999px;
+		border: 1px solid color-mix(in srgb, var(--magenta) 28%, var(--line));
+		background: var(--bg);
+		color: var(--magenta-soft);
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+
+	.reviews-index__text {
+		margin: 0;
+		color: var(--ink-muted);
+		font-size: 0.92rem;
+		line-height: 1.6;
+		flex-grow: 1;
+	}
+
+	.reviews-index__more {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-size: 0.8rem;
+		font-weight: 700;
+		color: var(--magenta-soft);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.reviews-index__more:hover {
+		color: var(--ink);
+	}
+
+	.reviews-index__cta {
+		display: grid;
+		gap: 0.65rem;
+		padding: clamp(1.25rem, 3vw, 1.75rem);
+		border-radius: var(--radius-lg, 1rem);
+		border: 1px solid var(--line);
+		background:
+			radial-gradient(ellipse 70% 80% at 0% 0%, color-mix(in srgb, var(--magenta) 10%, transparent), transparent 55%),
+			var(--bg-panel);
+	}
+
+	.reviews-index__cta h2 {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+		font-weight: 800;
+		color: var(--ink);
+	}
+
+	.reviews-index__cta p {
+		margin: 0;
+		color: var(--ink-muted);
+		line-height: 1.6;
+		max-width: 44rem;
+	}
+
+	.reviews-index__cta-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem;
+		margin-top: 0.35rem;
+	}
+
+	.reviews-index__buy {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.8rem 1.35rem;
+		border-radius: 0.75rem;
+		font-size: 0.95rem;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.reviews-index__link-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.8rem 1.1rem;
+		border-radius: 0.75rem;
+		font-size: 0.9rem;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	@media (max-width: 680px) {
+		.reviews-index {
+			padding-block: 1.35rem max(2.5rem, var(--safe-bottom));
+		}
+
+		.reviews-index__head h1 {
+			font-size: clamp(1.45rem, 6.5vw, 1.85rem);
+		}
+
+		.reviews-index__grid {
+			grid-template-columns: 1fr;
+		}
+
+		.reviews-index__summary {
+			justify-items: start;
+			text-align: left;
+			width: 100%;
+		}
+
+		.reviews-index__cta-row {
+			flex-direction: column;
+		}
+
+		.reviews-index__buy,
+		.reviews-index__link-btn {
+			width: 100%;
+			min-height: var(--touch-min, 2.75rem);
+		}
+	}
+</style>

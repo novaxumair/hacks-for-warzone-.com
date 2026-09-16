@@ -1,0 +1,13 @@
+---
+import { isForumThreadSlug } from '../../data/i18n/routing';
+
+export function getStaticPaths() {
+	return [];
+}
+
+const slug = Astro.params.slug ?? '';
+if (slug && isForumThreadSlug(slug)) {
+	return Astro.redirect(`/forums/${slug}/`, 301);
+}
+return Astro.redirect('/404/', 404);
+---

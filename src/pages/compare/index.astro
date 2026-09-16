@@ -1,0 +1,241 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import TrustBar from '../../components/TrustBar.astro';
+import { productInfo, siteConfig } from '../../data/site';
+import { getSelfHreflangAlternates } from '../../data/i18n/routing';
+
+const title = 'Warzone Cheats Comparison | vs Budget Cheat Shops 2026';
+const description =
+	'Compare Warzone Cheats vs typical budget cheat shops — ESP, aimbot, radar, Ricochet maintenance, pricing ($35/mo or $150 lifetime), and support at cheatsforwarzone.com.';
+const canonicalPath = '/compare/';
+const hreflangAlternates = getSelfHreflangAlternates(canonicalPath);
+
+const rows = [
+	{ feature: 'ESP wallhack + operator markers', us: 'Included', them: 'Often extra tier' },
+	{ feature: 'Soft aim / aimbot profiles', us: 'Included', them: 'Basic or paywalled' },
+	{ feature: '2D radar overlay', us: 'Included', them: 'Rare on budget builds' },
+	{ feature: 'Ricochet maintenance', us: 'Documented on /updates/', them: 'Often vague' },
+	{ feature: 'Windows 10 & 11', us: 'Yes', them: 'Varies' },
+	{ feature: 'Monthly plan', us: '$35/month', them: '$20–$50+ (varies)' },
+	{ feature: 'Lifetime plan', us: '$150 lifetime', them: 'Often unavailable' },
+	{ feature: 'Setup guide + support', us: '/setup/ + email support', them: 'Discord-only common' },
+	{ feature: 'Buyer reviews', us: '1000+ on-site reviews', them: 'Rarely verified' },
+];
+
+const extraGraph = [
+	{
+		'@type': 'WebPage',
+		'@id': `${siteConfig.url}${canonicalPath}#compare`,
+		name: title,
+		description,
+		url: `${siteConfig.url}${canonicalPath}`,
+	},
+];
+---
+
+<Layout
+	title={title}
+	description={description}
+	canonicalPath={canonicalPath}
+	hreflangAlternates={hreflangAlternates}
+	ogLocaleAlternates={false}
+	ogImage={siteConfig.defaultOgImage}
+	ogImageAlt="Warzone Cheats comparison table"
+	locale="en"
+	breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Compare' }]}
+	extraGraph={extraGraph}
+>
+	<Navbar />
+	<TrustBar />
+	<main class="standalone-page">
+		<div class="shell standalone-page__wrap standalone-page__wrap--wide">
+			<header>
+				<p class="standalone-page__eyebrow">Comparison hub</p>
+				<h1>Warzone Cheats vs typical budget cheat shops</h1>
+				<p class="standalone-page__lede">
+					Use this table before checkout. For deeper dives, read our
+					<a href="/blog/warzone-cheats-vs-cheatspike-comparison/">CheatSpike comparison</a>,
+					<a href="/blog/warzone-cheats-vs-ghostware-features-pricing/">Ghostware comparison</a>, and
+					<a href="/blog/warzone-cheats-buyers-guide/">buyers guide</a>.
+				</p>
+			</header>
+
+			<div class="compare-table-wrap" role="region" aria-label="Feature comparison table">
+				<table class="compare-table">
+					<thead>
+						<tr>
+							<th scope="col">Feature</th>
+							<th scope="col">{siteConfig.name}</th>
+							<th scope="col">Typical budget shops</th>
+						</tr>
+					</thead>
+					<tbody>
+						{
+							rows.map((row) => (
+								<tr>
+									<th scope="row">{row.feature}</th>
+									<td>{row.us}</td>
+									<td>{row.them}</td>
+								</tr>
+							))
+						}
+					</tbody>
+				</table>
+			</div>
+
+			<section>
+				<h2>When Warzone Cheats is the better fit</h2>
+				<p>
+					You want ESP, aimbot, and radar in one license with a public status page after Ricochet patches,
+					written setup steps, and clear pricing — not a Discord-only reseller with empty “undetected forever”
+					banners.
+				</p>
+			</section>
+
+			<section>
+				<h2>Top competitor categories to research</h2>
+				<ul>
+					<li><strong>Budget ESP-only tools</strong> — cheap weekly subs, minimal maintenance notes.</li>
+					<li><strong>Marketplace resellers</strong> — mixed quality, slow support, unclear rebuild timelines.</li>
+					<li><strong>DMA / hardware setups</strong> — higher cost, different risk profile; see our reviews.</li>
+				</ul>
+			</section>
+
+			<p class="standalone-page__cta">
+				<a href={siteConfig.checkoutUrl} data-analytics="checkout">Buy {productInfo.name} — ${productInfo.plans[0].price}/mo</a>
+				<a class="standalone-page__cta-secondary" href="/pricing/">View pricing</a>
+				<a class="standalone-page__cta-secondary" href="/features/">Full feature list</a>
+			</p>
+		</div>
+	</main>
+	<SiteFooter />
+</Layout>
+
+<style>
+	.standalone-page {
+		padding: 2rem 0 3.5rem;
+	}
+
+	.standalone-page__wrap {
+		max-width: 46rem;
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.standalone-page__wrap--wide {
+		max-width: 56rem;
+	}
+
+	.standalone-page__eyebrow {
+		margin: 0 0 0.35rem;
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--magenta-soft);
+	}
+
+	.standalone-page h1 {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+		font-weight: 800;
+		color: var(--ink);
+	}
+
+	.standalone-page__lede {
+		margin: 0.75rem 0 0;
+		color: var(--ink-muted);
+		line-height: 1.65;
+	}
+
+	.standalone-page h2 {
+		margin: 0 0 0.5rem;
+		font-size: 1.15rem;
+		font-weight: 700;
+		color: var(--ink);
+	}
+
+	.standalone-page p,
+	.standalone-page li {
+		margin: 0;
+		color: var(--ink-muted);
+		line-height: 1.65;
+	}
+
+	.standalone-page ul {
+		margin: 0;
+		padding-left: 1.2rem;
+		display: grid;
+		gap: 0.45rem;
+	}
+
+	.standalone-page a {
+		color: var(--link);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.compare-table-wrap {
+		overflow-x: auto;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md, 0.75rem);
+		background: var(--bg-panel);
+	}
+
+	.compare-table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.9rem;
+	}
+
+	.compare-table th,
+	.compare-table td {
+		padding: 0.85rem 1rem;
+		border-bottom: 1px solid var(--line-soft);
+		text-align: left;
+		vertical-align: top;
+	}
+
+	.compare-table thead th {
+		background: var(--bg-elevated);
+		color: var(--ink);
+		font-weight: 700;
+	}
+
+	.compare-table tbody th {
+		color: var(--ink);
+		font-weight: 600;
+	}
+
+	.compare-table td {
+		color: var(--ink-muted);
+	}
+
+	.compare-table tr:last-child th,
+	.compare-table tr:last-child td {
+		border-bottom: none;
+	}
+
+	.standalone-page__cta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 0.5rem;
+	}
+
+	.standalone-page__cta a {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.75rem 1.2rem;
+		border-radius: 0.75rem;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.standalone-page__cta-secondary {
+		border-color: transparent;
+	}
+</style>

@@ -1,0 +1,27 @@
+---
+import ReviewDetailPage from '../../../../components/ReviewDetailPage.astro';
+import { customerReviews } from '../../../../data/site';
+import { defaultLocale, isLocaleCode, localeCodes } from '../../../../data/i18n/locales';
+
+export function getStaticPaths() {
+	const paths: { params: { lang: string; slug: string } }[] = [];
+
+	for (const lang of localeCodes) {
+		if (lang === defaultLocale) continue;
+		for (const review of customerReviews) {
+			paths.push({ params: { lang, slug: review.slug } });
+		}
+	}
+
+	return paths;
+}
+
+const lang = Astro.params.lang ?? '';
+const slug = Astro.params.slug ?? '';
+
+if (!isLocaleCode(lang)) {
+	return Astro.redirect(`/reviews/${slug}/`, 301);
+}
+---
+
+<ReviewDetailPage locale={lang} slug={slug} />

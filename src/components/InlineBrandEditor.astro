@@ -1,0 +1,285 @@
+---
+/**
+ * Localhost-only: double-click any text to edit.
+ * Brand-linked fields (data-edit) save into brand.ts.
+ * Other text saves into src/data/inline-edits.json.
+ */
+const isDev = import.meta.env.DEV;
+---
+
+{
+	isDev && (
+		<>
+			<div class="ibe" id="ibe-bar" hidden>
+				<span class="ibe__hint" id="ibe-hint">Double-click text · brand fields → brand.ts (permanent) · other text → inline-edits.json (dev override)</span>
+				<button type="button" class="ibe__btn" id="ibe-save">
+					Save
+				</button>
+				<button type="button" class="ibe__btn ibe__btn--ghost" id="ibe-cancel">
+					Cancel
+				</button>
+				<a class="ibe__link" href="/brand-studio/">
+					Brand Studio
+				</a>
+			</div>
+			<script is:inline>
+				(() => {
+					const host = location.hostname;
+					if (host !== 'localhost' && host !== '127.0.0.1' && host !== '[::1]') return;
+					if (location.pathname.startsWith('/brand-studio')) return;
+
+					const bar = document.getElementById('ibe-bar');
+					const hint = document.getElementById('ibe-hint');
+					const saveBtn = document.getElementById('ibe-save');
+					const cancelBtn = document.getElementById('ibe-cancel');
+					if (!bar || !hint || !saveBtn || !cancelBtn) return;
+
+					let active = null;
+					let original = '';
+					const skip = new Set([
+						'SCRIPT',
+						'STYLE',
+						'TEXTAREA',
+						'INPUT',
+						'SELECT',
+						'OPTION',
+						'CODE',
+						'PRE',
+						'SVG',
+						'PATH',
+						'IMG',
+						'VIDEO',
+						'IFRAME',
+					]);
+
+					function isEditableTarget(el) {
+						if (!(el instanceof HTMLElement)) return null;
+						if (el.closest('.ibe, .studio, [data-nav-panel]')) return null;
+						let node = el;
+						for (let i = 0; i < 5 && node; i++) {
+							if (skip.has(node.tagName)) return null;
+							if (node.hasAttribute('data-edit')) return node;
+							if (
+								/^(H1|H2|H3|H4|H5|H6|P|SPAN|LI|LABEL|BUTTON|A|TD|TH|DT|DD|FIGCAPTION|STRONG|EM|SMALL)$/.test(
+									node.tagName,
+								)
+							) {
+								const text = (node.textContent || '').trim();
+								if (text && text.length <= 500) return node;
+							}
+							node = node.parentElement;
+						}
+						return null;
+					}
+
+					function cssKey(el) {
+						if (el.hasAttribute('data-edit')) return 'brand:' + el.getAttribute('data-edit');
+						const parts = [];
+						let n = el;
+						while (n && n.nodeType === 1 && parts.length < 6) {
+							let part = n.tagName.toLowerCase();
+							if (n.id) {
+								parts.unshift(part + '#' + n.id);
+								break;
+							}
+							const parent = n.parentElement;
+							if (parent) {
+								const siblings = [...parent.children].filter((c) => c.tagName === n.tagName);
+								if (siblings.length > 1) part += ':nth-of-type(' + (siblings.indexOf(n) + 1) + ')';
+							}
+							if (n.classList && n.classList.length) {
+								part += '.' + [...n.classList].slice(0, 2).join('.');
+							}
+							parts.unshift(part);
+							n = parent;
+						}
+						return parts.join('>');
+					}
+
+					async function applyOverrides() {
+						try {
+							const res = await fetch('/brand-studio/api/inline/', {
+								headers: { 'X-Brand-Studio': '1' },
+							});
+							const data = await res.json();
+							if (!res.ok || !data.ok) return;
+							const map = data.edits || {};
+							const page = map[location.pathname] || {};
+							Object.entries(page).foreach(([key, value]) => {
+								if (typeof value !== 'string') return;
+								if (key.startsWith('brand:')) {
+									document.querySelectorAll('[data-edit="' + key.slice(6) + '"]').foreach((el) => {
+										el.textContent = value;
+									});
+									return;
+								}
+								try {
+									const el = document.querySelector(key);
+									if (el) el.textContent = value;
+								} catch (_) {}
+							});
+						} catch (_) {}
+					}
+
+					function showBar(msg) {
+						bar.hidden = false;
+						hint.textContent = msg;
+					}
+					function hideBar() {
+						bar.hidden = true;
+					}
+					function endEdit(restore) {
+						if (!active) return;
+						active.removeAttribute('contenteditable');
+						active.classList.remove('ibe-active');
+						if (restore) active.textContent = original;
+						active = null;
+						hideBar();
+					}
+
+					async function saveEdit() {
+						if (!active) return;
+						const value = (active.textContent || '').trim();
+						if (!value) {
+							hint.textContent = 'Text cannot be empty';
+							return;
+						}
+						const field = active.getAttribute('data-edit');
+						saveBtn.disabled = true;
+						hint.textContent = 'Saving…';
+						try {
+							const headers = {
+								'Content-Type': 'application/json',
+								'X-Brand-Studio': '1',
+							};
+							let res;
+							if (field) {
+								res = await fetch('/brand-studio/api/patch/', {
+									method: 'POST',
+									headers,
+									body: JSON.stringify({ field: field, value: value }),
+								});
+							} else {
+								res = await fetch('/brand-studio/api/inline/', {
+									method: 'POST',
+									headers,
+									body: JSON.stringify({
+										path: location.pathname,
+										key: cssKey(active),
+										value: value,
+									}),
+								});
+							}
+							const data = await res.json();
+							if (!res.ok || !data.ok) {
+								hint.textContent = data.error || 'Save failed';
+								saveBtn.disabled = false;
+								return;
+							}
+							endEdit(false);
+							if (field) location.reload();
+							else showBar('Saved inline text');
+						} catch (_) {
+							hint.textContent = 'Network error — is astro dev running?';
+							saveBtn.disabled = false;
+						}
+					}
+
+					document.addEventListener('dblclick', (e) => {
+						const target = isEditableTarget(e.target);
+						if (!target) return;
+						e.preventDefault();
+						e.stopPropagation();
+						if (active && active !== target) endEdit(true);
+						active = target;
+						original = target.textContent || '';
+						target.setAttribute('contenteditable', 'true');
+						target.classList.add('ibe-active');
+						target.focus();
+						const field = target.getAttribute('data-edit');
+						showBar(
+							field
+								? 'Editing ' + field + ' — Save writes brand.ts'
+								: 'Editing page text — Save writes inline-edits.json',
+						);
+						saveBtn.disabled = false;
+					});
+
+					saveBtn.addEventListener('click', saveEdit);
+					cancelBtn.addEventListener('click', () => endEdit(true));
+					document.addEventListener('keydown', (e) => {
+						if (!active) return;
+						if (e.key === 'Escape') {
+							e.preventDefault();
+							endEdit(true);
+						}
+						if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+							e.preventDefault();
+							saveEdit();
+						}
+					});
+
+					document.documentElement.classList.add('ibe-on');
+					applyOverrides();
+					showBar('Local edit mode: double-click any text');
+					setTimeout(() => {
+						if (!active) hideBar();
+					}, 3200);
+				})();
+			</script>
+			<style is:global>
+				html.ibe-on [data-edit] {
+					cursor: text;
+				}
+				html.ibe-on .ibe-active {
+					outline: 2px solid var(--magenta) !important;
+					outline-offset: 3px;
+					background: color-mix(in srgb, var(--magenta) 12%, transparent);
+				}
+				.ibe {
+					position: fixed;
+					z-index: 99999;
+					left: 50%;
+					bottom: 1rem;
+					transform: translateX(-50%);
+					display: flex;
+					align-items: center;
+					gap: 0.55rem;
+					padding: 0.55rem 0.75rem;
+					border-radius: 999px;
+					background: #111;
+					border: 1px solid #3f3f46;
+					color: #fafafa;
+					box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+					font: 500 0.8rem/1.2 Inter, system-ui, sans-serif;
+					max-width: calc(100vw - 1.5rem);
+				}
+				.ibe__hint {
+					color: #a1a1aa;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					max-width: 42vw;
+				}
+				.ibe__btn {
+					border: 0;
+					border-radius: 999px;
+					padding: 0.35rem 0.7rem;
+					background: var(--magenta, #c026d3);
+					color: #fff;
+					font: inherit;
+					cursor: pointer;
+				}
+				.ibe__btn--ghost {
+					background: #27272a;
+					color: #e4e4e7;
+				}
+				.ibe__link {
+					color: #a1a1aa;
+					text-decoration: underline;
+					text-underline-offset: 2px;
+				}
+			</style>
+		</>
+	)
+}

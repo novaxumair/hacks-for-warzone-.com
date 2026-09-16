@@ -1,0 +1,426 @@
+---
+interface Props {
+	/** Video URL (WebM/MP4) — not fetched until the user presses play */
+	src: string;
+	poster: string;
+	playLabel: string;
+	pauseLabel: string;
+	caption?: string;
+	volumeLabel?: string;
+	seekLabel?: string;
+	muteLabel?: string;
+	unmuteLabel?: string;
+}
+
+const {
+	src,
+	poster,
+	playLabel,
+	pauseLabel,
+	caption,
+	seekLabel = 'Video progress',
+	muteLabel = 'Mute video',
+	unmuteLabel = 'Unmute video',
+} = Astro.props;
+const videoId = `demo-video-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+<figure class="lazy-demo-video">
+	<div class="lazy-demo-video__frame" data-lazy-video data-src={src}>
+		<video
+			id={videoId}
+			class="lazy-demo-video__el"
+			preload="none"
+			playsinline
+			poster={poster}
+			tabindex="-1"
+		>
+			<track kind="captions" />
+		</video>
+		<button
+			type="button"
+			class="lazy-demo-video__toggle"
+			aria-label={playLabel}
+			data-pause-label={pauseLabel}
+			aria-controls={videoId}
+		>
+			<span class="lazy-demo-video__icon lazy-demo-video__icon--play" aria-hidden="true">
+				<svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+					<path d="M8 5.14v13.72a1 1 0 0 0 1.5.87l11.04-6.86a1 1 0 0 0 0-1.74L9.5 4.27A1 1 0 0 0 8 5.14z"></path>
+				</svg>
+			</span>
+			<span class="lazy-demo-video__icon lazy-demo-video__icon--pause is-hidden" aria-hidden="true">
+				<svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+					<path d="M7 5h3v14H7V5zm7 0h3v14h-3V5z"></path>
+				</svg>
+			</span>
+		</button>
+		<div class="lazy-demo-video__controls" hidden>
+			<div class="lazy-demo-video__timeline">
+				<label class="lazy-demo-video__progress-wrap">
+					<span class="sr-only">{seekLabel}</span>
+					<input
+						type="range"
+						class="lazy-demo-video__progress"
+						min="0"
+						max="1000"
+						value="0"
+						aria-label={seekLabel}
+						aria-valuemin="0"
+						aria-valuemax="1000"
+						aria-valuenow="0"
+					/>
+				</label>
+			</div>
+			<button
+				type="button"
+				class="lazy-demo-video__mute"
+				aria-label={muteLabel}
+				data-unmute-label={unmuteLabel}
+				data-mute-label={muteLabel}
+			>
+				<span class="lazy-demo-video__mute-icon lazy-demo-video__mute-icon--on" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+						<path d="M4 9v6h4l5 5V4L8 9H4zm10.5 3c0-1.77-1.02-3.29-2.5-4.03v8.06c1.48-.74 2.5-2.26 2.5-4.03zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+					</svg>
+				</span>
+				<span class="lazy-demo-video__mute-icon lazy-demo-video__mute-icon--off is-hidden" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+						<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"></path>
+					</svg>
+				</span>
+			</button>
+		</div>
+	</div>
+	{caption && <figcaption class="lazy-demo-video__caption">{caption}</figcaption>}
+</figure>
+
+<script>
+	function initLazyDemoVideos() {
+		document.querySelectorAll('[data-lazy-video]').forEach((root) => {
+			if (root.dataset.lazyVideoInit === 'true') return;
+			root.dataset.lazyVideoInit = 'true';
+
+			const video = root.querySelector('video');
+			const toggle = root.querySelector('.lazy-demo-video__toggle');
+			const controls = root.querySelector('.lazy-demo-video__controls');
+			const muteBtn = root.querySelector('.lazy-demo-video__mute');
+			const progressInput = root.querySelector('.lazy-demo-video__progress');
+			const src = root.dataset.src;
+			if (!video || !toggle || !src) return;
+
+			const playIcon = root.querySelector('.lazy-demo-video__icon--play');
+			const pauseIcon = root.querySelector('.lazy-demo-video__icon--pause');
+			const muteOnIcon = root.querySelector('.lazy-demo-video__mute-icon--on');
+			const muteOffIcon = root.querySelector('.lazy-demo-video__mute-icon--off');
+			const playLabel = toggle.getAttribute('aria-label') ?? 'Play video';
+			const pauseLabel = toggle.dataset.pauseLabel ?? 'Pause video';
+			const muteLabel = muteBtn?.dataset.muteLabel ?? 'Mute video';
+			const unmuteLabel = muteBtn?.dataset.unmuteLabel ?? 'Unmute video';
+
+			let lastVolume = 1;
+			let seeking = false;
+
+			const setPlaying = (playing) => {
+				root.classList.toggle('is-playing', playing);
+				toggle.setAttribute('aria-label', playing ? pauseLabel : playLabel);
+				if (playIcon) playIcon.classList.toggle('is-hidden', playing);
+				if (pauseIcon) pauseIcon.classList.toggle('is-hidden', !playing);
+				if (controls) controls.hidden = !playing;
+			};
+
+			const syncProgressUi = () => {
+				if (!progressInput || !Number.isFinite(video.duration) || video.duration <= 0) return;
+				const value = Math.round((video.currentTime / video.duration) * 1000);
+				progressInput.value = String(value);
+				progressInput.setAttribute('aria-valuenow', String(value));
+			};
+
+			const syncMuteUi = () => {
+				if (!muteBtn) return;
+				const isMuted = video.muted || video.volume === 0;
+				muteBtn.setAttribute('aria-label', isMuted ? unmuteLabel : muteLabel);
+				if (muteOnIcon) muteOnIcon.classList.toggle('is-hidden', isMuted);
+				if (muteOffIcon) muteOffIcon.classList.toggle('is-hidden', !isMuted);
+			};
+
+			const ensureSrc = () => {
+				if (!video.getAttribute('src')) {
+					video.setAttribute('src', src);
+					video.load();
+				}
+			};
+
+			const playVideo = async () => {
+				ensureSrc();
+				try {
+					await video.play();
+					setPlaying(true);
+				} catch {
+					setPlaying(false);
+				}
+			};
+
+			const pauseVideo = () => {
+				video.pause();
+				setPlaying(false);
+			};
+
+			toggle.addEventListener('click', (event) => {
+				event.stopPropagation();
+				if (video.paused) void playVideo();
+				else pauseVideo();
+			});
+
+			video.addEventListener('click', (event) => {
+				if (event.target !== video) return;
+				if (video.paused) void playVideo();
+				else pauseVideo();
+			});
+
+			muteBtn?.addEventListener('click', (event) => {
+				event.stopPropagation();
+				if (video.muted || video.volume === 0) {
+					video.muted = false;
+					video.volume = lastVolume > 0 ? lastVolume : 0.8;
+				} else {
+					lastVolume = video.volume;
+					video.muted = true;
+				}
+				syncMuteUi();
+			});
+
+			progressInput?.addEventListener('input', (event) => {
+				event.stopPropagation();
+				seeking = true;
+				if (!Number.isFinite(video.duration) || video.duration <= 0) return;
+				video.currentTime = (Number(progressInput.value) / 1000) * video.duration;
+				syncProgressUi();
+			});
+
+			progressInput?.addEventListener('change', () => {
+				seeking = false;
+			});
+
+			progressInput?.addEventListener('pointerdown', (event) => {
+				event.stopPropagation();
+				seeking = true;
+			});
+			progressInput?.addEventListener('pointerup', () => {
+				seeking = false;
+			});
+			controls?.addEventListener('click', (event) => event.stopPropagation());
+
+			video.addEventListener('timeupdate', () => {
+				if (!seeking) syncProgressUi();
+			});
+			video.addEventListener('loadedmetadata', syncProgressUi);
+			video.addEventListener('durationchange', syncProgressUi);
+
+			video.addEventListener('ended', () => setPlaying(false));
+			video.addEventListener('pause', () => {
+				if (!video.ended) setPlaying(false);
+			});
+
+			video.volume = 1;
+			syncMuteUi();
+			setPlaying(false);
+		});
+	}
+
+	initLazyDemoVideos();
+	document.addEventListener('astro:page-load', initLazyDemoVideos);
+</script>
+
+<style>
+	.lazy-demo-video {
+		margin: 0;
+		width: 100%;
+	}
+
+	.lazy-demo-video__frame {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		border-radius: var(--radius-md);
+		overflow: hidden;
+		border: 1px solid var(--line);
+		background: var(--bg-elevated);
+		box-shadow: 0 12px 40px color-mix(in srgb, var(--bg) 55%, transparent);
+	}
+
+	.lazy-demo-video__el {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		background: var(--bg-elevated);
+		cursor: pointer;
+	}
+
+	.lazy-demo-video__toggle {
+		position: absolute;
+		inset: 0;
+		display: grid;
+		place-items: center;
+		margin: 0;
+		padding: 0;
+		border: none;
+		background: color-mix(in srgb, var(--bg) 28%, transparent);
+		color: #fff;
+		cursor: pointer;
+		transition:
+			opacity 0.2s ease,
+			background 0.2s ease;
+		z-index: 1;
+	}
+
+	.lazy-demo-video__controls {
+		position: absolute;
+		inset: auto 0 0;
+		z-index: 2;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		align-items: center;
+		gap: 0.55rem;
+		padding: 0.5rem 0.65rem 0.55rem;
+		background: linear-gradient(
+			to top,
+			color-mix(in srgb, var(--bg) 92%, transparent),
+			color-mix(in srgb, var(--bg) 35%, transparent)
+		);
+	}
+
+	.lazy-demo-video__timeline {
+		display: flex;
+		align-items: center;
+		min-height: 2rem;
+	}
+
+	.lazy-demo-video__progress-wrap {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin: 0;
+	}
+
+	.lazy-demo-video__progress {
+		-webkit-appearance: none;
+		appearance: none;
+		margin: 0;
+		border-radius: 999px;
+		cursor: pointer;
+		width: 100%;
+		height: 0.4rem;
+		background: color-mix(in srgb, #fff 22%, transparent);
+	}
+
+	.lazy-demo-video__progress::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 0.9rem;
+		height: 0.9rem;
+		border: none;
+		border-radius: 999px;
+		background: var(--magenta);
+		box-shadow: 0 0 0 2px color-mix(in srgb, var(--bg) 70%, transparent);
+		cursor: pointer;
+	}
+
+	.lazy-demo-video__progress::-moz-range-thumb {
+		width: 0.9rem;
+		height: 0.9rem;
+		border: none;
+		border-radius: 999px;
+		background: var(--magenta);
+		box-shadow: 0 0 0 2px color-mix(in srgb, var(--bg) 70%, transparent);
+		cursor: pointer;
+	}
+
+	.lazy-demo-video__progress::-moz-range-track {
+		height: 0.4rem;
+		border: none;
+		border-radius: 999px;
+		background: color-mix(in srgb, #fff 22%, transparent);
+	}
+
+	.lazy-demo-video__mute {
+		display: grid;
+		place-items: center;
+		flex-shrink: 0;
+		width: 2rem;
+		height: 2rem;
+		margin: 0;
+		padding: 0;
+		border: none;
+		border-radius: 999px;
+		background: color-mix(in srgb, var(--bg) 45%, transparent);
+		color: #fff;
+		cursor: pointer;
+		transition: background 0.15s ease, transform 0.15s ease;
+	}
+
+	.lazy-demo-video__mute:hover,
+	.lazy-demo-video__mute:focus-visible {
+		background: color-mix(in srgb, var(--magenta) 55%, var(--bg));
+		transform: scale(1.04);
+	}
+
+	.lazy-demo-video__mute-icon.is-hidden {
+		display: none;
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	.lazy-demo-video__frame.is-playing .lazy-demo-video__toggle {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.lazy-demo-video__frame.is-playing:hover .lazy-demo-video__toggle,
+	.lazy-demo-video__frame.is-playing:focus-within .lazy-demo-video__toggle {
+		opacity: 1;
+		pointer-events: auto;
+		background: color-mix(in srgb, var(--bg) 42%, transparent);
+	}
+
+	.lazy-demo-video__icon {
+		display: grid;
+		place-items: center;
+		width: 3.75rem;
+		height: 3.75rem;
+		border-radius: 999px;
+		transition: transform 0.15s ease;
+	}
+
+	.lazy-demo-video__icon.is-hidden {
+		display: none;
+	}
+
+	.lazy-demo-video__toggle:hover .lazy-demo-video__icon,
+	.lazy-demo-video__toggle:focus-visible .lazy-demo-video__icon {
+		transform: scale(1.06);
+	}
+
+	.lazy-demo-video__icon--play svg {
+		margin-left: 0.15rem;
+	}
+
+	.lazy-demo-video__caption {
+		margin: 0.55rem 0 0;
+		font-size: 0.8125rem;
+		line-height: 1.45;
+		color: var(--ink-faint);
+		text-align: center;
+	}
+</style>

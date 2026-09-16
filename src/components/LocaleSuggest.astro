@@ -1,0 +1,68 @@
+---
+import LocaleSuggestApp from './react/LocaleSuggestApp';
+import { locales, defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import { localizedSlugs, type PageId } from '../data/i18n/routing';
+
+interface Props {
+	currentLocale: LocaleCode;
+	pageId?: PageId;
+}
+
+const { currentLocale, pageId = 'home' } = Astro.props;
+
+if (currentLocale !== defaultLocale) {
+	return null;
+}
+
+const localeMetas = locales.map((l) => ({
+	code: l.code,
+	name: l.name,
+	nativeName: l.nativeName,
+	region: l.region,
+}));
+
+const pageSlugs = localizedSlugs[pageId] ?? {};
+---
+
+<LocaleSuggestApp
+	client:idle
+	locale={currentLocale}
+	locales={localeMetas}
+	pageSlugs={pageSlugs}
+	defaultLocale={defaultLocale}
+/>
+
+<style is:global>
+	.locale-suggest {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		padding: 0.55rem 1rem;
+		background: color-mix(in srgb, var(--magenta) 14%, var(--bg));
+		border-bottom: 1px solid color-mix(in srgb, var(--magenta) 25%, var(--line));
+		font-size: 0.82rem;
+		color: var(--ink-muted);
+		text-align: center;
+	}
+
+	.locale-suggest__text {
+		margin: 0;
+	}
+
+	.locale-suggest a {
+		color: var(--link);
+		font-weight: 700;
+		text-decoration: underline;
+	}
+
+	.locale-suggest__dismiss {
+		border: none;
+		background: transparent;
+		color: var(--ink-faint);
+		font-size: 1.2rem;
+		line-height: 1;
+		cursor: pointer;
+		padding: 0.15rem 0.35rem;
+	}
+</style>

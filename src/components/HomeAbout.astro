@@ -1,0 +1,142 @@
+---
+import { getLocalizedPath } from '../data/i18n/routing';
+import type { LocaleCode } from '../data/i18n/locales';
+import { getT } from '../i18n/server';
+import { siteConfig } from '../data/site';
+
+interface Props {
+	locale: LocaleCode;
+}
+
+const { locale } = Astro.props;
+const t = getT(locale);
+const pillarHref = getLocalizedPath('hacks', locale);
+const espHref = getLocalizedPath('warzone-esp', locale);
+const aimbotHref = getLocalizedPath('warzone-aimbot', locale);
+const updatesHref = getLocalizedPath('updates', locale);
+---
+
+<section class="shell home__prose home__prose--en" aria-labelledby="home-about-title">
+	<div class="home__prose-grid">
+		<div class="home__prose-callout">
+			<h2 id="home-about-title">{t('home.aboutTitle')}</h2>
+			<p>{t('home.aboutP1')}</p>
+			<p>
+				{t('home.aboutP2Before')}{' '}
+				<a href={pillarHref}>{t('home.aboutPillar')}</a>
+				{t('home.aboutP2Mid')}
+				<a href={espHref}>{t('home.aboutEsp')}</a>
+				{t('home.aboutP2Mid')}
+				<a href={aimbotHref}>{t('home.aboutAimbot')}</a>
+				{t('home.aboutP2Or')}
+				<a href={updatesHref}>{t('home.aboutUndetected')}</a>
+				{t('home.aboutP2After')}
+			</p>
+		</div>
+		<div class="home__prose-media">
+			<img
+				src={siteConfig.demoScreenshot}
+				alt={t('home.demoVideoCaption')}
+				width={960}
+				height={540}
+				loading="lazy"
+				decoding="async"
+			/>
+		</div>
+	</div>
+</section>
+
+<style is:global>
+	.home__prose--en {
+		padding-block: clamp(2rem, 4vw, 2.75rem) 0.5rem;
+		border-bottom: 1px solid var(--line-soft);
+	}
+
+	.home__prose-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: clamp(1.25rem, 3vw, 2rem);
+		align-items: center;
+	}
+
+	.home__prose-callout {
+		max-width: none;
+		padding-left: 1.1rem;
+		border-left: 3px solid var(--magenta);
+	}
+
+	.home__prose-media {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.home__prose-media img {
+		width: 100%;
+		height: auto;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md);
+		box-shadow: 0 12px 40px color-mix(in srgb, var(--magenta-deep) 18%, transparent);
+	}
+
+	.home__prose-callout h2 {
+		margin: 0 0 0.75rem;
+		font-family: var(--font-display);
+		font-size: clamp(1.35rem, 3vw, 1.75rem);
+		font-weight: 800;
+		line-height: 1.2;
+		letter-spacing: 0.05em;
+		color: var(--ink);
+	}
+
+	.home__prose-callout p {
+		margin: 0 0 0.75rem;
+		color: var(--ink-muted);
+		line-height: 1.65;
+		font-size: 0.9375rem;
+	}
+
+	.home__prose-callout p:last-child {
+		margin-bottom: 0;
+	}
+
+	.home__prose--en a {
+		color: var(--link);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.home__prose--en a:hover {
+		color: var(--accent-hover);
+	}
+
+	@media (min-width: 56rem) {
+		.home__prose-grid {
+			grid-template-columns: minmax(0, 1.05fr) minmax(16rem, 0.95fr);
+			gap: clamp(1.5rem, 3.5vw, 2.75rem);
+			align-items: center;
+		}
+
+		.home__prose-media {
+			justify-self: end;
+			max-width: 34rem;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.home__prose--en {
+			padding-block: 1.5rem 0.35rem;
+		}
+
+		.home__prose-callout {
+			padding-left: 0.85rem;
+		}
+
+		.home__prose-callout h2 {
+			font-size: 1.25rem;
+		}
+
+		.home__prose-callout p {
+			font-size: 0.9rem;
+		}
+	}
+</style>

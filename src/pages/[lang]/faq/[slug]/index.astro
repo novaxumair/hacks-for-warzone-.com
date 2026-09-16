@@ -1,0 +1,27 @@
+---
+import FaqDetailPage from '../../../../components/FaqDetailPage.astro';
+import { seoFaqs } from '../../../../data/site';
+import { defaultLocale, isLocaleCode, localeCodes } from '../../../../data/i18n/locales';
+
+export function getStaticPaths() {
+	const paths: { params: { lang: string; slug: string } }[] = [];
+
+	for (const lang of localeCodes) {
+		if (lang === defaultLocale) continue;
+		for (const faq of seoFaqs) {
+			paths.push({ params: { lang, slug: faq.slug } });
+		}
+	}
+
+	return paths;
+}
+
+const lang = Astro.params.lang ?? '';
+const slug = Astro.params.slug ?? '';
+
+if (!isLocaleCode(lang)) {
+	return Astro.redirect(`/faq/${slug}/`, 301);
+}
+---
+
+<FaqDetailPage locale={lang} slug={slug} />

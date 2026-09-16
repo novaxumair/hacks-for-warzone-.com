@@ -1,0 +1,150 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import { siteConfig } from '../../data/site';
+import { getSelfHreflangAlternates } from '../../data/i18n/routing';
+
+const title = 'Write for Warzone Cheats | Guest Post Guidelines';
+const description =
+	'Guest post and contributor guidelines for Warzone Cheats at cheatsforwarzone.com. Pitch Call of Duty: Warzone guides, ESP/aimbot tutorials, and competitive tips for our blog.';
+const canonicalPath = '/write-for-us/';
+const hreflangAlternates = getSelfHreflangAlternates(canonicalPath);
+---
+
+<Layout
+	title={title}
+	description={description}
+	canonicalPath={canonicalPath}
+	hreflangAlternates={hreflangAlternates}
+	ogLocaleAlternates={false}
+	ogImage={siteConfig.defaultOgImage}
+	ogImageAlt="Write for Warzone Cheats"
+	locale="en"
+	breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Write for us' }]}
+>
+	<Navbar />
+	<main class="standalone-page">
+		<div class="shell standalone-page__wrap">
+			<header>
+				<p class="standalone-page__eyebrow">Contributors</p>
+				<h1>Write for {siteConfig.name}</h1>
+				<p class="standalone-page__lede">
+					We accept pitches for Call of Duty: Warzone guides, ESP/aimbot explainers, ranked strategy posts, and Ricochet
+					patch breakdowns. Read our <a href="/about/">editorial standards</a> before you submit.
+				</p>
+			</header>
+
+			<section>
+				<h2>What we publish</h2>
+				<ul>
+					<li>Call of Duty: Warzone meta, weapon meta tiers, economy rounds, and map callouts.</li>
+					<li>ESP, wallhack, aimbot, and radar tutorials (non-promotional, factual tone).</li>
+					<li>Comparison and buyers-guide style posts with clear disclosures.</li>
+					<li>Patch-note summaries tied to <a href="/updates/">maintenance status</a>.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Pitch requirements</h2>
+				<ul>
+					<li>Original content — no AI spam or spun competitor articles.</li>
+					<li>1,000+ words for feature posts; include headings and internal links to our pillars.</li>
+					<li>Disclose affiliate relationships if you link to checkout pages.</li>
+					<li>English only for the main blog (see <a href="/guides/">Guides hub</a> for cross-game topics).</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>How to submit</h2>
+				<p>
+					Email <a href={`mailto:${siteConfig.supportEmail}`}>{siteConfig.supportEmail}</a> with subject
+					<code>Guest Post Pitch</code> — include your outline, target keyword, and two sample URLs or writing
+					samples.
+				</p>
+			</section>
+
+			<section>
+				<h2>Find guest blogging opportunities elsewhere</h2>
+				<p>Use these search operators to find gaming blogs accepting contributors:</p>
+				<ul>
+					<li><code>"warzone" "submit a guest post"</code></li>
+					<li><code>"gaming cheats" "guest post guidelines"</code></li>
+					<li><code>"fps guides" "accepting guest posts"</code></li>
+					<li><code>"esports" "guest post by"</code></li>
+				</ul>
+			</section>
+		</div>
+	</main>
+	<SiteFooter />
+</Layout>
+
+<style>
+	.standalone-page {
+		padding: 2rem 0 3.5rem;
+	}
+
+	.standalone-page__wrap {
+		max-width: 46rem;
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.standalone-page__eyebrow {
+		margin: 0 0 0.35rem;
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--magenta-soft);
+	}
+
+	.standalone-page h1 {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+		font-weight: 800;
+		color: var(--ink);
+	}
+
+	.standalone-page__lede {
+		margin: 0.75rem 0 0;
+		color: var(--ink-muted);
+		line-height: 1.65;
+	}
+
+	.standalone-page h2 {
+		margin: 0 0 0.5rem;
+		font-size: 1.15rem;
+		font-weight: 700;
+		color: var(--ink);
+	}
+
+	.standalone-page p,
+	.standalone-page li {
+		margin: 0;
+		color: var(--ink-muted);
+		line-height: 1.65;
+	}
+
+	.standalone-page ul {
+		margin: 0;
+		padding-left: 1.2rem;
+		display: grid;
+		gap: 0.45rem;
+	}
+
+	.standalone-page a {
+		color: var(--link);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.standalone-page code {
+		font-size: 0.85em;
+		padding: 0.1rem 0.35rem;
+		border-radius: 0.35rem;
+		background: var(--bg-elevated);
+		color: var(--ink);
+	}
+</style>

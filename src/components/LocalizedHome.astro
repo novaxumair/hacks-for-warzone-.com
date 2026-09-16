@@ -1,0 +1,221 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Agent from '../components/Hero.astro';
+import HomeReviews from '../components/HomeReviews.astro';
+import HomeSeo from '../components/HomeSeo.astro';
+import HomeAbout from '../components/HomeAbout.astro';
+import HomeForumHighlights from '../components/HomeForumHighlights.astro';
+import ExternalResources from '../components/ExternalResources.astro';
+import { externalUrls } from '../data/external-resources';
+import SiteFooter from '../components/SiteFooter.astro';
+import { getLocaleContent, getPageContent } from '../data/i18n';
+import { getLocalizedPath } from '../data/i18n/routing';
+import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import { homeSeo, productInfo, siteConfig, customerReviewStats } from '../data/site';
+import { getLocalizedHomeFaqs } from '../data/localized-faq';
+import { heroPreloadSrc, heroSizes, heroSrcSet } from '../lib/responsive-images';
+import { defaultCrawlImageSrc } from '../data/page-images';
+
+interface Props {
+	locale: LocaleCode;
+}
+
+const { locale } = Astro.props;
+const { ui } = getLocaleContent(locale);
+const home = getPageContent(locale, 'home');
+const enHome = homeSeo();
+
+const title = home.title || enHome.title;
+const description = home.description || enHome.description;
+const canonicalPath = getLocalizedPath('home', locale);
+const canonicalURL = new URL(canonicalPath, siteConfig.url).href;
+/** Canonical product entity — always the English money URL, even on locale home pages. */
+const canonicalProductUrl = new URL('/', siteConfig.url).href;
+const heroImage = new URL(siteConfig.defaultOgImage || defaultCrawlImageSrc, siteConfig.url).href;
+const priceValidUntil = '2027-12-31';
+
+const localizedHomeFaqs = getLocalizedHomeFaqs(locale);
+
+const isEnglishHome = locale === defaultLocale;
+
+const aggregateRating = {
+	'@type': 'AggregateRating',
+	ratingValue: customerReviewStats.averageRating.toFixed(1),
+	reviewCount: String(customerReviewStats.totalCount),
+	bestRating: '5',
+	worstRating: '1',
+};
+
+/** Product + AggregateRating on EN home only; reviews live at /reviews/. */
+const extraGraph: Record<string, unknown>[] = [
+	...(isEnglishHome
+		? [
+				{
+					'@type': 'Product',
+					'@id': `${canonicalProductUrl}#product`,
+					name: productInfo.name,
+					description: productInfo.summary,
+					image: heroImage,
+					brand: { '@type': 'Brand', name: productInfo.brand },
+					url: canonicalProductUrl,
+					aggregateRating,
+					offers: {
+						'@type': 'AggregateOffer',
+						lowPrice: Math.min(...productInfo.plans.map((p) => p.price)).toFixed(2),
+						highPrice: Math.max(...productInfo.plans.map((p) => p.price)).toFixed(2),
+						priceCurrency: productInfo.currency,
+						offerCount: productInfo.plans.length,
+						availability: 'https://schema.org/InStock',
+						url: siteConfig.checkoutUrl,
+						offers: productInfo.plans.map((plan) => ({
+							'@type': 'Offer',
+							name: `${productInfo.name} ${plan.label}`,
+							price: plan.price.toFixed(2),
+							priceCurrency: productInfo.currency,
+							priceValidUntil,
+							availability: 'https://schema.org/InStock',
+							url: siteConfig.checkoutUrl,
+							seller: { '@id': `${siteConfig.url}/#organization` },
+						})),
+					},
+				},
+			]
+		: []),
+	{
+		'@type': 'FAQPage',
+		'@id': `${canonicalURL}#faq`,
+		mainEntity: localizedHomeFaqs.map((item) => ({
+			'@type': 'Question',
+			name: item.question,
+			url: `${siteConfig.url}/faq/${item.slug}/`,
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: item.answer,
+			},
+		})),
+	},
+];
+---
+
+<Layout
+	title={title}
+	description={description}
+	canonicalPath={canonicalPath}
+	ogImage={siteConfig.defaultOgImage}
+	ogImageAlt={
+		home.imageAlt?.trim() && home.imageAlt.trim().length > 12
+			? home.imageAlt
+			: `${siteConfig.name} — Call of Duty: Warzone ESP and aimbot`
+	}
+	locale={locale}
+	pageId="home"
+	breadcrumbs={[{ label: ui.nav.home }]}
+	extraGraph={extraGraph}
+	lcpImage={heroPreloadSrc}
+	lcpImageSrcSet={heroSrcSet}
+	lcpImageSizes={heroSizes}
+>
+	<Navbar locale={locale} pageId="home" />
+	<main class="home">
+		<Agent locale={locale} />
+		<div class="home__below-hero">
+			<HomeAbout locale={locale} />
+			<div class="home__seo">
+				<HomeSeo locale={locale} />
+				<HomeReviews locale={locale} />
+				<HomeForumHighlights locale={locale} />
+				<div class="shell">
+					<ExternalResources locale={locale} omitHrefs={[externalUrls.wiki]} />
+				</div>
+			</div>
+			<SiteFooter locale={locale} />
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.home {
+		width: 100%;
+		overflow-x: clip;
+	}
+
+	.home__below-hero {
+		position: relative;
+	}
+
+	.home__seo {
+		border-top: 1px solid color-mix(in srgb, var(--magenta) 10%, var(--line-soft));
+		background: transparent;
+		content-visibility: auto;
+		contain-intrinsic-size: 1px 900px;
+	}
+
+	.home__prose {
+		padding-block: var(--section-space);
+		color: var(--ink-muted);
+		line-height: 1.65;
+		font-size: 0.9375rem;
+	}
+
+	.home__prose--en {
+		padding-block: clamp(2rem, 4vw, 2.75rem) 0.5rem;
+		border-bottom: 1px solid var(--line-soft);
+	}
+
+	.home__prose-callout {
+		max-width: 42rem;
+		padding-left: 1.1rem;
+		border-left: 3px solid var(--magenta);
+	}
+
+	.home__prose-kicker {
+		margin: 0 0 0.7rem;
+		font-family: var(--font-sans);
+		font-size: 0.8125rem;
+		font-weight: 700;
+		line-height: 1.35;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--magenta-soft);
+	}
+
+	.home__prose-callout p {
+		margin: 0 0 0.75rem;
+	}
+
+	.home__prose-callout p:last-child {
+		margin-bottom: 0;
+	}
+
+	.home__prose--en a {
+		color: var(--link);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.home__prose--en a:hover {
+		color: var(--accent-hover);
+	}
+
+	.home__prose h1,
+	.home__prose h2 {
+		margin: 0 0 0.75rem;
+		font-family: var(--font-display);
+		font-size: 1.5rem;
+		letter-spacing: 0.05em;
+		color: var(--ink);
+	}
+
+	.home__prose h3 {
+		margin: 1.25rem 0 0.5rem;
+		font-size: 1rem;
+		color: var(--ink);
+	}
+
+	@media (max-width: 720px) {
+		.home__seo {
+			padding-bottom: max(1.5rem, var(--safe-bottom));
+		}
+	}
+</style>

@@ -1,0 +1,138 @@
+---
+import { getRelatedLinks, productTopicLinks, type InternalLinkTarget } from '../data/internal-links';
+import { getLocalizedPath, localizeInternalHref, type PageId } from '../data/i18n/routing';
+import type { LocaleCode } from '../data/i18n/locales';
+import { getT } from '../i18n/server';
+
+interface Props {
+	locale: LocaleCode;
+	pageId?: PageId;
+	/** Override the default related set for this pageId. */
+	links?: InternalLinkTarget[];
+	/** Use the shared product-topic strip (blog, FAQ, reviews). */
+	variant?: 'related' | 'topics';
+	class?: string;
+}
+
+const { locale, pageId, links, variant = 'related', class: className } = Astro.props;
+const t = getT(locale);
+
+const source = links ?? (variant === 'topics' ? productTopicLinks : getRelatedLinks(pageId));
+
+function resolveHref(target: InternalLinkTarget): string {
+	if (target.kind === 'page') {
+		return getLocalizedPath(target.pageId, locale);
+	}
+	return localizeInternalHref(target.path, locale);
+}
+
+const items = source.filter((target) => {
+	if (target.kind !== 'page' || !pageId) return true;
+	return target.pageId !== pageId;
+});
+---
+
+{
+	items.length > 0 && (
+		<nav
+			class:list={['related-pages', className]}
+			aria-label={variant === 'topics' ? t('internalLinks.topicsLabel') : t('common.relatedPages')}
+		>
+			<h2 class="related-pages__title">
+				{variant === 'topics' ? t('internalLinks.topicsTitle') : t('common.relatedPages')}
+			</h2>
+			<p class="related-pages__lede">
+				{variant === 'topics' ? t('internalLinks.topicsLede') : t('internalLinks.relatedLede')}
+			</p>
+			<ul class="related-pages__list">
+				{items.map((target) => (
+					<li>
+						<a href={resolveHref(target)}>
+							<span>{t(target.labelKey) === target.labelKey ? (target.label ?? target.labelKey) : t(target.labelKey)}</span>
+							<span class="related-pages__arrow" aria-hidden="true" />
+						</a>
+					</li>
+				))}
+			</ul>
+		</nav>
+	)
+}
+
+<style>
+	.related-pages {
+		margin-top: 2rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--line-soft);
+	}
+
+	.related-pages__title {
+		margin: 0 0 0.35rem;
+		font-size: 1.15rem;
+	}
+
+	.related-pages__lede {
+		margin: 0 0 1rem;
+		color: var(--ink-muted);
+		font-size: 0.92rem;
+		line-height: 1.55;
+	}
+
+	.related-pages__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+		gap: 0.55rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.related-pages__list a {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+		min-height: var(--touch-min, 2.75rem);
+		padding: 0.75rem 0.95rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md, 0.75rem);
+		background: var(--bg-elevated);
+		color: var(--ink);
+		font-size: 0.875rem;
+		font-weight: 600;
+		text-decoration: none;
+		transition:
+			border-color 0.2s ease,
+			color 0.2s ease,
+			background 0.2s ease;
+	}
+
+	.related-pages__list a:hover {
+		border-color: color-mix(in srgb, var(--magenta) 35%, var(--line));
+		color: var(--accent-hover);
+		background: color-mix(in srgb, var(--magenta) 6%, var(--bg-elevated));
+	}
+
+	.related-pages__arrow::before {
+		content: '→';
+		color: var(--ink-faint);
+	}
+
+	@media (max-width: 720px) {
+		.related-pages {
+			margin-top: 1.5rem;
+			padding-top: 1.25rem;
+		}
+
+		.related-pages__title {
+			font-size: 1.05rem;
+		}
+
+		.related-pages__lede {
+			font-size: 0.875rem;
+		}
+
+		.related-pages__list {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

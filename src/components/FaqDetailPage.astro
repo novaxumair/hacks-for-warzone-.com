@@ -1,0 +1,355 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from './Navbar.astro';
+import SiteFooter from './SiteFooter.astro';
+import { productInfo, siteConfig, type FaqItem } from '../data/site';
+import { getFaqCrawlImage, getFaqPath, getRelatedFaqs } from '../data/faq';
+import { getLocalizedPath } from '../data/i18n/routing';
+import type { LocaleCode } from '../data/i18n/locales';
+import { getFaqHreflangAlternates, getLocalizedFaqBySlug, getLocalizedFaqs } from '../data/localized-faq';
+import { contentSrcSet, productMainSizes } from '../lib/responsive-images';
+import RelatedPages from './RelatedPages.astro';
+import ExternalResources from './ExternalResources.astro';
+import { getT } from '../i18n/server';
+import { buildCanonicalUrl } from '../data/i18n/routing';
+
+interface Props {
+	locale: LocaleCode;
+	slug: string;
+}
+
+const { locale, slug } = Astro.props;
+const faq = getLocalizedFaqBySlug(slug, locale);
+if (!faq) {
+	throw new Error(`FAQ not found: ${slug}`);
+}
+
+const t = getT(locale);
+function tOr(key: string, fallback: string): string {
+	const value = t(key);
+	return value === key ? fallback : value;
+}
+const homeHref = getLocalizedPath('home', locale);
+const faqIndexHref = getLocalizedPath('faq', locale);
+const canonicalPath = getFaqPath(faq.slug, locale);
+const canonicalURL = buildCanonicalUrl(canonicalPath);
+const hreflangAlternates = getFaqHreflangAlternates(faq.slug, locale);
+const related = getRelatedFaqs(faq.slug, 4).map(
+	(item) => getLocalizedFaqs(locale).find((f) => f.slug === item.slug) ?? item,
+);
+const photo = getFaqCrawlImage(faq);
+
+const extraGraph: Record<string, unknown>[] = [
+	{
+		'@type': 'FAQPage',
+		'@id': `${canonicalURL}#faq`,
+		url: canonicalURL,
+		inLanguage: locale,
+		image: photo.url,
+		primaryImageOfPage: {
+			'@type': 'ImageObject',
+			url: photo.url,
+		},
+		mainEntity: [
+			{
+				'@type': 'Question',
+				'@id': `${canonicalURL}#question`,
+				name: faq.question,
+				url: canonicalURL,
+				acceptedAnswer: {
+					'@type': 'Answer',
+					text: faq.answer,
+				},
+			},
+		],
+	},
+];
+---
+
+<Layout
+	title={faq.seoTitle}
+	description={faq.seoDescription}
+	canonicalPath={canonicalPath}
+	hreflangAlternates={hreflangAlternates}
+	ogImage={photo.src}
+	ogImageAlt={faq.question}
+	type="article"
+	locale={locale}
+	breadcrumbs={[
+		{ label: t('common.home'), href: homeHref },
+		{ label: t('nav.faq'), href: faqIndexHref },
+		{ label: faq.question },
+	]}
+	extraGraph={extraGraph}
+>
+	<Navbar locale={locale} />
+	<main class="faq-page">
+		<div class="shell">
+			<div class="shell-content faq-page__wrap">
+			<nav class="faq-page__crumbs" aria-label={t('common.breadcrumb')}>
+				<a href={homeHref}>{t('common.home')}</a>
+				<span aria-hidden="true">/</span>
+				<a href={faqIndexHref}>{t('nav.faq')}</a>
+				<span aria-hidden="true">/</span>
+				<span aria-current="page">{t('common.allQuestions')}</span>
+			</nav>
+
+			<article class="faq-detail">
+				<figure class="faq-detail__media">
+					<img
+						src={photo.src}
+						srcset={contentSrcSet(photo.src)}
+						sizes={productMainSizes}
+						alt={faq.question}
+						width="1280"
+						height="720"
+						loading="eager"
+						decoding="async"
+						fetchpriority="high"
+					/>
+				</figure>
+				<p class="faq-detail__eyebrow">{tOr('faq.beforeBuy', 'Before you buy')}</p>
+				<h1 class="faq-detail__title">{faq.question}</h1>
+				<div class="faq-detail__answer">
+					<p>{faq.answer}</p>
+				</div>
+
+				<div class="faq-detail__ctas">
+					<a href={siteConfig.checkoutUrl} class="faq-detail__buy" rel="noopener noreferrer">
+						{t('cta.buy')} — ${productInfo.plans[0].price}
+					</a>
+				</div>
+			</article>
+
+			<section class="faq-detail__more" aria-labelledby="more-faq-title">
+				<h2 id="more-faq-title">{tOr('faq.moreQuestions', 'More questions')}</h2>
+				<ul class="faq-detail__more-list">
+					{
+						related.map((item) => (
+							<li>
+								<a href={getFaqPath(item.slug, locale)}>
+									<span>{item.question}</span>
+									<span class="faq-detail__arrow" aria-hidden="true" />
+								</a>
+							</li>
+						))
+					}
+				</ul>
+				<p class="faq-detail__all">
+					<a href={faqIndexHref}>{t('common.allQuestions')}</a>
+				</p>
+			</section>
+
+			<RelatedPages locale={locale} pageId="faq" variant="topics" class="faq-detail__topics" />
+			<ExternalResources locale={locale} class="faq-detail__external" />
+			</div>
+		</div>
+	</main>
+	<SiteFooter locale={locale} />
+</Layout>
+
+<style>
+	.faq-page {
+		overflow-x: clip;
+		padding-block: clamp(2rem, 4vw, 3.25rem) 3.5rem;
+	}
+
+	.faq-page__wrap {
+		display: grid;
+		gap: 1.75rem;
+	}
+
+	.faq-page__crumbs {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.45rem;
+		font-size: 0.8rem;
+		color: var(--ink-faint);
+	}
+
+	.faq-page__crumbs a {
+		color: var(--ink-muted);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.faq-page__crumbs a:hover {
+		color: var(--accent-hover);
+	}
+
+	.faq-detail {
+		display: grid;
+		gap: 1.15rem;
+		padding: clamp(1.35rem, 3.5vw, 2rem);
+		border: 1px solid var(--line);
+		border-radius: var(--radius-lg, 1rem);
+		background:
+			radial-gradient(ellipse 80% 60% at 0% 0%, color-mix(in srgb, var(--magenta) 12%, transparent), transparent 55%),
+			var(--bg-panel);
+	}
+
+	.faq-detail__media {
+		margin: 0 0 1.25rem;
+		border-radius: var(--radius-md, 0.75rem);
+		overflow: hidden;
+		border: 1px solid var(--line-soft);
+		background: var(--bg-elevated);
+	}
+
+	.faq-detail__media img {
+		display: block;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+	}
+
+	.faq-detail__eyebrow {
+		margin: 0;
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--magenta-soft);
+	}
+
+	.faq-detail__title {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(1.55rem, 4.2vw, 2.15rem);
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		line-height: 1.15;
+		color: var(--ink);
+		overflow-wrap: anywhere;
+	}
+
+	.faq-detail__answer {
+		padding: 1.15rem 1.25rem;
+		border-left: 2px solid color-mix(in srgb, var(--magenta) 55%, var(--line));
+		border-radius: 0 0.65rem 0.65rem 0;
+		background: color-mix(in srgb, var(--bg-elevated) 88%, transparent);
+	}
+
+	.faq-detail__answer p {
+		margin: 0;
+		font-size: 1.125rem;
+		line-height: 1.75;
+		color: var(--ink-muted);
+	}
+
+	.faq-detail__ctas {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem;
+		padding-top: 0.25rem;
+	}
+
+	.faq-detail__buy {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.8rem 1.35rem;
+		border-radius: 0.75rem;
+		font-size: 0.95rem;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.faq-detail__more {
+		display: grid;
+		gap: 0.85rem;
+	}
+
+	.faq-detail__more h2 {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: 1.15rem;
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		color: var(--ink);
+	}
+
+	.faq-detail__more-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: grid;
+		gap: 0.45rem;
+	}
+
+	.faq-detail__more-list a {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 0.95rem 1.05rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md, 0.75rem);
+		background: var(--bg-panel);
+		color: var(--ink);
+		font-size: 0.9375rem;
+		font-weight: 600;
+		line-height: 1.35;
+		text-decoration: none;
+		transition:
+			border-color 0.2s ease,
+			transform 0.2s ease;
+	}
+
+	.faq-detail__more-list a:hover {
+		border-color: color-mix(in srgb, var(--magenta) 35%, var(--line));
+		transform: translateY(-1px);
+		color: var(--accent-hover);
+	}
+
+	.faq-detail__arrow {
+		position: relative;
+		flex-shrink: 0;
+		width: 0.55rem;
+		height: 0.55rem;
+		border-right: 1.5px solid var(--magenta-soft);
+		border-bottom: 1.5px solid var(--magenta-soft);
+		transform: rotate(-45deg);
+		opacity: 0.7;
+	}
+
+	.faq-detail__all {
+		margin: 0;
+		font-size: 0.88rem;
+	}
+
+	.faq-detail__all a {
+		color: var(--link);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.faq-detail__all a:hover {
+		color: var(--ink);
+	}
+
+	.faq-detail__topics {
+		margin-top: 0.5rem;
+	}
+
+	@media (max-width: 560px) {
+		.faq-page {
+			padding-block: 1.35rem max(2.5rem, var(--safe-bottom));
+		}
+
+		.faq-detail {
+			padding: 1rem 1.05rem;
+		}
+
+		.faq-detail__ctas {
+			flex-direction: column;
+		}
+
+		.faq-detail__buy {
+			width: 100%;
+			min-height: 2.75rem;
+		}
+	}
+</style>

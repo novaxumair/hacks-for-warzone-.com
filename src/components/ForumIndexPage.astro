@@ -1,0 +1,354 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from './Navbar.astro';
+import SiteFooter from './SiteFooter.astro';
+import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
+import {
+	absoluteForumUrl,
+	getAllThreadsForLocale,
+	getForumBasePath,
+	getFeaturedThreads,
+	getForumListThreads,
+	getForumIndexHreflangAlternates,
+	getThreadViewCount,
+	formatForumStat,
+	FORUM_FEATURED_COUNT,
+} from '../data/forums/helpers';
+import { forumLabel, siteConfig } from '../data/site';
+import { brandSeo, seoPageTitle } from '../data/site-core';
+import { seoDescription } from '../data/brand';
+import { getLocalizedPath } from '../data/i18n/routing';
+interface Props {
+	locale: LocaleCode;
+}
+
+const { locale } = Astro.props;
+const threads = getForumListThreads(locale);
+const allThreads = getAllThreadsForLocale(locale);
+const featured = getFeaturedThreads(locale, FORUM_FEATURED_COUNT);
+const canonicalPath = getForumBasePath(locale);
+const canonicalURL = absoluteForumUrl(locale);
+const hreflangAlternates = getForumIndexHreflangAlternates(locale);
+const homeHref = getLocalizedPath('home', locale);
+
+const pageTitle = seoPageTitle(brandSeo.forumTitle ?? 'Warzone Hacks Forums | Setup & ESP Discussions');
+const pageDescription = seoDescription(
+	brandSeo.forumDescription ??
+		'Warzone hacks forums — setup instructions, aimbot settings, ESP configs, and patch notes. Join discussions about warzone cheats on PC.',
+);
+
+const threadListSchema = {
+	'@type': 'CollectionPage',
+	'@id': `${canonicalURL}#collection`,
+	name: 'Warzone Hacks Forums',
+	description: pageDescription,
+	url: canonicalURL,
+	inLanguage: locale,
+	isPartOf: { '@id': `${siteConfig.url}/#website` },
+	mainEntity: {
+		'@type': 'ItemList',
+		itemListElement: allThreads.map((thread, i) => ({
+			'@type': 'ListItem',
+			position: i + 1,
+			url: absoluteForumUrl(locale, thread.translation.slug),
+			name: thread.translation.title,
+		})),
+	},
+};
+---
+
+<Layout
+	title={pageTitle}
+	description={pageDescription}
+	canonicalPath={canonicalPath}
+	hreflangAlternates={hreflangAlternates}
+	locale={locale}
+	ogImage={siteConfig.defaultOgImage}
+	ogImageAlt="Warzone hacks community forums"
+	breadcrumbs={[{ label: 'Home', href: homeHref }, { label: 'Forums' }]}
+	extraGraph={[threadListSchema]}
+>
+	<Navbar locale={locale} />
+	<main class="forum">
+		<div class="shell forum__inner">
+			<header class="forum__hero">
+				<p class="forum__eyebrow">{forumLabel}</p>
+				<h1>Warzone Hacks Forums</h1>
+				<p class="forum__intro">
+					Setup walkthroughs, aimbot tuning threads, ESP configs, and post-patch checklists. Read public previews below — sign in after purchase for full reply access.
+				</p>
+			</header>
+
+			{
+				featured.length > 0 && (
+					<section class="forum__popular" aria-labelledby="forum-popular-title">
+						<h2 id="forum-popular-title" class="forum__section-title">Popular questions</h2>
+						<div class="forum__popular-grid">
+							{
+								featured.map((thread) => {
+									const replyCount = thread.translation.comments.length;
+									const views = getThreadViewCount(thread);
+									return (
+										<a class="forum__popular-card" href={thread.canonicalPath}>
+											<span class="forum__cat">{thread.category}</span>
+											<h3>{thread.translation.title}</h3>
+											<p>{thread.translation.intro}</p>
+											<span class="forum__popular-stats">
+												{replyCount} {replyCount === 1 ? 'reply' : 'replies'} · {formatForumStat(views)} views
+											</span>
+										</a>
+									);
+								})
+							}
+						</div>
+					</section>
+				)
+			}
+
+			<section class="forum__all" aria-labelledby="forum-all-title">
+				<h2 id="forum-all-title" class="forum__section-title">All discussions</h2>
+				<div class="forum__all-list">
+					{
+						threads.map((thread) => {
+							const replyCount = thread.translation.comments.length;
+							const views = getThreadViewCount(thread);
+							return (
+								<article class="forum__row">
+									<a class="forum__row-link" href={thread.canonicalPath}>
+										<div class="forum__reply-block" aria-hidden="true">
+											<span class="forum__reply-count">{replyCount}</span>
+											<span class="forum__reply-label">Replies</span>
+										</div>
+										<div class="forum__row-body">
+											<span class="forum__cat">{thread.category}</span>
+											<h3>{thread.translation.title}</h3>
+											<p>{thread.translation.intro}</p>
+											<span class="forum__row-meta">
+												Updated {thread.updated} · {formatForumStat(views)} views · {replyCount} {replyCount === 1 ? 'answer' : 'answers'}
+											</span>
+										</div>
+									</a>
+								</article>
+							);
+						})
+					}
+				</div>
+			</section>
+		</div>
+	</main>
+	<SiteFooter locale={locale} />
+</Layout>
+
+<style>
+	.forum {
+		padding: 2.5rem 0 4rem;
+		background: transparent;
+	}
+
+	.forum__inner {
+		display: grid;
+		gap: 0;
+	}
+
+	.forum__hero {
+		margin-bottom: 2rem;
+		padding-bottom: 1.75rem;
+		border-bottom: 1px solid var(--line-soft);
+	}
+
+	.forum__eyebrow {
+		margin: 0 0 0.5rem;
+		color: var(--magenta-soft);
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		font-size: 0.72rem;
+	}
+
+	.forum__hero h1 {
+		margin: 0 0 0.85rem;
+		font-family: var(--font-display);
+		font-size: clamp(2rem, 4.5vw, 2.85rem);
+		font-weight: 800;
+		letter-spacing: 0.05em;
+		line-height: 1.08;
+		color: var(--ink-heading);
+	}
+
+	.forum__intro {
+		max-width: 40rem;
+		margin: 0;
+		color: var(--ink-secondary);
+		font-size: 1.02rem;
+		line-height: 1.7;
+	}
+
+	.forum__section-title {
+		margin: 0 0 1.15rem;
+		font-family: var(--font-display);
+		font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+		font-weight: 800;
+		color: var(--ink-heading);
+	}
+
+	.forum__popular {
+		margin-top: 1.5rem;
+		margin-bottom: 2.75rem;
+	}
+
+	.forum__popular-grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.forum__popular-card {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		padding: 1.1rem 1.15rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md, 0.75rem);
+		background: var(--bg-panel);
+		text-decoration: none;
+		color: inherit;
+		box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+		transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+	}
+
+	.forum__popular-card:hover {
+		border-color: color-mix(in srgb, var(--magenta) 30%, var(--line));
+		box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+	}
+
+	.forum__all {
+		padding-top: 1.75rem;
+		border-top: 1px solid var(--line-soft);
+	}
+
+	.forum__all-list {
+		display: grid;
+		gap: 0.85rem;
+	}
+
+	.forum__row {
+		border: 1px solid var(--line);
+		border-radius: var(--radius-md, 0.75rem);
+		background: var(--bg-panel);
+		overflow: hidden;
+		box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+		transition: border-color 0.22s ease, box-shadow 0.22s ease;
+	}
+
+	.forum__row:hover {
+		border-color: color-mix(in srgb, var(--magenta) 28%, var(--line));
+		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+	}
+
+	.forum__row-link {
+		display: grid;
+		grid-template-columns: 5.5rem minmax(0, 1fr);
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.forum__reply-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.15rem;
+		padding: 1.25rem 0.75rem;
+		border-right: 1px solid var(--line-soft);
+		background: color-mix(in srgb, var(--magenta) 4%, var(--bg-panel));
+	}
+
+	.forum__reply-count {
+		font-family: var(--font-display);
+		font-size: clamp(1.75rem, 3vw, 2.15rem);
+		font-weight: 800;
+		line-height: 1;
+		color: var(--magenta-soft);
+	}
+
+	.forum__reply-label {
+		font-size: 0.62rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--ink-faint);
+	}
+
+	.forum__row-body {
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		padding: 1rem 1.15rem 1.05rem;
+	}
+
+	.forum__cat {
+		display: inline-flex;
+		align-self: flex-start;
+		margin-bottom: 0.35rem;
+		color: var(--magenta-soft);
+		font-size: 0.68rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+	}
+
+	.forum__popular-card h3,
+	.forum__row-body h3 {
+		margin: 0 0 0.5rem;
+		font-family: var(--font-display);
+		font-size: 1.05rem;
+		font-weight: 700;
+		line-height: 1.3;
+		color: var(--ink);
+	}
+
+	.forum__popular-card p,
+	.forum__row-body p {
+		margin: 0;
+		color: var(--ink-muted);
+		font-size: 0.92rem;
+		line-height: 1.55;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.forum__popular-stats,
+	.forum__row-meta {
+		display: block;
+		margin-top: auto;
+		padding-top: 0.85rem;
+		color: var(--ink-faint);
+		font-size: 0.8rem;
+		font-weight: 500;
+	}
+
+	.forum__row-meta {
+		padding-top: 0.75rem;
+	}
+
+	@media (max-width: 1100px) {
+		.forum__popular-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 640px) {
+		.forum__popular-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.forum__row-link {
+			grid-template-columns: 4.5rem minmax(0, 1fr);
+		}
+
+		.forum__reply-count {
+			font-size: 1.5rem;
+		}
+	}
+</style>
