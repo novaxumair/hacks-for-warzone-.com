@@ -11,14 +11,23 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 
-function readCheckoutUrl() {
+function readBrandUrl(key) {
 	const src = readFileSync(path.join(ROOT, 'src/data/brand.ts'), 'utf8');
-	const m = src.match(/checkoutUrl:\s*'((?:\\'|[^'])*)'/);
-	if (!m) throw new Error('brand.ts missing checkoutUrl');
+	const m = src.match(new RegExp(`${key}:\\s*'((?:\\\\'|[^'])*)'`));
+	if (!m) throw new Error(`brand.ts missing ${key}`);
 	return m[1].replace(/\\'/g, "'");
 }
 
-const CHECKOUT_URL = readCheckoutUrl();
+const CHECKOUT_URL = readBrandUrl('checkoutUrl');
+const SUPPORT_URL = readBrandUrl('supportUrl');
+
+/** Support tab primary CTA uses btn-buy styling but links to Discord, not checkout. */
+function isAllowedPurchaseHref(href) {
+	if (href === CHECKOUT_URL) return true;
+	if (href === SUPPORT_URL) return true;
+	if (href.startsWith('mailto:')) return true;
+	return false;
+}
 const BUY_SELECTORS = [
 	'hero__buy',
 	'site-tools__buy',
@@ -71,8 +80,7 @@ const bad = [];
 for (const file of files) {
 	const html = readFileSync(file, 'utf8');
 	for (const { href } of collectBuyHrefs(html, file)) {
-		if (href.startsWith('mailto:')) continue;
-		if (href !== CHECKOUT_URL) {
+		if (!isAllowedPurchaseHref(href)) {
 			bad.push({ file: path.relative(ROOT, file), href });
 		}
 	}
