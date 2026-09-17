@@ -17,6 +17,9 @@ function stars(rating: number): string {
 	return '★'.repeat(rating) + '☆'.repeat(5 - rating);
 }
 
+const avgRatingLabel = customerReviewStats.averageRating.toFixed(1);
+const summaryStarCount = Math.round(customerReviewStats.averageRating);
+
 const dateFormatter = new Intl.DateTimeFormat('en', {
 	day: 'numeric',
 	month: 'short',
@@ -89,13 +92,28 @@ const extraGraph: Record<string, unknown>[] = [
 			</nav>
 
 			<header class="reviews-index__head">
-				<div>
-					<h1 data-edit="navReviews">Warzone cheats reviews — Call of Duty: Warzone hacks & cheats</h1>
+				<div class="reviews-index__head-copy">
+					<h1 data-edit="navReviews">CALL OF DUTY : WARZONE HACKS &amp; CHEATS REVIEWS</h1>
 					<p class="reviews-index__intro" data-edit="reviewsIntro">{reviewsIntro}</p>
 				</div>
-				<div class="reviews-index__summary" aria-label={`${customerReviewStats.averageRating} out of 5 average rating`}>
-					<p class="reviews-index__avg">{customerReviewStats.averageRating.toFixed(1)}</p>
-					<p class="reviews-index__avg-stars" aria-hidden="true">{stars(Math.round(customerReviewStats.averageRating))}</p>
+				<div
+					class="reviews-index__summary"
+					aria-label={`${avgRatingLabel} out of 5 average rating from ${customerReviewStats.reviewCountLabel} reviews`}
+				>
+					<p class="reviews-index__avg">{avgRatingLabel}</p>
+					<div class="reviews-index__avg-stars" aria-hidden="true">
+						{
+							[0, 1, 2, 3, 4].map((index) => (
+								<svg
+									class:list={[index >= summaryStarCount && 'reviews-index__star--dim']}
+									viewBox="0 0 20 20"
+									fill="currentColor"
+								>
+									<path d="M10 2.5l2.2 5.1 5.5.5-4.2 3.7 1.3 5.4L10 14.4 5.2 17.2l1.3-5.4L2.3 8.1l5.5-.5L10 2.5z" />
+								</svg>
+							))
+						}
+					</div>
 					<p class="reviews-index__count">{customerReviewStats.reviewCountLabel} buyer reviews · out of 5</p>
 				</div>
 			</header>
@@ -180,61 +198,83 @@ const extraGraph: Record<string, unknown>[] = [
 	.reviews-index__head {
 		display: flex;
 		flex-wrap: wrap;
-		align-items: flex-start;
+		align-items: center;
 		justify-content: space-between;
-		gap: 1rem 1.5rem;
-		padding-bottom: 1.15rem;
-		border-bottom: 1px solid var(--line-soft);
+		gap: 1.25rem 2rem;
+		padding-block: 0.35rem 1.35rem;
+	}
+
+	.reviews-index__head-copy {
+		flex: 1 1 16rem;
+		min-width: 0;
+		max-width: 42rem;
 	}
 
 	.reviews-index__head h1 {
 		margin: 0;
 		font-family: var(--font-display);
-		font-size: clamp(1.65rem, 3.5vw, 2.35rem);
-		font-weight: 800;
-		letter-spacing: 0.05em;
+		font-size: clamp(1.85rem, 4.2vw, 2.75rem);
+		font-weight: 400;
+		letter-spacing: 0.04em;
+		line-height: 1.05;
+		text-transform: uppercase;
 		color: var(--ink);
 	}
 
 	.reviews-index__intro {
-		margin: 0.55rem 0 0;
+		margin: 0.65rem 0 0;
 		color: var(--ink-muted);
-		font-size: 0.96rem;
-		line-height: 1.6;
-		max-width: 40rem;
+		font-size: 0.92rem;
+		line-height: 1.55;
+		max-width: 36rem;
 	}
 
 	.reviews-index__summary {
 		display: grid;
-		gap: 0.15rem;
-		justify-items: end;
-		text-align: right;
-		padding: 0.85rem 1.1rem;
+		gap: 0.35rem;
+		justify-items: center;
+		text-align: center;
+		flex: 0 0 auto;
+		min-width: min(100%, 11.5rem);
+		padding: 1rem 1.35rem 0.9rem;
 		border-radius: var(--radius-md, 0.75rem);
-		border: 1px solid var(--line);
-		background: var(--bg-panel);
+		border: 1px solid color-mix(in srgb, var(--line) 88%, var(--ink-faint));
+		background: color-mix(in srgb, var(--bg-panel) 92%, var(--bg));
 	}
 
 	.reviews-index__avg {
 		margin: 0;
 		font-family: var(--font-display);
-		font-size: 1.85rem;
-		font-weight: 800;
+		font-size: clamp(2rem, 4vw, 2.35rem);
+		font-weight: 400;
 		line-height: 1;
-		color: var(--magenta-soft);
+		letter-spacing: 0.02em;
+		color: var(--ink);
 	}
 
 	.reviews-index__avg-stars {
-		margin: 0;
-		font-size: 0.85rem;
-		letter-spacing: 0.08em;
-		color: var(--accent-amber);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.2rem;
+		color: var(--ink);
+	}
+
+	.reviews-index__avg-stars svg {
+		width: 1.05rem;
+		height: 1.05rem;
+	}
+
+	.reviews-index__star--dim {
+		opacity: 0.28;
+		color: var(--ink-muted);
 	}
 
 	.reviews-index__count {
-		margin: 0;
+		margin: 0.15rem 0 0;
 		font-size: 0.78rem;
 		color: var(--ink-faint);
+		white-space: nowrap;
 	}
 
 	.reviews-index__grid {
@@ -419,8 +459,6 @@ const extraGraph: Record<string, unknown>[] = [
 		}
 
 		.reviews-index__summary {
-			justify-items: start;
-			text-align: left;
 			width: 100%;
 		}
 

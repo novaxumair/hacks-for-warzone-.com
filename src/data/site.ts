@@ -156,7 +156,7 @@ export const homeFaqs: readonly FaqItem[] = [
 	faq({
 		question: 'How do I contact support?',
 		answer:
-			'Use the Support page or email {email}. Include your order details, package length, and a clear description of the setup issue so replies can be faster.',
+			'Use the Support page or join {email}. Include your order details, package length, and a clear description of the setup issue so replies can be faster.',
 		slug: 'how-to-contact-support',
 		seoTitle: 'How to Contact {brand} Support | FAQ',
 		seoDescription:
@@ -174,7 +174,7 @@ export const homeFaqs: readonly FaqItem[] = [
 	faq({
 		question: 'How do I install {primaryKeyword} on Windows PC?',
 		answer:
-			'After checkout, follow the Setup guide. Download the loader, disable conflicting overlays, and launch {brand}. Enable ESP, radar, or aimbot toggles in the mod menu. Most buyers finish first launch in under 15 minutes. Email {email} if activation fails.',
+			'After checkout, follow the Setup guide. Download the loader, disable conflicting overlays, and launch {brand}. Enable ESP, radar, or aimbot toggles in the mod menu. Most buyers finish first launch in under 15 minutes. Join {email} if activation fails.',
 		slug: 'how-to-install-warzone-cheats',
 		seoTitle: 'How to Install {game} Hacks on Windows PC | FAQ',
 		seoDescription:
@@ -322,7 +322,7 @@ export const seoFaqs: readonly FaqItem[] = [
 	faq({
 		question: 'How long does {primaryKeyword} setup take?',
 		answer:
-			'Most buyers finish {brand} setup in 10–20 minutes on Windows PC: install the loader, activate the license, and enable ESP or aimbot in the mod menu. If Windows Defender or another AV blocks the loader, follow Setup troubleshooting or email {email} with your order ID.',
+			'Most buyers finish {brand} setup in 10–20 minutes on Windows PC: install the loader, activate the license, and enable ESP or aimbot in the mod menu. If Windows Defender or another AV blocks the loader, follow Setup troubleshooting or join {email} with your order ID.',
 		slug: 'how-long-warzone-cheat-setup-takes',
 		seoTitle: 'How Long Does {game} Hack Setup Take? | FAQ',
 		seoDescription:

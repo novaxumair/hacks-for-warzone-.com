@@ -114,7 +114,6 @@ const graph: Record<string, unknown>[] = [
 		'@id': `${siteConfig.url}/#organization`,
 		name: siteConfig.name,
 		url: siteConfig.url,
-		email: siteConfig.supportEmail,
 		...(siteConfig.socialSameAs.length > 0 ? { sameAs: siteConfig.socialSameAs } : {}),
 		areaServed: worldwidePlace,
 		logo: {
@@ -127,7 +126,7 @@ const graph: Record<string, unknown>[] = [
 		contactPoint: {
 			'@type': 'ContactPoint',
 			contactType: 'customer support',
-			email: siteConfig.supportEmail,
+			url: siteConfig.supportUrl,
 			areaServed: worldwidePlace,
 			availableLanguage: locales.map((l) => l.name),
 		},

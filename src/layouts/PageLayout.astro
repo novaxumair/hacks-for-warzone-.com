@@ -15,7 +15,14 @@ import {
 	contentSrcSet,
 	galleryTileSizes,
 } from '../lib/responsive-images';
-import { getPageGalleryImages } from '../data/page-images';
+import {
+	getPageGalleryImages,
+	pillarTabHeroHeight,
+	pillarTabHeroSizes,
+	pillarTabHeroSrcSet,
+	pillarTabHeroWidth,
+	usesPillarTabHero,
+} from '../data/page-images';
 import { defaultLocale } from '../data/i18n/locales';
 import { siteConfig } from '../data/site';
 import { getT } from '../i18n/server';
@@ -116,6 +123,9 @@ const breadcrumbs = [
 ];
 
 const useHomeAgent = isHeroMarketingImage(heroImage);
+const pillarTabHero = pageId ? usesPillarTabHero(pageId) : false;
+const hideCategoryRow =
+	pageId === 'hacks' || pageId === 'features' || pageId === 'pricing' || pageId === 'updates';
 ---
 
 <Layout
@@ -135,10 +145,25 @@ const useHomeAgent = isHeroMarketingImage(heroImage);
 	<Navbar locale={locale} pageId={pageId} />
 	{pageId === 'setup' ? <TrustStrip locale={locale} /> : null}
 	<main class="page">
-		<section class="banner">
+		<section class:list={['banner', pillarTabHero && 'banner--pillar-hero']}>
 			<div class="banner__media">
 				{
-					useHomeAgent ? (
+					pillarTabHero ? (
+						<div class="banner__pillar" aria-hidden="true">
+							<img
+								src={heroImage}
+								srcset={pillarTabHeroSrcSet}
+								sizes={pillarTabHeroSizes}
+								alt=""
+								width={pillarTabHeroWidth}
+								height={pillarTabHeroHeight}
+								class="banner__pillar-photo"
+								fetchpriority="high"
+								loading="eager"
+								decoding="async"
+							/>
+						</div>
+					) : useHomeAgent ? (
 						<img
 							src={heroPreloadSrc}
 							srcset={heroSrcSet}
@@ -179,7 +204,7 @@ const useHomeAgent = isHeroMarketingImage(heroImage);
 					</nav>
 					{showEyebrow && <p class="banner__eyebrow">{resolvedEyebrow}</p>}
 					<h1 class="banner__title">{heading}</h1>
-					<p class="banner__intro" data-edit={introEdit || undefined}>{intro}</p>
+					<p class="banner__intro" data-edit={introEdit || undefined} set:html={intro} />
 					{
 						ctaPrimary && (
 							<div class="banner__actions">
@@ -196,10 +221,6 @@ const useHomeAgent = isHeroMarketingImage(heroImage);
 				</div>
 			</div>
 		</section>
-
-		{pageId === 'pricing' || pageId === 'features' ? (
-			<TrustStrip locale={locale} />
-		) : null}
 
 		<div class="shell page__wrap">
 			<article class:list={['article', pageId === 'hacks' && 'article--guide']}>
@@ -246,7 +267,7 @@ const useHomeAgent = isHeroMarketingImage(heroImage);
 			}
 		</div>
 	</main>
-	{showCategoryRow && pageId && <CategoryRow locale={locale} />}
+	{showCategoryRow && pageId && !hideCategoryRow ? <CategoryRow locale={locale} /> : null}
 	<SiteFooter locale={locale} />
 </Layout>
 
@@ -279,6 +300,38 @@ const useHomeAgent = isHeroMarketingImage(heroImage);
 		height: 100%;
 		object-fit: cover;
 		object-position: center center;
+	}
+
+	.banner--pillar-hero .banner__media {
+		background: var(--bg);
+	}
+
+	.banner--pillar-hero .banner__pillar {
+		position: absolute;
+		inset: 0;
+	}
+
+	.banner--pillar-hero .banner__pillar-photo {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+		filter: blur(12px);
+		transform: scale(1.06);
+		transform-origin: center center;
+	}
+
+	.banner--pillar-hero .banner__scrim {
+		z-index: 1;
+		background: linear-gradient(
+			90deg,
+			color-mix(in srgb, var(--bg) 97%, transparent) 0%,
+			color-mix(in srgb, var(--bg) 90%, transparent) 38%,
+			color-mix(in srgb, var(--bg) 72%, transparent) 62%,
+			color-mix(in srgb, var(--bg) 55%, transparent) 100%
+		);
 	}
 
 	.banner__scrim {

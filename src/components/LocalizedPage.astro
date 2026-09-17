@@ -7,8 +7,14 @@ import { getLocalizedFaqs } from '../data/localized-faq';
 import { productInfo, siteConfig } from '../data/site';
 import { absoluteFaqUrl, getFaqPath } from '../data/faq';
 import { getT } from '../i18n/server';
-import { getPageCrawlImage, getPageGalleryImages } from '../data/page-images';
+import {
+	getPageCrawlImage,
+	getPageGalleryImages,
+	pillarTabHeroSrc,
+	usesPillarTabHero,
+} from '../data/page-images';
 import { screenshotImageObjects } from '../data/product-images';
+import { linkSupportContacts } from '../data/brand';
 
 interface Props {
 	locale: LocaleCode;
@@ -20,15 +26,20 @@ const page = getPageContent(locale, pageId);
 const ui = getUi(locale);
 const t = getT(locale);
 const crawl = getPageCrawlImage(pageId);
+const resolvedHeroImage = usesPillarTabHero(pageId) ? pillarTabHeroSrc : crawl.src;
+const resolvedHeroAlt =
+	usesPillarTabHero(pageId) ? `${siteConfig.name} logo` : page.imageAlt || crawl.caption;
 
 function localizeParagraphHtml(html: string): string {
-	return html
-		.replace(/\{checkout\}/g, siteConfig.checkoutUrl)
-		.replace(/href="(\/[^"]+)"/g, (_, path: string) => `href="${localizeInternalHref(path, locale)}"`);
+	return linkSupportContacts(
+		html
+			.replace(/\{checkout\}/g, siteConfig.checkoutUrl)
+			.replace(/href="(\/[^"]+)"/g, (_, path: string) => `href="${localizeInternalHref(path, locale)}"`),
+	);
 }
 
 const heading = page.h1;
-const intro = page.intro;
+const intro = linkSupportContacts(page.intro);
 const sections = page.sections;
 const isGuidePage = pageId === 'hacks';
 const ctaPrimaryLabel = page.ctaPrimary;
@@ -130,8 +141,8 @@ const breadcrumbLabel = eyebrowByPage[pageId];
 	intro={intro}
 	introEdit={introEdit}
 	eyebrow={eyebrowByPage[pageId]}
-	heroImage={crawl.src}
-	heroAlt={page.imageAlt || crawl.caption}
+	heroImage={resolvedHeroImage}
+	heroAlt={resolvedHeroAlt}
 	gallery={gallery}
 	galleryTitle={galleryTitle}
 	locale={locale}
@@ -141,8 +152,8 @@ const breadcrumbLabel = eyebrowByPage[pageId];
 	ctaPrimary={
 		pageId === 'support'
 			? {
-					href: `mailto:${siteConfig.supportEmail}`,
-					label: 'Email support',
+					href: siteConfig.supportUrl,
+					label: siteConfig.supportLabel,
 				}
 			: { href: siteConfig.checkoutUrl, label: ctaPrimaryLabel, edit: 'ctaBuy' }
 	}

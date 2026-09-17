@@ -2,6 +2,7 @@ import { siteConfig } from './site';
 import { pageIds, type PageId } from './i18n/routing';
 import { pageSitemapImageLabels } from './brand-sitemap';
 
+import { buildSrcSet } from '../lib/responsive-images';
 import {
 	screenshotSrc,
 	PRODUCT_SCREENSHOT_COUNT,
@@ -13,6 +14,24 @@ import {
 } from './product-images';
 
 const shot = screenshotSrc;
+
+/** Blurred banner photo for Cheats / Features / Store / Status tabs. */
+export const pillarTabHeroSrc = '/images/pillar-tab-hero.webp';
+export const pillarTabHeroSrcSet = buildSrcSet([
+	{ src: '/images/pillar-tab-hero-640w.webp', width: 640 },
+	{ src: '/images/pillar-tab-hero-960w.webp', width: 960 },
+	{ src: '/images/pillar-tab-hero.webp', width: 1024 },
+	{ src: '/images/pillar-tab-hero-1920w.webp', width: 1920 },
+]);
+export const pillarTabHeroSizes = '100vw';
+export const pillarTabHeroWidth = 1024;
+export const pillarTabHeroHeight = 576;
+
+const PILLAR_TAB_HERO_PAGE_IDS = new Set<PageId>(['hacks', 'features', 'pricing', 'updates']);
+
+export function usesPillarTabHero(pageId: PageId): boolean {
+	return PILLAR_TAB_HERO_PAGE_IDS.has(pageId);
+}
 
 /** Rotating product screenshots for FAQ / review detail URLs. */
 export const crawlPhotoPool = Array.from({ length: PRODUCT_SCREENSHOT_COUNT }, (_, i) => shot(i + 1));

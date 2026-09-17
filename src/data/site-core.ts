@@ -32,7 +32,7 @@ const copyDefaults = {
 	statusIntro: 'Check here after a {game} or {antiCheat} patch before you play.',
 	previewIntro: 'A quick look at {brand} — ESP, aimbot, radar, and updates after patches.',
 	setupIntro: 'Install {brand} on Windows PC after you buy. Follow these short steps.',
-	supportIntro: 'Need help with {brand}? Email {email} with your order ID.',
+	supportIntro: 'Need help with {brand}? Join {email} with your order ID.',
 	faqIntro: 'Short answers about delivery, setup, updates, and refunds.',
 	reviewsIntro:
 		'Real feedback on Warzone cheats and Call of Duty: Warzone hacks — ESP, soft aim, radar, and support from {brand} buyers.',
@@ -68,7 +68,7 @@ const seoDefaults = {
 		'Install {brand} on PC — activate ESP, aimbot and wallhack step by step. Check {antiCheat} status before your first match.',
 	supportTitle: 'Warzone Hacks Support | License & Setup Help',
 	supportDescription:
-		'Support for license delivery, ESP setup and billing on PC. Email {email} with your order ID.',
+		'Support for license delivery, ESP setup and billing on PC. Join {email} with your order ID.',
 	faqTitle: 'Warzone Hacks FAQ | ESP, Aimbot & {antiCheat}',
 	faqDescription:
 		'FAQ for warzone hacks — delivery, setup, Battle Royale use, {antiCheat} updates and pricing on PC.',
@@ -103,6 +103,8 @@ export const siteConfig = {
 	locale: brand.locale,
 	market: brand.market,
 	supportEmail: brand.supportEmail,
+	supportUrl: brand.supportUrl,
+	supportLabel: brand.supportLabel,
 	logo: brand.logo,
 	logoRaster: brand.logoRaster,
 	logoRasterWidth: brand.logoRasterWidth,

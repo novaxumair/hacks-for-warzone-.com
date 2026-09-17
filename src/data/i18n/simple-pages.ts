@@ -353,7 +353,7 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 			},
 			{
 				h2: 'If something fails',
-				paragraphs: ['Check Status after a patch. Email {email} with your order ID.'],
+				paragraphs: ['Check Status after a patch. Join {email} with your order ID.'],
 				list: ['<a href="/updates/">Status page</a>', '<a href="/support/">Support</a>', '<a href="/faq/">FAQ</a>'],
 			},
 		],
@@ -370,7 +370,9 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 		sections: [
 			{
 				h2: 'How to contact us',
-				paragraphs: ['Email {email}. Include your order ID and a short note about the issue.'],
+				paragraphs: [
+					'Open <a href="{supportUrl}" target="_blank" rel="noopener noreferrer">{email}</a>. Include your order ID and a short note about the issue.',
+				],
 				list: ['Order ID from your receipt', 'Windows version', 'What you already tried'],
 			},
 			{

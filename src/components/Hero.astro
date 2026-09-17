@@ -37,11 +37,11 @@ const locale = Astro.props.locale ?? defaultLocale;
 	}
 
 	.hero {
-		--hero-pad-y: clamp(1.25rem, 2.4vw, 2rem);
-		--hero-stack: clamp(0.5rem, 1.1vw, 0.75rem);
-		/* 16:9 layout keeps copy placement; zoom crops baked-in bars in hero.webm (1920×1080 → 815px content) */
-		--hero-ratio: 16 / 9;
-		--hero-video-zoom: 1.325;
+		--hero-pad-y: clamp(0.85rem, 1.8vw, 1.35rem);
+		--hero-stack: clamp(0.35rem, 0.85vw, 0.55rem);
+		/* Compact cinematic band — video fills panel edge to edge */
+		--hero-ratio: 21 / 9;
+		--hero-video-zoom: 1.12;
 		position: relative;
 		isolation: isolate;
 		display: grid;
@@ -49,6 +49,7 @@ const locale = Astro.props.locale ?? defaultLocale;
 		align-items: stretch;
 		width: 100%;
 		aspect-ratio: var(--hero-ratio);
+		max-height: clamp(23.76rem, 65.664vw, 37.152rem);
 		min-height: 0;
 		background: var(--bg);
 		overflow: hidden;
@@ -68,6 +69,7 @@ const locale = Astro.props.locale ?? defaultLocale;
 		min-height: 0;
 		overflow: hidden;
 		line-height: 0;
+		background: var(--bg);
 	}
 
 	.hero__media picture,
@@ -79,12 +81,13 @@ const locale = Astro.props.locale ?? defaultLocale;
 		margin: 0;
 	}
 
-	.hero__media video {
+	.hero__media video,
+	.hero__media video.hero__video {
 		object-fit: cover;
 		object-position: center center;
 		transform: scale(var(--hero-video-zoom));
 		transform-origin: center center;
-		filter: brightness(0.78) contrast(1.04);
+		filter: brightness(0.82) contrast(1.04);
 		animation: hero-in 0.9s ease-out both;
 	}
 
@@ -97,7 +100,7 @@ const locale = Astro.props.locale ?? defaultLocale;
 		object-position: center center;
 		image-rendering: auto;
 		transform: translateZ(0);
-		filter: brightness(0.72) contrast(1.06);
+		filter: brightness(0.78) contrast(1.06);
 		animation: hero-in 0.9s ease-out both;
 	}
 
@@ -154,7 +157,7 @@ const locale = Astro.props.locale ?? defaultLocale;
 	.hero__brand {
 		margin: 0;
 		font-family: var(--font-warzone);
-		font-size: clamp(2.75rem, 6vw, 4.25rem);
+		font-size: clamp(2rem, 4.8vw, 3.35rem);
 		font-weight: 400;
 		line-height: 0.95;
 		letter-spacing: 0.06em;
@@ -245,6 +248,12 @@ const locale = Astro.props.locale ?? defaultLocale;
 	 * Mobile: overlay copy on lower third; keep a tall enough strip for art + text.
 	 */
 	@media (max-width: 900px) {
+		.hero {
+			--hero-ratio: 16 / 9;
+			--hero-video-zoom: 1.08;
+			max-height: clamp(25.92rem, 89.856vw, 38.016rem);
+		}
+
 		.hero__veil {
 			background:
 				linear-gradient(

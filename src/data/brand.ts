@@ -7,7 +7,10 @@ export const brand = {
 	url: 'https://hacksforwarzone.com',
 	locale: 'en',
 	market: 'Worldwide',
+	/** Brand Studio / legacy token; public contact is Discord. */
 	supportEmail: 'support@hacksforwarzone.com',
+	supportUrl: 'https://discord.gg/vRnQ5PxByz',
+	supportLabel: 'Discord',
 	checkoutUrl: 'https://zadeyo.com/go/UMAIR?to=%2Fproducts%2Fwarzone',
 
 	social: {
@@ -107,7 +110,7 @@ export const brand = {
 			'Install warzone hacks on PC — activate ESP, aimbot and wallhack step by step. Check Ricochet status before your first Battle Royale match.',
 		supportTitle: 'Warzone Hacks Support | License & Setup Help',
 		supportDescription:
-			'Support for license delivery, ESP setup and billing on PC. Email support@hacksforwarzone.com with your order ID before you queue.',
+			'Support for license delivery, ESP setup and billing on PC. Join Discord with your order ID before you queue.',
 		faqTitle: 'Warzone Hacks FAQ | ESP, Aimbot & Ricochet',
 		faqDescription:
 			'FAQ for warzone hacks — delivery, setup, Battle Royale use, Ricochet updates and pricing on PC.',
@@ -134,7 +137,7 @@ export const brand = {
 		previewIntro:
 			'Warzone Hacks for Call of Duty: Warzone — ESP wallhack, aimbot, item ESP, radar, and Ricochet rebuilds after patches.',
 		setupIntro: 'Install Warzone Hacks on Windows PC after you buy. Follow these short steps.',
-		supportIntro: 'Need help with Warzone Hacks? Email support@hacksforwarzone.com with your order ID.',
+		supportIntro: 'Need help with Warzone Hacks? Join Discord with your order ID.',
 		faqIntro: 'Short answers about delivery, setup, updates, and refunds.',
 		reviewsIntro: 'Real feedback on warzone hacks — ESP, aimbot, wallhack, and support from buyers.',
 		chipEsp: 'ESP / wallhack',
@@ -198,14 +201,28 @@ export const brand = {
 
 export type Brand = typeof brand;
 
+const SUPPORT_EMAIL_RE = /support@(?:hacksforwarzone|cheatsforwarzone)\.com/gi;
+
+export function supportContactAnchor(): string {
+	return `<a href="${brand.supportUrl}" target="_blank" rel="noopener noreferrer">${brand.supportLabel}</a>`;
+}
+
+/** Replace legacy support emails with a Discord link (HTML contexts). */
+export function linkSupportContacts(input: string): string {
+	return input.replace(SUPPORT_EMAIL_RE, supportContactAnchor());
+}
+
 export function fillBrandTokens(input: string): string {
-	return input
-		.replaceAll('{brand}', brand.name)
-		.replaceAll('{game}', brand.game)
-		.replaceAll('{antiCheat}', brand.antiCheat)
-		.replaceAll('{email}', brand.supportEmail)
-		.replaceAll('{primaryKeyword}', brand.keywords.primary)
-		.replaceAll('{checkout}', brand.checkoutUrl);
+	return linkSupportContacts(
+		input
+			.replaceAll('{brand}', brand.name)
+			.replaceAll('{game}', brand.game)
+			.replaceAll('{antiCheat}', brand.antiCheat)
+			.replaceAll('{email}', brand.supportLabel)
+			.replaceAll('{supportUrl}', brand.supportUrl)
+			.replaceAll('{primaryKeyword}', brand.keywords.primary)
+			.replaceAll('{checkout}', brand.checkoutUrl),
+	);
 }
 
 export function seoTitle(topic: string): string {
