@@ -3,7 +3,7 @@ import HeroApp from './react/Hero';
 import TrustBar from './TrustBar.astro';
 import type { LocaleCode } from '../data/i18n/locales';
 import { defaultLocale } from '../data/i18n/locales';
-import { brand, productInfo, siteConfig } from '../data/site-core';
+import { brand, siteConfig } from '../data/site-core';
 import { heroWidth, heroHeight, heroSrcSet, heroSizes, heroSrc } from '../lib/responsive-images';
 
 interface Props {
@@ -11,7 +11,6 @@ interface Props {
 }
 
 const locale = Astro.props.locale ?? defaultLocale;
-const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo.plans[0];
 ---
 
 <div class="hero-stage">
@@ -19,8 +18,6 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 		client:idle
 		locale={locale}
 		siteName={siteConfig.name}
-		checkoutUrl={siteConfig.checkoutUrl}
-		monthlyPrice={monthly.price}
 		heroSrc={heroSrc}
 		heroSrcSet={heroSrcSet}
 		heroSizes={heroSizes}
@@ -179,68 +176,6 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 		color: color-mix(in srgb, #fff 74%, var(--ink-muted));
 	}
 
-	.hero__actions {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 0.7rem;
-		margin: 0;
-		width: 100%;
-	}
-
-	.hero__buy {
-		pointer-events: auto;
-		display: inline-flex;
-		align-items: center;
-		justify-content: flex-start;
-		gap: 0.55rem;
-		width: auto;
-		max-width: 100%;
-		min-height: 3rem;
-		padding: 0.55rem 0.55rem 0.55rem 1.05rem;
-		border-radius: 999px;
-		font-size: 0.9375rem;
-		font-weight: 700;
-		letter-spacing: 0.05em;
-	}
-
-	.hero__buy svg {
-		width: 1.05rem;
-		height: 1.05rem;
-		flex-shrink: 0;
-		opacity: 0.85;
-	}
-
-	.hero__buy-label {
-		padding-right: 0.15rem;
-	}
-
-	.hero__buy-price {
-		display: inline-flex;
-		align-items: center;
-		min-height: 2rem;
-		margin-left: auto;
-		padding: 0 0.85rem;
-		border-radius: 999px;
-		background: color-mix(in srgb, #000 28%, transparent);
-		color: #fff;
-		font-size: 0.8125rem;
-		font-weight: 700;
-		letter-spacing: 0.05em;
-	}
-
-	.hero__buy:hover {
-		transform: translateY(-2px);
-	}
-
-	.hero__buy:hover .hero__buy-price {
-		background: color-mix(in srgb, #000 36%, transparent);
-	}
-
-	.hero__buy:active {
-		transform: translateY(0);
-	}
-
 	.hero__features {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -301,12 +236,6 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 			animation: none;
 		}
 
-		.hero__buy,
-		.hero__buy:hover {
-			transition: none;
-			transform: none;
-		}
-
 		.hero__content {
 			transform: translateY(clamp(-1.5rem, -3vw, -0.35rem));
 		}
@@ -357,22 +286,6 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 			color: color-mix(in srgb, #fff 80%, var(--ink-muted));
 		}
 
-		.hero__actions {
-			width: 100%;
-		}
-
-		.hero__buy {
-			width: 100%;
-			max-width: 22rem;
-			min-height: var(--touch-min, 2.75rem);
-			font-size: 0.9375rem;
-			justify-content: flex-start;
-		}
-
-		.hero__buy-price {
-			margin-left: auto;
-		}
-
 		.hero__features {
 			display: grid;
 			grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -397,11 +310,6 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 		}
 
 		.hero__lede {
-			max-width: none;
-		}
-
-		.hero__buy {
-			width: 100%;
 			max-width: none;
 		}
 
@@ -437,10 +345,6 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 
 		.hero__features {
 			display: none;
-		}
-
-		.hero__buy {
-			max-width: 20rem;
 		}
 	}
 </style>

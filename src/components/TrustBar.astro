@@ -16,26 +16,32 @@ const t = getT(locale);
 ---
 
 <section
-	class:list={['trust-bar', 'shell', overlay && 'trust-bar--overlay']}
+	class:list={['trust-bar', overlay && 'trust-bar--overlay']}
 	aria-label={t('common.packageStatus')}
 >
-	<p class="trust-bar__text">
-		<strong>{trust.status}</strong>
-		<span aria-hidden="true">·</span>
-		{trust.delivery}
-		<span aria-hidden="true">·</span>
-		{trust.platform}
-		<span aria-hidden="true">·</span>
-		{trust.antiCheatShort ?? trust.antiCheat}
-	</p>
+	<div class:list={['trust-bar__inner', !overlay && 'shell']}>
+		<p class="trust-bar__text">
+			<strong>{trust.status}</strong>
+			<span aria-hidden="true">·</span>
+			{trust.delivery}
+			<span aria-hidden="true">·</span>
+			{trust.platform}
+			<span aria-hidden="true">·</span>
+			{trust.antiCheatShort ?? trust.antiCheat}
+		</p>
+	</div>
 </section>
 
 <style>
 	.trust-bar {
-		padding-block: 0.75rem;
+		width: 100%;
 		border-top: 1px solid color-mix(in srgb, var(--magenta) 8%, var(--line-soft));
 		border-bottom: 1px solid var(--line-soft);
-		background: color-mix(in srgb, var(--bg-panel) 88%, transparent);
+		background: var(--bg-panel);
+	}
+
+	.trust-bar__inner {
+		padding-block: 0.75rem;
 	}
 
 	.trust-bar--overlay {
@@ -43,10 +49,13 @@ const t = getT(locale);
 		inset-inline: 0;
 		bottom: 0;
 		z-index: 3;
-		padding-block: 0.65rem;
 		border: none;
 		background: none;
 		pointer-events: none;
+	}
+
+	.trust-bar--overlay .trust-bar__inner {
+		padding-block: 0.65rem;
 	}
 
 	.trust-bar__text {
@@ -81,7 +90,7 @@ const t = getT(locale);
 	}
 
 	@media (max-width: 480px) {
-		.trust-bar {
+		.trust-bar__inner {
 			padding-block: 0.6rem;
 		}
 
