@@ -33,7 +33,9 @@ const t = getT(locale);
 <style>
 	.trust-bar {
 		padding-block: 0.75rem;
-		border-bottom: 1px solid var(--color-border);
+		border-top: 1px solid color-mix(in srgb, var(--magenta) 8%, var(--line-soft));
+		border-bottom: 1px solid var(--line-soft);
+		background: color-mix(in srgb, var(--bg-panel) 88%, transparent);
 	}
 
 	.trust-bar--overlay {

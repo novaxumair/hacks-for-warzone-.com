@@ -133,9 +133,7 @@ const useHomeAgent = isHeroMarketingImage(heroImage);
 	lcpImageSizes={useHomeAgent ? heroSizes : '100vw'}
 >
 	<Navbar locale={locale} pageId={pageId} />
-	{pageId === 'pricing' || pageId === 'setup' || pageId === 'features' ? (
-		<TrustStrip locale={locale} />
-	) : null}
+	{pageId === 'setup' ? <TrustStrip locale={locale} /> : null}
 	<main class="page">
 		<section class="banner">
 			<div class="banner__media">
@@ -198,6 +196,10 @@ const useHomeAgent = isHeroMarketingImage(heroImage);
 				</div>
 			</div>
 		</section>
+
+		{pageId === 'pricing' || pageId === 'features' ? (
+			<TrustStrip locale={locale} />
+		) : null}
 
 		<div class="shell page__wrap">
 			<article class:list={['article', pageId === 'hacks' && 'article--guide']}>
