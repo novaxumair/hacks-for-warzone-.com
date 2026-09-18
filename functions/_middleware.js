@@ -1,11 +1,13 @@
 import CANNIBAL_REDIRECTS from './cannibal-redirects.json';
 
-const CANONICAL_ORIGIN = 'https://cheatsforwarzone.com';
-const CANONICAL_HOST = 'cheatsforwarzone.com';
-const WWW_HOST = 'www.cheatsforwarzone.com';
+const CANONICAL_ORIGIN = 'https://hacksforwarzone.com';
+const CANONICAL_HOST = 'hacksforwarzone.com';
+const WWW_HOST = 'www.hacksforwarzone.com';
 
 /** Legacy domains → canonical apex (301). Must NOT include CANONICAL_HOST. */
 const LEGACY_HOSTS = new Set([
+	'cheatsforwarzone.com',
+	'www.cheatsforwarzone.com',
 	'warzonehacks.org',
 	'www.warzonehacks.org',
 	'warzonecheats.org',
@@ -186,10 +188,12 @@ const SITEMAP_PATH = /^\/sitemap(?:-[a-z0-9-]+)?\.xml$/;
 
 /** Legacy origins rewritten in sitemap XML (GSC "URL not allowed" when stale dist uses old apex). */
 const LEGACY_ORIGIN_REPLACEMENTS = [
+	['https://www.hacksforwarzone.com', CANONICAL_ORIGIN],
+	['http://www.hacksforwarzone.com', CANONICAL_ORIGIN],
 	['https://cheatsforwarzone.com', CANONICAL_ORIGIN],
 	['http://cheatsforwarzone.com', CANONICAL_ORIGIN],
-	['https://cheatsforwarzone.com', CANONICAL_ORIGIN],
-	['http://cheatsforwarzone.com', CANONICAL_ORIGIN],
+	['https://www.cheatsforwarzone.com', CANONICAL_ORIGIN],
+	['http://www.cheatsforwarzone.com', CANONICAL_ORIGIN],
 	['https://www.thefinalscheats.org', CANONICAL_ORIGIN],
 	['http://www.thefinalscheats.org', CANONICAL_ORIGIN],
 	['https://thefinalscheats.org', CANONICAL_ORIGIN],

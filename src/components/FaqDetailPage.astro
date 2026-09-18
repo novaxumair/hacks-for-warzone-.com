@@ -12,6 +12,7 @@ import RelatedPages from './RelatedPages.astro';
 import ExternalResources from './ExternalResources.astro';
 import { getT } from '../i18n/server';
 import { buildCanonicalUrl } from '../data/i18n/routing';
+import { shortLinkLabel } from '../utils/short-link-label';
 
 interface Props {
 	locale: LocaleCode;
@@ -127,8 +128,8 @@ const extraGraph: Record<string, unknown>[] = [
 					{
 						related.map((item) => (
 							<li>
-								<a href={getFaqPath(item.slug, locale)}>
-									<span>{item.question}</span>
+								<a href={getFaqPath(item.slug, locale)} title={item.question}>
+									<span>{shortLinkLabel(item.question)}</span>
 									<span class="faq-detail__arrow" aria-hidden="true" />
 								</a>
 							</li>

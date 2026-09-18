@@ -25,12 +25,6 @@ const TOPIC_LINKS = {
 	forums: { kind: 'path' as const, path: '/forums/', labelKey: 'internalLinks.forums', label: L('Warzone hacks forums') },
 	reviews: { kind: 'path' as const, path: '/reviews/', labelKey: 'internalLinks.reviews', label: L('{brand} buyer reviews') },
 	hacks: { kind: 'page' as const, pageId: 'hacks' as const, labelKey: 'internalLinks.hacks', label: L('{primaryKeyword} pillar') },
-	forumsAlt: {
-		kind: 'path' as const,
-		path: '/forums/',
-		labelKey: 'internalLinks.forums',
-		label: L('Warzone hacks forums'),
-	},
 	ricochet: {
 		kind: 'page' as const,
 		pageId: 'ricochet' as const,
@@ -149,7 +143,6 @@ export const relatedLinksByPageId: Partial<Record<PageId, InternalLinkTarget[]>>
 	terms: [TOPIC_LINKS.overview, TOPIC_LINKS.support, TOPIC_LINKS.faq],
 	ricochet: [
 		TOPIC_LINKS.status,
-		TOPIC_LINKS.status,
 		TOPIC_LINKS.hacks,
 		TOPIC_LINKS.esp,
 		TOPIC_LINKS.aimbot,
@@ -160,7 +153,6 @@ export const relatedLinksByPageId: Partial<Record<PageId, InternalLinkTarget[]>>
 		TOPIC_LINKS.status,
 		TOPIC_LINKS.features,
 		TOPIC_LINKS.pricing,
-		TOPIC_LINKS.status,
 		TOPIC_LINKS.forums,
 	],
 	'best-cheats': [
@@ -169,7 +161,6 @@ export const relatedLinksByPageId: Partial<Record<PageId, InternalLinkTarget[]>>
 		TOPIC_LINKS.features,
 		TOPIC_LINKS.pricing,
 		TOPIC_LINKS.reviews,
-		TOPIC_LINKS.status,
 	],
 };
 

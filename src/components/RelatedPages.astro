@@ -26,9 +26,17 @@ function resolveHref(target: InternalLinkTarget): string {
 	return localizeInternalHref(target.path, locale);
 }
 
-const items = source.filter((target) => {
+const filtered = source.filter((target) => {
 	if (target.kind !== 'page' || !pageId) return true;
 	return target.pageId !== pageId;
+});
+
+const seenHrefs = new Set<string>();
+const items = filtered.filter((target) => {
+	const href = resolveHref(target);
+	if (seenHrefs.has(href)) return false;
+	seenHrefs.add(href);
+	return true;
 });
 ---
 

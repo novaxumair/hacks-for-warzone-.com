@@ -198,15 +198,15 @@
     "forums": "Forums"
   },
   "internalLinks": {
-    "relatedLede": "Explore more Warzone Hacks guides — the same topics covered on other cheat sites, mapped to our canonical pages.",
+    "relatedLede": "More guides on our main product pages.",
     "topicsTitle": "Product guides",
-    "topicsLabel": "Product topic guides",
-    "topicsLede": "Jump to the main Warzone Hacks pages for ESP, aimbot, radar, setup, and status.",
-    "overview": "Warzone Hacks overview",
+    "topicsLabel": "Product guides",
+    "topicsLede": "ESP, aimbot, radar, setup, and status.",
+    "overview": "Overview",
     "esp": "ESP & wallhack",
     "aimbot": "Aimbot & soft aim",
     "radar": "Radar hack",
-    "features": "Full feature list",
+    "features": "Feature list",
     "pricing": "Store & pricing",
     "setup": "Setup guide",
     "status": "Live status",
@@ -214,8 +214,8 @@
     "support": "Support",
     "blog": "Blog",
     "reviews": "Buyer reviews",
-    "hacks": "Warzone Hacks pillar",
-    "undetected": "status"
+    "hacks": "Cheats hub",
+    "undetected": "Status"
   },
   "externalResources": {
     "title": "Official game guides & resources",

@@ -100,4 +100,34 @@ if (nextAstro === astro && !astro.includes(`site: '${brand.url}'`)) {
 }
 writeFileSync(astroPath, nextAstro, 'utf8');
 
-console.log(`sync-brand: ${brand.name} → ${brand.url} (robots Sitemap + Astro site)`);
+const canonicalHost = new URL(brand.url).hostname;
+const wwwHost = `www.${canonicalHost}`;
+
+function syncCanonicalConstant(filePath, pattern, replacement) {
+	let text = readFileSync(filePath, 'utf8');
+	const next = text.replace(pattern, replacement);
+	if (next === text && !text.includes(replacement.trim().slice(0, 30))) {
+		throw new Error(`Could not update canonical constants in ${path.relative(ROOT, filePath)}`);
+	}
+	writeFileSync(filePath, next, 'utf8');
+}
+
+syncCanonicalConstant(
+	path.join(ROOT, 'src/lib/canonical-origin.ts'),
+	/export const CANONICAL_ORIGIN = '[^']*';/,
+	`export const CANONICAL_ORIGIN = '${brand.url}';`,
+);
+syncCanonicalConstant(
+	path.join(ROOT, 'src/lib/canonical-origin.ts'),
+	/export const CANONICAL_HOST = '[^']*';/,
+	`export const CANONICAL_HOST = '${canonicalHost}';`,
+);
+
+const middlewarePath = path.join(ROOT, 'functions/_middleware.js');
+syncCanonicalConstant(middlewarePath, /const CANONICAL_ORIGIN = '[^']*';/, `const CANONICAL_ORIGIN = '${brand.url}';`);
+syncCanonicalConstant(middlewarePath, /const CANONICAL_HOST = '[^']*';/, `const CANONICAL_HOST = '${canonicalHost}';`);
+syncCanonicalConstant(middlewarePath, /const WWW_HOST = '[^']*';/, `const WWW_HOST = '${wwwHost}';`);
+
+console.log(
+	`sync-brand: ${brand.name} → ${brand.url} (robots, Astro site, canonical host ${canonicalHost})`,
+);

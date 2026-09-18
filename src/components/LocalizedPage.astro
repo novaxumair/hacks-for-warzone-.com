@@ -15,6 +15,7 @@ import {
 } from '../data/page-images';
 import { screenshotImageObjects } from '../data/product-images';
 import { linkSupportContacts } from '../data/brand';
+import { shortLinkLabel } from '../utils/short-link-label';
 
 interface Props {
 	locale: LocaleCode;
@@ -235,8 +236,11 @@ const breadcrumbLabel = eyebrowByPage[pageId];
 				<ul class="faq-index__list">
 					{localizedFaqs.map((item) => (
 						<li>
-							<a href={localizeInternalHref(getFaqPath(item.slug), locale)}>
-								<span>{item.question}</span>
+							<a
+								href={localizeInternalHref(getFaqPath(item.slug), locale)}
+								title={item.question}
+							>
+								<span>{shortLinkLabel(item.question)}</span>
 								<span aria-hidden="true">→</span>
 							</a>
 						</li>

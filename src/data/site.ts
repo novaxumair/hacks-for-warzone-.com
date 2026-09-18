@@ -44,7 +44,7 @@ export const seoLandingPages = [
 	{ label: fillBrandTokens('{game} cheats'), href: '/cheats/' },
 	{ label: fillBrandTokens('{game} cheats 2026'), href: '/2026/' },
 	{ label: fillBrandTokens('{game} esp'), href: '/esp/' },
-	{ label: fillBrandTokens('{game} wallhack'), href: '/esp/' },
+	{ label: fillBrandTokens('{game} wallhack'), href: '/wallhack/' },
 	{ label: fillBrandTokens('{game} aimbot'), href: '/aimbot/' },
 	{ label: fillBrandTokens('{game} radar hack'), href: '/radar/' },
 	{ label: fillBrandTokens('Best {primaryKeyword}'), href: '/best/' },
