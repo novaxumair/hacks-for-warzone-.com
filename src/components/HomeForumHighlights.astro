@@ -1,6 +1,7 @@
 ---
 import { getFeaturedThreads, getForumBasePath } from '../data/forums/helpers';
 import type { LocaleCode } from '../data/i18n/locales';
+import { shortLinkLabel } from '../utils/short-link-label';
 
 interface Props {
 	locale: LocaleCode;
@@ -26,20 +27,24 @@ const forumHref = getForumBasePath(locale);
 				const replyCount = thread.translation.comments.length;
 				return (
 					<li>
-						<a class="home-forums__card" href={thread.canonicalPath}>
+						<article class="home-forums__card">
 							<div class="home-forums__reply" aria-hidden="true">
 								<span class="home-forums__reply-count">{replyCount}</span>
 								<span class="home-forums__reply-label">Replies</span>
 							</div>
 							<div class="home-forums__body">
 								<span class="home-forums__cat">{thread.category}</span>
-								<strong>{thread.translation.title}</strong>
+								<h3 class="home-forums__title">
+									<a href={thread.canonicalPath} title={thread.translation.title}>
+										{shortLinkLabel(thread.translation.title, 50)}
+									</a>
+								</h3>
 								<p class="home-forums__excerpt">{thread.translation.intro}</p>
 								<span class="home-forums__meta">
 									{replyCount} {replyCount === 1 ? 'reply' : 'replies'} · Updated {thread.updated}
 								</span>
 							</div>
-						</a>
+						</article>
 					</li>
 				);
 			})
@@ -98,7 +103,6 @@ const forumHref = getForumBasePath(locale);
 		border-radius: var(--radius-md);
 		background:
 			linear-gradient(145deg, color-mix(in srgb, var(--magenta) 4%, var(--bg-panel)), var(--bg-panel));
-		text-decoration: none;
 		color: inherit;
 		overflow: hidden;
 		box-shadow:
@@ -110,7 +114,7 @@ const forumHref = getForumBasePath(locale);
 			transform 0.22s ease;
 	}
 
-	.home-forums__card:hover {
+	.home-forums__card:has(.home-forums__title a:hover) {
 		border-color: color-mix(in srgb, var(--magenta) 22%, var(--line-strong));
 		box-shadow:
 			0 0 0 1px color-mix(in srgb, var(--magenta) 6%, transparent) inset,
@@ -167,12 +171,21 @@ const forumHref = getForumBasePath(locale);
 		color: color-mix(in srgb, var(--magenta-soft) 75%, var(--ink-muted));
 	}
 
-	.home-forums__body strong {
+	.home-forums__title {
+		margin: 0;
 		font-family: var(--font-display);
 		font-size: 1.08rem;
 		font-weight: 700;
 		line-height: 1.25;
+	}
+
+	.home-forums__title a {
 		color: var(--ink-heading);
+		text-decoration: none;
+	}
+
+	.home-forums__title a:hover {
+		color: var(--link);
 	}
 
 	.home-forums__excerpt {

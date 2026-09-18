@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import I18nProvider from './I18nProvider';
+import { shortLinkLabel } from '../../utils/short-link-label';
 
 type FaqItem = { slug: string; question: string; answer: string; href: string };
 
@@ -105,8 +106,8 @@ function HomeSeoInner({ faqs }: Props) {
 							</summary>
 							<div className="home-seo__item-body">
 								<p>{item.answer}</p>
-								<a className="home-seo__item-link" href={item.href}>
-									{t('homeSeo.openFullPage')}
+								<a className="home-seo__item-link" href={item.href} title={item.question}>
+									{shortLinkLabel(item.question, 50)}
 								</a>
 							</div>
 						</details>

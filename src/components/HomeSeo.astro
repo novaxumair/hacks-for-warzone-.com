@@ -4,6 +4,7 @@ import { getFaqPath } from '../data/faq';
 import { defaultLocale, type LocaleCode } from '../data/i18n/locales';
 import { getLocalizedPath } from '../data/i18n/routing';
 import { getT } from '../i18n/server';
+import { shortLinkLabel } from '../utils/short-link-label';
 
 interface Props {
 	locale?: LocaleCode;
@@ -118,8 +119,8 @@ const faqIndexHref = getLocalizedPath('faq', locale);
 						</summary>
 						<div class="home-seo__item-body">
 							<p>{item.answer}</p>
-							<a class="home-seo__item-link" href={item.href}>
-								{t('homeSeo.openFullPage')}
+							<a class="home-seo__item-link" href={item.href} title={item.question}>
+								{shortLinkLabel(item.question, 50)}
 							</a>
 						</div>
 					</details>

@@ -18,6 +18,7 @@ import { forumLabel, siteConfig } from '../data/site';
 import { brandSeo, seoPageTitle } from '../data/site-core';
 import { seoDescription } from '../data/brand';
 import { getLocalizedPath } from '../data/i18n/routing';
+import { shortLinkLabel } from '../utils/short-link-label';
 interface Props {
 	locale: LocaleCode;
 }
@@ -89,14 +90,18 @@ const threadListSchema = {
 									const replyCount = thread.translation.comments.length;
 									const views = getThreadViewCount(thread);
 									return (
-										<a class="forum__popular-card" href={thread.canonicalPath}>
+										<article class="forum__popular-card">
 											<span class="forum__cat">{thread.category}</span>
-											<h3>{thread.translation.title}</h3>
+											<h3>
+												<a href={thread.canonicalPath} title={thread.translation.title}>
+													{shortLinkLabel(thread.translation.title, 50)}
+												</a>
+											</h3>
 											<p>{thread.translation.intro}</p>
 											<span class="forum__popular-stats">
 												{replyCount} {replyCount === 1 ? 'reply' : 'replies'} · {formatForumStat(views)} views
 											</span>
-										</a>
+										</article>
 									);
 								})
 							}
@@ -114,20 +119,24 @@ const threadListSchema = {
 							const views = getThreadViewCount(thread);
 							return (
 								<article class="forum__row">
-									<a class="forum__row-link" href={thread.canonicalPath}>
+									<div class="forum__row-link">
 										<div class="forum__reply-block" aria-hidden="true">
 											<span class="forum__reply-count">{replyCount}</span>
 											<span class="forum__reply-label">Replies</span>
 										</div>
 										<div class="forum__row-body">
 											<span class="forum__cat">{thread.category}</span>
-											<h3>{thread.translation.title}</h3>
+											<h3>
+												<a href={thread.canonicalPath} title={thread.translation.title}>
+													{shortLinkLabel(thread.translation.title, 50)}
+												</a>
+											</h3>
 											<p>{thread.translation.intro}</p>
 											<span class="forum__row-meta">
 												Updated {thread.updated} · {formatForumStat(views)} views · {replyCount} {replyCount === 1 ? 'answer' : 'answers'}
 											</span>
 										</div>
-									</a>
+									</div>
 								</article>
 							);
 						})
@@ -209,13 +218,12 @@ const threadListSchema = {
 		border: 1px solid var(--line);
 		border-radius: var(--radius-md, 0.75rem);
 		background: var(--bg-panel);
-		text-decoration: none;
 		color: inherit;
 		box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
 		transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 	}
 
-	.forum__popular-card:hover {
+	.forum__popular-card:has(h3 a:hover) {
 		border-color: color-mix(in srgb, var(--magenta) 30%, var(--line));
 		box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
 	}
@@ -247,8 +255,18 @@ const threadListSchema = {
 	.forum__row-link {
 		display: grid;
 		grid-template-columns: 5.5rem minmax(0, 1fr);
-		text-decoration: none;
 		color: inherit;
+	}
+
+	.forum__popular-card h3 a,
+	.forum__row-body h3 a {
+		color: var(--ink);
+		text-decoration: none;
+	}
+
+	.forum__popular-card h3 a:hover,
+	.forum__row-body h3 a:hover {
+		color: var(--link);
 	}
 
 	.forum__reply-block {
