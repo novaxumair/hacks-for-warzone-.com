@@ -155,7 +155,8 @@
     "linkAimbot": "Aimbot",
     "linkRadar": "Radar",
     "linkLiveStatus": "Live status",
-    "linkUndetected": "Updates",
+    "linkUndetected": "Patch status",
+    "linkFeatureBreakdown": "Control list",
     "linkRicochet": "Ricochet",
     "linkSetup": "Setup",
     "linkPlans": "Plans",
@@ -187,7 +188,7 @@
     "support247": "24/7 support"
   },
   "categoryRow": {
-    "hacks": "Cheats",
+    "hacks": "Cheats hub",
     "esp": "ESP",
     "aimbot": "Aimbot",
     "radar": "Radar",
@@ -215,6 +216,7 @@
     "blog": "Blog",
     "reviews": "Buyer reviews",
     "hacks": "Cheats hub",
+    "forums": "Forums",
     "undetected": "Status"
   },
   "externalResources": {

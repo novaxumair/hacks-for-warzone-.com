@@ -13,9 +13,11 @@ type Props = {
 	currentLocale: string;
 	locales: LocaleMeta[];
 	hrefForLocale: Record<string, string>;
+	/** Use buttons in mobile panel to avoid duplicate anchor labels in HTML. */
+	useButtons?: boolean;
 };
 
-export default function LanguageSwitcher({ currentLocale, locales, hrefForLocale }: Props) {
+export default function LanguageSwitcher({ currentLocale, locales, hrefForLocale, useButtons = false }: Props) {
 	const { t } = useTranslation();
 	const currentMeta = useMemo(
 		() => locales.find((l) => l.code === currentLocale) ?? locales[0],
@@ -44,21 +46,38 @@ export default function LanguageSwitcher({ currentLocale, locales, hrefForLocale
 						const href = hrefForLocale[locale.code] ?? `/${locale.code}/`;
 						const isCurrent = locale.code === currentLocale;
 						return (
-							<li key={locale.code}>
-								<a
-									href={href}
-									hrefLang={locale.hreflang}
-									lang={locale.code}
-									className={`lang-switcher__link${isCurrent ? ' is-current' : ''}`}
-									aria-current={isCurrent ? 'page' : undefined}
-									data-locale={locale.code}
-									onClick={() => {
-										document.cookie = `vc_locale=${locale.code};path=/;max-age=31536000;SameSite=Lax`;
-									}}
-								>
-									<span className="lang-switcher__native">{locale.nativeName}</span>
-									<span className="lang-switcher__region">{locale.region}</span>
-								</a>
+							<li key={locale.code} className="lang-switcher__item">
+								{useButtons ? (
+									<button
+										type="button"
+										className={`lang-switcher__link lang-switcher__link--btn${isCurrent ? ' is-current' : ''}`}
+										aria-current={isCurrent ? 'page' : undefined}
+										title={`${locale.nativeName} (${locale.region})`}
+										data-locale={locale.code}
+										onClick={() => {
+											document.cookie = `vc_locale=${locale.code};path=/;max-age=31536000;SameSite=Lax`;
+											window.location.href = href;
+										}}
+									>
+										{locale.nativeName}
+									</button>
+								) : (
+									<a
+										href={href}
+										hrefLang={locale.hreflang}
+										lang={locale.code}
+										className={`lang-switcher__link${isCurrent ? ' is-current' : ''}`}
+										aria-current={isCurrent ? 'page' : undefined}
+										title={`${locale.nativeName} (${locale.region})`}
+										data-locale={locale.code}
+										onClick={() => {
+											document.cookie = `vc_locale=${locale.code};path=/;max-age=31536000;SameSite=Lax`;
+										}}
+									>
+										{locale.nativeName}
+									</a>
+								)}
+								<span className="lang-switcher__region">{locale.region}</span>
 							</li>
 						);
 					})}

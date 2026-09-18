@@ -77,9 +77,9 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 					'Most {game} cheat sites cover ESP, aimbot, radar, setup, and status on separate pages. Use these guides next:',
 				],
 				list: [
-					'<a href="/warzone-esp/">ESP & wallhack guide</a>',
-					'<a href="/warzone-aimbot/">Aimbot & soft aim</a>',
-					'<a href="/warzone-radar-hack/">2D radar overlay</a>',
+					'<a href="/esp/">ESP & wallhack guide</a>',
+					'<a href="/aimbot/">Aimbot & soft aim</a>',
+					'<a href="/radar/">2D radar overlay</a>',
 					'<a href="/setup/">Setup guide</a>',
 					'<a href="/updates/">Live status</a>',
 					'<a href="/blog/">Warzone Intel blog</a>',
@@ -128,7 +128,7 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 				h2: 'Before you buy',
 				paragraphs: ['Read the refund policy if you need it. Contact support with your order ID for help.'],
 				list: [
-					'<a href="/refund-policy/">Refund policy</a>',
+					'<a href="/refund/">Refund policy</a>',
 					'<a href="/faq/">FAQ</a>',
 					'<a href="/support/">Support</a>',
 				],
@@ -209,9 +209,9 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 					'Each tool has its own deep-dive page if you want details before checkout.',
 				],
 				list: [
-					'<a href="/warzone-esp/">Call of Duty: Warzone ESP & wallhack</a>',
-					'<a href="/warzone-aimbot/">Call of Duty: Warzone Aimbot & soft aim</a>',
-					'<a href="/warzone-radar-hack/">Radar hack overlay</a>',
+					'<a href="/esp/">Call of Duty: Warzone ESP & wallhack</a>',
+					'<a href="/aimbot/">Call of Duty: Warzone Aimbot & soft aim</a>',
+					'<a href="/radar/">Radar hack overlay</a>',
 					'<a href="/features/">Full feature list</a>',
 				],
 			},
@@ -324,7 +324,7 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 				h2: 'With ESP',
 				paragraphs: ['Use radar for threats you cannot see yet. Use ESP when you push.'],
 				list: [
-					'<a href="/warzone-esp/">ESP guide</a>',
+					'<a href="/esp/">ESP guide</a>',
 					'<a href="/">Full product</a>',
 					'<a href="/pricing/">Store</a>',
 				],
@@ -405,7 +405,7 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 			{
 				h2: 'Refunds',
 				paragraphs: ['Read the refund policy before you buy if you need details.'],
-				list: ['<a href="/refund-policy/">Refund policy</a>', '<a href="/support/">Support</a>'],
+				list: ['<a href="/refund/">Refund policy</a>', '<a href="/support/">Support</a>'],
 			},
 		],
 	}),

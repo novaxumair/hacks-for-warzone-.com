@@ -12,13 +12,13 @@ interface Props {
 const locale = Astro.props.locale ?? defaultLocale;
 
 const explore = [
-	{ labelKey: 'nav.preview', href: getLocalizedPath('hacks', locale) },
-	{ labelKey: 'nav.esp', href: getLocalizedPath('warzone-esp', locale) },
-	{ labelKey: 'nav.aimbot', href: getLocalizedPath('warzone-aimbot', locale) },
-	{ labelKey: 'common.featureList', href: getLocalizedPath('features', locale) },
-	{ labelKey: 'common.pricingPlans', href: getLocalizedPath('pricing', locale) },
-	{ labelKey: 'nav.faq', href: getLocalizedPath('faq', locale) },
-	{ labelKey: 'common.forums', href: getForumBasePath(locale) },
+	{ labelKey: 'internalLinks.hacks', href: getLocalizedPath('hacks', locale) },
+	{ labelKey: 'internalLinks.esp', href: getLocalizedPath('warzone-esp', locale) },
+	{ labelKey: 'internalLinks.aimbot', href: getLocalizedPath('warzone-aimbot', locale) },
+	{ labelKey: 'internalLinks.features', href: getLocalizedPath('features', locale) },
+	{ labelKey: 'internalLinks.pricing', href: getLocalizedPath('pricing', locale) },
+	{ labelKey: 'internalLinks.faq', href: getLocalizedPath('faq', locale) },
+	{ labelKey: 'internalLinks.forums', href: getForumBasePath(locale) },
 ];
 
 const help = [

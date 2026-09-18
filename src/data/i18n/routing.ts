@@ -705,6 +705,12 @@ export function localizeInternalHref(href: string, locale: LocaleCode): string {
 	if (withSlash === '/cheats/' || withSlash === '/warzone-cheats/') {
 		return getLocalizedPath('hacks', locale);
 	}
+	if (withSlash === '/forums/') {
+		return locale === defaultLocale ? '/forums/' : `/${locale}/forums/`;
+	}
+	if (withSlash.startsWith('/forums/') && locale !== defaultLocale) {
+		return `/${locale}${withSlash}`;
+	}
 	if (withSlash.startsWith('/blog/') && withSlash !== '/blog/') {
 		const legacySlug = withSlash.slice('/blog/'.length, -1);
 		if (isBlogPostSlug(legacySlug)) {

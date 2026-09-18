@@ -18,9 +18,9 @@ function HomeSeoInner({ faqs }: Props) {
 			hintKey: 'homeSeo.catFeaturesHint',
 			links: [
 				{ href: '/features/', labelKey: 'homeSeo.linkAllFeatures' },
-				{ href: '/warzone-esp/', labelKey: 'homeSeo.linkEsp' },
-				{ href: '/warzone-aimbot/', labelKey: 'homeSeo.linkAimbot' },
-				{ href: '/warzone-radar-hack/', labelKey: 'homeSeo.linkRadar' },
+				{ href: '/esp/', labelKey: 'homeSeo.linkEsp' },
+				{ href: '/aimbot/', labelKey: 'homeSeo.linkAimbot' },
+				{ href: '/radar/', labelKey: 'homeSeo.linkRadar' },
 			],
 		},
 		{

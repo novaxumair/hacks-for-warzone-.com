@@ -133,10 +133,10 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "ESP wallhack, radar hack, and Aimbot in one license",
 							paragraphs: [
 								"Instead of stacking separate tools, Warzone Cheats bundles player ESP wallhack, operator markers, 2D radar overlays, and Aimbot profiles in one undetected package built for Battle Royale rounds and Battle Royale matches — covering both “warzone cheats” and “warzone cheats” search intent.",
-								"Browse the <a href=\"/warzone-esp/\">ESP</a>, <a href=\"/warzone-aimbot/\">Aimbot</a>, <a href=\"/warzone-esp/\">wallhack</a>, and <a href=\"/warzone-radar-hack/\">radar</a> pages for control details — or jump to <a href=\"/pricing/\">Pricing</a> for monthly and lifetime options.",
+								"Browse the <a href=\"/esp/\">ESP</a>, <a href=\"/aimbot/\">Aimbot</a>, <a href=\"/esp/\">wallhack</a>, and <a href=\"/radar/\">radar</a> pages for control details — or jump to <a href=\"/pricing/\">Pricing</a> for monthly and lifetime options.",
 								"Before patch days, check <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> for Warzone server status, then confirm our maintenance notes so you are not loading in on an outdated build.",
 								"Warzone runs Ricochet at kernel level. No package stays undetected forever without rebuilds. We publish maintenance on <a href=\"/updates/\">Updates</a> and explain the workflow on <a href=\"/ricochet-bypass/\">Ricochet bypass</a>.",
-								"Use conservative soft aim FOV, enable ESP categories selectively, and avoid rage settings that attract reports even when the build is clean. Read <a href=\"/warzone-aimbot/\">legit aimbot settings</a> and <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> before you queue.",
+								"Use conservative soft aim FOV, enable ESP categories selectively, and avoid rage settings that attract reports even when the build is clean. Read <a href=\"/aimbot/\">legit aimbot settings</a> and <a href=\"/2026/\">warzone cheats 2026</a> before you queue.",
 							],
 						},
 					],
@@ -328,9 +328,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Each guide covers one part of the match stack so you can compare controls before checkout.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -382,7 +382,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Prices are listed in USD for Windows 10 and 11 PCs worldwide.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Refund policy</a>",
+								"<a href=\"/refund/\">Refund policy</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Support</a>",
 							],
@@ -531,7 +531,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Contact support with your order ID for billing or delivery questions.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Refund policy</a>",
+								"<a href=\"/refund/\">Refund policy</a>",
 								"<a href=\"/support/\">Support</a>",
 							],
 						},
@@ -608,7 +608,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Pricing</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Setup</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Setup</a> after delivery.",
 							],
 						},
 						{
@@ -631,14 +631,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "warzone wallhack ESP gallery",
 					ctaPrimary: "Buy Warzone Cheats",
 					ctaSecondary: "Warzone ESP page",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"A Warzone wallhack focuses on information — player outlines, weapon drops pins, threat cues — rather than automatic aiming. Warzone Cheats bundles wallhack ESP with radar and optional Aimbot in one license.",
 								"Toggle categories so only the wallhack overlays you need stay active during rotations and buy stations.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">Warzone ESP</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">Warzone ESP</a>; for combat assist see <a href=\"/aimbot/\">Aimbot</a>.",
 							],
 						},
 						{
@@ -646,7 +646,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Wallhack overlays support match, Resurgence sessions, and official servers with distance readouts and snaplines for engagement control.",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">radar hack</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">radar hack</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -654,7 +654,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Updates page</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Ricochet bypass</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Pricing</a> or continue to the <a href=\"/warzone-esp/\">ESP hack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Pricing</a> or continue to the <a href=\"/esp/\">ESP hack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -690,7 +690,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Radar complements ESP markers during squad pushes and zone fights.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP guide</a>",
+								"<a href=\"/esp/\">ESP guide</a>",
 								"<a href=\"/\">Full product</a>",
 								"<a href=\"/pricing/\">Store</a>",
 							],
@@ -722,7 +722,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Updates</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">undetected warzone cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">undetected warzone cheats</a>.",
 							],
 						},
 						{
@@ -746,7 +746,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Maintenance prioritizes external-style overlays and behavioral tuning over risky injection patterns. Reduce on-screen ESP markers if you stream — pair with radar for awareness.",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Updates</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">this page</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">warzone cheats pillar</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">warzone cheats pillar</a>.",
 							],
 						},
 					],
@@ -775,22 +775,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Player ESP wallhack, operator markers, 2D radar overlays, Aimbot profiles, in-client toggles, and post-patch rebuilds — one license instead of stacking separate tools.",
-								"Deep links: <a href=\"/warzone-cheats/\">Warzone Cheats pillar</a>, <a href=\"/warzone-esp/\">ESP</a>, <a href=\"/warzone-aimbot/\">Aimbot</a>, <a href=\"/warzone-esp/\">wallhack</a>, <a href=\"/warzone-radar-hack/\">radar</a>, <a href=\"/warzone-cheats/\">undetected</a>.",
+								"Deep links: <a href=\"/cheats/\">Warzone Cheats pillar</a>, <a href=\"/esp/\">ESP</a>, <a href=\"/aimbot/\">Aimbot</a>, <a href=\"/esp/\">wallhack</a>, <a href=\"/radar/\">radar</a>, <a href=\"/cheats/\">undetected</a>.",
 								"Instant digital delivery after checkout confirmation worldwide.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">warzone cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">warzone cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">warzone cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">warzone cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Support page</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">aimbot profiles</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">aimbot profiles</a> and ESP toggles.",
 								"Compare against <a href=\"/\">warzone cheats</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -837,9 +837,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Read ESP, aimbot, radar, and feature guides before you buy.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone Aimbot & soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">Radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone Aimbot & soft aim</a>",
+								"<a href=\"/radar/\">Radar hack overlay</a>",
 								"<a href=\"/features/\">Full feature list</a>",
 							],
 						},
@@ -895,7 +895,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Every warzone cheat download includes player ESP wallhack, weapon drops and operator markers, 2D radar overlays, Aimbot profiles, and in-client toggles for Battle Royale rounds and Battle Royale matches.",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Pricing page</a>.",
-								"Feature detail: <a href=\"/features/\">Features</a>. Module pages: <a href=\"/warzone-esp/\">ESP</a>, <a href=\"/warzone-aimbot/\">Aimbot</a>.",
+								"Feature detail: <a href=\"/features/\">Features</a>. Module pages: <a href=\"/esp/\">ESP</a>, <a href=\"/aimbot/\">Aimbot</a>.",
 							],
 						},
 						{
@@ -903,7 +903,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Updates page</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Support</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">undetected status</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">undetected status</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -925,7 +925,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"A Warzone mod menu is the in-client panel where you enable ESP wallhack overlays, adjust radar range, and switch Aimbot profiles during live matches. Warzone Cheats keeps those toggles accessible with hotkeys.",
 								"Toggle player outlines, operator markers, vehicle cues, and per-weapon Aimbot settings without alt-tabbing out of Warzone.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">ESP</a>, <a href=\"/warzone-aimbot/\">Aimbot</a>, <a href=\"/warzone-radar-hack/\">radar</a>.",
+								"Control deep-dives: <a href=\"/esp/\">ESP</a>, <a href=\"/aimbot/\">Aimbot</a>, <a href=\"/radar/\">radar</a>.",
 							],
 						},
 						{
@@ -933,7 +933,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Separate ESP wallhack categories for players, operators, operator abilitys, and weapon drops let you reduce overlay noise during rotations and buy stations.",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -956,14 +956,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Warzone soft aim gallery",
 					ctaPrimary: "Buy Warzone Cheats",
 					ctaSecondary: "Aimbot controls",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone soft aim refers to Aimbot behavior tuned for smooth, natural-looking tracking rather than instant snap. Warzone Cheats exposes smoothness, FOV, and aim smoothing sliders so you control how assist feels in BR competitive fights.",
 								"Bone priority and target selection cover closest player, lowest health, or highest-threat targets during team fights.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Warzone Aimbot</a>. Alternate wording: <a href=\"/warzone-aimbot/\">aimbot hack</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Warzone Aimbot</a>. Alternate wording: <a href=\"/aimbot/\">aimbot hack</a>.",
 							],
 						},
 						{
@@ -971,7 +971,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Save separate soft aim profiles for ARs, SMGs, and long-range rifles. Switch between long-range ambush competitive fights and close team fights with hotkeys mid-session.",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">ESP wallhack</a> and <a href=\"/warzone-radar-hack/\">2D radar</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">ESP wallhack</a> and <a href=\"/radar/\">2D radar</a> overlays.",
 							],
 						},
 						{
@@ -1008,8 +1008,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Look for player ESP wallhack, operator markers, 2D radar overlays, Aimbot profiles, hotkey toggles, and documented maintenance after Warzone patches.",
-								"Review <a href=\"/features/\">Features</a>, <a href=\"/warzone-cheats/\">undetected status</a>, and <a href=\"/warzone-cheats/\">warzone cheats 2026</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">ESP</a>, <a href=\"/warzone-aimbot/\">Aimbot</a>, <a href=\"/warzone-cheats/\">hacks</a>.",
+								"Review <a href=\"/features/\">Features</a>, <a href=\"/cheats/\">undetected status</a>, and <a href=\"/cheats/\">warzone cheats 2026</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">ESP</a>, <a href=\"/aimbot/\">Aimbot</a>, <a href=\"/cheats/\">hacks</a>.",
 							],
 						},
 						{
@@ -1025,7 +1025,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Updates</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">warzone cheats pillar</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">pricing</a>.",
+								"Still deciding? <a href=\"/cheats/\">warzone cheats pillar</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">pricing</a>.",
 							],
 						},
 					],
@@ -1040,14 +1040,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Warzone Aimbot hack gallery",
 					ctaPrimary: "Buy Warzone Cheats",
 					ctaSecondary: "Aimbot settings",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"A Warzone Aimbot hack focuses on assisted targeting during competitive fights — while ESP wallhack and radar handle map awareness. Warzone Cheats bundles aimbot hack modules with visibility overlays in one license.",
 								"Smoothness, FOV, and aim smoothing controls tune assist for Warzone combat pace across Battle Royale rounds and Battle Royale matches.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot page</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot page</a>.",
 							],
 						},
 						{
@@ -1063,7 +1063,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Updates page</a> and <a href=\"/ricochet-bypass/\">Ricochet bypass guide</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Pricing</a>.",
-								"Pair with <a href=\"/warzone-esp/\">ESP</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">ESP</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -1078,14 +1078,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Warzone ESP hack gallery",
 					ctaPrimary: "Buy Warzone Cheats",
 					ctaSecondary: "ESP controls",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"A Warzone ESP hack renders enemy player outlines, vehicle positions, and weapon drops pins through walls and terrain — closing the information gap before you commit to a fight.",
 								"Distance readouts and snapline options help control engagement range during squad pushes and third-party scenarios.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">Warzone ESP</a>. Wallhack wording: <a href=\"/warzone-esp/\">wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">Warzone ESP</a>. Wallhack wording: <a href=\"/esp/\">wallhack</a>.",
 							],
 						},
 						{
@@ -1099,9 +1099,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Updates page</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">radar hack</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Updates page</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">radar hack</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Pricing</a>.",
-								"Install steps: <a href=\"/setup/\">Setup</a>. Status questions: <a href=\"/warzone-cheats/\">undetected guide</a>.",
+								"Install steps: <a href=\"/setup/\">Setup</a>. Status questions: <a href=\"/cheats/\">undetected guide</a>.",
 							],
 						},
 					],
@@ -1130,8 +1130,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"ESP wallhack helps you spot enemy squads, enemy players, and high-value weapon drops during live matches. Radar hack adds flank awareness; Aimbot covers combat assist with smoothness and hotkey controls.",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">ESP</a> and <a href=\"/features/\">Features</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">warzone cheats</a> and <a href=\"/warzone-cheats/\">warzone cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">ESP</a> and <a href=\"/features/\">Features</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">warzone cheats</a> and <a href=\"/cheats/\">warzone cheats</a>.",
 							],
 						},
 						{
@@ -1179,7 +1179,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Your choices and contact",
 							paragraphs: [
 								"You may request correction or deletion of support email data by contacting support@cheatsforwarzone.com with your request details.",
-								"Policy updates publish on this page. Continued use of cheatsforwarzone.com after updates means you accept the revised policy. Also see <a href=\"/terms/\">Terms of Use</a> and <a href=\"/refund-policy/\">Refund Policy</a>.",
+								"Policy updates publish on this page. Continued use of cheatsforwarzone.com after updates means you accept the revised policy. Also see <a href=\"/terms/\">Terms of Use</a> and <a href=\"/refund/\">Refund Policy</a>.",
 							],
 						},
 						{
@@ -1215,7 +1215,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Warzone Cheats billing resources",
 					ctaPrimary: "Contact support",
 					ctaSecondary: "Read privacy policy",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Digital delivery and eligibility",
@@ -1264,7 +1264,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Warzone Cheats legal pages",
 					ctaPrimary: "Email support",
 					ctaSecondary: "Read privacy policy",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Acceptance and license scope",
@@ -1277,14 +1277,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Risk and anti-cheat disclaimer",
 							paragraphs: [
 								"Using cheats in Warzone may violate Activision terms and result in account penalties. Warzone Cheats provides maintenance but does not guarantee undetected status or account safety.",
-								"You assume all risk. We are not liable for bans, data loss, or damages arising from product use. See also <a href=\"/warzone-cheats/\">undetected status</a>.",
+								"You assume all risk. We are not liable for bans, data loss, or damages arising from product use. See also <a href=\"/cheats/\">undetected status</a>.",
 							],
 						},
 						{
 							h2: "Changes and governing law",
 							paragraphs: [
 								"We may update these terms by posting revisions on this page. Continued use after changes constitutes acceptance.",
-								"Contact support@cheatsforwarzone.com for questions. Related policies: <a href=\"/privacy-policy/\">Privacy</a> and <a href=\"/refund-policy/\">Refunds</a>.",
+								"Contact support@cheatsforwarzone.com for questions. Related policies: <a href=\"/privacy/\">Privacy</a> and <a href=\"/refund/\">Refunds</a>.",
 							],
 						},
 						{
@@ -1593,9 +1593,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licencias con entrega digital instantánea vía checkout checkout. Planes $35/mes y $150 de por vida incluyen mantenimiento Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -1647,7 +1647,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licencias con entrega digital instantánea vía checkout checkout. Planes $35/mes y $150 de por vida incluyen mantenimiento Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Política de reembolso</a>",
+								"<a href=\"/refund/\">Política de reembolso</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Soporte</a>",
 							],
@@ -1795,7 +1795,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licencias con entrega digital instantánea vía checkout checkout. Planes $35/mes y $150 de por vida incluyen mantenimiento Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Política de reembolso</a>",
+								"<a href=\"/refund/\">Política de reembolso</a>",
 								"<a href=\"/support/\">Soporte</a>",
 							],
 						},
@@ -1849,7 +1849,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Trucos indetectables",
 					ctaPrimary: "Comprar Warzone Cheats",
 					ctaSecondary: "Ver funciones",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -1872,7 +1872,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Tienda</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Guía de instalación</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Guía de instalación</a> after delivery.",
 							],
 						},
 						{
@@ -1895,14 +1895,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Comprar Warzone Cheats",
 					ctaSecondary: "Ver funciones",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. wallhack ESP para jugadores, weapon drops y distancia",
 								"Licencias con entrega digital instantánea vía checkout checkout. Planes $35/mes y $150 de por vida incluyen mantenimiento Ricochet.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">Guía ESP y wallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot y soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">Guía ESP y wallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot y soft aim</a>.",
 							],
 						},
 						{
@@ -1910,7 +1910,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. wallhack ESP para jugadores, weapon drops y distancia",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -1918,7 +1918,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Guía de trucos indetectables</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Mantenimiento Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Tienda</a> or continue to the <a href=\"/warzone-esp/\">Guía ESP y wallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Tienda</a> or continue to the <a href=\"/esp/\">Guía ESP y wallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -1954,7 +1954,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licencias con entrega digital instantánea vía checkout checkout. Planes $35/mes y $150 de por vida incluyen mantenimiento Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Guía ESP y wallhack</a>",
+								"<a href=\"/esp/\">Guía ESP y wallhack</a>",
 								"<a href=\"/\">Producto completo</a>",
 								"<a href=\"/pricing/\">Tienda</a>",
 							],
@@ -1986,7 +1986,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Guía de trucos indetectables</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Resumen Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -2010,7 +2010,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. cómo se gestionan las actualizaciones Ricochet para Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Guía de trucos indetectables</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Mantenimiento Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Resumen Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -2025,7 +2025,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Trucos Call of Duty: Warzone 2026",
 					ctaPrimary: "Comprar Warzone Cheats",
 					ctaSecondary: "Ver funciones",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -2039,22 +2039,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. checklist de warzone cheats 2026 antes del checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a>, <a href=\"/warzone-esp/\">Guía ESP y wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot y soft aim</a>, <a href=\"/warzone-esp/\">Guía ESP y wallhack</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>, <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">Resumen Warzone Cheats</a>, <a href=\"/esp/\">Guía ESP y wallhack</a>, <a href=\"/aimbot/\">Aimbot y soft aim</a>, <a href=\"/esp/\">Guía ESP y wallhack</a>, <a href=\"/radar/\">Overlay radar 2D</a>, <a href=\"/cheats/\">Resumen Warzone Cheats</a>.",
 								"Consulta la página Updates antes de jugar tras parches de Ricochet. Ningún cheat garantiza estado indetectable permanente.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Resumen Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Resumen Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Soporte</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot y soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot y soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Producto completo</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -2101,9 +2101,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licencias con entrega digital instantánea vía checkout checkout. Planes $35/mes y $150 de por vida incluyen mantenimiento Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Guía ESP y wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot y soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>",
+								"<a href=\"/esp/\">Guía ESP y wallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot y soft aim</a>",
+								"<a href=\"/radar/\">Overlay radar 2D</a>",
 								"<a href=\"/features/\">Todas las funciones</a>",
 							],
 						},
@@ -2159,7 +2159,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. descarga de licencia digital tras el pago",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Tienda</a>.",
-								"Feature detail: <a href=\"/features/\">Todas las funciones</a>. Module pages: <a href=\"/warzone-esp/\">Guía ESP y wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot y soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Todas las funciones</a>. Module pages: <a href=\"/esp/\">Guía ESP y wallhack</a>, <a href=\"/aimbot/\">Aimbot y soft aim</a>.",
 							],
 						},
 						{
@@ -2167,7 +2167,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Guía de trucos indetectables</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Soporte</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Resumen Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -2189,7 +2189,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. toggles de ESP y soft aim en el cliente",
 								"Licencias con entrega digital instantánea vía checkout checkout. Planes $35/mes y $150 de por vida incluyen mantenimiento Ricochet.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">Guía ESP y wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot y soft aim</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>.",
+								"Control deep-dives: <a href=\"/esp/\">Guía ESP y wallhack</a>, <a href=\"/aimbot/\">Aimbot y soft aim</a>, <a href=\"/radar/\">Overlay radar 2D</a>.",
 							],
 						},
 						{
@@ -2197,7 +2197,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. toggles de ESP y soft aim en el cliente",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot y soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot y soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -2220,14 +2220,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Soft aim Call of Duty: Warzone",
 					ctaPrimary: "Comprar Warzone Cheats",
 					ctaSecondary: "Ver funciones",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. ajustes suaves de soft aim para Windows PC",
 								"Licencias con entrega digital instantánea vía checkout checkout. Planes $35/mes y $150 de por vida incluyen mantenimiento Ricochet.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot y soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot y soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot y soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot y soft aim</a>.",
 							],
 						},
 						{
@@ -2235,7 +2235,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. ajustes suaves de soft aim para Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">Guía ESP y wallhack</a> and <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">Guía ESP y wallhack</a> and <a href=\"/radar/\">Overlay radar 2D</a> overlays.",
 							],
 						},
 						{
@@ -2272,8 +2272,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. qué comparar antes de comprar warzone cheats",
-								"Review <a href=\"/features/\">Todas las funciones</a>, <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">Guía ESP y wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot y soft aim</a>, <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">Todas las funciones</a>, <a href=\"/cheats/\">Resumen Warzone Cheats</a>, and <a href=\"/cheats/\">Resumen Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">Guía ESP y wallhack</a>, <a href=\"/aimbot/\">Aimbot y soft aim</a>, <a href=\"/cheats/\">Resumen Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -2289,7 +2289,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Guía de trucos indetectables</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Tienda</a>.",
+								"Still deciding? <a href=\"/cheats/\">Resumen Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Tienda</a>.",
 							],
 						},
 					],
@@ -2304,14 +2304,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack aimbot Call of Duty: Warzone",
 					ctaPrimary: "Comprar Warzone Cheats",
 					ctaSecondary: "Ver funciones",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. asistencia undetected de hack Aimbot para Call of Duty: Warzone",
 								"Licencias con entrega digital instantánea vía checkout checkout. Planes $35/mes y $150 de por vida incluyen mantenimiento Ricochet.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot y soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot y soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot y soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot y soft aim</a>.",
 							],
 						},
 						{
@@ -2327,7 +2327,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Guía de trucos indetectables</a> and <a href=\"/ricochet-bypass/\">Mantenimiento Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Tienda</a>.",
-								"Pair with <a href=\"/warzone-esp/\">Guía ESP y wallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">Guía ESP y wallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -2342,14 +2342,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack ESP Call of Duty: Warzone",
 					ctaPrimary: "Comprar Warzone Cheats",
 					ctaSecondary: "Ver funciones",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. cajas ESP hack, pins de carcasa y distancia",
 								"Licencias con entrega digital instantánea vía checkout checkout. Planes $35/mes y $150 de por vida incluyen mantenimiento Ricochet.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">Guía ESP y wallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">Guía ESP y wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">Guía ESP y wallhack</a>. Wallhack wording: <a href=\"/esp/\">Guía ESP y wallhack</a>.",
 							],
 						},
 						{
@@ -2363,9 +2363,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Guía de trucos indetectables</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Guía de trucos indetectables</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">Overlay radar 2D</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Tienda</a>.",
-								"Install steps: <a href=\"/setup/\">Guía de instalación</a>. Status questions: <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">Guía de instalación</a>. Status questions: <a href=\"/cheats/\">Resumen Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -2394,8 +2394,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats ofrece ESP wallhack, radar hack y Call of Duty: Warzone Aimbot indetectables para Call of Duty: Warzone en Windows PC. búsquedas unlock-all vs herramientas reales ESP y Aimbot",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">Guía ESP y wallhack</a> and <a href=\"/features/\">Todas las funciones</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a> and <a href=\"/warzone-cheats/\">Resumen Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">Guía ESP y wallhack</a> and <a href=\"/features/\">Todas las funciones</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Resumen Warzone Cheats</a> and <a href=\"/cheats/\">Resumen Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -2454,7 +2454,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "Correo al soporte",
 					ctaSecondary: "Leer privacidad",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Entrega digital",
@@ -2489,7 +2489,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "Correo al soporte",
 					ctaSecondary: "Leer privacidad",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Aceptación de términos",
@@ -2803,9 +2803,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licences avec livraison numérique instantanée via checkout checkout. Forfaits 35 $/mois et 150 $ à vie incluent la maintenance Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -2857,7 +2857,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licences avec livraison numérique instantanée via checkout checkout. Forfaits 35 $/mois et 150 $ à vie incluent la maintenance Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Politique de remboursement</a>",
+								"<a href=\"/refund/\">Politique de remboursement</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Support</a>",
 							],
@@ -3005,7 +3005,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licences avec livraison numérique instantanée via checkout checkout. Forfaits 35 $/mois et 150 $ à vie incluent la maintenance Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Politique de remboursement</a>",
+								"<a href=\"/refund/\">Politique de remboursement</a>",
 								"<a href=\"/support/\">Support</a>",
 							],
 						},
@@ -3059,7 +3059,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Triches indétectables",
 					ctaPrimary: "Acheter Warzone Cheats",
 					ctaSecondary: "Voir les fonctions",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -3082,7 +3082,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Boutique</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Guide d'installation</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Guide d'installation</a> after delivery.",
 							],
 						},
 						{
@@ -3105,14 +3105,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Acheter Warzone Cheats",
 					ctaSecondary: "Voir les fonctions",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. wallhack ESP pour joueurs, weapon drops et distance",
 								"Licences avec livraison numérique instantanée via checkout checkout. Forfaits 35 $/mois et 150 $ à vie incluent la maintenance Ricochet.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">Guide ESP et wallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot et soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">Guide ESP et wallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot et soft aim</a>.",
 							],
 						},
 						{
@@ -3120,7 +3120,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. wallhack ESP pour joueurs, weapon drops et distance",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -3128,7 +3128,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Guide triches indétectables</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Maintenance Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Boutique</a> or continue to the <a href=\"/warzone-esp/\">Guide ESP et wallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Boutique</a> or continue to the <a href=\"/esp/\">Guide ESP et wallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -3164,7 +3164,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licences avec livraison numérique instantanée via checkout checkout. Forfaits 35 $/mois et 150 $ à vie incluent la maintenance Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Guide ESP et wallhack</a>",
+								"<a href=\"/esp/\">Guide ESP et wallhack</a>",
 								"<a href=\"/\">Produit complet</a>",
 								"<a href=\"/pricing/\">Boutique</a>",
 							],
@@ -3196,7 +3196,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Guide triches indétectables</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Aperçu Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -3220,7 +3220,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. gestion des mises à jour Ricochet pour Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Guide triches indétectables</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Maintenance Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Aperçu Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -3235,7 +3235,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Triches Call of Duty: Warzone 2026",
 					ctaPrimary: "Acheter Warzone Cheats",
 					ctaSecondary: "Voir les fonctions",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -3249,22 +3249,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. checklist warzone cheats 2026 avant checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a>, <a href=\"/warzone-esp/\">Guide ESP et wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot et soft aim</a>, <a href=\"/warzone-esp/\">Guide ESP et wallhack</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>, <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">Aperçu Warzone Cheats</a>, <a href=\"/esp/\">Guide ESP et wallhack</a>, <a href=\"/aimbot/\">Aimbot et soft aim</a>, <a href=\"/esp/\">Guide ESP et wallhack</a>, <a href=\"/radar/\">Overlay radar 2D</a>, <a href=\"/cheats/\">Aperçu Warzone Cheats</a>.",
 								"Consultez Updates après les patchs Ricochet. Aucune triche ne garantit un statut indétectable permanent.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Aperçu Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Aperçu Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Support</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot et soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot et soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Produit complet</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -3311,9 +3311,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licences avec livraison numérique instantanée via checkout checkout. Forfaits 35 $/mois et 150 $ à vie incluent la maintenance Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Guide ESP et wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot et soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>",
+								"<a href=\"/esp/\">Guide ESP et wallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot et soft aim</a>",
+								"<a href=\"/radar/\">Overlay radar 2D</a>",
 								"<a href=\"/features/\">Toutes les fonctions</a>",
 							],
 						},
@@ -3369,7 +3369,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. téléchargement licence numérique après paiement",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Boutique</a>.",
-								"Feature detail: <a href=\"/features/\">Toutes les fonctions</a>. Module pages: <a href=\"/warzone-esp/\">Guide ESP et wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot et soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Toutes les fonctions</a>. Module pages: <a href=\"/esp/\">Guide ESP et wallhack</a>, <a href=\"/aimbot/\">Aimbot et soft aim</a>.",
 							],
 						},
 						{
@@ -3377,7 +3377,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Guide triches indétectables</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Support</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Aperçu Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -3399,7 +3399,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. toggles ESP et soft aim in-client",
 								"Licences avec livraison numérique instantanée via checkout checkout. Forfaits 35 $/mois et 150 $ à vie incluent la maintenance Ricochet.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">Guide ESP et wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot et soft aim</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>.",
+								"Control deep-dives: <a href=\"/esp/\">Guide ESP et wallhack</a>, <a href=\"/aimbot/\">Aimbot et soft aim</a>, <a href=\"/radar/\">Overlay radar 2D</a>.",
 							],
 						},
 						{
@@ -3407,7 +3407,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. toggles ESP et soft aim in-client",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot et soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot et soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -3430,14 +3430,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Soft aim Call of Duty: Warzone",
 					ctaPrimary: "Acheter Warzone Cheats",
 					ctaSecondary: "Voir les fonctions",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. réglages soft aim fluides pour Windows PC",
 								"Licences avec livraison numérique instantanée via checkout checkout. Forfaits 35 $/mois et 150 $ à vie incluent la maintenance Ricochet.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot et soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot et soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot et soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot et soft aim</a>.",
 							],
 						},
 						{
@@ -3445,7 +3445,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. réglages soft aim fluides pour Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">Guide ESP et wallhack</a> and <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">Guide ESP et wallhack</a> and <a href=\"/radar/\">Overlay radar 2D</a> overlays.",
 							],
 						},
 						{
@@ -3482,8 +3482,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. quoi comparer avant d'acheter warzone cheats",
-								"Review <a href=\"/features/\">Toutes les fonctions</a>, <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">Guide ESP et wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot et soft aim</a>, <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">Toutes les fonctions</a>, <a href=\"/cheats/\">Aperçu Warzone Cheats</a>, and <a href=\"/cheats/\">Aperçu Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">Guide ESP et wallhack</a>, <a href=\"/aimbot/\">Aimbot et soft aim</a>, <a href=\"/cheats/\">Aperçu Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -3499,7 +3499,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Guide triches indétectables</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Boutique</a>.",
+								"Still deciding? <a href=\"/cheats/\">Aperçu Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Boutique</a>.",
 							],
 						},
 					],
@@ -3514,14 +3514,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack aimbot Call of Duty: Warzone",
 					ctaPrimary: "Acheter Warzone Cheats",
 					ctaSecondary: "Voir les fonctions",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. assist hack Aimbot undetected pour Call of Duty: Warzone",
 								"Licences avec livraison numérique instantanée via checkout checkout. Forfaits 35 $/mois et 150 $ à vie incluent la maintenance Ricochet.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot et soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot et soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot et soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot et soft aim</a>.",
 							],
 						},
 						{
@@ -3537,7 +3537,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Guide triches indétectables</a> and <a href=\"/ricochet-bypass/\">Maintenance Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Boutique</a>.",
-								"Pair with <a href=\"/warzone-esp/\">Guide ESP et wallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">Guide ESP et wallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -3552,14 +3552,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack ESP Call of Duty: Warzone",
 					ctaPrimary: "Acheter Warzone Cheats",
 					ctaSecondary: "Voir les fonctions",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. boîtes ESP hack, pins weapon dropse et distance",
 								"Licences avec livraison numérique instantanée via checkout checkout. Forfaits 35 $/mois et 150 $ à vie incluent la maintenance Ricochet.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">Guide ESP et wallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">Guide ESP et wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">Guide ESP et wallhack</a>. Wallhack wording: <a href=\"/esp/\">Guide ESP et wallhack</a>.",
 							],
 						},
 						{
@@ -3573,9 +3573,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Guide triches indétectables</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Guide triches indétectables</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">Overlay radar 2D</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Boutique</a>.",
-								"Install steps: <a href=\"/setup/\">Guide d'installation</a>. Status questions: <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">Guide d'installation</a>. Status questions: <a href=\"/cheats/\">Aperçu Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -3604,8 +3604,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats combine ESP wallhack, radar hack et Call of Duty: Warzone Aimbot indétectables pour Call of Duty: Warzone sur PC Windows. recherches unlock-all vs vrais outils ESP et Aimbot",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">Guide ESP et wallhack</a> and <a href=\"/features/\">Toutes les fonctions</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a> and <a href=\"/warzone-cheats/\">Aperçu Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">Guide ESP et wallhack</a> and <a href=\"/features/\">Toutes les fonctions</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Aperçu Warzone Cheats</a> and <a href=\"/cheats/\">Aperçu Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -3664,7 +3664,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "Contacter le support",
 					ctaSecondary: "Lire la confidentialité",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Livraison numérique",
@@ -3699,7 +3699,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "Contacter le support",
 					ctaSecondary: "Lire la confidentialité",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Acceptation des conditions",
@@ -4013,9 +4013,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Lizenzen mit sofortige digitale Lieferung über checkout Checkout. $35/Monat und $150 Lifetime inkl. Ricochet-Wartung.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -4067,7 +4067,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Lizenzen mit sofortige digitale Lieferung über checkout Checkout. $35/Monat und $150 Lifetime inkl. Ricochet-Wartung.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Rückerstattungsrichtlinie</a>",
+								"<a href=\"/refund/\">Rückerstattungsrichtlinie</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Support</a>",
 							],
@@ -4215,7 +4215,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Lizenzen mit sofortige digitale Lieferung über checkout Checkout. $35/Monat und $150 Lifetime inkl. Ricochet-Wartung.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Rückerstattungsrichtlinie</a>",
+								"<a href=\"/refund/\">Rückerstattungsrichtlinie</a>",
 								"<a href=\"/support/\">Support</a>",
 							],
 						},
@@ -4269,7 +4269,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Undetected Cheats",
 					ctaPrimary: "Warzone Cheats kaufen",
 					ctaSecondary: "Features ansehen",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -4292,7 +4292,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Shop</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Setup-Anleitung</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Setup-Anleitung</a> after delivery.",
 							],
 						},
 						{
@@ -4315,14 +4315,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Warzone Cheats kaufen",
 					ctaSecondary: "Features ansehen",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. Wallhack ESP für Spieler, Kadaver und Entfernung",
 								"Lizenzen mit sofortige digitale Lieferung über checkout Checkout. $35/Monat und $150 Lifetime inkl. Ricochet-Wartung.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot und Soft Aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">ESP- und Wallhack-Guide</a>; for combat assist see <a href=\"/aimbot/\">Aimbot und Soft Aim</a>.",
 							],
 						},
 						{
@@ -4330,7 +4330,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. Wallhack ESP für Spieler, Kadaver und Entfernung",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">2D-Radar-Overlay</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">2D-Radar-Overlay</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -4338,7 +4338,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Undetected Cheats Guide</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Ricochet Wartung</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Shop</a> or continue to the <a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Shop</a> or continue to the <a href=\"/esp/\">ESP- und Wallhack-Guide</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -4374,7 +4374,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Lizenzen mit sofortige digitale Lieferung über checkout Checkout. $35/Monat und $150 Lifetime inkl. Ricochet-Wartung.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a>",
+								"<a href=\"/esp/\">ESP- und Wallhack-Guide</a>",
 								"<a href=\"/\">Vollständiges Produkt</a>",
 								"<a href=\"/pricing/\">Shop</a>",
 							],
@@ -4406,7 +4406,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Undetected Cheats Guide</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Warzone Cheats Übersicht</a>.",
 							],
 						},
 						{
@@ -4430,7 +4430,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. wie Ricochet Updates für Warzone Cheats gehandhabt werden",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Undetected Cheats Guide</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Ricochet Wartung</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Warzone Cheats Übersicht</a>.",
 							],
 						},
 					],
@@ -4445,7 +4445,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Warzone Cheats 2026",
 					ctaPrimary: "Warzone Cheats kaufen",
 					ctaSecondary: "Features ansehen",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -4459,22 +4459,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. 2026 warzone cheats Checkliste vor dem Checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a>, <a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a>, <a href=\"/warzone-aimbot/\">Aimbot und Soft Aim</a>, <a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a>, <a href=\"/warzone-radar-hack/\">2D-Radar-Overlay</a>, <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a>.",
+								"Deep links: <a href=\"/cheats/\">Warzone Cheats Übersicht</a>, <a href=\"/esp/\">ESP- und Wallhack-Guide</a>, <a href=\"/aimbot/\">Aimbot und Soft Aim</a>, <a href=\"/esp/\">ESP- und Wallhack-Guide</a>, <a href=\"/radar/\">2D-Radar-Overlay</a>, <a href=\"/cheats/\">Warzone Cheats Übersicht</a>.",
 								"Updates-Seite nach Ricochet-Patches prüfen. Kein Cheat garantiert dauerhaft undetected Status.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Warzone Cheats Übersicht</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Warzone Cheats Übersicht</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Support</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot und Soft Aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot und Soft Aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Vollständiges Produkt</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -4521,9 +4521,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Lizenzen mit sofortige digitale Lieferung über checkout Checkout. $35/Monat und $150 Lifetime inkl. Ricochet-Wartung.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot und Soft Aim</a>",
-								"<a href=\"/warzone-radar-hack/\">2D-Radar-Overlay</a>",
+								"<a href=\"/esp/\">ESP- und Wallhack-Guide</a>",
+								"<a href=\"/aimbot/\">Aimbot und Soft Aim</a>",
+								"<a href=\"/radar/\">2D-Radar-Overlay</a>",
 								"<a href=\"/features/\">Alle Features</a>",
 							],
 						},
@@ -4579,7 +4579,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. digitaler Lizenz-Download nach Zahlung",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Shop</a>.",
-								"Feature detail: <a href=\"/features/\">Alle Features</a>. Module pages: <a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a>, <a href=\"/warzone-aimbot/\">Aimbot und Soft Aim</a>.",
+								"Feature detail: <a href=\"/features/\">Alle Features</a>. Module pages: <a href=\"/esp/\">ESP- und Wallhack-Guide</a>, <a href=\"/aimbot/\">Aimbot und Soft Aim</a>.",
 							],
 						},
 						{
@@ -4587,7 +4587,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Undetected Cheats Guide</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Support</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Warzone Cheats Übersicht</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -4609,7 +4609,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. In-Client ESP- und Soft-Aim-Toggles",
 								"Lizenzen mit sofortige digitale Lieferung über checkout Checkout. $35/Monat und $150 Lifetime inkl. Ricochet-Wartung.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a>, <a href=\"/warzone-aimbot/\">Aimbot und Soft Aim</a>, <a href=\"/warzone-radar-hack/\">2D-Radar-Overlay</a>.",
+								"Control deep-dives: <a href=\"/esp/\">ESP- und Wallhack-Guide</a>, <a href=\"/aimbot/\">Aimbot und Soft Aim</a>, <a href=\"/radar/\">2D-Radar-Overlay</a>.",
 							],
 						},
 						{
@@ -4617,7 +4617,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. In-Client ESP- und Soft-Aim-Toggles",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot und Soft Aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot und Soft Aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -4640,14 +4640,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Soft Aim",
 					ctaPrimary: "Warzone Cheats kaufen",
 					ctaSecondary: "Features ansehen",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. sanfte Soft-Aim-Einstellungen für Windows PC",
 								"Lizenzen mit sofortige digitale Lieferung über checkout Checkout. $35/Monat und $150 Lifetime inkl. Ricochet-Wartung.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot und Soft Aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot und Soft Aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot und Soft Aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot und Soft Aim</a>.",
 							],
 						},
 						{
@@ -4655,7 +4655,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. sanfte Soft-Aim-Einstellungen für Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a> and <a href=\"/warzone-radar-hack/\">2D-Radar-Overlay</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">ESP- und Wallhack-Guide</a> and <a href=\"/radar/\">2D-Radar-Overlay</a> overlays.",
 							],
 						},
 						{
@@ -4692,8 +4692,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. was vor dem Kauf der warzone cheats verglichen werden sollte",
-								"Review <a href=\"/features/\">Alle Features</a>, <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a>, and <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a>, <a href=\"/warzone-aimbot/\">Aimbot und Soft Aim</a>, <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a>.",
+								"Review <a href=\"/features/\">Alle Features</a>, <a href=\"/cheats/\">Warzone Cheats Übersicht</a>, and <a href=\"/cheats/\">Warzone Cheats Übersicht</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">ESP- und Wallhack-Guide</a>, <a href=\"/aimbot/\">Aimbot und Soft Aim</a>, <a href=\"/cheats/\">Warzone Cheats Übersicht</a>.",
 							],
 						},
 						{
@@ -4709,7 +4709,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Undetected Cheats Guide</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Shop</a>.",
+								"Still deciding? <a href=\"/cheats/\">Warzone Cheats Übersicht</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Shop</a>.",
 							],
 						},
 					],
@@ -4724,14 +4724,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Aimbot Hack",
 					ctaPrimary: "Warzone Cheats kaufen",
 					ctaSecondary: "Features ansehen",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. undetected Aimbot-Hack-Assist für Call of Duty: Warzone",
 								"Lizenzen mit sofortige digitale Lieferung über checkout Checkout. $35/Monat und $150 Lifetime inkl. Ricochet-Wartung.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot und Soft Aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot und Soft Aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot und Soft Aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot und Soft Aim</a>.",
 							],
 						},
 						{
@@ -4747,7 +4747,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Undetected Cheats Guide</a> and <a href=\"/ricochet-bypass/\">Ricochet Wartung</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Shop</a>.",
-								"Pair with <a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">ESP- und Wallhack-Guide</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -4762,14 +4762,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone ESP Hack",
 					ctaPrimary: "Warzone Cheats kaufen",
 					ctaSecondary: "Features ansehen",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. ESP-Hack-Boxen, Kadaver-Pins und Entfernung",
 								"Lizenzen mit sofortige digitale Lieferung über checkout Checkout. $35/Monat und $150 Lifetime inkl. Ricochet-Wartung.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a>. Wallhack wording: <a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">ESP- und Wallhack-Guide</a>. Wallhack wording: <a href=\"/esp/\">ESP- und Wallhack-Guide</a>.",
 							],
 						},
 						{
@@ -4783,9 +4783,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected Cheats Guide</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">2D-Radar-Overlay</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected Cheats Guide</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">2D-Radar-Overlay</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Shop</a>.",
-								"Install steps: <a href=\"/setup/\">Setup-Anleitung</a>. Status questions: <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a>.",
+								"Install steps: <a href=\"/setup/\">Setup-Anleitung</a>. Status questions: <a href=\"/cheats/\">Warzone Cheats Übersicht</a>.",
 							],
 						},
 					],
@@ -4814,8 +4814,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats bündelt ESP wallhack, radar hack und Call of Duty: Warzone Aimbot als undetected Paket für Call of Duty: Warzone auf Windows PC. unlock-all Suchen vs echte ESP- und Aimbot-Tools",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">ESP- und Wallhack-Guide</a> and <a href=\"/features/\">Alle Features</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a> and <a href=\"/warzone-cheats/\">Warzone Cheats Übersicht</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">ESP- und Wallhack-Guide</a> and <a href=\"/features/\">Alle Features</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Warzone Cheats Übersicht</a> and <a href=\"/cheats/\">Warzone Cheats Übersicht</a>.",
 							],
 						},
 						{
@@ -4874,7 +4874,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "Support per E-Mail",
 					ctaSecondary: "Datenschutz lesen",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Digitale Lieferung",
@@ -4909,7 +4909,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "Support per E-Mail",
 					ctaSecondary: "Datenschutz lesen",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Annahme der Bedingungen",
@@ -5223,9 +5223,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenças com entrega digital instantânea via checkout checkout. Planos $35/mês e $150 vitalício incluem manutenção Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -5277,7 +5277,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenças com entrega digital instantânea via checkout checkout. Planos $35/mês e $150 vitalício incluem manutenção Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Política de reembolso</a>",
+								"<a href=\"/refund/\">Política de reembolso</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Suporte</a>",
 							],
@@ -5425,7 +5425,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenças com entrega digital instantânea via checkout checkout. Planos $35/mês e $150 vitalício incluem manutenção Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Política de reembolso</a>",
+								"<a href=\"/refund/\">Política de reembolso</a>",
 								"<a href=\"/support/\">Suporte</a>",
 							],
 						},
@@ -5479,7 +5479,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheats indetectáveis",
 					ctaPrimary: "Comprar Warzone Cheats",
 					ctaSecondary: "Ver recursos",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -5502,7 +5502,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Loja</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Guia de instalação</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Guia de instalação</a> after delivery.",
 							],
 						},
 						{
@@ -5525,14 +5525,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Comprar Warzone Cheats",
 					ctaSecondary: "Ver recursos",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. wallhack ESP para jogadores, carcaças e distância",
 								"Licenças com entrega digital instantânea via checkout checkout. Planos $35/mês e $150 vitalício incluem manutenção Ricochet.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">Guia ESP e wallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">Guia ESP e wallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot e soft aim</a>.",
 							],
 						},
 						{
@@ -5540,7 +5540,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. wallhack ESP para jogadores, carcaças e distância",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -5548,7 +5548,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Guia de cheats indetectáveis</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Manutenção Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Loja</a> or continue to the <a href=\"/warzone-esp/\">Guia ESP e wallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Loja</a> or continue to the <a href=\"/esp/\">Guia ESP e wallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -5584,7 +5584,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenças com entrega digital instantânea via checkout checkout. Planos $35/mês e $150 vitalício incluem manutenção Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Guia ESP e wallhack</a>",
+								"<a href=\"/esp/\">Guia ESP e wallhack</a>",
 								"<a href=\"/\">Produto completo</a>",
 								"<a href=\"/pricing/\">Loja</a>",
 							],
@@ -5616,7 +5616,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Guia de cheats indetectáveis</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Visão geral Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -5640,7 +5640,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. como as atualizações Ricochet são tratadas para Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Guia de cheats indetectáveis</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Manutenção Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Visão geral Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -5655,7 +5655,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheats Call of Duty: Warzone 2026",
 					ctaPrimary: "Comprar Warzone Cheats",
 					ctaSecondary: "Ver recursos",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -5669,22 +5669,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. checklist de warzone cheats 2026 antes do checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a>, <a href=\"/warzone-esp/\">Guia ESP e wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>, <a href=\"/warzone-esp/\">Guia ESP e wallhack</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>, <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">Visão geral Warzone Cheats</a>, <a href=\"/esp/\">Guia ESP e wallhack</a>, <a href=\"/aimbot/\">Aimbot e soft aim</a>, <a href=\"/esp/\">Guia ESP e wallhack</a>, <a href=\"/radar/\">Overlay radar 2D</a>, <a href=\"/cheats/\">Visão geral Warzone Cheats</a>.",
 								"Verifique Updates após patches Ricochet. Nenhum cheat garante status indetectável permanente.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Visão geral Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Visão geral Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Suporte</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot e soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Produto completo</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -5731,9 +5731,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenças com entrega digital instantânea via checkout checkout. Planos $35/mês e $150 vitalício incluem manutenção Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Guia ESP e wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>",
+								"<a href=\"/esp/\">Guia ESP e wallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot e soft aim</a>",
+								"<a href=\"/radar/\">Overlay radar 2D</a>",
 								"<a href=\"/features/\">Todos os recursos</a>",
 							],
 						},
@@ -5789,7 +5789,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. download de licença digital após pagamento",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Loja</a>.",
-								"Feature detail: <a href=\"/features/\">Todos os recursos</a>. Module pages: <a href=\"/warzone-esp/\">Guia ESP e wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Todos os recursos</a>. Module pages: <a href=\"/esp/\">Guia ESP e wallhack</a>, <a href=\"/aimbot/\">Aimbot e soft aim</a>.",
 							],
 						},
 						{
@@ -5797,7 +5797,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Guia de cheats indetectáveis</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Suporte</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Visão geral Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -5819,7 +5819,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. toggles de ESP e soft aim no cliente",
 								"Licenças com entrega digital instantânea via checkout checkout. Planos $35/mês e $150 vitalício incluem manutenção Ricochet.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">Guia ESP e wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>.",
+								"Control deep-dives: <a href=\"/esp/\">Guia ESP e wallhack</a>, <a href=\"/aimbot/\">Aimbot e soft aim</a>, <a href=\"/radar/\">Overlay radar 2D</a>.",
 							],
 						},
 						{
@@ -5827,7 +5827,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. toggles de ESP e soft aim no cliente",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot e soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -5850,14 +5850,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Soft aim Call of Duty: Warzone",
 					ctaPrimary: "Comprar Warzone Cheats",
 					ctaSecondary: "Ver recursos",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. ajustes suaves de soft aim para Windows PC",
 								"Licenças com entrega digital instantânea via checkout checkout. Planos $35/mês e $150 vitalício incluem manutenção Ricochet.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot e soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot e soft aim</a>.",
 							],
 						},
 						{
@@ -5865,7 +5865,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. ajustes suaves de soft aim para Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">Guia ESP e wallhack</a> and <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">Guia ESP e wallhack</a> and <a href=\"/radar/\">Overlay radar 2D</a> overlays.",
 							],
 						},
 						{
@@ -5902,8 +5902,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. o que comparar antes de comprar warzone cheats",
-								"Review <a href=\"/features/\">Todos os recursos</a>, <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">Guia ESP e wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>, <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">Todos os recursos</a>, <a href=\"/cheats/\">Visão geral Warzone Cheats</a>, and <a href=\"/cheats/\">Visão geral Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">Guia ESP e wallhack</a>, <a href=\"/aimbot/\">Aimbot e soft aim</a>, <a href=\"/cheats/\">Visão geral Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -5919,7 +5919,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Guia de cheats indetectáveis</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Loja</a>.",
+								"Still deciding? <a href=\"/cheats/\">Visão geral Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Loja</a>.",
 							],
 						},
 					],
@@ -5934,14 +5934,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack aimbot Call of Duty: Warzone",
 					ctaPrimary: "Comprar Warzone Cheats",
 					ctaSecondary: "Ver recursos",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. assistência undetected de hack Aimbot para Call of Duty: Warzone",
 								"Licenças com entrega digital instantânea via checkout checkout. Planos $35/mês e $150 vitalício incluem manutenção Ricochet.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot e soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot e soft aim</a>.",
 							],
 						},
 						{
@@ -5957,7 +5957,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Guia de cheats indetectáveis</a> and <a href=\"/ricochet-bypass/\">Manutenção Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Loja</a>.",
-								"Pair with <a href=\"/warzone-esp/\">Guia ESP e wallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">Guia ESP e wallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -5972,14 +5972,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack ESP Call of Duty: Warzone",
 					ctaPrimary: "Comprar Warzone Cheats",
 					ctaSecondary: "Ver recursos",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. caixas ESP hack, pins de carcaça e distância",
 								"Licenças com entrega digital instantânea via checkout checkout. Planos $35/mês e $150 vitalício incluem manutenção Ricochet.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">Guia ESP e wallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">Guia ESP e wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">Guia ESP e wallhack</a>. Wallhack wording: <a href=\"/esp/\">Guia ESP e wallhack</a>.",
 							],
 						},
 						{
@@ -5993,9 +5993,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Guia de cheats indetectáveis</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Guia de cheats indetectáveis</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">Overlay radar 2D</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Loja</a>.",
-								"Install steps: <a href=\"/setup/\">Guia de instalação</a>. Status questions: <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">Guia de instalação</a>. Status questions: <a href=\"/cheats/\">Visão geral Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -6024,8 +6024,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats reúne ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectáveis para Call of Duty: Warzone no PC Windows. buscas unlock-all vs ferramentas reais ESP e Aimbot",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">Guia ESP e wallhack</a> and <a href=\"/features/\">Todos os recursos</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a> and <a href=\"/warzone-cheats/\">Visão geral Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">Guia ESP e wallhack</a> and <a href=\"/features/\">Todos os recursos</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Visão geral Warzone Cheats</a> and <a href=\"/cheats/\">Visão geral Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -6084,7 +6084,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "E-mail ao suporte",
 					ctaSecondary: "Ler privacidade",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Entrega digital",
@@ -6119,7 +6119,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "E-mail ao suporte",
 					ctaSecondary: "Ler privacidade",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Aceitação dos termos",
@@ -6433,9 +6433,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenze con consegna digitale istantanea via checkout checkout. Piani $35/mese e $150 a vita includono manutenzione Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -6487,7 +6487,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenze con consegna digitale istantanea via checkout checkout. Piani $35/mese e $150 a vita includono manutenzione Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Politica di rimborso</a>",
+								"<a href=\"/refund/\">Politica di rimborso</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Supporto</a>",
 							],
@@ -6635,7 +6635,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenze con consegna digitale istantanea via checkout checkout. Piani $35/mese e $150 a vita includono manutenzione Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Politica di rimborso</a>",
+								"<a href=\"/refund/\">Politica di rimborso</a>",
 								"<a href=\"/support/\">Supporto</a>",
 							],
 						},
@@ -6689,7 +6689,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheat indetectable",
 					ctaPrimary: "Acquista Warzone Cheats",
 					ctaSecondary: "Vedi funzioni",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -6712,7 +6712,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Negozio</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Guida installazione</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Guida installazione</a> after delivery.",
 							],
 						},
 						{
@@ -6735,14 +6735,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Acquista Warzone Cheats",
 					ctaSecondary: "Vedi funzioni",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. wallhack ESP per giocatori, weapon drops e distanza",
 								"Licenze con consegna digitale istantanea via checkout checkout. Piani $35/mese e $150 a vita includono manutenzione Ricochet.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">Guida ESP e wallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">Guida ESP e wallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot e soft aim</a>.",
 							],
 						},
 						{
@@ -6750,7 +6750,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. wallhack ESP per giocatori, weapon drops e distanza",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -6758,7 +6758,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Guida cheat indetectable</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Manutenzione Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Negozio</a> or continue to the <a href=\"/warzone-esp/\">Guida ESP e wallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Negozio</a> or continue to the <a href=\"/esp/\">Guida ESP e wallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -6794,7 +6794,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenze con consegna digitale istantanea via checkout checkout. Piani $35/mese e $150 a vita includono manutenzione Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Guida ESP e wallhack</a>",
+								"<a href=\"/esp/\">Guida ESP e wallhack</a>",
 								"<a href=\"/\">Prodotto completo</a>",
 								"<a href=\"/pricing/\">Negozio</a>",
 							],
@@ -6826,7 +6826,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Guida cheat indetectable</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Panoramica Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -6850,7 +6850,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. come vengono gestiti gli aggiornamenti Ricochet per Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Guida cheat indetectable</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Manutenzione Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Panoramica Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -6865,7 +6865,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheat Call of Duty: Warzone 2026",
 					ctaPrimary: "Acquista Warzone Cheats",
 					ctaSecondary: "Vedi funzioni",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -6879,22 +6879,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. checklist warzone cheats 2026 prima del checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a>, <a href=\"/warzone-esp/\">Guida ESP e wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>, <a href=\"/warzone-esp/\">Guida ESP e wallhack</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>, <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">Panoramica Warzone Cheats</a>, <a href=\"/esp/\">Guida ESP e wallhack</a>, <a href=\"/aimbot/\">Aimbot e soft aim</a>, <a href=\"/esp/\">Guida ESP e wallhack</a>, <a href=\"/radar/\">Overlay radar 2D</a>, <a href=\"/cheats/\">Panoramica Warzone Cheats</a>.",
 								"Controlla Updates dopo patch Ricochet. Nessun cheat garantisce stato indetectable permanente.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Panoramica Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Panoramica Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Supporto</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot e soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Prodotto completo</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -6941,9 +6941,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenze con consegna digitale istantanea via checkout checkout. Piani $35/mese e $150 a vita includono manutenzione Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Guida ESP e wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>",
+								"<a href=\"/esp/\">Guida ESP e wallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot e soft aim</a>",
+								"<a href=\"/radar/\">Overlay radar 2D</a>",
 								"<a href=\"/features/\">Tutte le funzioni</a>",
 							],
 						},
@@ -6999,7 +6999,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. download licenza digitale dopo il pagamento",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Negozio</a>.",
-								"Feature detail: <a href=\"/features/\">Tutte le funzioni</a>. Module pages: <a href=\"/warzone-esp/\">Guida ESP e wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Tutte le funzioni</a>. Module pages: <a href=\"/esp/\">Guida ESP e wallhack</a>, <a href=\"/aimbot/\">Aimbot e soft aim</a>.",
 							],
 						},
 						{
@@ -7007,7 +7007,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Guida cheat indetectable</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Supporto</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Panoramica Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -7029,7 +7029,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. toggle ESP e soft aim in-client",
 								"Licenze con consegna digitale istantanea via checkout checkout. Piani $35/mese e $150 a vita includono manutenzione Ricochet.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">Guida ESP e wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>.",
+								"Control deep-dives: <a href=\"/esp/\">Guida ESP e wallhack</a>, <a href=\"/aimbot/\">Aimbot e soft aim</a>, <a href=\"/radar/\">Overlay radar 2D</a>.",
 							],
 						},
 						{
@@ -7037,7 +7037,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. toggle ESP e soft aim in-client",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot e soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -7060,14 +7060,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Soft aim Call of Duty: Warzone",
 					ctaPrimary: "Acquista Warzone Cheats",
 					ctaSecondary: "Vedi funzioni",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. impostazioni soft aim fluide per Windows PC",
 								"Licenze con consegna digitale istantanea via checkout checkout. Piani $35/mese e $150 a vita includono manutenzione Ricochet.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot e soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot e soft aim</a>.",
 							],
 						},
 						{
@@ -7075,7 +7075,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. impostazioni soft aim fluide per Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">Guida ESP e wallhack</a> and <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">Guida ESP e wallhack</a> and <a href=\"/radar/\">Overlay radar 2D</a> overlays.",
 							],
 						},
 						{
@@ -7112,8 +7112,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. cosa confrontare prima di acquistare warzone cheats",
-								"Review <a href=\"/features/\">Tutte le funzioni</a>, <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">Guida ESP e wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>, <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">Tutte le funzioni</a>, <a href=\"/cheats/\">Panoramica Warzone Cheats</a>, and <a href=\"/cheats/\">Panoramica Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">Guida ESP e wallhack</a>, <a href=\"/aimbot/\">Aimbot e soft aim</a>, <a href=\"/cheats/\">Panoramica Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -7129,7 +7129,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Guida cheat indetectable</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Negozio</a>.",
+								"Still deciding? <a href=\"/cheats/\">Panoramica Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Negozio</a>.",
 							],
 						},
 					],
@@ -7144,14 +7144,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack aimbot Call of Duty: Warzone",
 					ctaPrimary: "Acquista Warzone Cheats",
 					ctaSecondary: "Vedi funzioni",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. assist undetected hack Aimbot per Call of Duty: Warzone",
 								"Licenze con consegna digitale istantanea via checkout checkout. Piani $35/mese e $150 a vita includono manutenzione Ricochet.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot e soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot e soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot e soft aim</a>.",
 							],
 						},
 						{
@@ -7167,7 +7167,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Guida cheat indetectable</a> and <a href=\"/ricochet-bypass/\">Manutenzione Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Negozio</a>.",
-								"Pair with <a href=\"/warzone-esp/\">Guida ESP e wallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">Guida ESP e wallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -7182,14 +7182,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack ESP Call of Duty: Warzone",
 					ctaPrimary: "Acquista Warzone Cheats",
 					ctaSecondary: "Vedi funzioni",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. box ESP hack, pin weapon dropsa e distanza",
 								"Licenze con consegna digitale istantanea via checkout checkout. Piani $35/mese e $150 a vita includono manutenzione Ricochet.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">Guida ESP e wallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">Guida ESP e wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">Guida ESP e wallhack</a>. Wallhack wording: <a href=\"/esp/\">Guida ESP e wallhack</a>.",
 							],
 						},
 						{
@@ -7203,9 +7203,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Guida cheat indetectable</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Guida cheat indetectable</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">Overlay radar 2D</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Negozio</a>.",
-								"Install steps: <a href=\"/setup/\">Guida installazione</a>. Status questions: <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">Guida installazione</a>. Status questions: <a href=\"/cheats/\">Panoramica Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -7234,8 +7234,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats unisce ESP wallhack, radar hack e Call of Duty: Warzone Aimbot indetectable per Call of Duty: Warzone su PC Windows. ricerche unlock-all vs veri strumenti ESP e Aimbot",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">Guida ESP e wallhack</a> and <a href=\"/features/\">Tutte le funzioni</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a> and <a href=\"/warzone-cheats/\">Panoramica Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">Guida ESP e wallhack</a> and <a href=\"/features/\">Tutte le funzioni</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Panoramica Warzone Cheats</a> and <a href=\"/cheats/\">Panoramica Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -7294,7 +7294,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "Email al supporto",
 					ctaSecondary: "Leggi la privacy",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Consegna digitale",
@@ -7329,7 +7329,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "Email al supporto",
 					ctaSecondary: "Leggi la privacy",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Accettazione dei termini",
@@ -7643,9 +7643,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenties met directe digitale levering via checkout checkout. $35/maand en $150 lifetime incl. Ricochet-onderhoud.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -7697,7 +7697,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenties met directe digitale levering via checkout checkout. $35/maand en $150 lifetime incl. Ricochet-onderhoud.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Restitutiebeleid</a>",
+								"<a href=\"/refund/\">Restitutiebeleid</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Support</a>",
 							],
@@ -7845,7 +7845,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenties met directe digitale levering via checkout checkout. $35/maand en $150 lifetime incl. Ricochet-onderhoud.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Restitutiebeleid</a>",
+								"<a href=\"/refund/\">Restitutiebeleid</a>",
 								"<a href=\"/support/\">Support</a>",
 							],
 						},
@@ -7899,7 +7899,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Undetected Cheats",
 					ctaPrimary: "Warzone Cheats kopen",
 					ctaSecondary: "Bekijk functies",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -7922,7 +7922,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Winkel</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Installatiegids</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Installatiegids</a> after delivery.",
 							],
 						},
 						{
@@ -7945,14 +7945,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Warzone Cheats kopen",
 					ctaSecondary: "Bekijk functies",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. wallhack ESP voor spelers, karkassen en afstand",
 								"Licenties met directe digitale levering via checkout checkout. $35/maand en $150 lifetime incl. Ricochet-onderhoud.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">ESP- en wallhack-gids</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot en soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">ESP- en wallhack-gids</a>; for combat assist see <a href=\"/aimbot/\">Aimbot en soft aim</a>.",
 							],
 						},
 						{
@@ -7960,7 +7960,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. wallhack ESP voor spelers, karkassen en afstand",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">2D-radaroverlay</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">2D-radaroverlay</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -7968,7 +7968,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Undetected cheats gids</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Ricochet onderhoud</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Winkel</a> or continue to the <a href=\"/warzone-esp/\">ESP- en wallhack-gids</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Winkel</a> or continue to the <a href=\"/esp/\">ESP- en wallhack-gids</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -8004,7 +8004,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenties met directe digitale levering via checkout checkout. $35/maand en $150 lifetime incl. Ricochet-onderhoud.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP- en wallhack-gids</a>",
+								"<a href=\"/esp/\">ESP- en wallhack-gids</a>",
 								"<a href=\"/\">Volledig product</a>",
 								"<a href=\"/pricing/\">Winkel</a>",
 							],
@@ -8036,7 +8036,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Undetected cheats gids</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Warzone Cheats overzicht</a>.",
 							],
 						},
 						{
@@ -8060,7 +8060,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. hoe Ricochet updates worden afgehandeld voor Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Undetected cheats gids</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Ricochet onderhoud</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Warzone Cheats overzicht</a>.",
 							],
 						},
 					],
@@ -8075,7 +8075,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Warzone Cheats 2026",
 					ctaPrimary: "Warzone Cheats kopen",
 					ctaSecondary: "Bekijk functies",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -8089,22 +8089,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. 2026 warzone cheats checklist vóór checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a>, <a href=\"/warzone-esp/\">ESP- en wallhack-gids</a>, <a href=\"/warzone-aimbot/\">Aimbot en soft aim</a>, <a href=\"/warzone-esp/\">ESP- en wallhack-gids</a>, <a href=\"/warzone-radar-hack/\">2D-radaroverlay</a>, <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a>.",
+								"Deep links: <a href=\"/cheats/\">Warzone Cheats overzicht</a>, <a href=\"/esp/\">ESP- en wallhack-gids</a>, <a href=\"/aimbot/\">Aimbot en soft aim</a>, <a href=\"/esp/\">ESP- en wallhack-gids</a>, <a href=\"/radar/\">2D-radaroverlay</a>, <a href=\"/cheats/\">Warzone Cheats overzicht</a>.",
 								"Check Updates na Ricochet-patches. Geen cheat garandeert permanent undetected status.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Warzone Cheats overzicht</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Warzone Cheats overzicht</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Support</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot en soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot en soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Volledig product</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -8151,9 +8151,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenties met directe digitale levering via checkout checkout. $35/maand en $150 lifetime incl. Ricochet-onderhoud.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP- en wallhack-gids</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot en soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">2D-radaroverlay</a>",
+								"<a href=\"/esp/\">ESP- en wallhack-gids</a>",
+								"<a href=\"/aimbot/\">Aimbot en soft aim</a>",
+								"<a href=\"/radar/\">2D-radaroverlay</a>",
 								"<a href=\"/features/\">Alle functies</a>",
 							],
 						},
@@ -8209,7 +8209,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. digitale licentiedownload na betaling",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Winkel</a>.",
-								"Feature detail: <a href=\"/features/\">Alle functies</a>. Module pages: <a href=\"/warzone-esp/\">ESP- en wallhack-gids</a>, <a href=\"/warzone-aimbot/\">Aimbot en soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Alle functies</a>. Module pages: <a href=\"/esp/\">ESP- en wallhack-gids</a>, <a href=\"/aimbot/\">Aimbot en soft aim</a>.",
 							],
 						},
 						{
@@ -8217,7 +8217,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Undetected cheats gids</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Support</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Warzone Cheats overzicht</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -8239,7 +8239,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. in-client ESP en soft aim toggles",
 								"Licenties met directe digitale levering via checkout checkout. $35/maand en $150 lifetime incl. Ricochet-onderhoud.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">ESP- en wallhack-gids</a>, <a href=\"/warzone-aimbot/\">Aimbot en soft aim</a>, <a href=\"/warzone-radar-hack/\">2D-radaroverlay</a>.",
+								"Control deep-dives: <a href=\"/esp/\">ESP- en wallhack-gids</a>, <a href=\"/aimbot/\">Aimbot en soft aim</a>, <a href=\"/radar/\">2D-radaroverlay</a>.",
 							],
 						},
 						{
@@ -8247,7 +8247,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. in-client ESP en soft aim toggles",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot en soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot en soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -8270,14 +8270,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Soft Aim",
 					ctaPrimary: "Warzone Cheats kopen",
 					ctaSecondary: "Bekijk functies",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. vloeiende soft aim instellingen voor Windows PC",
 								"Licenties met directe digitale levering via checkout checkout. $35/maand en $150 lifetime incl. Ricochet-onderhoud.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot en soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot en soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot en soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot en soft aim</a>.",
 							],
 						},
 						{
@@ -8285,7 +8285,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. vloeiende soft aim instellingen voor Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">ESP- en wallhack-gids</a> and <a href=\"/warzone-radar-hack/\">2D-radaroverlay</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">ESP- en wallhack-gids</a> and <a href=\"/radar/\">2D-radaroverlay</a> overlays.",
 							],
 						},
 						{
@@ -8322,8 +8322,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. wat te vergelijken vóór aankoop van warzone cheats",
-								"Review <a href=\"/features/\">Alle functies</a>, <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a>, and <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">ESP- en wallhack-gids</a>, <a href=\"/warzone-aimbot/\">Aimbot en soft aim</a>, <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a>.",
+								"Review <a href=\"/features/\">Alle functies</a>, <a href=\"/cheats/\">Warzone Cheats overzicht</a>, and <a href=\"/cheats/\">Warzone Cheats overzicht</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">ESP- en wallhack-gids</a>, <a href=\"/aimbot/\">Aimbot en soft aim</a>, <a href=\"/cheats/\">Warzone Cheats overzicht</a>.",
 							],
 						},
 						{
@@ -8339,7 +8339,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Undetected cheats gids</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Winkel</a>.",
+								"Still deciding? <a href=\"/cheats/\">Warzone Cheats overzicht</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Winkel</a>.",
 							],
 						},
 					],
@@ -8354,14 +8354,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Aimbot Hack",
 					ctaPrimary: "Warzone Cheats kopen",
 					ctaSecondary: "Bekijk functies",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. undetected Aimbot hack assist voor Call of Duty: Warzone",
 								"Licenties met directe digitale levering via checkout checkout. $35/maand en $150 lifetime incl. Ricochet-onderhoud.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot en soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot en soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot en soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot en soft aim</a>.",
 							],
 						},
 						{
@@ -8377,7 +8377,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Undetected cheats gids</a> and <a href=\"/ricochet-bypass/\">Ricochet onderhoud</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Winkel</a>.",
-								"Pair with <a href=\"/warzone-esp/\">ESP- en wallhack-gids</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">ESP- en wallhack-gids</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -8392,14 +8392,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone ESP Hack",
 					ctaPrimary: "Warzone Cheats kopen",
 					ctaSecondary: "Bekijk functies",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. ESP hack boxen, karkas pins en afstand",
 								"Licenties met directe digitale levering via checkout checkout. $35/maand en $150 lifetime incl. Ricochet-onderhoud.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">ESP- en wallhack-gids</a>. Wallhack wording: <a href=\"/warzone-esp/\">ESP- en wallhack-gids</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">ESP- en wallhack-gids</a>. Wallhack wording: <a href=\"/esp/\">ESP- en wallhack-gids</a>.",
 							],
 						},
 						{
@@ -8413,9 +8413,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected cheats gids</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">2D-radaroverlay</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected cheats gids</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">2D-radaroverlay</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Winkel</a>.",
-								"Install steps: <a href=\"/setup/\">Installatiegids</a>. Status questions: <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a>.",
+								"Install steps: <a href=\"/setup/\">Installatiegids</a>. Status questions: <a href=\"/cheats/\">Warzone Cheats overzicht</a>.",
 							],
 						},
 					],
@@ -8444,8 +8444,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats bundelt ESP wallhack, radar hack en Call of Duty: Warzone Aimbot als undetected pakket voor Call of Duty: Warzone op Windows PC. unlock-all zoekopdrachten vs echte ESP en Aimbot tools",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">ESP- en wallhack-gids</a> and <a href=\"/features/\">Alle functies</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a> and <a href=\"/warzone-cheats/\">Warzone Cheats overzicht</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">ESP- en wallhack-gids</a> and <a href=\"/features/\">Alle functies</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Warzone Cheats overzicht</a> and <a href=\"/cheats/\">Warzone Cheats overzicht</a>.",
 							],
 						},
 						{
@@ -8504,7 +8504,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "E-mail support",
 					ctaSecondary: "Privacy lezen",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Digitale levering",
@@ -8539,7 +8539,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "E-mail support",
 					ctaSecondary: "Privacy lezen",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Acceptatie van voorwaarden",
@@ -8853,9 +8853,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licencje z natychmiastowa dostawa cyfrowa przez checkout checkout. Plany $35/mies. i $150 lifetime z konserwacją Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -8907,7 +8907,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licencje z natychmiastowa dostawa cyfrowa przez checkout checkout. Plany $35/mies. i $150 lifetime z konserwacją Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Polityka zwrotów</a>",
+								"<a href=\"/refund/\">Polityka zwrotów</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Wsparcie</a>",
 							],
@@ -9055,7 +9055,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licencje z natychmiastowa dostawa cyfrowa przez checkout checkout. Plany $35/mies. i $150 lifetime z konserwacją Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Polityka zwrotów</a>",
+								"<a href=\"/refund/\">Polityka zwrotów</a>",
 								"<a href=\"/support/\">Wsparcie</a>",
 							],
 						},
@@ -9109,7 +9109,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheaty undetected",
 					ctaPrimary: "Kup Warzone Cheats",
 					ctaSecondary: "Zobacz funkcje",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -9132,7 +9132,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Sklep</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Przewodnik instalacji</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Przewodnik instalacji</a> after delivery.",
 							],
 						},
 						{
@@ -9155,14 +9155,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Kup Warzone Cheats",
 					ctaSecondary: "Zobacz funkcje",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. wallhack ESP dla graczy, tusz i dystansu",
 								"Licencje z natychmiastowa dostawa cyfrowa przez checkout checkout. Plany $35/mies. i $150 lifetime z konserwacją Ricochet.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot i soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">Przewodnik ESP i wallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot i soft aim</a>.",
 							],
 						},
 						{
@@ -9170,7 +9170,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. wallhack ESP dla graczy, tusz i dystansu",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">Overlay radaru 2D</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">Overlay radaru 2D</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -9178,7 +9178,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Przewodnik cheatów undetected</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Konserwacja Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Sklep</a> or continue to the <a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Sklep</a> or continue to the <a href=\"/esp/\">Przewodnik ESP i wallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -9214,7 +9214,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licencje z natychmiastowa dostawa cyfrowa przez checkout checkout. Plany $35/mies. i $150 lifetime z konserwacją Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a>",
+								"<a href=\"/esp/\">Przewodnik ESP i wallhack</a>",
 								"<a href=\"/\">Pełny produkt</a>",
 								"<a href=\"/pricing/\">Sklep</a>",
 							],
@@ -9246,7 +9246,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Przewodnik cheatów undetected</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Przegląd Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -9270,7 +9270,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. jak obsługiwane są aktualizacje Ricochet dla Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Przewodnik cheatów undetected</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Konserwacja Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Przegląd Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -9285,7 +9285,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheaty Call of Duty: Warzone 2026",
 					ctaPrimary: "Kup Warzone Cheats",
 					ctaSecondary: "Zobacz funkcje",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -9299,22 +9299,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. checklista warzone cheats 2026 przed checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a>, <a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot i soft aim</a>, <a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a>, <a href=\"/warzone-radar-hack/\">Overlay radaru 2D</a>, <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">Przegląd Warzone Cheats</a>, <a href=\"/esp/\">Przewodnik ESP i wallhack</a>, <a href=\"/aimbot/\">Aimbot i soft aim</a>, <a href=\"/esp/\">Przewodnik ESP i wallhack</a>, <a href=\"/radar/\">Overlay radaru 2D</a>, <a href=\"/cheats/\">Przegląd Warzone Cheats</a>.",
 								"Sprawdź Updates po patchach Ricochet. Żaden cheat nie gwarantuje permanentnego undetected statusu.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Przegląd Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Przegląd Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Wsparcie</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot i soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot i soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Pełny produkt</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -9361,9 +9361,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licencje z natychmiastowa dostawa cyfrowa przez checkout checkout. Plany $35/mies. i $150 lifetime z konserwacją Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot i soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">Overlay radaru 2D</a>",
+								"<a href=\"/esp/\">Przewodnik ESP i wallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot i soft aim</a>",
+								"<a href=\"/radar/\">Overlay radaru 2D</a>",
 								"<a href=\"/features/\">Wszystkie funkcje</a>",
 							],
 						},
@@ -9419,7 +9419,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. cyfrowe pobranie licencji po płatności",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Sklep</a>.",
-								"Feature detail: <a href=\"/features/\">Wszystkie funkcje</a>. Module pages: <a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot i soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Wszystkie funkcje</a>. Module pages: <a href=\"/esp/\">Przewodnik ESP i wallhack</a>, <a href=\"/aimbot/\">Aimbot i soft aim</a>.",
 							],
 						},
 						{
@@ -9427,7 +9427,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Przewodnik cheatów undetected</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Wsparcie</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Przegląd Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -9449,7 +9449,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. przełączniki ESP i soft aim w kliencie",
 								"Licencje z natychmiastowa dostawa cyfrowa przez checkout checkout. Plany $35/mies. i $150 lifetime z konserwacją Ricochet.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot i soft aim</a>, <a href=\"/warzone-radar-hack/\">Overlay radaru 2D</a>.",
+								"Control deep-dives: <a href=\"/esp/\">Przewodnik ESP i wallhack</a>, <a href=\"/aimbot/\">Aimbot i soft aim</a>, <a href=\"/radar/\">Overlay radaru 2D</a>.",
 							],
 						},
 						{
@@ -9457,7 +9457,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. przełączniki ESP i soft aim w kliencie",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot i soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot i soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -9480,14 +9480,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Soft aim Call of Duty: Warzone",
 					ctaPrimary: "Kup Warzone Cheats",
 					ctaSecondary: "Zobacz funkcje",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. płynne ustawienia soft aim dla Windows PC",
 								"Licencje z natychmiastowa dostawa cyfrowa przez checkout checkout. Plany $35/mies. i $150 lifetime z konserwacją Ricochet.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot i soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot i soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot i soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot i soft aim</a>.",
 							],
 						},
 						{
@@ -9495,7 +9495,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. płynne ustawienia soft aim dla Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a> and <a href=\"/warzone-radar-hack/\">Overlay radaru 2D</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">Przewodnik ESP i wallhack</a> and <a href=\"/radar/\">Overlay radaru 2D</a> overlays.",
 							],
 						},
 						{
@@ -9532,8 +9532,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. co porównać przed zakupem warzone cheats",
-								"Review <a href=\"/features/\">Wszystkie funkcje</a>, <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot i soft aim</a>, <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">Wszystkie funkcje</a>, <a href=\"/cheats/\">Przegląd Warzone Cheats</a>, and <a href=\"/cheats/\">Przegląd Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">Przewodnik ESP i wallhack</a>, <a href=\"/aimbot/\">Aimbot i soft aim</a>, <a href=\"/cheats/\">Przegląd Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -9549,7 +9549,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Przewodnik cheatów undetected</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Sklep</a>.",
+								"Still deciding? <a href=\"/cheats/\">Przegląd Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Sklep</a>.",
 							],
 						},
 					],
@@ -9564,14 +9564,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack aimbot Call of Duty: Warzone",
 					ctaPrimary: "Kup Warzone Cheats",
 					ctaSecondary: "Zobacz funkcje",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. undetected Aimbot hack assist dla Call of Duty: Warzone",
 								"Licencje z natychmiastowa dostawa cyfrowa przez checkout checkout. Plany $35/mies. i $150 lifetime z konserwacją Ricochet.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot i soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot i soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot i soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot i soft aim</a>.",
 							],
 						},
 						{
@@ -9587,7 +9587,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Przewodnik cheatów undetected</a> and <a href=\"/ricochet-bypass/\">Konserwacja Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Sklep</a>.",
-								"Pair with <a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">Przewodnik ESP i wallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -9602,14 +9602,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack ESP Call of Duty: Warzone",
 					ctaPrimary: "Kup Warzone Cheats",
 					ctaSecondary: "Zobacz funkcje",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. boxy ESP hack, piny tusz i dystans",
 								"Licencje z natychmiastowa dostawa cyfrowa przez checkout checkout. Plany $35/mies. i $150 lifetime z konserwacją Ricochet.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">Przewodnik ESP i wallhack</a>. Wallhack wording: <a href=\"/esp/\">Przewodnik ESP i wallhack</a>.",
 							],
 						},
 						{
@@ -9623,9 +9623,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Przewodnik cheatów undetected</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">Overlay radaru 2D</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Przewodnik cheatów undetected</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">Overlay radaru 2D</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Sklep</a>.",
-								"Install steps: <a href=\"/setup/\">Przewodnik instalacji</a>. Status questions: <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">Przewodnik instalacji</a>. Status questions: <a href=\"/cheats/\">Przegląd Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -9654,8 +9654,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats łączy ESP wallhack, radar hack i Call of Duty: Warzone Aimbot jako pakiet undetected dla Call of Duty: Warzone na PC Windows. wyszukiwania unlock-all vs prawdziwe narzędzia ESP i Aimbot",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">Przewodnik ESP i wallhack</a> and <a href=\"/features/\">Wszystkie funkcje</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a> and <a href=\"/warzone-cheats/\">Przegląd Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">Przewodnik ESP i wallhack</a> and <a href=\"/features/\">Wszystkie funkcje</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Przegląd Warzone Cheats</a> and <a href=\"/cheats/\">Przegląd Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -9714,7 +9714,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "E-mail do supportu",
 					ctaSecondary: "Przeczytaj politykę prywatności",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Dostawa cyfrowa",
@@ -9749,7 +9749,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "E-mail do supportu",
 					ctaSecondary: "Przeczytaj politykę prywatności",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Akceptacja warunków",
@@ -10063,9 +10063,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Лицензии с мгновенная цифровая доставка через checkout checkout. Тарифы $35/мес и $150 навсегда включают обслуживание Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -10117,7 +10117,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Лицензии с мгновенная цифровая доставка через checkout checkout. Тарифы $35/мес и $150 навсегда включают обслуживание Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Политика возврата</a>",
+								"<a href=\"/refund/\">Политика возврата</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Поддержка</a>",
 							],
@@ -10265,7 +10265,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Лицензии с мгновенная цифровая доставка через checkout checkout. Тарифы $35/мес и $150 навсегда включают обслуживание Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Политика возврата</a>",
+								"<a href=\"/refund/\">Политика возврата</a>",
 								"<a href=\"/support/\">Поддержка</a>",
 							],
 						},
@@ -10319,7 +10319,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Undetected читы",
 					ctaPrimary: "Купить Warzone Cheats",
 					ctaSecondary: "Смотреть функции",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -10342,7 +10342,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Магазин</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Гайд по установке</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Гайд по установке</a> after delivery.",
 							],
 						},
 						{
@@ -10365,14 +10365,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Купить Warzone Cheats",
 					ctaSecondary: "Смотреть функции",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. wallhack ESP для игроков, туш и дистанции",
 								"Лицензии с мгновенная цифровая доставка через checkout checkout. Тарифы $35/мес и $150 навсегда включают обслуживание Ricochet.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">Гайд ESP и wallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot и soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">Гайд ESP и wallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot и soft aim</a>.",
 							],
 						},
 						{
@@ -10380,7 +10380,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. wallhack ESP для игроков, туш и дистанции",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">2D радар overlay</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">2D радар overlay</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -10388,7 +10388,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Гайд undetected читов</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Обслуживание Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Магазин</a> or continue to the <a href=\"/warzone-esp/\">Гайд ESP и wallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Магазин</a> or continue to the <a href=\"/esp/\">Гайд ESP и wallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -10424,7 +10424,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Лицензии с мгновенная цифровая доставка через checkout checkout. Тарифы $35/мес и $150 навсегда включают обслуживание Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Гайд ESP и wallhack</a>",
+								"<a href=\"/esp/\">Гайд ESP и wallhack</a>",
 								"<a href=\"/\">Полный продукт</a>",
 								"<a href=\"/pricing/\">Магазин</a>",
 							],
@@ -10456,7 +10456,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Гайд undetected читов</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Обзор Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -10480,7 +10480,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. как обрабатываются обновления Ricochet для Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Гайд undetected читов</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Обслуживание Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Обзор Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -10495,7 +10495,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Читы Call of Duty: Warzone 2026",
 					ctaPrimary: "Купить Warzone Cheats",
 					ctaSecondary: "Смотреть функции",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -10509,22 +10509,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. чеклист warzone cheats 2026 перед checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a>, <a href=\"/warzone-esp/\">Гайд ESP и wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot и soft aim</a>, <a href=\"/warzone-esp/\">Гайд ESP и wallhack</a>, <a href=\"/warzone-radar-hack/\">2D радар overlay</a>, <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">Обзор Warzone Cheats</a>, <a href=\"/esp/\">Гайд ESP и wallhack</a>, <a href=\"/aimbot/\">Aimbot и soft aim</a>, <a href=\"/esp/\">Гайд ESP и wallhack</a>, <a href=\"/radar/\">2D радар overlay</a>, <a href=\"/cheats/\">Обзор Warzone Cheats</a>.",
 								"Проверяйте Updates после патчей Ricochet. Ни один чит не гарантирует постоянный undetected статус.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Обзор Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Обзор Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Поддержка</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot и soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot и soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Полный продукт</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -10571,9 +10571,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Лицензии с мгновенная цифровая доставка через checkout checkout. Тарифы $35/мес и $150 навсегда включают обслуживание Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Гайд ESP и wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot и soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">2D радар overlay</a>",
+								"<a href=\"/esp/\">Гайд ESP и wallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot и soft aim</a>",
+								"<a href=\"/radar/\">2D радар overlay</a>",
 								"<a href=\"/features/\">Все функции</a>",
 							],
 						},
@@ -10629,7 +10629,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. цифровая загрузка лицензии после оплаты",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Магазин</a>.",
-								"Feature detail: <a href=\"/features/\">Все функции</a>. Module pages: <a href=\"/warzone-esp/\">Гайд ESP и wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot и soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Все функции</a>. Module pages: <a href=\"/esp/\">Гайд ESP и wallhack</a>, <a href=\"/aimbot/\">Aimbot и soft aim</a>.",
 							],
 						},
 						{
@@ -10637,7 +10637,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Гайд undetected читов</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Поддержка</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Обзор Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -10659,7 +10659,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. переключатели ESP и soft aim в клиенте",
 								"Лицензии с мгновенная цифровая доставка через checkout checkout. Тарифы $35/мес и $150 навсегда включают обслуживание Ricochet.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">Гайд ESP и wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot и soft aim</a>, <a href=\"/warzone-radar-hack/\">2D радар overlay</a>.",
+								"Control deep-dives: <a href=\"/esp/\">Гайд ESP и wallhack</a>, <a href=\"/aimbot/\">Aimbot и soft aim</a>, <a href=\"/radar/\">2D радар overlay</a>.",
 							],
 						},
 						{
@@ -10667,7 +10667,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. переключатели ESP и soft aim в клиенте",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot и soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot и soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -10690,14 +10690,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Soft aim Call of Duty: Warzone",
 					ctaPrimary: "Купить Warzone Cheats",
 					ctaSecondary: "Смотреть функции",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. плавные настройки soft aim для Windows PC",
 								"Лицензии с мгновенная цифровая доставка через checkout checkout. Тарифы $35/мес и $150 навсегда включают обслуживание Ricochet.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot и soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot и soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot и soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot и soft aim</a>.",
 							],
 						},
 						{
@@ -10705,7 +10705,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. плавные настройки soft aim для Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">Гайд ESP и wallhack</a> and <a href=\"/warzone-radar-hack/\">2D радар overlay</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">Гайд ESP и wallhack</a> and <a href=\"/radar/\">2D радар overlay</a> overlays.",
 							],
 						},
 						{
@@ -10742,8 +10742,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. что сравнить перед покупкой warzone cheats",
-								"Review <a href=\"/features/\">Все функции</a>, <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">Гайд ESP и wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot и soft aim</a>, <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">Все функции</a>, <a href=\"/cheats/\">Обзор Warzone Cheats</a>, and <a href=\"/cheats/\">Обзор Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">Гайд ESP и wallhack</a>, <a href=\"/aimbot/\">Aimbot и soft aim</a>, <a href=\"/cheats/\">Обзор Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -10759,7 +10759,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Гайд undetected читов</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Магазин</a>.",
+								"Still deciding? <a href=\"/cheats/\">Обзор Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Магазин</a>.",
 							],
 						},
 					],
@@ -10774,14 +10774,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Хак aimbot Call of Duty: Warzone",
 					ctaPrimary: "Купить Warzone Cheats",
 					ctaSecondary: "Смотреть функции",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. undetected Aimbot hack assist для Call of Duty: Warzone",
 								"Лицензии с мгновенная цифровая доставка через checkout checkout. Тарифы $35/мес и $150 навсегда включают обслуживание Ricochet.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot и soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot и soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot и soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot и soft aim</a>.",
 							],
 						},
 						{
@@ -10797,7 +10797,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Гайд undetected читов</a> and <a href=\"/ricochet-bypass/\">Обслуживание Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Магазин</a>.",
-								"Pair with <a href=\"/warzone-esp/\">Гайд ESP и wallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">Гайд ESP и wallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -10812,14 +10812,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Хак ESP Call of Duty: Warzone",
 					ctaPrimary: "Купить Warzone Cheats",
 					ctaSecondary: "Смотреть функции",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. ESP hack боксы, pins туш и дистанция",
 								"Лицензии с мгновенная цифровая доставка через checkout checkout. Тарифы $35/мес и $150 навсегда включают обслуживание Ricochet.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">Гайд ESP и wallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">Гайд ESP и wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">Гайд ESP и wallhack</a>. Wallhack wording: <a href=\"/esp/\">Гайд ESP и wallhack</a>.",
 							],
 						},
 						{
@@ -10833,9 +10833,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Гайд undetected читов</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">2D радар overlay</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Гайд undetected читов</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">2D радар overlay</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Магазин</a>.",
-								"Install steps: <a href=\"/setup/\">Гайд по установке</a>. Status questions: <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">Гайд по установке</a>. Status questions: <a href=\"/cheats/\">Обзор Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -10864,8 +10864,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats объединяет ESP wallhack, radar hack и Call of Duty: Warzone Aimbot в undetected пакете для Call of Duty: Warzone на Windows PC. поиски unlock-all vs настоящие ESP и Aimbot инструменты",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">Гайд ESP и wallhack</a> and <a href=\"/features/\">Все функции</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a> and <a href=\"/warzone-cheats/\">Обзор Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">Гайд ESP и wallhack</a> and <a href=\"/features/\">Все функции</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Обзор Warzone Cheats</a> and <a href=\"/cheats/\">Обзор Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -10924,7 +10924,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "Написать в поддержку",
 					ctaSecondary: "Читать политику конфиденциальности",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Цифровая доставка",
@@ -10959,7 +10959,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "Написать в поддержку",
 					ctaSecondary: "Читать политику конфиденциальности",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Принятие условий",
@@ -11273,9 +11273,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout ile anında dijital teslimat. $35/ay ve $150 ömür boyu planları Ricochet bakımı içerir.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -11327,7 +11327,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout ile anında dijital teslimat. $35/ay ve $150 ömür boyu planları Ricochet bakımı içerir.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">İade politikası</a>",
+								"<a href=\"/refund/\">İade politikası</a>",
 								"<a href=\"/faq/\">SSS</a>",
 								"<a href=\"/support/\">Destek</a>",
 							],
@@ -11475,7 +11475,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout ile anında dijital teslimat. $35/ay ve $150 ömür boyu planları Ricochet bakımı içerir.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">İade politikası</a>",
+								"<a href=\"/refund/\">İade politikası</a>",
 								"<a href=\"/support/\">Destek</a>",
 							],
 						},
@@ -11529,7 +11529,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Undetected hileler",
 					ctaPrimary: "Warzone Cheats satın al",
 					ctaSecondary: "Özellikleri gör",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -11552,7 +11552,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">SSS</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Mağaza</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Kurulum rehberi</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Kurulum rehberi</a> after delivery.",
 							],
 						},
 						{
@@ -11575,14 +11575,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Warzone Cheats satın al",
 					ctaSecondary: "Özellikleri gör",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. oyuncular, leşler ve mesafe için wallhack ESP",
 								"checkout checkout ile anında dijital teslimat. $35/ay ve $150 ömür boyu planları Ricochet bakımı içerir.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot ve soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">ESP ve wallhack rehberi</a>; for combat assist see <a href=\"/aimbot/\">Aimbot ve soft aim</a>.",
 							],
 						},
 						{
@@ -11590,7 +11590,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. oyuncular, leşler ve mesafe için wallhack ESP",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">2D radar overlay</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">2D radar overlay</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -11598,7 +11598,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Undetected hile rehberi</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Ricochet bakımı</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Mağaza</a> or continue to the <a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Mağaza</a> or continue to the <a href=\"/esp/\">ESP ve wallhack rehberi</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -11634,7 +11634,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout ile anında dijital teslimat. $35/ay ve $150 ömür boyu planları Ricochet bakımı içerir.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a>",
+								"<a href=\"/esp/\">ESP ve wallhack rehberi</a>",
 								"<a href=\"/\">Tam ürün</a>",
 								"<a href=\"/pricing/\">Mağaza</a>",
 							],
@@ -11666,7 +11666,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Undetected hile rehberi</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Warzone Cheats genel bakış</a>.",
 							],
 						},
 						{
@@ -11690,7 +11690,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. Warzone cheats için Ricochet güncellemelerinin nasıl yönetildiği",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Undetected hile rehberi</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Ricochet bakımı</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Warzone Cheats genel bakış</a>.",
 							],
 						},
 					],
@@ -11705,7 +11705,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Hileleri 2026",
 					ctaPrimary: "Warzone Cheats satın al",
 					ctaSecondary: "Özellikleri gör",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -11719,22 +11719,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. checkout öncesi 2026 warzone cheats kontrol listesi",
-								"Deep links: <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a>, <a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a>, <a href=\"/warzone-aimbot/\">Aimbot ve soft aim</a>, <a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a>, <a href=\"/warzone-radar-hack/\">2D radar overlay</a>, <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a>.",
+								"Deep links: <a href=\"/cheats/\">Warzone Cheats genel bakış</a>, <a href=\"/esp/\">ESP ve wallhack rehberi</a>, <a href=\"/aimbot/\">Aimbot ve soft aim</a>, <a href=\"/esp/\">ESP ve wallhack rehberi</a>, <a href=\"/radar/\">2D radar overlay</a>, <a href=\"/cheats/\">Warzone Cheats genel bakış</a>.",
 								"Ricochet yamalarından sonra Updates sayfasını kontrol edin. Hiçbir hile kalıcı undetected garantisi vermez.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">SSS</a>.",
+								"Read the <a href=\"/cheats/\">Warzone Cheats genel bakış</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Warzone Cheats genel bakış</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">SSS</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Destek</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot ve soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot ve soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Tam ürün</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -11781,9 +11781,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout ile anında dijital teslimat. $35/ay ve $150 ömür boyu planları Ricochet bakımı içerir.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot ve soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">2D radar overlay</a>",
+								"<a href=\"/esp/\">ESP ve wallhack rehberi</a>",
+								"<a href=\"/aimbot/\">Aimbot ve soft aim</a>",
+								"<a href=\"/radar/\">2D radar overlay</a>",
 								"<a href=\"/features/\">Tüm özellikler</a>",
 							],
 						},
@@ -11839,7 +11839,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. ödeme sonrası dijital lisans indirme",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Mağaza</a>.",
-								"Feature detail: <a href=\"/features/\">Tüm özellikler</a>. Module pages: <a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a>, <a href=\"/warzone-aimbot/\">Aimbot ve soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Tüm özellikler</a>. Module pages: <a href=\"/esp/\">ESP ve wallhack rehberi</a>, <a href=\"/aimbot/\">Aimbot ve soft aim</a>.",
 							],
 						},
 						{
@@ -11847,7 +11847,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Undetected hile rehberi</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Destek</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Warzone Cheats genel bakış</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -11869,7 +11869,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. istemci içi ESP ve soft aim toggle'ları",
 								"checkout checkout ile anında dijital teslimat. $35/ay ve $150 ömür boyu planları Ricochet bakımı içerir.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a>, <a href=\"/warzone-aimbot/\">Aimbot ve soft aim</a>, <a href=\"/warzone-radar-hack/\">2D radar overlay</a>.",
+								"Control deep-dives: <a href=\"/esp/\">ESP ve wallhack rehberi</a>, <a href=\"/aimbot/\">Aimbot ve soft aim</a>, <a href=\"/radar/\">2D radar overlay</a>.",
 							],
 						},
 						{
@@ -11877,7 +11877,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. istemci içi ESP ve soft aim toggle'ları",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot ve soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot ve soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -11900,14 +11900,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Soft Aim",
 					ctaPrimary: "Warzone Cheats satın al",
 					ctaSecondary: "Özellikleri gör",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. Windows PC için akıcı soft aim ayarları",
 								"checkout checkout ile anında dijital teslimat. $35/ay ve $150 ömür boyu planları Ricochet bakımı içerir.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot ve soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot ve soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot ve soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot ve soft aim</a>.",
 							],
 						},
 						{
@@ -11915,7 +11915,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. Windows PC için akıcı soft aim ayarları",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a> and <a href=\"/warzone-radar-hack/\">2D radar overlay</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">ESP ve wallhack rehberi</a> and <a href=\"/radar/\">2D radar overlay</a> overlays.",
 							],
 						},
 						{
@@ -11952,8 +11952,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. warzone cheats satın almadan önce ne karşılaştırılmalı",
-								"Review <a href=\"/features/\">Tüm özellikler</a>, <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a>, and <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a>, <a href=\"/warzone-aimbot/\">Aimbot ve soft aim</a>, <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a>.",
+								"Review <a href=\"/features/\">Tüm özellikler</a>, <a href=\"/cheats/\">Warzone Cheats genel bakış</a>, and <a href=\"/cheats/\">Warzone Cheats genel bakış</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">ESP ve wallhack rehberi</a>, <a href=\"/aimbot/\">Aimbot ve soft aim</a>, <a href=\"/cheats/\">Warzone Cheats genel bakış</a>.",
 							],
 						},
 						{
@@ -11969,7 +11969,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Undetected hile rehberi</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Mağaza</a>.",
+								"Still deciding? <a href=\"/cheats/\">Warzone Cheats genel bakış</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Mağaza</a>.",
 							],
 						},
 					],
@@ -11984,14 +11984,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Aimbot Hilesi",
 					ctaPrimary: "Warzone Cheats satın al",
 					ctaSecondary: "Özellikleri gör",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. Call of Duty: Warzone için undetected Aimbot hack assist",
 								"checkout checkout ile anında dijital teslimat. $35/ay ve $150 ömür boyu planları Ricochet bakımı içerir.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot ve soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot ve soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot ve soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot ve soft aim</a>.",
 							],
 						},
 						{
@@ -12007,7 +12007,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Undetected hile rehberi</a> and <a href=\"/ricochet-bypass/\">Ricochet bakımı</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Mağaza</a>.",
-								"Pair with <a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">ESP ve wallhack rehberi</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -12022,14 +12022,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone ESP Hilesi",
 					ctaPrimary: "Warzone Cheats satın al",
 					ctaSecondary: "Özellikleri gör",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. ESP hack kutuları, leş pinleri ve mesafe",
 								"checkout checkout ile anında dijital teslimat. $35/ay ve $150 ömür boyu planları Ricochet bakımı içerir.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a>. Wallhack wording: <a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">ESP ve wallhack rehberi</a>. Wallhack wording: <a href=\"/esp/\">ESP ve wallhack rehberi</a>.",
 							],
 						},
 						{
@@ -12043,9 +12043,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected hile rehberi</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">2D radar overlay</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected hile rehberi</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">2D radar overlay</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Mağaza</a>.",
-								"Install steps: <a href=\"/setup/\">Kurulum rehberi</a>. Status questions: <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a>.",
+								"Install steps: <a href=\"/setup/\">Kurulum rehberi</a>. Status questions: <a href=\"/cheats/\">Warzone Cheats genel bakış</a>.",
 							],
 						},
 					],
@@ -12074,8 +12074,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats, Call of Duty: Warzone için Windows PC üzerinde ESP wallhack, radar hack ve Call of Duty: Warzone Aimbot undetected paket sunar. unlock-all aramaları vs gerçek ESP ve Aimbot araçları",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">ESP ve wallhack rehberi</a> and <a href=\"/features/\">Tüm özellikler</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a> and <a href=\"/warzone-cheats/\">Warzone Cheats genel bakış</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">ESP ve wallhack rehberi</a> and <a href=\"/features/\">Tüm özellikler</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Warzone Cheats genel bakış</a> and <a href=\"/cheats/\">Warzone Cheats genel bakış</a>.",
 							],
 						},
 						{
@@ -12134,7 +12134,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "Destek e-postası",
 					ctaSecondary: "Gizliliği oku",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Dijital teslimat",
@@ -12169,7 +12169,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "Destek e-postası",
 					ctaSecondary: "Gizliliği oku",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Şartların kabulü",
@@ -12483,9 +12483,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"تراخيص مع تسليم رقمي فوري عبر checkout checkout. خطط 35$/شهر و150$ مدى الحياة تشمل صيانة Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -12537,7 +12537,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"تراخيص مع تسليم رقمي فوري عبر checkout checkout. خطط 35$/شهر و150$ مدى الحياة تشمل صيانة Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">سياسة الاسترداد</a>",
+								"<a href=\"/refund/\">سياسة الاسترداد</a>",
 								"<a href=\"/faq/\">الأسئلة الشائعة</a>",
 								"<a href=\"/support/\">الدعم</a>",
 							],
@@ -12685,7 +12685,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"تراخيص مع تسليم رقمي فوري عبر checkout checkout. خطط 35$/شهر و150$ مدى الحياة تشمل صيانة Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">سياسة الاسترداد</a>",
+								"<a href=\"/refund/\">سياسة الاسترداد</a>",
 								"<a href=\"/support/\">الدعم</a>",
 							],
 						},
@@ -12739,7 +12739,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "غش undetected",
 					ctaPrimary: "اشترِ Warzone Cheats",
 					ctaSecondary: "عرض الميزات",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -12762,7 +12762,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">الأسئلة الشائعة</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">المتجر</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">دليل التثبيت</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">دليل التثبيت</a> after delivery.",
 							],
 						},
 						{
@@ -12785,14 +12785,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "اشترِ Warzone Cheats",
 					ctaSecondary: "عرض الميزات",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. wallhack ESP للاعبين والجيف والمسافة",
 								"تراخيص مع تسليم رقمي فوري عبر checkout checkout. خطط 35$/شهر و150$ مدى الحياة تشمل صيانة Ricochet.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">دليل ESP وWallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot وSoft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">دليل ESP وWallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot وSoft aim</a>.",
 							],
 						},
 						{
@@ -12800,7 +12800,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. wallhack ESP للاعبين والجيف والمسافة",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">تراكب رادار 2D</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">تراكب رادار 2D</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -12808,7 +12808,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">دليل الغش غير المكتشف</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">صيانة Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">المتجر</a> or continue to the <a href=\"/warzone-esp/\">دليل ESP وWallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">المتجر</a> or continue to the <a href=\"/esp/\">دليل ESP وWallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -12844,7 +12844,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"تراخيص مع تسليم رقمي فوري عبر checkout checkout. خطط 35$/شهر و150$ مدى الحياة تشمل صيانة Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">دليل ESP وWallhack</a>",
+								"<a href=\"/esp/\">دليل ESP وWallhack</a>",
 								"<a href=\"/\">المنتج الكامل</a>",
 								"<a href=\"/pricing/\">المتجر</a>",
 							],
@@ -12876,7 +12876,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">دليل الغش غير المكتشف</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -12900,7 +12900,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. كيف تُدار تحديثات Ricochet لـ Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">دليل الغش غير المكتشف</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">صيانة Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -12915,7 +12915,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "غش Call of Duty: Warzone 2026",
 					ctaPrimary: "اشترِ Warzone Cheats",
 					ctaSecondary: "عرض الميزات",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -12929,22 +12929,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. قائمة warzone cheats 2026 قبل checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a>, <a href=\"/warzone-esp/\">دليل ESP وWallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot وSoft aim</a>, <a href=\"/warzone-esp/\">دليل ESP وWallhack</a>, <a href=\"/warzone-radar-hack/\">تراكب رادار 2D</a>, <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a>, <a href=\"/esp/\">دليل ESP وWallhack</a>, <a href=\"/aimbot/\">Aimbot وSoft aim</a>, <a href=\"/esp/\">دليل ESP وWallhack</a>, <a href=\"/radar/\">تراكب رادار 2D</a>, <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a>.",
 								"راجع Updates بعد تص patches Ricochet. لا يضمن أي غش حالة undetected دائمة.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">الأسئلة الشائعة</a>.",
+								"Read the <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">الأسئلة الشائعة</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">الدعم</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot وSoft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot وSoft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">المنتج الكامل</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -12991,9 +12991,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"تراخيص مع تسليم رقمي فوري عبر checkout checkout. خطط 35$/شهر و150$ مدى الحياة تشمل صيانة Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">دليل ESP وWallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot وSoft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">تراكب رادار 2D</a>",
+								"<a href=\"/esp/\">دليل ESP وWallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot وSoft aim</a>",
+								"<a href=\"/radar/\">تراكب رادار 2D</a>",
 								"<a href=\"/features/\">جميع الميزات</a>",
 							],
 						},
@@ -13049,7 +13049,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. تنزيل ترخيص رقمي بعد الدفع",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">المتجر</a>.",
-								"Feature detail: <a href=\"/features/\">جميع الميزات</a>. Module pages: <a href=\"/warzone-esp/\">دليل ESP وWallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot وSoft aim</a>.",
+								"Feature detail: <a href=\"/features/\">جميع الميزات</a>. Module pages: <a href=\"/esp/\">دليل ESP وWallhack</a>, <a href=\"/aimbot/\">Aimbot وSoft aim</a>.",
 							],
 						},
 						{
@@ -13057,7 +13057,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">دليل الغش غير المكتشف</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">الدعم</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -13079,7 +13079,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. مفاتيح ESP وsoft aim داخل العميل",
 								"تراخيص مع تسليم رقمي فوري عبر checkout checkout. خطط 35$/شهر و150$ مدى الحياة تشمل صيانة Ricochet.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">دليل ESP وWallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot وSoft aim</a>, <a href=\"/warzone-radar-hack/\">تراكب رادار 2D</a>.",
+								"Control deep-dives: <a href=\"/esp/\">دليل ESP وWallhack</a>, <a href=\"/aimbot/\">Aimbot وSoft aim</a>, <a href=\"/radar/\">تراكب رادار 2D</a>.",
 							],
 						},
 						{
@@ -13087,7 +13087,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. مفاتيح ESP وsoft aim داخل العميل",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot وSoft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot وSoft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -13110,14 +13110,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Soft aim Call of Duty: Warzone",
 					ctaPrimary: "اشترِ Warzone Cheats",
 					ctaSecondary: "عرض الميزات",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. إعدادات soft aim سلسة لـ Windows PC",
 								"تراخيص مع تسليم رقمي فوري عبر checkout checkout. خطط 35$/شهر و150$ مدى الحياة تشمل صيانة Ricochet.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot وSoft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot وSoft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot وSoft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot وSoft aim</a>.",
 							],
 						},
 						{
@@ -13125,7 +13125,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. إعدادات soft aim سلسة لـ Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">دليل ESP وWallhack</a> and <a href=\"/warzone-radar-hack/\">تراكب رادار 2D</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">دليل ESP وWallhack</a> and <a href=\"/radar/\">تراكب رادار 2D</a> overlays.",
 							],
 						},
 						{
@@ -13162,8 +13162,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. ما يجب مقارنته قبل شراء warzone cheats",
-								"Review <a href=\"/features/\">جميع الميزات</a>, <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">دليل ESP وWallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot وSoft aim</a>, <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">جميع الميزات</a>, <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a>, and <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">دليل ESP وWallhack</a>, <a href=\"/aimbot/\">Aimbot وSoft aim</a>, <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -13179,7 +13179,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">دليل الغش غير المكتشف</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">المتجر</a>.",
+								"Still deciding? <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">المتجر</a>.",
 							],
 						},
 					],
@@ -13194,14 +13194,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "هاك Aimbot Call of Duty: Warzone",
 					ctaPrimary: "اشترِ Warzone Cheats",
 					ctaSecondary: "عرض الميزات",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. مساعدة hack Aimbot undetected لـ Call of Duty: Warzone",
 								"تراخيص مع تسليم رقمي فوري عبر checkout checkout. خطط 35$/شهر و150$ مدى الحياة تشمل صيانة Ricochet.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot وSoft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot وSoft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot وSoft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot وSoft aim</a>.",
 							],
 						},
 						{
@@ -13217,7 +13217,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">دليل الغش غير المكتشف</a> and <a href=\"/ricochet-bypass/\">صيانة Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">المتجر</a>.",
-								"Pair with <a href=\"/warzone-esp/\">دليل ESP وWallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">دليل ESP وWallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -13232,14 +13232,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "هاك ESP Call of Duty: Warzone",
 					ctaPrimary: "اشترِ Warzone Cheats",
 					ctaSecondary: "عرض الميزات",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. صناديق ESP hack وpins الجيف والمسافة",
 								"تراخيص مع تسليم رقمي فوري عبر checkout checkout. خطط 35$/شهر و150$ مدى الحياة تشمل صيانة Ricochet.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">دليل ESP وWallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">دليل ESP وWallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">دليل ESP وWallhack</a>. Wallhack wording: <a href=\"/esp/\">دليل ESP وWallhack</a>.",
 							],
 						},
 						{
@@ -13253,9 +13253,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">دليل الغش غير المكتشف</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">تراكب رادار 2D</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">دليل الغش غير المكتشف</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">تراكب رادار 2D</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">المتجر</a>.",
-								"Install steps: <a href=\"/setup/\">دليل التثبيت</a>. Status questions: <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">دليل التثبيت</a>. Status questions: <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -13284,8 +13284,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats يجمع ESP wallhack وradar hack وCall of Duty: Warzone Aimbot غير مكتشف لـ Call of Duty: Warzone على Windows PC. بحث unlock-all مقابل أدوات ESP وAimbot الحقيقية",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">دليل ESP وWallhack</a> and <a href=\"/features/\">جميع الميزات</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a> and <a href=\"/warzone-cheats/\">نظرة عامة على Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">دليل ESP وWallhack</a> and <a href=\"/features/\">جميع الميزات</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a> and <a href=\"/cheats/\">نظرة عامة على Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -13344,7 +13344,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "مراسلة الدعم",
 					ctaSecondary: "اقرأ الخصوصية",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "التسليم الرقمي",
@@ -13379,7 +13379,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "مراسلة الدعم",
 					ctaSecondary: "اقرأ الخصوصية",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "قبول الشروط",
@@ -13693,9 +13693,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkoutで即時デジタル配信。$35/月と$150永久プランにRicochetメンテナンス含む。",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -13747,7 +13747,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkoutで即時デジタル配信。$35/月と$150永久プランにRicochetメンテナンス含む。",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">返金ポリシー</a>",
+								"<a href=\"/refund/\">返金ポリシー</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">サポート</a>",
 							],
@@ -13895,7 +13895,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkoutで即時デジタル配信。$35/月と$150永久プランにRicochetメンテナンス含む。",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">返金ポリシー</a>",
+								"<a href=\"/refund/\">返金ポリシー</a>",
 								"<a href=\"/support/\">サポート</a>",
 							],
 						},
@@ -13949,7 +13949,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Undetectedチート",
 					ctaPrimary: "Warzone Cheatsを購入",
 					ctaSecondary: "機能を見る",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -13972,7 +13972,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">ストア</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">セットアップガイド</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">セットアップガイド</a> after delivery.",
 							],
 						},
 						{
@@ -13995,14 +13995,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Warzone Cheatsを購入",
 					ctaSecondary: "機能を見る",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。プレイヤー、死体、距離向けwallhack ESP",
 								"checkout checkoutで即時デジタル配信。$35/月と$150永久プランにRicochetメンテナンス含む。",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">ESP・Wallhackガイド</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot・Soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">ESP・Wallhackガイド</a>; for combat assist see <a href=\"/aimbot/\">Aimbot・Soft aim</a>.",
 							],
 						},
 						{
@@ -14010,7 +14010,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。プレイヤー、死体、距離向けwallhack ESP",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">2Dレーダーオーバーレイ</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">2Dレーダーオーバーレイ</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -14018,7 +14018,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Undetectedチートガイド</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Ricochetメンテナンス</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">ストア</a> or continue to the <a href=\"/warzone-esp/\">ESP・Wallhackガイド</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">ストア</a> or continue to the <a href=\"/esp/\">ESP・Wallhackガイド</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -14054,7 +14054,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkoutで即時デジタル配信。$35/月と$150永久プランにRicochetメンテナンス含む。",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP・Wallhackガイド</a>",
+								"<a href=\"/esp/\">ESP・Wallhackガイド</a>",
 								"<a href=\"/\">製品全体</a>",
 								"<a href=\"/pricing/\">ストア</a>",
 							],
@@ -14086,7 +14086,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Undetectedチートガイド</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Warzone Cheats概要</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Warzone Cheats概要</a>.",
 							],
 						},
 						{
@@ -14110,7 +14110,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。Warzone cheats向けRicochet更新の対応方法",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Undetectedチートガイド</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Ricochetメンテナンス</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Warzone Cheats概要</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Warzone Cheats概要</a>.",
 							],
 						},
 					],
@@ -14125,7 +14125,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Warzone Cheats 2026",
 					ctaPrimary: "Warzone Cheatsを購入",
 					ctaSecondary: "機能を見る",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -14139,22 +14139,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。checkout前の2026 warzone cheatsチェックリスト",
-								"Deep links: <a href=\"/warzone-cheats/\">Warzone Cheats概要</a>, <a href=\"/warzone-esp/\">ESP・Wallhackガイド</a>, <a href=\"/warzone-aimbot/\">Aimbot・Soft aim</a>, <a href=\"/warzone-esp/\">ESP・Wallhackガイド</a>, <a href=\"/warzone-radar-hack/\">2Dレーダーオーバーレイ</a>, <a href=\"/warzone-cheats/\">Warzone Cheats概要</a>.",
+								"Deep links: <a href=\"/cheats/\">Warzone Cheats概要</a>, <a href=\"/esp/\">ESP・Wallhackガイド</a>, <a href=\"/aimbot/\">Aimbot・Soft aim</a>, <a href=\"/esp/\">ESP・Wallhackガイド</a>, <a href=\"/radar/\">2Dレーダーオーバーレイ</a>, <a href=\"/cheats/\">Warzone Cheats概要</a>.",
 								"Ricochetパッチ後はUpdatesページを確認。永久undetectedは保証されません。",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Warzone Cheats概要</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Warzone Cheats概要</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Warzone Cheats概要</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Warzone Cheats概要</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">サポート</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot・Soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot・Soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">製品全体</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -14201,9 +14201,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkoutで即時デジタル配信。$35/月と$150永久プランにRicochetメンテナンス含む。",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP・Wallhackガイド</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot・Soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">2Dレーダーオーバーレイ</a>",
+								"<a href=\"/esp/\">ESP・Wallhackガイド</a>",
+								"<a href=\"/aimbot/\">Aimbot・Soft aim</a>",
+								"<a href=\"/radar/\">2Dレーダーオーバーレイ</a>",
 								"<a href=\"/features/\">全機能</a>",
 							],
 						},
@@ -14259,7 +14259,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。支払い後のデジタルライセンスダウンロード",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">ストア</a>.",
-								"Feature detail: <a href=\"/features/\">全機能</a>. Module pages: <a href=\"/warzone-esp/\">ESP・Wallhackガイド</a>, <a href=\"/warzone-aimbot/\">Aimbot・Soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">全機能</a>. Module pages: <a href=\"/esp/\">ESP・Wallhackガイド</a>, <a href=\"/aimbot/\">Aimbot・Soft aim</a>.",
 							],
 						},
 						{
@@ -14267,7 +14267,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Undetectedチートガイド</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">サポート</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Warzone Cheats概要</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Warzone Cheats概要</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -14289,7 +14289,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。クライアント内ESPとsoft aimトグル",
 								"checkout checkoutで即時デジタル配信。$35/月と$150永久プランにRicochetメンテナンス含む。",
-								"Control deep-dives: <a href=\"/warzone-esp/\">ESP・Wallhackガイド</a>, <a href=\"/warzone-aimbot/\">Aimbot・Soft aim</a>, <a href=\"/warzone-radar-hack/\">2Dレーダーオーバーレイ</a>.",
+								"Control deep-dives: <a href=\"/esp/\">ESP・Wallhackガイド</a>, <a href=\"/aimbot/\">Aimbot・Soft aim</a>, <a href=\"/radar/\">2Dレーダーオーバーレイ</a>.",
 							],
 						},
 						{
@@ -14297,7 +14297,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。クライアント内ESPとsoft aimトグル",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot・Soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot・Soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -14320,14 +14320,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Soft Aim",
 					ctaPrimary: "Warzone Cheatsを購入",
 					ctaSecondary: "機能を見る",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。Windows PC向けスムーズなsoft aim設定",
 								"checkout checkoutで即時デジタル配信。$35/月と$150永久プランにRicochetメンテナンス含む。",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot・Soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot・Soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot・Soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot・Soft aim</a>.",
 							],
 						},
 						{
@@ -14335,7 +14335,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。Windows PC向けスムーズなsoft aim設定",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">ESP・Wallhackガイド</a> and <a href=\"/warzone-radar-hack/\">2Dレーダーオーバーレイ</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">ESP・Wallhackガイド</a> and <a href=\"/radar/\">2Dレーダーオーバーレイ</a> overlays.",
 							],
 						},
 						{
@@ -14372,8 +14372,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。warzone cheats購入前に比較すべき点",
-								"Review <a href=\"/features/\">全機能</a>, <a href=\"/warzone-cheats/\">Warzone Cheats概要</a>, and <a href=\"/warzone-cheats/\">Warzone Cheats概要</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">ESP・Wallhackガイド</a>, <a href=\"/warzone-aimbot/\">Aimbot・Soft aim</a>, <a href=\"/warzone-cheats/\">Warzone Cheats概要</a>.",
+								"Review <a href=\"/features/\">全機能</a>, <a href=\"/cheats/\">Warzone Cheats概要</a>, and <a href=\"/cheats/\">Warzone Cheats概要</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">ESP・Wallhackガイド</a>, <a href=\"/aimbot/\">Aimbot・Soft aim</a>, <a href=\"/cheats/\">Warzone Cheats概要</a>.",
 							],
 						},
 						{
@@ -14389,7 +14389,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Undetectedチートガイド</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Warzone Cheats概要</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">ストア</a>.",
+								"Still deciding? <a href=\"/cheats/\">Warzone Cheats概要</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">ストア</a>.",
 							],
 						},
 					],
@@ -14404,14 +14404,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Aimbot Hack",
 					ctaPrimary: "Warzone Cheatsを購入",
 					ctaSecondary: "機能を見る",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。Call of Duty: Warzone向けundetected Aimbot hack assist",
 								"checkout checkoutで即時デジタル配信。$35/月と$150永久プランにRicochetメンテナンス含む。",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot・Soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot・Soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot・Soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot・Soft aim</a>.",
 							],
 						},
 						{
@@ -14427,7 +14427,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Undetectedチートガイド</a> and <a href=\"/ricochet-bypass/\">Ricochetメンテナンス</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">ストア</a>.",
-								"Pair with <a href=\"/warzone-esp/\">ESP・Wallhackガイド</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">ESP・Wallhackガイド</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -14442,14 +14442,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone ESP Hack",
 					ctaPrimary: "Warzone Cheatsを購入",
 					ctaSecondary: "機能を見る",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。ESP hackボックス、死体pin、距離",
 								"checkout checkoutで即時デジタル配信。$35/月と$150永久プランにRicochetメンテナンス含む。",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">ESP・Wallhackガイド</a>. Wallhack wording: <a href=\"/warzone-esp/\">ESP・Wallhackガイド</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">ESP・Wallhackガイド</a>. Wallhack wording: <a href=\"/esp/\">ESP・Wallhackガイド</a>.",
 							],
 						},
 						{
@@ -14463,9 +14463,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetectedチートガイド</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">2Dレーダーオーバーレイ</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetectedチートガイド</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">2Dレーダーオーバーレイ</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">ストア</a>.",
-								"Install steps: <a href=\"/setup/\">セットアップガイド</a>. Status questions: <a href=\"/warzone-cheats/\">Warzone Cheats概要</a>.",
+								"Install steps: <a href=\"/setup/\">セットアップガイド</a>. Status questions: <a href=\"/cheats/\">Warzone Cheats概要</a>.",
 							],
 						},
 					],
@@ -14494,8 +14494,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone CheatsはCall of Duty: Warzone向けWindows PC用ESP wallhack、radar hack、Call of Duty: Warzone Aimbotのundetectedパッケージです。unlock-all検索 vs 本物のESPとAimbotツール",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">ESP・Wallhackガイド</a> and <a href=\"/features/\">全機能</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Warzone Cheats概要</a> and <a href=\"/warzone-cheats/\">Warzone Cheats概要</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">ESP・Wallhackガイド</a> and <a href=\"/features/\">全機能</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Warzone Cheats概要</a> and <a href=\"/cheats/\">Warzone Cheats概要</a>.",
 							],
 						},
 						{
@@ -14554,7 +14554,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "サポートにメール",
 					ctaSecondary: "プライバシーを読む",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "デジタル配信",
@@ -14589,7 +14589,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "サポートにメール",
 					ctaSecondary: "プライバシーを読む",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "規約への同意",
@@ -14903,9 +14903,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout으로 즉시 디지털 배송. $35/월 및 $150 평생 요금제에 Ricochet 유지보수 포함.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -14957,7 +14957,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout으로 즉시 디지털 배송. $35/월 및 $150 평생 요금제에 Ricochet 유지보수 포함.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">환불 정책</a>",
+								"<a href=\"/refund/\">환불 정책</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">지원</a>",
 							],
@@ -15105,7 +15105,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout으로 즉시 디지털 배송. $35/월 및 $150 평생 요금제에 Ricochet 유지보수 포함.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">환불 정책</a>",
+								"<a href=\"/refund/\">환불 정책</a>",
 								"<a href=\"/support/\">지원</a>",
 							],
 						},
@@ -15159,7 +15159,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Undetected 치트",
 					ctaPrimary: "Warzone Cheats 구매",
 					ctaSecondary: "기능 보기",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -15182,7 +15182,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">스토어</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">설치 가이드</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">설치 가이드</a> after delivery.",
 							],
 						},
 						{
@@ -15205,14 +15205,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Warzone Cheats 구매",
 					ctaSecondary: "기능 보기",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. 플레이어, 시체, 거리용 wallhack ESP",
 								"checkout checkout으로 즉시 디지털 배송. $35/월 및 $150 평생 요금제에 Ricochet 유지보수 포함.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot 및 soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">ESP 및 wallhack 가이드</a>; for combat assist see <a href=\"/aimbot/\">Aimbot 및 soft aim</a>.",
 							],
 						},
 						{
@@ -15220,7 +15220,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. 플레이어, 시체, 거리용 wallhack ESP",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">2D 레이더 오버레이</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">2D 레이더 오버레이</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -15228,7 +15228,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Undetected 치트 가이드</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Ricochet 유지보수</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">스토어</a> or continue to the <a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">스토어</a> or continue to the <a href=\"/esp/\">ESP 및 wallhack 가이드</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -15264,7 +15264,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout으로 즉시 디지털 배송. $35/월 및 $150 평생 요금제에 Ricochet 유지보수 포함.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a>",
+								"<a href=\"/esp/\">ESP 및 wallhack 가이드</a>",
 								"<a href=\"/\">전체 제품</a>",
 								"<a href=\"/pricing/\">스토어</a>",
 							],
@@ -15296,7 +15296,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Undetected 치트 가이드</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Warzone Cheats 개요</a>.",
 							],
 						},
 						{
@@ -15320,7 +15320,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. Warzone cheats용 Ricochet 업데이트 처리 방법",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Undetected 치트 가이드</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Ricochet 유지보수</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Warzone Cheats 개요</a>.",
 							],
 						},
 					],
@@ -15335,7 +15335,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Warzone Cheats 2026",
 					ctaPrimary: "Warzone Cheats 구매",
 					ctaSecondary: "기능 보기",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -15349,22 +15349,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. checkout 전 2026 warzone cheats 체크리스트",
-								"Deep links: <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a>, <a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a>, <a href=\"/warzone-aimbot/\">Aimbot 및 soft aim</a>, <a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a>, <a href=\"/warzone-radar-hack/\">2D 레이더 오버레이</a>, <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a>.",
+								"Deep links: <a href=\"/cheats/\">Warzone Cheats 개요</a>, <a href=\"/esp/\">ESP 및 wallhack 가이드</a>, <a href=\"/aimbot/\">Aimbot 및 soft aim</a>, <a href=\"/esp/\">ESP 및 wallhack 가이드</a>, <a href=\"/radar/\">2D 레이더 오버레이</a>, <a href=\"/cheats/\">Warzone Cheats 개요</a>.",
 								"Ricochet 패치 후 Updates 페이지 확인. 영구 undetected 보장 없음.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Warzone Cheats 개요</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Warzone Cheats 개요</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">지원</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot 및 soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot 및 soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">전체 제품</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -15411,9 +15411,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout으로 즉시 디지털 배송. $35/월 및 $150 평생 요금제에 Ricochet 유지보수 포함.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot 및 soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">2D 레이더 오버레이</a>",
+								"<a href=\"/esp/\">ESP 및 wallhack 가이드</a>",
+								"<a href=\"/aimbot/\">Aimbot 및 soft aim</a>",
+								"<a href=\"/radar/\">2D 레이더 오버레이</a>",
 								"<a href=\"/features/\">모든 기능</a>",
 							],
 						},
@@ -15469,7 +15469,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. 결제 후 디지털 라이선스 다운로드",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">스토어</a>.",
-								"Feature detail: <a href=\"/features/\">모든 기능</a>. Module pages: <a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a>, <a href=\"/warzone-aimbot/\">Aimbot 및 soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">모든 기능</a>. Module pages: <a href=\"/esp/\">ESP 및 wallhack 가이드</a>, <a href=\"/aimbot/\">Aimbot 및 soft aim</a>.",
 							],
 						},
 						{
@@ -15477,7 +15477,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Undetected 치트 가이드</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">지원</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Warzone Cheats 개요</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -15499,7 +15499,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. 클라이언트 내 ESP 및 soft aim 토글",
 								"checkout checkout으로 즉시 디지털 배송. $35/월 및 $150 평생 요금제에 Ricochet 유지보수 포함.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a>, <a href=\"/warzone-aimbot/\">Aimbot 및 soft aim</a>, <a href=\"/warzone-radar-hack/\">2D 레이더 오버레이</a>.",
+								"Control deep-dives: <a href=\"/esp/\">ESP 및 wallhack 가이드</a>, <a href=\"/aimbot/\">Aimbot 및 soft aim</a>, <a href=\"/radar/\">2D 레이더 오버레이</a>.",
 							],
 						},
 						{
@@ -15507,7 +15507,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. 클라이언트 내 ESP 및 soft aim 토글",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot 및 soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot 및 soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -15530,14 +15530,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Soft Aim",
 					ctaPrimary: "Warzone Cheats 구매",
 					ctaSecondary: "기능 보기",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. Windows PC용 부드러운 soft aim 설정",
 								"checkout checkout으로 즉시 디지털 배송. $35/월 및 $150 평생 요금제에 Ricochet 유지보수 포함.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot 및 soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot 및 soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot 및 soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot 및 soft aim</a>.",
 							],
 						},
 						{
@@ -15545,7 +15545,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. Windows PC용 부드러운 soft aim 설정",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a> and <a href=\"/warzone-radar-hack/\">2D 레이더 오버레이</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">ESP 및 wallhack 가이드</a> and <a href=\"/radar/\">2D 레이더 오버레이</a> overlays.",
 							],
 						},
 						{
@@ -15582,8 +15582,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. warzone cheats 구매 전 비교할 항목",
-								"Review <a href=\"/features/\">모든 기능</a>, <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a>, and <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a>, <a href=\"/warzone-aimbot/\">Aimbot 및 soft aim</a>, <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a>.",
+								"Review <a href=\"/features/\">모든 기능</a>, <a href=\"/cheats/\">Warzone Cheats 개요</a>, and <a href=\"/cheats/\">Warzone Cheats 개요</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">ESP 및 wallhack 가이드</a>, <a href=\"/aimbot/\">Aimbot 및 soft aim</a>, <a href=\"/cheats/\">Warzone Cheats 개요</a>.",
 							],
 						},
 						{
@@ -15599,7 +15599,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Undetected 치트 가이드</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">스토어</a>.",
+								"Still deciding? <a href=\"/cheats/\">Warzone Cheats 개요</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">스토어</a>.",
 							],
 						},
 					],
@@ -15614,14 +15614,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone 에임봇 핵",
 					ctaPrimary: "Warzone Cheats 구매",
 					ctaSecondary: "기능 보기",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. Call of Duty: Warzone용 undetected Aimbot hack assist",
 								"checkout checkout으로 즉시 디지털 배송. $35/월 및 $150 평생 요금제에 Ricochet 유지보수 포함.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot 및 soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot 및 soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot 및 soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot 및 soft aim</a>.",
 							],
 						},
 						{
@@ -15637,7 +15637,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Undetected 치트 가이드</a> and <a href=\"/ricochet-bypass/\">Ricochet 유지보수</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">스토어</a>.",
-								"Pair with <a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">ESP 및 wallhack 가이드</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -15652,14 +15652,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone ESP 핵",
 					ctaPrimary: "Warzone Cheats 구매",
 					ctaSecondary: "기능 보기",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. ESP hack 박스, 시체 pin, 거리",
 								"checkout checkout으로 즉시 디지털 배송. $35/월 및 $150 평생 요금제에 Ricochet 유지보수 포함.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a>. Wallhack wording: <a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">ESP 및 wallhack 가이드</a>. Wallhack wording: <a href=\"/esp/\">ESP 및 wallhack 가이드</a>.",
 							],
 						},
 						{
@@ -15673,9 +15673,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected 치트 가이드</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">2D 레이더 오버레이</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected 치트 가이드</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">2D 레이더 오버레이</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">스토어</a>.",
-								"Install steps: <a href=\"/setup/\">설치 가이드</a>. Status questions: <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a>.",
+								"Install steps: <a href=\"/setup/\">설치 가이드</a>. Status questions: <a href=\"/cheats/\">Warzone Cheats 개요</a>.",
 							],
 						},
 					],
@@ -15704,8 +15704,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats는 Call of Duty: Warzone Windows PC용 ESP wallhack, radar hack, Call of Duty: Warzone Aimbot undetected 패키지입니다. unlock-all 검색 vs 실제 ESP 및 Aimbot 도구",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">ESP 및 wallhack 가이드</a> and <a href=\"/features/\">모든 기능</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a> and <a href=\"/warzone-cheats/\">Warzone Cheats 개요</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">ESP 및 wallhack 가이드</a> and <a href=\"/features/\">모든 기능</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Warzone Cheats 개요</a> and <a href=\"/cheats/\">Warzone Cheats 개요</a>.",
 							],
 						},
 						{
@@ -15764,7 +15764,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "지원 이메일",
 					ctaSecondary: "개인정보 읽기",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "디지털 배송",
@@ -15799,7 +15799,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "지원 이메일",
 					ctaSecondary: "개인정보 읽기",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "약관 동의",
@@ -16113,9 +16113,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"通过checkout checkout即时数字交付。$35/月和$150终身含Ricochet维护。",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -16167,7 +16167,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"通过checkout checkout即时数字交付。$35/月和$150终身含Ricochet维护。",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">退款政策</a>",
+								"<a href=\"/refund/\">退款政策</a>",
 								"<a href=\"/faq/\">常见问题</a>",
 								"<a href=\"/support/\">支持</a>",
 							],
@@ -16315,7 +16315,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"通过checkout checkout即时数字交付。$35/月和$150终身含Ricochet维护。",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">退款政策</a>",
+								"<a href=\"/refund/\">退款政策</a>",
 								"<a href=\"/support/\">支持</a>",
 							],
 						},
@@ -16369,7 +16369,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Undetected作弊",
 					ctaPrimary: "购买 Warzone Cheats",
 					ctaSecondary: "查看功能",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -16392,7 +16392,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">常见问题</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">商店</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">安装指南</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">安装指南</a> after delivery.",
 							],
 						},
 						{
@@ -16415,14 +16415,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "购买 Warzone Cheats",
 					ctaSecondary: "查看功能",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。玩家、尸体和距离的wallhack ESP",
 								"通过checkout checkout即时数字交付。$35/月和$150终身含Ricochet维护。",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">ESP和透视指南</a>; for combat assist see <a href=\"/warzone-aimbot/\">自瞄和软瞄准</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">ESP和透视指南</a>; for combat assist see <a href=\"/aimbot/\">自瞄和软瞄准</a>.",
 							],
 						},
 						{
@@ -16430,7 +16430,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。玩家、尸体和距离的wallhack ESP",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">2D雷达覆盖</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">2D雷达覆盖</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -16438,7 +16438,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Undetected作弊指南</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Ricochet维护</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">商店</a> or continue to the <a href=\"/warzone-esp/\">ESP和透视指南</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">商店</a> or continue to the <a href=\"/esp/\">ESP和透视指南</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -16474,7 +16474,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"通过checkout checkout即时数字交付。$35/月和$150终身含Ricochet维护。",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP和透视指南</a>",
+								"<a href=\"/esp/\">ESP和透视指南</a>",
 								"<a href=\"/\">完整产品</a>",
 								"<a href=\"/pricing/\">商店</a>",
 							],
@@ -16506,7 +16506,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Undetected作弊指南</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Warzone Cheats概览</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Warzone Cheats概览</a>.",
 							],
 						},
 						{
@@ -16530,7 +16530,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。Warzone cheats的Ricochet更新处理方式",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Undetected作弊指南</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Ricochet维护</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Warzone Cheats概览</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Warzone Cheats概览</a>.",
 							],
 						},
 					],
@@ -16545,7 +16545,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone作弊 2026",
 					ctaPrimary: "购买 Warzone Cheats",
 					ctaSecondary: "查看功能",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -16559,22 +16559,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。checkout前的2026 warzone cheats清单",
-								"Deep links: <a href=\"/warzone-cheats/\">Warzone Cheats概览</a>, <a href=\"/warzone-esp/\">ESP和透视指南</a>, <a href=\"/warzone-aimbot/\">自瞄和软瞄准</a>, <a href=\"/warzone-esp/\">ESP和透视指南</a>, <a href=\"/warzone-radar-hack/\">2D雷达覆盖</a>, <a href=\"/warzone-cheats/\">Warzone Cheats概览</a>.",
+								"Deep links: <a href=\"/cheats/\">Warzone Cheats概览</a>, <a href=\"/esp/\">ESP和透视指南</a>, <a href=\"/aimbot/\">自瞄和软瞄准</a>, <a href=\"/esp/\">ESP和透视指南</a>, <a href=\"/radar/\">2D雷达覆盖</a>, <a href=\"/cheats/\">Warzone Cheats概览</a>.",
 								"Ricochet补丁后请查看Updates页面。无任何作弊保证永久undetected。",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Warzone Cheats概览</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Warzone Cheats概览</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">常见问题</a>.",
+								"Read the <a href=\"/cheats/\">Warzone Cheats概览</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Warzone Cheats概览</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">常见问题</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">支持</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">自瞄和软瞄准</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">自瞄和软瞄准</a> and ESP toggles.",
 								"Compare against <a href=\"/\">完整产品</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -16621,9 +16621,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"通过checkout checkout即时数字交付。$35/月和$150终身含Ricochet维护。",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP和透视指南</a>",
-								"<a href=\"/warzone-aimbot/\">自瞄和软瞄准</a>",
-								"<a href=\"/warzone-radar-hack/\">2D雷达覆盖</a>",
+								"<a href=\"/esp/\">ESP和透视指南</a>",
+								"<a href=\"/aimbot/\">自瞄和软瞄准</a>",
+								"<a href=\"/radar/\">2D雷达覆盖</a>",
 								"<a href=\"/features/\">所有功能</a>",
 							],
 						},
@@ -16679,7 +16679,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。付款后的数字许可证下载",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">商店</a>.",
-								"Feature detail: <a href=\"/features/\">所有功能</a>. Module pages: <a href=\"/warzone-esp/\">ESP和透视指南</a>, <a href=\"/warzone-aimbot/\">自瞄和软瞄准</a>.",
+								"Feature detail: <a href=\"/features/\">所有功能</a>. Module pages: <a href=\"/esp/\">ESP和透视指南</a>, <a href=\"/aimbot/\">自瞄和软瞄准</a>.",
 							],
 						},
 						{
@@ -16687,7 +16687,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Undetected作弊指南</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">支持</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Warzone Cheats概览</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Warzone Cheats概览</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -16709,7 +16709,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。客户端内ESP和soft aim开关",
 								"通过checkout checkout即时数字交付。$35/月和$150终身含Ricochet维护。",
-								"Control deep-dives: <a href=\"/warzone-esp/\">ESP和透视指南</a>, <a href=\"/warzone-aimbot/\">自瞄和软瞄准</a>, <a href=\"/warzone-radar-hack/\">2D雷达覆盖</a>.",
+								"Control deep-dives: <a href=\"/esp/\">ESP和透视指南</a>, <a href=\"/aimbot/\">自瞄和软瞄准</a>, <a href=\"/radar/\">2D雷达覆盖</a>.",
 							],
 						},
 						{
@@ -16717,7 +16717,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。客户端内ESP和soft aim开关",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">自瞄和软瞄准</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">自瞄和软瞄准</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -16740,14 +16740,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Soft Aim",
 					ctaPrimary: "购买 Warzone Cheats",
 					ctaSecondary: "查看功能",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。Windows PC的流畅soft aim设置",
 								"通过checkout checkout即时数字交付。$35/月和$150终身含Ricochet维护。",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">自瞄和软瞄准</a>. Alternate wording: <a href=\"/warzone-aimbot/\">自瞄和软瞄准</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">自瞄和软瞄准</a>. Alternate wording: <a href=\"/aimbot/\">自瞄和软瞄准</a>.",
 							],
 						},
 						{
@@ -16755,7 +16755,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。Windows PC的流畅soft aim设置",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">ESP和透视指南</a> and <a href=\"/warzone-radar-hack/\">2D雷达覆盖</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">ESP和透视指南</a> and <a href=\"/radar/\">2D雷达覆盖</a> overlays.",
 							],
 						},
 						{
@@ -16792,8 +16792,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。购买warzone cheats前应比较的内容",
-								"Review <a href=\"/features/\">所有功能</a>, <a href=\"/warzone-cheats/\">Warzone Cheats概览</a>, and <a href=\"/warzone-cheats/\">Warzone Cheats概览</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">ESP和透视指南</a>, <a href=\"/warzone-aimbot/\">自瞄和软瞄准</a>, <a href=\"/warzone-cheats/\">Warzone Cheats概览</a>.",
+								"Review <a href=\"/features/\">所有功能</a>, <a href=\"/cheats/\">Warzone Cheats概览</a>, and <a href=\"/cheats/\">Warzone Cheats概览</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">ESP和透视指南</a>, <a href=\"/aimbot/\">自瞄和软瞄准</a>, <a href=\"/cheats/\">Warzone Cheats概览</a>.",
 							],
 						},
 						{
@@ -16809,7 +16809,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Undetected作弊指南</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Warzone Cheats概览</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">商店</a>.",
+								"Still deciding? <a href=\"/cheats/\">Warzone Cheats概览</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">商店</a>.",
 							],
 						},
 					],
@@ -16824,14 +16824,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone自瞄外挂",
 					ctaPrimary: "购买 Warzone Cheats",
 					ctaSecondary: "查看功能",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。Call of Duty: Warzone的undetected Aimbot hack assist",
 								"通过checkout checkout即时数字交付。$35/月和$150终身含Ricochet维护。",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">自瞄和软瞄准</a>. Full settings: <a href=\"/warzone-aimbot/\">自瞄和软瞄准</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">自瞄和软瞄准</a>. Full settings: <a href=\"/aimbot/\">自瞄和软瞄准</a>.",
 							],
 						},
 						{
@@ -16847,7 +16847,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Undetected作弊指南</a> and <a href=\"/ricochet-bypass/\">Ricochet维护</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">商店</a>.",
-								"Pair with <a href=\"/warzone-esp/\">ESP和透视指南</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">ESP和透视指南</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -16862,14 +16862,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone ESP外挂",
 					ctaPrimary: "购买 Warzone Cheats",
 					ctaSecondary: "查看功能",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。ESP hack方框、尸体pin和距离",
 								"通过checkout checkout即时数字交付。$35/月和$150终身含Ricochet维护。",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">ESP和透视指南</a>. Wallhack wording: <a href=\"/warzone-esp/\">ESP和透视指南</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">ESP和透视指南</a>. Wallhack wording: <a href=\"/esp/\">ESP和透视指南</a>.",
 							],
 						},
 						{
@@ -16883,9 +16883,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected作弊指南</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">2D雷达覆盖</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected作弊指南</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">2D雷达覆盖</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">商店</a>.",
-								"Install steps: <a href=\"/setup/\">安装指南</a>. Status questions: <a href=\"/warzone-cheats/\">Warzone Cheats概览</a>.",
+								"Install steps: <a href=\"/setup/\">安装指南</a>. Status questions: <a href=\"/cheats/\">Warzone Cheats概览</a>.",
 							],
 						},
 					],
@@ -16914,8 +16914,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats为Call of Duty: WarzoneWindows PC提供ESP wallhack、radar hack和Call of Duty: Warzone Aimbotundetected套餐。unlock-all搜索 vs 真正的ESP和Aimbot工具",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">ESP和透视指南</a> and <a href=\"/features/\">所有功能</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Warzone Cheats概览</a> and <a href=\"/warzone-cheats/\">Warzone Cheats概览</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">ESP和透视指南</a> and <a href=\"/features/\">所有功能</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Warzone Cheats概览</a> and <a href=\"/cheats/\">Warzone Cheats概览</a>.",
 							],
 						},
 						{
@@ -16974,7 +16974,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "邮件支持",
 					ctaSecondary: "阅读隐私政策",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "数字交付",
@@ -17009,7 +17009,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "邮件支持",
 					ctaSecondary: "阅读隐私政策",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "接受条款",
@@ -17323,9 +17323,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout से तुरंत डिजिटल डिलीवरी। $35/माह और $150 लाइफ़टाइम में Ricochet maintenance शामिल।",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -17377,7 +17377,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout से तुरंत डिजिटल डिलीवरी। $35/माह और $150 लाइफ़टाइम में Ricochet maintenance शामिल।",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">रिफंड नीति</a>",
+								"<a href=\"/refund/\">रिफंड नीति</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">सहायता</a>",
 							],
@@ -17525,7 +17525,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout से तुरंत डिजिटल डिलीवरी। $35/माह और $150 लाइफ़टाइम में Ricochet maintenance शामिल।",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">रिफंड नीति</a>",
+								"<a href=\"/refund/\">रिफंड नीति</a>",
 								"<a href=\"/support/\">सहायता</a>",
 							],
 						},
@@ -17579,7 +17579,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Undetected cheats",
 					ctaPrimary: "Warzone Cheats खरीदें",
 					ctaSecondary: "फ़ीचर्स देखें",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -17602,7 +17602,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">स्टोर</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">सेटअप गाइड</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">सेटअप गाइड</a> after delivery.",
 							],
 						},
 						{
@@ -17625,14 +17625,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Warzone Cheats खरीदें",
 					ctaSecondary: "फ़ीचर्स देखें",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। players, weapon drops और distance के लिए wallhack ESP",
 								"checkout checkout से तुरंत डिजिटल डिलीवरी। $35/माह और $150 लाइफ़टाइम में Ricochet maintenance शामिल।",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">ESP और wallhack गाइड</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot और soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">ESP और wallhack गाइड</a>; for combat assist see <a href=\"/aimbot/\">Aimbot और soft aim</a>.",
 							],
 						},
 						{
@@ -17640,7 +17640,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। players, weapon drops और distance के लिए wallhack ESP",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">2D रडार ओवरले</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">2D रडार ओवरले</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -17648,7 +17648,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Undetected cheats गाइड</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Ricochet रखरखाव</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">स्टोर</a> or continue to the <a href=\"/warzone-esp/\">ESP और wallhack गाइड</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">स्टोर</a> or continue to the <a href=\"/esp/\">ESP और wallhack गाइड</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -17684,7 +17684,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout से तुरंत डिजिटल डिलीवरी। $35/माह और $150 लाइफ़टाइम में Ricochet maintenance शामिल।",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP और wallhack गाइड</a>",
+								"<a href=\"/esp/\">ESP और wallhack गाइड</a>",
 								"<a href=\"/\">पूरा उत्पाद</a>",
 								"<a href=\"/pricing/\">स्टोर</a>",
 							],
@@ -17716,7 +17716,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Undetected cheats गाइड</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Warzone Cheats अवलोकन</a>.",
 							],
 						},
 						{
@@ -17740,7 +17740,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। Warzone cheats के लिए Ricochet updates कैसे handle होते हैं",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Undetected cheats गाइड</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Ricochet रखरखाव</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Warzone Cheats अवलोकन</a>.",
 							],
 						},
 					],
@@ -17755,7 +17755,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Warzone Cheats 2026",
 					ctaPrimary: "Warzone Cheats खरीदें",
 					ctaSecondary: "फ़ीचर्स देखें",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -17769,22 +17769,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। checkout से पहले 2026 warzone cheats checklist",
-								"Deep links: <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a>, <a href=\"/warzone-esp/\">ESP और wallhack गाइड</a>, <a href=\"/warzone-aimbot/\">Aimbot और soft aim</a>, <a href=\"/warzone-esp/\">ESP और wallhack गाइड</a>, <a href=\"/warzone-radar-hack/\">2D रडार ओवरले</a>, <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a>.",
+								"Deep links: <a href=\"/cheats/\">Warzone Cheats अवलोकन</a>, <a href=\"/esp/\">ESP और wallhack गाइड</a>, <a href=\"/aimbot/\">Aimbot और soft aim</a>, <a href=\"/esp/\">ESP और wallhack गाइड</a>, <a href=\"/radar/\">2D रडार ओवरले</a>, <a href=\"/cheats/\">Warzone Cheats अवलोकन</a>.",
 								"Ricochet पैच के बाद Updates पेज देखें। कोई भी cheat permanent undetected गारंटी नहीं देता।",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Warzone Cheats अवलोकन</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Warzone Cheats अवलोकन</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">सहायता</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot और soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot और soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">पूरा उत्पाद</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -17831,9 +17831,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"checkout checkout से तुरंत डिजिटल डिलीवरी। $35/माह और $150 लाइफ़टाइम में Ricochet maintenance शामिल।",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP और wallhack गाइड</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot और soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">2D रडार ओवरले</a>",
+								"<a href=\"/esp/\">ESP और wallhack गाइड</a>",
+								"<a href=\"/aimbot/\">Aimbot और soft aim</a>",
+								"<a href=\"/radar/\">2D रडार ओवरले</a>",
 								"<a href=\"/features/\">सभी फ़ीचर्स</a>",
 							],
 						},
@@ -17889,7 +17889,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। payment के बाद digital license download",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">स्टोर</a>.",
-								"Feature detail: <a href=\"/features/\">सभी फ़ीचर्स</a>. Module pages: <a href=\"/warzone-esp/\">ESP और wallhack गाइड</a>, <a href=\"/warzone-aimbot/\">Aimbot और soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">सभी फ़ीचर्स</a>. Module pages: <a href=\"/esp/\">ESP और wallhack गाइड</a>, <a href=\"/aimbot/\">Aimbot और soft aim</a>.",
 							],
 						},
 						{
@@ -17897,7 +17897,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Undetected cheats गाइड</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">सहायता</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Warzone Cheats अवलोकन</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -17919,7 +17919,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। in-client ESP और soft aim toggles",
 								"checkout checkout से तुरंत डिजिटल डिलीवरी। $35/माह और $150 लाइफ़टाइम में Ricochet maintenance शामिल।",
-								"Control deep-dives: <a href=\"/warzone-esp/\">ESP और wallhack गाइड</a>, <a href=\"/warzone-aimbot/\">Aimbot और soft aim</a>, <a href=\"/warzone-radar-hack/\">2D रडार ओवरले</a>.",
+								"Control deep-dives: <a href=\"/esp/\">ESP और wallhack गाइड</a>, <a href=\"/aimbot/\">Aimbot और soft aim</a>, <a href=\"/radar/\">2D रडार ओवरले</a>.",
 							],
 						},
 						{
@@ -17927,7 +17927,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। in-client ESP और soft aim toggles",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot और soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot और soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -17950,14 +17950,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Soft Aim",
 					ctaPrimary: "Warzone Cheats खरीदें",
 					ctaSecondary: "फ़ीचर्स देखें",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। Windows PC के लिए smooth soft aim settings",
 								"checkout checkout से तुरंत डिजिटल डिलीवरी। $35/माह और $150 लाइफ़टाइम में Ricochet maintenance शामिल।",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot और soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot और soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot और soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot और soft aim</a>.",
 							],
 						},
 						{
@@ -17965,7 +17965,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। Windows PC के लिए smooth soft aim settings",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">ESP और wallhack गाइड</a> and <a href=\"/warzone-radar-hack/\">2D रडार ओवरले</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">ESP और wallhack गाइड</a> and <a href=\"/radar/\">2D रडार ओवरले</a> overlays.",
 							],
 						},
 						{
@@ -18002,8 +18002,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। warzone cheats खरीदने से पहले क्या compare करें",
-								"Review <a href=\"/features/\">सभी फ़ीचर्स</a>, <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a>, and <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">ESP और wallhack गाइड</a>, <a href=\"/warzone-aimbot/\">Aimbot और soft aim</a>, <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a>.",
+								"Review <a href=\"/features/\">सभी फ़ीचर्स</a>, <a href=\"/cheats/\">Warzone Cheats अवलोकन</a>, and <a href=\"/cheats/\">Warzone Cheats अवलोकन</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">ESP और wallhack गाइड</a>, <a href=\"/aimbot/\">Aimbot और soft aim</a>, <a href=\"/cheats/\">Warzone Cheats अवलोकन</a>.",
 							],
 						},
 						{
@@ -18019,7 +18019,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Undetected cheats गाइड</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">स्टोर</a>.",
+								"Still deciding? <a href=\"/cheats/\">Warzone Cheats अवलोकन</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">स्टोर</a>.",
 							],
 						},
 					],
@@ -18034,14 +18034,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Aimbot Hack",
 					ctaPrimary: "Warzone Cheats खरीदें",
 					ctaSecondary: "फ़ीचर्स देखें",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। Call of Duty: Warzone के लिए undetected Aimbot hack assist",
 								"checkout checkout से तुरंत डिजिटल डिलीवरी। $35/माह और $150 लाइफ़टाइम में Ricochet maintenance शामिल।",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot और soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot और soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot और soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot और soft aim</a>.",
 							],
 						},
 						{
@@ -18057,7 +18057,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Undetected cheats गाइड</a> and <a href=\"/ricochet-bypass/\">Ricochet रखरखाव</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">स्टोर</a>.",
-								"Pair with <a href=\"/warzone-esp/\">ESP और wallhack गाइड</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">ESP और wallhack गाइड</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -18072,14 +18072,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone ESP Hack",
 					ctaPrimary: "Warzone Cheats खरीदें",
 					ctaSecondary: "फ़ीचर्स देखें",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। ESP hack boxes, weapon drops pins और distance",
 								"checkout checkout से तुरंत डिजिटल डिलीवरी। $35/माह और $150 लाइफ़टाइम में Ricochet maintenance शामिल।",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">ESP और wallhack गाइड</a>. Wallhack wording: <a href=\"/warzone-esp/\">ESP और wallhack गाइड</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">ESP और wallhack गाइड</a>. Wallhack wording: <a href=\"/esp/\">ESP और wallhack गाइड</a>.",
 							],
 						},
 						{
@@ -18093,9 +18093,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected cheats गाइड</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">2D रडार ओवरले</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected cheats गाइड</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">2D रडार ओवरले</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">स्टोर</a>.",
-								"Install steps: <a href=\"/setup/\">सेटअप गाइड</a>. Status questions: <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a>.",
+								"Install steps: <a href=\"/setup/\">सेटअप गाइड</a>. Status questions: <a href=\"/cheats/\">Warzone Cheats अवलोकन</a>.",
 							],
 						},
 					],
@@ -18124,8 +18124,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats Call of Duty: Warzone के लिए Windows PC पर ESP wallhack, radar hack और Call of Duty: Warzone Aimbot undetected पैकेज देता है। unlock-all searches vs real ESP और Aimbot tools",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">ESP और wallhack गाइड</a> and <a href=\"/features/\">सभी फ़ीचर्स</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a> and <a href=\"/warzone-cheats/\">Warzone Cheats अवलोकन</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">ESP और wallhack गाइड</a> and <a href=\"/features/\">सभी फ़ीचर्स</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Warzone Cheats अवलोकन</a> and <a href=\"/cheats/\">Warzone Cheats अवलोकन</a>.",
 							],
 						},
 						{
@@ -18184,7 +18184,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "सहायता ईमेल",
 					ctaSecondary: "गोपनीयता पढ़ें",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "डिजिटल डिलीवरी",
@@ -18219,7 +18219,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "सहायता ईमेल",
 					ctaSecondary: "गोपनीयता पढ़ें",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "शर्तों की स्वीकृति",
@@ -18533,9 +18533,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"pengiriman digital instan via checkout checkout. Paket $35/bulan dan $150 seumur hidup termasuk pemeliharaan Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -18587,7 +18587,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"pengiriman digital instan via checkout checkout. Paket $35/bulan dan $150 seumur hidup termasuk pemeliharaan Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Kebijakan refund</a>",
+								"<a href=\"/refund/\">Kebijakan refund</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Dukungan</a>",
 							],
@@ -18735,7 +18735,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"pengiriman digital instan via checkout checkout. Paket $35/bulan dan $150 seumur hidup termasuk pemeliharaan Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Kebijakan refund</a>",
+								"<a href=\"/refund/\">Kebijakan refund</a>",
 								"<a href=\"/support/\">Dukungan</a>",
 							],
 						},
@@ -18789,7 +18789,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheat undetected",
 					ctaPrimary: "Beli Warzone Cheats",
 					ctaSecondary: "Lihat fitur",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -18812,7 +18812,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Toko</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Panduan setup</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Panduan setup</a> after delivery.",
 							],
 						},
 						{
@@ -18835,14 +18835,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Beli Warzone Cheats",
 					ctaSecondary: "Lihat fitur",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. wallhack ESP untuk pemain, bangkai, dan jarak",
 								"pengiriman digital instan via checkout checkout. Paket $35/bulan dan $150 seumur hidup termasuk pemeliharaan Ricochet.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">Panduan ESP & wallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">Panduan ESP & wallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot & soft aim</a>.",
 							],
 						},
 						{
@@ -18850,7 +18850,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. wallhack ESP untuk pemain, bangkai, dan jarak",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -18858,7 +18858,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Panduan cheat undetected</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Pemeliharaan Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Toko</a> or continue to the <a href=\"/warzone-esp/\">Panduan ESP & wallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Toko</a> or continue to the <a href=\"/esp/\">Panduan ESP & wallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -18894,7 +18894,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"pengiriman digital instan via checkout checkout. Paket $35/bulan dan $150 seumur hidup termasuk pemeliharaan Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Panduan ESP & wallhack</a>",
+								"<a href=\"/esp/\">Panduan ESP & wallhack</a>",
 								"<a href=\"/\">Produk lengkap</a>",
 								"<a href=\"/pricing/\">Toko</a>",
 							],
@@ -18926,7 +18926,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Panduan cheat undetected</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Ringkasan Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -18950,7 +18950,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. cara pembaruan Ricochet ditangani untuk Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Panduan cheat undetected</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Pemeliharaan Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Ringkasan Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -18965,7 +18965,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheat Call of Duty: Warzone 2026",
 					ctaPrimary: "Beli Warzone Cheats",
 					ctaSecondary: "Lihat fitur",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -18979,22 +18979,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. checklist warzone cheats 2026 sebelum checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a>, <a href=\"/warzone-esp/\">Panduan ESP & wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>, <a href=\"/warzone-esp/\">Panduan ESP & wallhack</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>, <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">Ringkasan Warzone Cheats</a>, <a href=\"/esp/\">Panduan ESP & wallhack</a>, <a href=\"/aimbot/\">Aimbot & soft aim</a>, <a href=\"/esp/\">Panduan ESP & wallhack</a>, <a href=\"/radar/\">Overlay radar 2D</a>, <a href=\"/cheats/\">Ringkasan Warzone Cheats</a>.",
 								"Periksa Updates setelah patch Ricochet. Tidak ada cheat yang menjamin undetected permanen.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Ringkasan Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Ringkasan Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Dukungan</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot & soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Produk lengkap</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -19041,9 +19041,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"pengiriman digital instan via checkout checkout. Paket $35/bulan dan $150 seumur hidup termasuk pemeliharaan Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Panduan ESP & wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>",
+								"<a href=\"/esp/\">Panduan ESP & wallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot & soft aim</a>",
+								"<a href=\"/radar/\">Overlay radar 2D</a>",
 								"<a href=\"/features/\">Semua fitur</a>",
 							],
 						},
@@ -19099,7 +19099,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. unduhan lisensi digital setelah pembayaran",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Toko</a>.",
-								"Feature detail: <a href=\"/features/\">Semua fitur</a>. Module pages: <a href=\"/warzone-esp/\">Panduan ESP & wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Semua fitur</a>. Module pages: <a href=\"/esp/\">Panduan ESP & wallhack</a>, <a href=\"/aimbot/\">Aimbot & soft aim</a>.",
 							],
 						},
 						{
@@ -19107,7 +19107,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Panduan cheat undetected</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Dukungan</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Ringkasan Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -19129,7 +19129,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. toggle ESP dan soft aim in-client",
 								"pengiriman digital instan via checkout checkout. Paket $35/bulan dan $150 seumur hidup termasuk pemeliharaan Ricochet.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">Panduan ESP & wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>.",
+								"Control deep-dives: <a href=\"/esp/\">Panduan ESP & wallhack</a>, <a href=\"/aimbot/\">Aimbot & soft aim</a>, <a href=\"/radar/\">Overlay radar 2D</a>.",
 							],
 						},
 						{
@@ -19137,7 +19137,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. toggle ESP dan soft aim in-client",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot & soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -19160,14 +19160,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Soft aim Call of Duty: Warzone",
 					ctaPrimary: "Beli Warzone Cheats",
 					ctaSecondary: "Lihat fitur",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. pengaturan soft aim halus untuk Windows PC",
 								"pengiriman digital instan via checkout checkout. Paket $35/bulan dan $150 seumur hidup termasuk pemeliharaan Ricochet.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot & soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot & soft aim</a>.",
 							],
 						},
 						{
@@ -19175,7 +19175,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. pengaturan soft aim halus untuk Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">Panduan ESP & wallhack</a> and <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">Panduan ESP & wallhack</a> and <a href=\"/radar/\">Overlay radar 2D</a> overlays.",
 							],
 						},
 						{
@@ -19212,8 +19212,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. apa yang dibandingkan sebelum membeli warzone cheats",
-								"Review <a href=\"/features/\">Semua fitur</a>, <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">Panduan ESP & wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>, <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">Semua fitur</a>, <a href=\"/cheats/\">Ringkasan Warzone Cheats</a>, and <a href=\"/cheats/\">Ringkasan Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">Panduan ESP & wallhack</a>, <a href=\"/aimbot/\">Aimbot & soft aim</a>, <a href=\"/cheats/\">Ringkasan Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -19229,7 +19229,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Panduan cheat undetected</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Toko</a>.",
+								"Still deciding? <a href=\"/cheats/\">Ringkasan Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Toko</a>.",
 							],
 						},
 					],
@@ -19244,14 +19244,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack aimbot Call of Duty: Warzone",
 					ctaPrimary: "Beli Warzone Cheats",
 					ctaSecondary: "Lihat fitur",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. assist hack Aimbot undetected untuk Call of Duty: Warzone",
 								"pengiriman digital instan via checkout checkout. Paket $35/bulan dan $150 seumur hidup termasuk pemeliharaan Ricochet.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot & soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot & soft aim</a>.",
 							],
 						},
 						{
@@ -19267,7 +19267,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Panduan cheat undetected</a> and <a href=\"/ricochet-bypass/\">Pemeliharaan Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Toko</a>.",
-								"Pair with <a href=\"/warzone-esp/\">Panduan ESP & wallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">Panduan ESP & wallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -19282,14 +19282,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack ESP Call of Duty: Warzone",
 					ctaPrimary: "Beli Warzone Cheats",
 					ctaSecondary: "Lihat fitur",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. kotak ESP hack, pin bangkai, dan jarak",
 								"pengiriman digital instan via checkout checkout. Paket $35/bulan dan $150 seumur hidup termasuk pemeliharaan Ricochet.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">Panduan ESP & wallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">Panduan ESP & wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">Panduan ESP & wallhack</a>. Wallhack wording: <a href=\"/esp/\">Panduan ESP & wallhack</a>.",
 							],
 						},
 						{
@@ -19303,9 +19303,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Panduan cheat undetected</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Panduan cheat undetected</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">Overlay radar 2D</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Toko</a>.",
-								"Install steps: <a href=\"/setup/\">Panduan setup</a>. Status questions: <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">Panduan setup</a>. Status questions: <a href=\"/cheats/\">Ringkasan Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -19334,8 +19334,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats menyediakan ESP wallhack, radar hack, dan Call of Duty: Warzone Aimbot undetected untuk Call of Duty: Warzone di PC Windows. pencarian unlock-all vs alat ESP dan Aimbot asli",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">Panduan ESP & wallhack</a> and <a href=\"/features/\">Semua fitur</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a> and <a href=\"/warzone-cheats/\">Ringkasan Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">Panduan ESP & wallhack</a> and <a href=\"/features/\">Semua fitur</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Ringkasan Warzone Cheats</a> and <a href=\"/cheats/\">Ringkasan Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -19394,7 +19394,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "Email dukungan",
 					ctaSecondary: "Baca privasi",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Pengiriman digital",
@@ -19429,7 +19429,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "Email dukungan",
 					ctaSecondary: "Baca privasi",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Penerimaan syarat",
@@ -19743,9 +19743,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล Ricochet",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -19797,7 +19797,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล Ricochet",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">นโยบายคืนเงิน</a>",
+								"<a href=\"/refund/\">นโยบายคืนเงิน</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">ฝ่ายสนับสนุน</a>",
 							],
@@ -19945,7 +19945,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล Ricochet",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">นโยบายคืนเงิน</a>",
+								"<a href=\"/refund/\">นโยบายคืนเงิน</a>",
 								"<a href=\"/support/\">ฝ่ายสนับสนุน</a>",
 							],
 						},
@@ -19999,7 +19999,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheats undetected",
 					ctaPrimary: "ซื้อ Warzone Cheats",
 					ctaSecondary: "ดูฟีเจอร์",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -20022,7 +20022,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">ร้านค้า</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">คู่มือติดตั้ง</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">คู่มือติดตั้ง</a> after delivery.",
 							],
 						},
 						{
@@ -20045,14 +20045,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "ซื้อ Warzone Cheats",
 					ctaSecondary: "ดูฟีเจอร์",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC wallhack ESP สำหรับผู้เล่น ซาก และระยะทาง",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล Ricochet",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot และ soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">คู่มือ ESP และ wallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot และ soft aim</a>.",
 							],
 						},
 						{
@@ -20060,7 +20060,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC wallhack ESP สำหรับผู้เล่น ซาก และระยะทาง",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">โอเวอร์เลย์เรดาร์ 2D</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">โอเวอร์เลย์เรดาร์ 2D</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -20068,7 +20068,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">คู่มือ cheat undetected</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">การดูแล Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">ร้านค้า</a> or continue to the <a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">ร้านค้า</a> or continue to the <a href=\"/esp/\">คู่มือ ESP และ wallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -20104,7 +20104,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล Ricochet",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a>",
+								"<a href=\"/esp/\">คู่มือ ESP และ wallhack</a>",
 								"<a href=\"/\">ผลิตภัณฑ์เต็มรูปแบบ</a>",
 								"<a href=\"/pricing/\">ร้านค้า</a>",
 							],
@@ -20136,7 +20136,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">คู่มือ cheat undetected</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -20160,7 +20160,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC วิธีจัดการอัปเดต Ricochet สำหรับ Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">คู่มือ cheat undetected</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">การดูแล Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -20175,7 +20175,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Warzone Cheats 2026",
 					ctaPrimary: "ซื้อ Warzone Cheats",
 					ctaSecondary: "ดูฟีเจอร์",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -20189,22 +20189,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC checklist warzone cheats 2026 ก่อน checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a>, <a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot และ soft aim</a>, <a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a>, <a href=\"/warzone-radar-hack/\">โอเวอร์เลย์เรดาร์ 2D</a>, <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a>, <a href=\"/esp/\">คู่มือ ESP และ wallhack</a>, <a href=\"/aimbot/\">Aimbot และ soft aim</a>, <a href=\"/esp/\">คู่มือ ESP และ wallhack</a>, <a href=\"/radar/\">โอเวอร์เลย์เรดาร์ 2D</a>, <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a>.",
 								"ตรวจ Updates หลังแพตช์ Ricochet ไม่มี cheat รับประกัน undetected ถาวร",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">ฝ่ายสนับสนุน</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot และ soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot และ soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">ผลิตภัณฑ์เต็มรูปแบบ</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -20251,9 +20251,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล Ricochet",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot และ soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">โอเวอร์เลย์เรดาร์ 2D</a>",
+								"<a href=\"/esp/\">คู่มือ ESP และ wallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot และ soft aim</a>",
+								"<a href=\"/radar/\">โอเวอร์เลย์เรดาร์ 2D</a>",
 								"<a href=\"/features/\">ฟีเจอร์ทั้งหมด</a>",
 							],
 						},
@@ -20309,7 +20309,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC ดาวน์โหลดใบอนุญาตดิจิทัลหลังชำระเงิน",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">ร้านค้า</a>.",
-								"Feature detail: <a href=\"/features/\">ฟีเจอร์ทั้งหมด</a>. Module pages: <a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot และ soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">ฟีเจอร์ทั้งหมด</a>. Module pages: <a href=\"/esp/\">คู่มือ ESP และ wallhack</a>, <a href=\"/aimbot/\">Aimbot และ soft aim</a>.",
 							],
 						},
 						{
@@ -20317,7 +20317,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">คู่มือ cheat undetected</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">ฝ่ายสนับสนุน</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -20339,7 +20339,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC สวิตช์ ESP และ soft aim ในไคลเอนต์",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล Ricochet",
-								"Control deep-dives: <a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot และ soft aim</a>, <a href=\"/warzone-radar-hack/\">โอเวอร์เลย์เรดาร์ 2D</a>.",
+								"Control deep-dives: <a href=\"/esp/\">คู่มือ ESP และ wallhack</a>, <a href=\"/aimbot/\">Aimbot และ soft aim</a>, <a href=\"/radar/\">โอเวอร์เลย์เรดาร์ 2D</a>.",
 							],
 						},
 						{
@@ -20347,7 +20347,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC สวิตช์ ESP และ soft aim ในไคลเอนต์",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot และ soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot และ soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -20370,14 +20370,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Soft Aim",
 					ctaPrimary: "ซื้อ Warzone Cheats",
 					ctaSecondary: "ดูฟีเจอร์",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC การตั้งค่า soft aim ที่ลื่นไหลสำหรับ Windows PC",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล Ricochet",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot และ soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot และ soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot และ soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot และ soft aim</a>.",
 							],
 						},
 						{
@@ -20385,7 +20385,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC การตั้งค่า soft aim ที่ลื่นไหลสำหรับ Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a> and <a href=\"/warzone-radar-hack/\">โอเวอร์เลย์เรดาร์ 2D</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">คู่มือ ESP และ wallhack</a> and <a href=\"/radar/\">โอเวอร์เลย์เรดาร์ 2D</a> overlays.",
 							],
 						},
 						{
@@ -20422,8 +20422,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC สิ่งที่ควรเปรียบเทียบก่อนซื้อ warzone cheats",
-								"Review <a href=\"/features/\">ฟีเจอร์ทั้งหมด</a>, <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot และ soft aim</a>, <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">ฟีเจอร์ทั้งหมด</a>, <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a>, and <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">คู่มือ ESP และ wallhack</a>, <a href=\"/aimbot/\">Aimbot และ soft aim</a>, <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -20439,7 +20439,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">คู่มือ cheat undetected</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">ร้านค้า</a>.",
+								"Still deciding? <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">ร้านค้า</a>.",
 							],
 						},
 					],
@@ -20454,14 +20454,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack Aimbot Call of Duty: Warzone",
 					ctaPrimary: "ซื้อ Warzone Cheats",
 					ctaSecondary: "ดูฟีเจอร์",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC assist hack Aimbot undetected สำหรับ Call of Duty: Warzone",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล Ricochet",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot และ soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot และ soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot และ soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot และ soft aim</a>.",
 							],
 						},
 						{
@@ -20477,7 +20477,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">คู่มือ cheat undetected</a> and <a href=\"/ricochet-bypass/\">การดูแล Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">ร้านค้า</a>.",
-								"Pair with <a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">คู่มือ ESP และ wallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -20492,14 +20492,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack ESP Call of Duty: Warzone",
 					ctaPrimary: "ซื้อ Warzone Cheats",
 					ctaSecondary: "ดูฟีเจอร์",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC กล่อง ESP hack, pin ซาก และระยะทาง",
 								"จัดส่งดิจิทัลทันที ผ่าน checkout checkout แพ็ก $35/เดือน และ $150 ตลอดชีพ รวมการดูแล Ricochet",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">คู่มือ ESP และ wallhack</a>. Wallhack wording: <a href=\"/esp/\">คู่มือ ESP และ wallhack</a>.",
 							],
 						},
 						{
@@ -20513,9 +20513,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">คู่มือ cheat undetected</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">โอเวอร์เลย์เรดาร์ 2D</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">คู่มือ cheat undetected</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">โอเวอร์เลย์เรดาร์ 2D</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">ร้านค้า</a>.",
-								"Install steps: <a href=\"/setup/\">คู่มือติดตั้ง</a>. Status questions: <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">คู่มือติดตั้ง</a>. Status questions: <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -20544,8 +20544,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats รวม ESP wallhack, radar hack และ Call of Duty: Warzone Aimbot แบบ undetected สำหรับ Call of Duty: Warzone บน Windows PC การค้นหา unlock-all vs เครื่องมือ ESP และ Aimbot จริง",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">คู่มือ ESP และ wallhack</a> and <a href=\"/features/\">ฟีเจอร์ทั้งหมด</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a> and <a href=\"/warzone-cheats/\">ภาพรวม Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">คู่มือ ESP และ wallhack</a> and <a href=\"/features/\">ฟีเจอร์ทั้งหมด</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a> and <a href=\"/cheats/\">ภาพรวม Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -20604,7 +20604,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "อีเมลฝ่ายสนับสนุน",
 					ctaSecondary: "อ่านนโยบายความเป็นส่วนตัว",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "การจัดส่งดิจิทัล",
@@ -20639,7 +20639,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "อีเมลฝ่ายสนับสนุน",
 					ctaSecondary: "อ่านนโยบายความเป็นส่วนตัว",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "การยอมรับข้อกำหนด",
@@ -20953,9 +20953,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"giao hàng kỹ thuật số tức thì qua checkout checkout. Gói $35/tháng và $150 trọn đời gồm bảo trì Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -21007,7 +21007,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"giao hàng kỹ thuật số tức thì qua checkout checkout. Gói $35/tháng và $150 trọn đời gồm bảo trì Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Chính sách hoàn tiền</a>",
+								"<a href=\"/refund/\">Chính sách hoàn tiền</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Hỗ trợ</a>",
 							],
@@ -21155,7 +21155,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"giao hàng kỹ thuật số tức thì qua checkout checkout. Gói $35/tháng và $150 trọn đời gồm bảo trì Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Chính sách hoàn tiền</a>",
+								"<a href=\"/refund/\">Chính sách hoàn tiền</a>",
 								"<a href=\"/support/\">Hỗ trợ</a>",
 							],
 						},
@@ -21209,7 +21209,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheat undetected",
 					ctaPrimary: "Mua Warzone Cheats",
 					ctaSecondary: "Xem tính năng",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -21232,7 +21232,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Cửa hàng</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Hướng dẫn cài đặt</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Hướng dẫn cài đặt</a> after delivery.",
 							],
 						},
 						{
@@ -21255,14 +21255,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Mua Warzone Cheats",
 					ctaSecondary: "Xem tính năng",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. wallhack ESP cho người chơi, xác thịt và khoảng cách",
 								"giao hàng kỹ thuật số tức thì qua checkout checkout. Gói $35/tháng và $150 trọn đời gồm bảo trì Ricochet.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">Hướng dẫn ESP & wallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot & soft aim</a>.",
 							],
 						},
 						{
@@ -21270,7 +21270,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. wallhack ESP cho người chơi, xác thịt và khoảng cách",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -21278,7 +21278,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Hướng dẫn cheat undetected</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Bảo trì Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Cửa hàng</a> or continue to the <a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Cửa hàng</a> or continue to the <a href=\"/esp/\">Hướng dẫn ESP & wallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -21314,7 +21314,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"giao hàng kỹ thuật số tức thì qua checkout checkout. Gói $35/tháng và $150 trọn đời gồm bảo trì Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a>",
+								"<a href=\"/esp/\">Hướng dẫn ESP & wallhack</a>",
 								"<a href=\"/\">Sản phẩm đầy đủ</a>",
 								"<a href=\"/pricing/\">Cửa hàng</a>",
 							],
@@ -21346,7 +21346,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Hướng dẫn cheat undetected</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Tổng quan Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -21370,7 +21370,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. cách xử lý cập nhật Ricochet cho Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Hướng dẫn cheat undetected</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Bảo trì Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Tổng quan Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -21385,7 +21385,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheat Call of Duty: Warzone 2026",
 					ctaPrimary: "Mua Warzone Cheats",
 					ctaSecondary: "Xem tính năng",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -21399,22 +21399,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. checklist warzone cheats 2026 trước checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a>, <a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>, <a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>, <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">Tổng quan Warzone Cheats</a>, <a href=\"/esp/\">Hướng dẫn ESP & wallhack</a>, <a href=\"/aimbot/\">Aimbot & soft aim</a>, <a href=\"/esp/\">Hướng dẫn ESP & wallhack</a>, <a href=\"/radar/\">Overlay radar 2D</a>, <a href=\"/cheats/\">Tổng quan Warzone Cheats</a>.",
 								"Kiểm tra Updates sau bản vá Ricochet. Không cheat nào đảm bảo undetected vĩnh viễn.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Tổng quan Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Tổng quan Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Hỗ trợ</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot & soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Sản phẩm đầy đủ</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -21461,9 +21461,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"giao hàng kỹ thuật số tức thì qua checkout checkout. Gói $35/tháng và $150 trọn đời gồm bảo trì Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>",
+								"<a href=\"/esp/\">Hướng dẫn ESP & wallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot & soft aim</a>",
+								"<a href=\"/radar/\">Overlay radar 2D</a>",
 								"<a href=\"/features/\">Tất cả tính năng</a>",
 							],
 						},
@@ -21519,7 +21519,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. tải giấy phép kỹ thuật số sau thanh toán",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Cửa hàng</a>.",
-								"Feature detail: <a href=\"/features/\">Tất cả tính năng</a>. Module pages: <a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Tất cả tính năng</a>. Module pages: <a href=\"/esp/\">Hướng dẫn ESP & wallhack</a>, <a href=\"/aimbot/\">Aimbot & soft aim</a>.",
 							],
 						},
 						{
@@ -21527,7 +21527,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Hướng dẫn cheat undetected</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Hỗ trợ</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Tổng quan Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -21549,7 +21549,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. công tắc ESP và soft aim trong client",
 								"giao hàng kỹ thuật số tức thì qua checkout checkout. Gói $35/tháng và $150 trọn đời gồm bảo trì Ricochet.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>.",
+								"Control deep-dives: <a href=\"/esp/\">Hướng dẫn ESP & wallhack</a>, <a href=\"/aimbot/\">Aimbot & soft aim</a>, <a href=\"/radar/\">Overlay radar 2D</a>.",
 							],
 						},
 						{
@@ -21557,7 +21557,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. công tắc ESP và soft aim trong client",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot & soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -21580,14 +21580,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Soft aim Call of Duty: Warzone",
 					ctaPrimary: "Mua Warzone Cheats",
 					ctaSecondary: "Xem tính năng",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. cài đặt soft aim mượt cho Windows PC",
 								"giao hàng kỹ thuật số tức thì qua checkout checkout. Gói $35/tháng và $150 trọn đời gồm bảo trì Ricochet.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot & soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot & soft aim</a>.",
 							],
 						},
 						{
@@ -21595,7 +21595,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. cài đặt soft aim mượt cho Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a> and <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">Hướng dẫn ESP & wallhack</a> and <a href=\"/radar/\">Overlay radar 2D</a> overlays.",
 							],
 						},
 						{
@@ -21632,8 +21632,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. nên so sánh gì trước khi mua warzone cheats",
-								"Review <a href=\"/features/\">Tất cả tính năng</a>, <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>, <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">Tất cả tính năng</a>, <a href=\"/cheats/\">Tổng quan Warzone Cheats</a>, and <a href=\"/cheats/\">Tổng quan Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">Hướng dẫn ESP & wallhack</a>, <a href=\"/aimbot/\">Aimbot & soft aim</a>, <a href=\"/cheats/\">Tổng quan Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -21649,7 +21649,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Hướng dẫn cheat undetected</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Cửa hàng</a>.",
+								"Still deciding? <a href=\"/cheats/\">Tổng quan Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Cửa hàng</a>.",
 							],
 						},
 					],
@@ -21664,14 +21664,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack aimbot Call of Duty: Warzone",
 					ctaPrimary: "Mua Warzone Cheats",
 					ctaSecondary: "Xem tính năng",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. hỗ trợ hack Aimbot undetected cho Call of Duty: Warzone",
 								"giao hàng kỹ thuật số tức thì qua checkout checkout. Gói $35/tháng và $150 trọn đời gồm bảo trì Ricochet.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot & soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot & soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot & soft aim</a>.",
 							],
 						},
 						{
@@ -21687,7 +21687,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Hướng dẫn cheat undetected</a> and <a href=\"/ricochet-bypass/\">Bảo trì Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Cửa hàng</a>.",
-								"Pair with <a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">Hướng dẫn ESP & wallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -21702,14 +21702,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack ESP Call of Duty: Warzone",
 					ctaPrimary: "Mua Warzone Cheats",
 					ctaSecondary: "Xem tính năng",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. hộp ESP hack, pin xác thịt và khoảng cách",
 								"giao hàng kỹ thuật số tức thì qua checkout checkout. Gói $35/tháng và $150 trọn đời gồm bảo trì Ricochet.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">Hướng dẫn ESP & wallhack</a>. Wallhack wording: <a href=\"/esp/\">Hướng dẫn ESP & wallhack</a>.",
 							],
 						},
 						{
@@ -21723,9 +21723,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Hướng dẫn cheat undetected</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Hướng dẫn cheat undetected</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">Overlay radar 2D</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Cửa hàng</a>.",
-								"Install steps: <a href=\"/setup/\">Hướng dẫn cài đặt</a>. Status questions: <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">Hướng dẫn cài đặt</a>. Status questions: <a href=\"/cheats/\">Tổng quan Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -21754,8 +21754,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats cung cấp ESP wallhack, radar hack và Call of Duty: Warzone Aimbot undetected cho Call of Duty: Warzone trên PC Windows. tìm kiếm unlock-all vs công cụ ESP và Aimbot thật",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">Hướng dẫn ESP & wallhack</a> and <a href=\"/features/\">Tất cả tính năng</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a> and <a href=\"/warzone-cheats/\">Tổng quan Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">Hướng dẫn ESP & wallhack</a> and <a href=\"/features/\">Tất cả tính năng</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Tổng quan Warzone Cheats</a> and <a href=\"/cheats/\">Tổng quan Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -21814,7 +21814,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "Email hỗ trợ",
 					ctaSecondary: "Đọc quyền riêng tư",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Giao hàng kỹ thuật số",
@@ -21849,7 +21849,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "Email hỗ trợ",
 					ctaSecondary: "Đọc quyền riêng tư",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Chấp nhận điều khoản",
@@ -22163,9 +22163,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Ліцензії з миттєва цифрова доставка через checkout checkout. Тарифи $35/міс і $150 назавжди включають обслуговування Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -22217,7 +22217,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Ліцензії з миттєва цифрова доставка через checkout checkout. Тарифи $35/міс і $150 назавжди включають обслуговування Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Політика повернення</a>",
+								"<a href=\"/refund/\">Політика повернення</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Підтримка</a>",
 							],
@@ -22365,7 +22365,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Ліцензії з миттєва цифрова доставка через checkout checkout. Тарифи $35/міс і $150 назавжди включають обслуговування Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Політика повернення</a>",
+								"<a href=\"/refund/\">Політика повернення</a>",
 								"<a href=\"/support/\">Підтримка</a>",
 							],
 						},
@@ -22419,7 +22419,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Undetected чіти",
 					ctaPrimary: "Купити Warzone Cheats",
 					ctaSecondary: "Дивитися функції",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -22442,7 +22442,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Магазин</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Гайд з встановлення</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Гайд з встановлення</a> after delivery.",
 							],
 						},
 						{
@@ -22465,14 +22465,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Купити Warzone Cheats",
 					ctaSecondary: "Дивитися функції",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. wallhack ESP для гравців, туш і дистанції",
 								"Ліцензії з миттєва цифрова доставка через checkout checkout. Тарифи $35/міс і $150 назавжди включають обслуговування Ricochet.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">Гайд ESP і wallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot і soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">Гайд ESP і wallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot і soft aim</a>.",
 							],
 						},
 						{
@@ -22480,7 +22480,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. wallhack ESP для гравців, туш і дистанції",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">2D радар overlay</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">2D радар overlay</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -22488,7 +22488,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Гайд undetected чітів</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Обслуговування Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Магазин</a> or continue to the <a href=\"/warzone-esp/\">Гайд ESP і wallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Магазин</a> or continue to the <a href=\"/esp/\">Гайд ESP і wallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -22524,7 +22524,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Ліцензії з миттєва цифрова доставка через checkout checkout. Тарифи $35/міс і $150 назавжди включають обслуговування Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Гайд ESP і wallhack</a>",
+								"<a href=\"/esp/\">Гайд ESP і wallhack</a>",
 								"<a href=\"/\">Повний продукт</a>",
 								"<a href=\"/pricing/\">Магазин</a>",
 							],
@@ -22556,7 +22556,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Гайд undetected чітів</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Огляд Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -22580,7 +22580,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. як обробляються оновлення Ricochet для Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Гайд undetected чітів</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Обслуговування Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Огляд Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -22595,7 +22595,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Чіти Call of Duty: Warzone 2026",
 					ctaPrimary: "Купити Warzone Cheats",
 					ctaSecondary: "Дивитися функції",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -22609,22 +22609,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. чеклист warzone cheats 2026 перед checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a>, <a href=\"/warzone-esp/\">Гайд ESP і wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot і soft aim</a>, <a href=\"/warzone-esp/\">Гайд ESP і wallhack</a>, <a href=\"/warzone-radar-hack/\">2D радар overlay</a>, <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">Огляд Warzone Cheats</a>, <a href=\"/esp/\">Гайд ESP і wallhack</a>, <a href=\"/aimbot/\">Aimbot і soft aim</a>, <a href=\"/esp/\">Гайд ESP і wallhack</a>, <a href=\"/radar/\">2D радар overlay</a>, <a href=\"/cheats/\">Огляд Warzone Cheats</a>.",
 								"Перевіряйте Updates після патчів Ricochet. Жоден чит не гарантує постійний undetected статус.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Огляд Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Огляд Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Підтримка</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot і soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot і soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Повний продукт</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -22671,9 +22671,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Ліцензії з миттєва цифрова доставка через checkout checkout. Тарифи $35/міс і $150 назавжди включають обслуговування Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Гайд ESP і wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot і soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">2D радар overlay</a>",
+								"<a href=\"/esp/\">Гайд ESP і wallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot і soft aim</a>",
+								"<a href=\"/radar/\">2D радар overlay</a>",
 								"<a href=\"/features/\">Усі функції</a>",
 							],
 						},
@@ -22729,7 +22729,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. цифрове завантаження ліцензії після оплати",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Магазин</a>.",
-								"Feature detail: <a href=\"/features/\">Усі функції</a>. Module pages: <a href=\"/warzone-esp/\">Гайд ESP і wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot і soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Усі функції</a>. Module pages: <a href=\"/esp/\">Гайд ESP і wallhack</a>, <a href=\"/aimbot/\">Aimbot і soft aim</a>.",
 							],
 						},
 						{
@@ -22737,7 +22737,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Гайд undetected чітів</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Підтримка</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Огляд Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -22759,7 +22759,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. перемикачі ESP і soft aim у клієнті",
 								"Ліцензії з миттєва цифрова доставка через checkout checkout. Тарифи $35/міс і $150 назавжди включають обслуговування Ricochet.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">Гайд ESP і wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot і soft aim</a>, <a href=\"/warzone-radar-hack/\">2D радар overlay</a>.",
+								"Control deep-dives: <a href=\"/esp/\">Гайд ESP і wallhack</a>, <a href=\"/aimbot/\">Aimbot і soft aim</a>, <a href=\"/radar/\">2D радар overlay</a>.",
 							],
 						},
 						{
@@ -22767,7 +22767,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. перемикачі ESP і soft aim у клієнті",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot і soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot і soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -22790,14 +22790,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Soft aim Call of Duty: Warzone",
 					ctaPrimary: "Купити Warzone Cheats",
 					ctaSecondary: "Дивитися функції",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. плавні налаштування soft aim для Windows PC",
 								"Ліцензії з миттєва цифрова доставка через checkout checkout. Тарифи $35/міс і $150 назавжди включають обслуговування Ricochet.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot і soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot і soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot і soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot і soft aim</a>.",
 							],
 						},
 						{
@@ -22805,7 +22805,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. плавні налаштування soft aim для Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">Гайд ESP і wallhack</a> and <a href=\"/warzone-radar-hack/\">2D радар overlay</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">Гайд ESP і wallhack</a> and <a href=\"/radar/\">2D радар overlay</a> overlays.",
 							],
 						},
 						{
@@ -22842,8 +22842,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. що порівняти перед покупкою warzone cheats",
-								"Review <a href=\"/features/\">Усі функції</a>, <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">Гайд ESP і wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot і soft aim</a>, <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">Усі функції</a>, <a href=\"/cheats/\">Огляд Warzone Cheats</a>, and <a href=\"/cheats/\">Огляд Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">Гайд ESP і wallhack</a>, <a href=\"/aimbot/\">Aimbot і soft aim</a>, <a href=\"/cheats/\">Огляд Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -22859,7 +22859,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Гайд undetected чітів</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Магазин</a>.",
+								"Still deciding? <a href=\"/cheats/\">Огляд Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Магазин</a>.",
 							],
 						},
 					],
@@ -22874,14 +22874,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Хак aimbot Call of Duty: Warzone",
 					ctaPrimary: "Купити Warzone Cheats",
 					ctaSecondary: "Дивитися функції",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. undetected Aimbot hack assist для Call of Duty: Warzone",
 								"Ліцензії з миттєва цифрова доставка через checkout checkout. Тарифи $35/міс і $150 назавжди включають обслуговування Ricochet.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot і soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot і soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot і soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot і soft aim</a>.",
 							],
 						},
 						{
@@ -22897,7 +22897,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Гайд undetected чітів</a> and <a href=\"/ricochet-bypass/\">Обслуговування Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Магазин</a>.",
-								"Pair with <a href=\"/warzone-esp/\">Гайд ESP і wallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">Гайд ESP і wallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -22912,14 +22912,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Хак ESP Call of Duty: Warzone",
 					ctaPrimary: "Купити Warzone Cheats",
 					ctaSecondary: "Дивитися функції",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. ESP hack бокси, pins туш і дистанція",
 								"Ліцензії з миттєва цифрова доставка через checkout checkout. Тарифи $35/міс і $150 назавжди включають обслуговування Ricochet.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">Гайд ESP і wallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">Гайд ESP і wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">Гайд ESP і wallhack</a>. Wallhack wording: <a href=\"/esp/\">Гайд ESP і wallhack</a>.",
 							],
 						},
 						{
@@ -22933,9 +22933,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Гайд undetected чітів</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">2D радар overlay</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Гайд undetected чітів</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">2D радар overlay</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Магазин</a>.",
-								"Install steps: <a href=\"/setup/\">Гайд з встановлення</a>. Status questions: <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">Гайд з встановлення</a>. Status questions: <a href=\"/cheats/\">Огляд Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -22964,8 +22964,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats об'єднує ESP wallhack, radar hack і Call of Duty: Warzone Aimbot у undetected пакеті для Call of Duty: Warzone на Windows PC. пошуки unlock-all vs справжні ESP і Aimbot інструменти",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">Гайд ESP і wallhack</a> and <a href=\"/features/\">Усі функції</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a> and <a href=\"/warzone-cheats/\">Огляд Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">Гайд ESP і wallhack</a> and <a href=\"/features/\">Усі функції</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Огляд Warzone Cheats</a> and <a href=\"/cheats/\">Огляд Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -23024,7 +23024,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "Написати в підтримку",
 					ctaSecondary: "Читати конфіденційність",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Цифрова доставка",
@@ -23059,7 +23059,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "Написати в підтримку",
 					ctaSecondary: "Читати конфіденційність",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Прийняття умов",
@@ -23373,9 +23373,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licence s okamžité digitální doručení přes checkout checkout. Plány $35/měs. a $150 lifetime včetně údržby Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -23427,7 +23427,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licence s okamžité digitální doručení přes checkout checkout. Plány $35/měs. a $150 lifetime včetně údržby Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Zásady vrácení peněz</a>",
+								"<a href=\"/refund/\">Zásady vrácení peněz</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Podpora</a>",
 							],
@@ -23575,7 +23575,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licence s okamžité digitální doručení přes checkout checkout. Plány $35/měs. a $150 lifetime včetně údržby Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Zásady vrácení peněz</a>",
+								"<a href=\"/refund/\">Zásady vrácení peněz</a>",
 								"<a href=\"/support/\">Podpora</a>",
 							],
 						},
@@ -23629,7 +23629,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Undetected cheaty",
 					ctaPrimary: "Koupit Warzone Cheats",
 					ctaSecondary: "Zobrazit funkce",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -23652,7 +23652,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Obchod</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Průvodce instalací</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Průvodce instalací</a> after delivery.",
 							],
 						},
 						{
@@ -23675,14 +23675,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Koupit Warzone Cheats",
 					ctaSecondary: "Zobrazit funkce",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. wallhack ESP pro hráče, kadávery a vzdálenost",
 								"Licence s okamžité digitální doručení přes checkout checkout. Plány $35/měs. a $150 lifetime včetně údržby Ricochet.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot a soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">Průvodce ESP a wallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot a soft aim</a>.",
 							],
 						},
 						{
@@ -23690,7 +23690,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. wallhack ESP pro hráče, kadávery a vzdálenost",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">2D radar overlay</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">2D radar overlay</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -23698,7 +23698,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Průvodce undetected cheaty</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Údržba Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Obchod</a> or continue to the <a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Obchod</a> or continue to the <a href=\"/esp/\">Průvodce ESP a wallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -23734,7 +23734,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licence s okamžité digitální doručení přes checkout checkout. Plány $35/měs. a $150 lifetime včetně údržby Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a>",
+								"<a href=\"/esp/\">Průvodce ESP a wallhack</a>",
 								"<a href=\"/\">Kompletní produkt</a>",
 								"<a href=\"/pricing/\">Obchod</a>",
 							],
@@ -23766,7 +23766,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Průvodce undetected cheaty</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Přehled Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -23790,7 +23790,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. jak se řeší aktualizace Ricochet pro Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Průvodce undetected cheaty</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Údržba Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Přehled Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -23805,7 +23805,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "warzone cheaty 2026",
 					ctaPrimary: "Koupit Warzone Cheats",
 					ctaSecondary: "Zobrazit funkce",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -23819,22 +23819,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. checklist warzone cheats 2026 před checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a>, <a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot a soft aim</a>, <a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a>, <a href=\"/warzone-radar-hack/\">2D radar overlay</a>, <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">Přehled Warzone Cheats</a>, <a href=\"/esp/\">Průvodce ESP a wallhack</a>, <a href=\"/aimbot/\">Aimbot a soft aim</a>, <a href=\"/esp/\">Průvodce ESP a wallhack</a>, <a href=\"/radar/\">2D radar overlay</a>, <a href=\"/cheats/\">Přehled Warzone Cheats</a>.",
 								"Po patchích Ricochet zkontrolujte Updates. Žádný cheat negarantuje trvalý undetected stav.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Přehled Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Přehled Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Podpora</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot a soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot a soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Kompletní produkt</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -23881,9 +23881,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licence s okamžité digitální doručení přes checkout checkout. Plány $35/měs. a $150 lifetime včetně údržby Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot a soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">2D radar overlay</a>",
+								"<a href=\"/esp/\">Průvodce ESP a wallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot a soft aim</a>",
+								"<a href=\"/radar/\">2D radar overlay</a>",
 								"<a href=\"/features/\">Všechny funkce</a>",
 							],
 						},
@@ -23939,7 +23939,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. digitální stažení licence po platbě",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Obchod</a>.",
-								"Feature detail: <a href=\"/features/\">Všechny funkce</a>. Module pages: <a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot a soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Všechny funkce</a>. Module pages: <a href=\"/esp/\">Průvodce ESP a wallhack</a>, <a href=\"/aimbot/\">Aimbot a soft aim</a>.",
 							],
 						},
 						{
@@ -23947,7 +23947,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Průvodce undetected cheaty</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Podpora</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Přehled Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -23969,7 +23969,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. přepínače ESP a soft aim v klientu",
 								"Licence s okamžité digitální doručení přes checkout checkout. Plány $35/měs. a $150 lifetime včetně údržby Ricochet.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot a soft aim</a>, <a href=\"/warzone-radar-hack/\">2D radar overlay</a>.",
+								"Control deep-dives: <a href=\"/esp/\">Průvodce ESP a wallhack</a>, <a href=\"/aimbot/\">Aimbot a soft aim</a>, <a href=\"/radar/\">2D radar overlay</a>.",
 							],
 						},
 						{
@@ -23977,7 +23977,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. přepínače ESP a soft aim v klientu",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot a soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot a soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -24000,14 +24000,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Soft Aim",
 					ctaPrimary: "Koupit Warzone Cheats",
 					ctaSecondary: "Zobrazit funkce",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. plynulé nastavení soft aim pro Windows PC",
 								"Licence s okamžité digitální doručení přes checkout checkout. Plány $35/měs. a $150 lifetime včetně údržby Ricochet.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot a soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot a soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot a soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot a soft aim</a>.",
 							],
 						},
 						{
@@ -24015,7 +24015,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. plynulé nastavení soft aim pro Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a> and <a href=\"/warzone-radar-hack/\">2D radar overlay</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">Průvodce ESP a wallhack</a> and <a href=\"/radar/\">2D radar overlay</a> overlays.",
 							],
 						},
 						{
@@ -24052,8 +24052,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. co porovnat před nákupem warzone cheats",
-								"Review <a href=\"/features/\">Všechny funkce</a>, <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot a soft aim</a>, <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">Všechny funkce</a>, <a href=\"/cheats/\">Přehled Warzone Cheats</a>, and <a href=\"/cheats/\">Přehled Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">Průvodce ESP a wallhack</a>, <a href=\"/aimbot/\">Aimbot a soft aim</a>, <a href=\"/cheats/\">Přehled Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -24069,7 +24069,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Průvodce undetected cheaty</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Obchod</a>.",
+								"Still deciding? <a href=\"/cheats/\">Přehled Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Obchod</a>.",
 							],
 						},
 					],
@@ -24084,14 +24084,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Aimbot hack",
 					ctaPrimary: "Koupit Warzone Cheats",
 					ctaSecondary: "Zobrazit funkce",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. undetected Aimbot hack assist pro Call of Duty: Warzone",
 								"Licence s okamžité digitální doručení přes checkout checkout. Plány $35/měs. a $150 lifetime včetně údržby Ricochet.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot a soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot a soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot a soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot a soft aim</a>.",
 							],
 						},
 						{
@@ -24107,7 +24107,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Průvodce undetected cheaty</a> and <a href=\"/ricochet-bypass/\">Údržba Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Obchod</a>.",
-								"Pair with <a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">Průvodce ESP a wallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -24122,14 +24122,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone ESP hack",
 					ctaPrimary: "Koupit Warzone Cheats",
 					ctaSecondary: "Zobrazit funkce",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. ESP hack boxy, piny kadáverů a vzdálenost",
 								"Licence s okamžité digitální doručení přes checkout checkout. Plány $35/měs. a $150 lifetime včetně údržby Ricochet.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">Průvodce ESP a wallhack</a>. Wallhack wording: <a href=\"/esp/\">Průvodce ESP a wallhack</a>.",
 							],
 						},
 						{
@@ -24143,9 +24143,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Průvodce undetected cheaty</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">2D radar overlay</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Průvodce undetected cheaty</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">2D radar overlay</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Obchod</a>.",
-								"Install steps: <a href=\"/setup/\">Průvodce instalací</a>. Status questions: <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">Průvodce instalací</a>. Status questions: <a href=\"/cheats/\">Přehled Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -24174,8 +24174,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats spojuje ESP wallhack, radar hack a Call of Duty: Warzone Aimbot jako undetected balíček pro Call of Duty: Warzone na Windows PC. vyhledávání unlock-all vs skutečné ESP a Aimbot nástroje",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">Průvodce ESP a wallhack</a> and <a href=\"/features/\">Všechny funkce</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a> and <a href=\"/warzone-cheats/\">Přehled Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">Průvodce ESP a wallhack</a> and <a href=\"/features/\">Všechny funkce</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Přehled Warzone Cheats</a> and <a href=\"/cheats/\">Přehled Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -24234,7 +24234,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "E-mail podpoře",
 					ctaSecondary: "Přečíst soukromí",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Digitální doručení",
@@ -24269,7 +24269,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "E-mail podpoře",
 					ctaSecondary: "Přečíst soukromí",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Přijetí podmínek",
@@ -24583,9 +24583,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licențe cu livrare digitală instantă via checkout checkout. Planuri $35/lună și $150 pe viață includ mentenanță Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -24637,7 +24637,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licențe cu livrare digitală instantă via checkout checkout. Planuri $35/lună și $150 pe viață includ mentenanță Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Politica de rambursare</a>",
+								"<a href=\"/refund/\">Politica de rambursare</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Suport</a>",
 							],
@@ -24785,7 +24785,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licențe cu livrare digitală instantă via checkout checkout. Planuri $35/lună și $150 pe viață includ mentenanță Ricochet.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Politica de rambursare</a>",
+								"<a href=\"/refund/\">Politica de rambursare</a>",
 								"<a href=\"/support/\">Suport</a>",
 							],
 						},
@@ -24839,7 +24839,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheats undetected",
 					ctaPrimary: "Cumpără Warzone Cheats",
 					ctaSecondary: "Vezi funcții",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -24862,7 +24862,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Magazin</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Ghid de instalare</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Ghid de instalare</a> after delivery.",
 							],
 						},
 						{
@@ -24885,14 +24885,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Cumpără Warzone Cheats",
 					ctaSecondary: "Vezi funcții",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. wallhack ESP pentru jucători, carcase și distanță",
 								"Licențe cu livrare digitală instantă via checkout checkout. Planuri $35/lună și $150 pe viață includ mentenanță Ricochet.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">Ghid ESP și wallhack</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot și soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">Ghid ESP și wallhack</a>; for combat assist see <a href=\"/aimbot/\">Aimbot și soft aim</a>.",
 							],
 						},
 						{
@@ -24900,7 +24900,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. wallhack ESP pentru jucători, carcase și distanță",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">Overlay radar 2D</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -24908,7 +24908,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Ghid cheats undetected</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Mentenanță Ricochet</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Magazin</a> or continue to the <a href=\"/warzone-esp/\">Ghid ESP și wallhack</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Magazin</a> or continue to the <a href=\"/esp/\">Ghid ESP și wallhack</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -24944,7 +24944,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licențe cu livrare digitală instantă via checkout checkout. Planuri $35/lună și $150 pe viață includ mentenanță Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Ghid ESP și wallhack</a>",
+								"<a href=\"/esp/\">Ghid ESP și wallhack</a>",
 								"<a href=\"/\">Produs complet</a>",
 								"<a href=\"/pricing/\">Magazin</a>",
 							],
@@ -24976,7 +24976,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Ghid cheats undetected</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Prezentare Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -25000,7 +25000,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. cum sunt gestionate actualizările Ricochet pentru Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Ghid cheats undetected</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Mentenanță Ricochet</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Prezentare Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -25015,7 +25015,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Cheats Call of Duty: Warzone 2026",
 					ctaPrimary: "Cumpără Warzone Cheats",
 					ctaSecondary: "Vezi funcții",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -25029,22 +25029,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. checklist warzone cheats 2026 înainte de checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a>, <a href=\"/warzone-esp/\">Ghid ESP și wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot și soft aim</a>, <a href=\"/warzone-esp/\">Ghid ESP și wallhack</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>, <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a>.",
+								"Deep links: <a href=\"/cheats/\">Prezentare Warzone Cheats</a>, <a href=\"/esp/\">Ghid ESP și wallhack</a>, <a href=\"/aimbot/\">Aimbot și soft aim</a>, <a href=\"/esp/\">Ghid ESP și wallhack</a>, <a href=\"/radar/\">Overlay radar 2D</a>, <a href=\"/cheats/\">Prezentare Warzone Cheats</a>.",
 								"Verificați Updates după patch-uri Ricochet. Niciun cheat nu garantează undetected permanent.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Prezentare Warzone Cheats</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Prezentare Warzone Cheats</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Suport</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot și soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot și soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Produs complet</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -25091,9 +25091,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licențe cu livrare digitală instantă via checkout checkout. Planuri $35/lună și $150 pe viață includ mentenanță Ricochet.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Ghid ESP și wallhack</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot și soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>",
+								"<a href=\"/esp/\">Ghid ESP și wallhack</a>",
+								"<a href=\"/aimbot/\">Aimbot și soft aim</a>",
+								"<a href=\"/radar/\">Overlay radar 2D</a>",
 								"<a href=\"/features/\">Toate funcțiile</a>",
 							],
 						},
@@ -25149,7 +25149,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. descărcare licență digitală după plată",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Magazin</a>.",
-								"Feature detail: <a href=\"/features/\">Toate funcțiile</a>. Module pages: <a href=\"/warzone-esp/\">Ghid ESP și wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot și soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Toate funcțiile</a>. Module pages: <a href=\"/esp/\">Ghid ESP și wallhack</a>, <a href=\"/aimbot/\">Aimbot și soft aim</a>.",
 							],
 						},
 						{
@@ -25157,7 +25157,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Ghid cheats undetected</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Suport</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Prezentare Warzone Cheats</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -25179,7 +25179,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. toggle-uri ESP și soft aim in-client",
 								"Licențe cu livrare digitală instantă via checkout checkout. Planuri $35/lună și $150 pe viață includ mentenanță Ricochet.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">Ghid ESP și wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot și soft aim</a>, <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a>.",
+								"Control deep-dives: <a href=\"/esp/\">Ghid ESP și wallhack</a>, <a href=\"/aimbot/\">Aimbot și soft aim</a>, <a href=\"/radar/\">Overlay radar 2D</a>.",
 							],
 						},
 						{
@@ -25187,7 +25187,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. toggle-uri ESP și soft aim in-client",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot și soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot și soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -25210,14 +25210,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Soft aim Call of Duty: Warzone",
 					ctaPrimary: "Cumpără Warzone Cheats",
 					ctaSecondary: "Vezi funcții",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. setări soft aim fluide pentru Windows PC",
 								"Licențe cu livrare digitală instantă via checkout checkout. Planuri $35/lună și $150 pe viață includ mentenanță Ricochet.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot și soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot și soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot și soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot și soft aim</a>.",
 							],
 						},
 						{
@@ -25225,7 +25225,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. setări soft aim fluide pentru Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">Ghid ESP și wallhack</a> and <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">Ghid ESP și wallhack</a> and <a href=\"/radar/\">Overlay radar 2D</a> overlays.",
 							],
 						},
 						{
@@ -25262,8 +25262,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. ce să compari înainte de a cumpăra warzone cheats",
-								"Review <a href=\"/features/\">Toate funcțiile</a>, <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a>, and <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">Ghid ESP și wallhack</a>, <a href=\"/warzone-aimbot/\">Aimbot și soft aim</a>, <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a>.",
+								"Review <a href=\"/features/\">Toate funcțiile</a>, <a href=\"/cheats/\">Prezentare Warzone Cheats</a>, and <a href=\"/cheats/\">Prezentare Warzone Cheats</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">Ghid ESP și wallhack</a>, <a href=\"/aimbot/\">Aimbot și soft aim</a>, <a href=\"/cheats/\">Prezentare Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -25279,7 +25279,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Ghid cheats undetected</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Magazin</a>.",
+								"Still deciding? <a href=\"/cheats/\">Prezentare Warzone Cheats</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Magazin</a>.",
 							],
 						},
 					],
@@ -25294,14 +25294,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack aimbot Call of Duty: Warzone",
 					ctaPrimary: "Cumpără Warzone Cheats",
 					ctaSecondary: "Vezi funcții",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. assist hack Aimbot undetected pentru Call of Duty: Warzone",
 								"Licențe cu livrare digitală instantă via checkout checkout. Planuri $35/lună și $150 pe viață includ mentenanță Ricochet.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot și soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot și soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot și soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot și soft aim</a>.",
 							],
 						},
 						{
@@ -25317,7 +25317,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Ghid cheats undetected</a> and <a href=\"/ricochet-bypass/\">Mentenanță Ricochet</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Magazin</a>.",
-								"Pair with <a href=\"/warzone-esp/\">Ghid ESP și wallhack</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">Ghid ESP și wallhack</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -25332,14 +25332,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Hack ESP Call of Duty: Warzone",
 					ctaPrimary: "Cumpără Warzone Cheats",
 					ctaSecondary: "Vezi funcții",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. casete ESP hack, pin-uri carcase și distanță",
 								"Licențe cu livrare digitală instantă via checkout checkout. Planuri $35/lună și $150 pe viață includ mentenanță Ricochet.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">Ghid ESP și wallhack</a>. Wallhack wording: <a href=\"/warzone-esp/\">Ghid ESP și wallhack</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">Ghid ESP și wallhack</a>. Wallhack wording: <a href=\"/esp/\">Ghid ESP și wallhack</a>.",
 							],
 						},
 						{
@@ -25353,9 +25353,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Ghid cheats undetected</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">Overlay radar 2D</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Ghid cheats undetected</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">Overlay radar 2D</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Magazin</a>.",
-								"Install steps: <a href=\"/setup/\">Ghid de instalare</a>. Status questions: <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a>.",
+								"Install steps: <a href=\"/setup/\">Ghid de instalare</a>. Status questions: <a href=\"/cheats/\">Prezentare Warzone Cheats</a>.",
 							],
 						},
 					],
@@ -25384,8 +25384,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats combină ESP wallhack, radar hack și Call of Duty: Warzone Aimbot undetected pentru Call of Duty: Warzone pe PC Windows. căutări unlock-all vs instrumente reale ESP și Aimbot",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">Ghid ESP și wallhack</a> and <a href=\"/features/\">Toate funcțiile</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a> and <a href=\"/warzone-cheats/\">Prezentare Warzone Cheats</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">Ghid ESP și wallhack</a> and <a href=\"/features/\">Toate funcțiile</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Prezentare Warzone Cheats</a> and <a href=\"/cheats/\">Prezentare Warzone Cheats</a>.",
 							],
 						},
 						{
@@ -25444,7 +25444,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "Email suport",
 					ctaSecondary: "Citește confidențialitatea",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Livrare digitală",
@@ -25479,7 +25479,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "Email suport",
 					ctaSecondary: "Citește confidențialitatea",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Acceptarea termenilor",
@@ -25793,9 +25793,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenser med omedelbar digital leverans via checkout checkout. $35/mån och $150 lifetime inkl. Ricochet-underhåll.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
-								"<a href=\"/warzone-aimbot/\">Call of Duty: Warzone aimbot settings</a>",
-								"<a href=\"/warzone-radar-hack/\">Call of Duty: Warzone radar hack overlay</a>",
+								"<a href=\"/esp/\">Call of Duty: Warzone ESP & wallhack guide</a>",
+								"<a href=\"/aimbot/\">Call of Duty: Warzone aimbot settings</a>",
+								"<a href=\"/radar/\">Call of Duty: Warzone radar hack overlay</a>",
 								"<a href=\"/warzone-wallhack/\">Call of Duty: Warzone wallhack features</a>",
 								"<a href=\"/setup/\">Setup guide</a>",
 								"<a href=\"/updates/\">Live status</a>",
@@ -25847,7 +25847,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenser med omedelbar digital leverans via checkout checkout. $35/mån och $150 lifetime inkl. Ricochet-underhåll.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Återbetalningspolicy</a>",
+								"<a href=\"/refund/\">Återbetalningspolicy</a>",
 								"<a href=\"/faq/\">FAQ</a>",
 								"<a href=\"/support/\">Support</a>",
 							],
@@ -25995,7 +25995,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenser med omedelbar digital leverans via checkout checkout. $35/mån och $150 lifetime inkl. Ricochet-underhåll.",
 							],
 							list: [
-								"<a href=\"/refund-policy/\">Återbetalningspolicy</a>",
+								"<a href=\"/refund/\">Återbetalningspolicy</a>",
 								"<a href=\"/support/\">Support</a>",
 							],
 						},
@@ -26049,7 +26049,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Undetected cheats",
 					ctaPrimary: "Köp Warzone Cheats",
 					ctaSecondary: "Se funktioner",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "What undetected means for Warzone Cheats",
@@ -26072,7 +26072,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Combine maintenance with conservative in-game settings. Read the <a href=\"/faq/\">FAQ</a> and Updates log regularly — undetected status is not a one-time promise.",
 								"Lifetime and monthly plans include rebuild access during active terms — see <a href=\"/pricing/\">Butik</a>.",
-								"New buyers should also read <a href=\"/warzone-cheats-2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Installationsguide</a> after delivery.",
+								"New buyers should also read <a href=\"/2026/\">warzone cheats 2026</a> and complete <a href=\"/setup/\">Installationsguide</a> after delivery.",
 							],
 						},
 						{
@@ -26095,14 +26095,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Wallhack",
 					ctaPrimary: "Köp Warzone Cheats",
 					ctaSecondary: "Se funktioner",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "Wallhack ESP vs raw aim tools",
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. wallhack ESP för spelare, kadaver och avstånd",
 								"Licenser med omedelbar digital leverans via checkout checkout. $35/mån och $150 lifetime inkl. Ricochet-underhåll.",
-								"For the broader ESP keyword page see <a href=\"/warzone-esp/\">ESP- och wallhack-guide</a>; for combat assist see <a href=\"/warzone-aimbot/\">Aimbot och soft aim</a>.",
+								"For the broader ESP keyword page see <a href=\"/esp/\">ESP- och wallhack-guide</a>; for combat assist see <a href=\"/aimbot/\">Aimbot och soft aim</a>.",
 							],
 						},
 						{
@@ -26110,7 +26110,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. wallhack ESP för spelare, kadaver och avstånd",
 								"Season maps and POI changes are announced via <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a>. Wallhack remains useful because it tracks entities, not fixed landmarks alone.",
-								"Pair wallhack awareness with <a href=\"/warzone-radar-hack/\">2D-radaroverlay</a> cues for flanks during arena corners and vertical fights.",
+								"Pair wallhack awareness with <a href=\"/radar/\">2D-radaroverlay</a> cues for flanks during arena corners and vertical fights.",
 							],
 						},
 						{
@@ -26118,7 +26118,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"ESP wallhack modules rebuild after Ricochet patches. Follow the <a href=\"/updates/\">Undetected cheats-guide</a> and complete checkout for instant license delivery on Windows PC.",
 								"Learn the full maintenance story on <a href=\"/undetected-warzone-cheats/\">undetected warzone cheats</a> and <a href=\"/ricochet-bypass/\">Ricochet-underhåll</a>.",
-								"Ready to buy? Compare <a href=\"/pricing/\">Butik</a> or continue to the <a href=\"/warzone-esp/\">ESP- och wallhack-guide</a> landing for alternate search wording.",
+								"Ready to buy? Compare <a href=\"/pricing/\">Butik</a> or continue to the <a href=\"/esp/\">ESP- och wallhack-guide</a> landing for alternate search wording.",
 							],
 						},
 					],
@@ -26154,7 +26154,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenser med omedelbar digital leverans via checkout checkout. $35/mån och $150 lifetime inkl. Ricochet-underhåll.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP- och wallhack-guide</a>",
+								"<a href=\"/esp/\">ESP- och wallhack-guide</a>",
 								"<a href=\"/\">Fullständig produkt</a>",
 								"<a href=\"/pricing/\">Butik</a>",
 							],
@@ -26186,7 +26186,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"The team tests ESP overlays, radar signatures, and Aimbot profiles against the new build, publishes status on <a href=\"/updates/\">Undetected cheats-guide</a>, and ships rebuilt packages to active licenses.",
 								"Confirm Warzone server status on <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone on PC</a> if the launcher or matchmaking fails during the same window.",
-								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a>.",
+								"Avoid loading in on old builds after major patch days until maintenance notes confirm a new release. Related reading: <a href=\"/cheats/\">Warzone Cheats-översikt</a>.",
 							],
 						},
 						{
@@ -26210,7 +26210,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. hur Ricochet-uppdateringar hanteras för Warzone cheats",
 								"Patch-day checklist: (1) read <a href=\"/updates/\">Undetected cheats-guide</a>, (2) confirm Ricochet notes on <a href=\"/ricochet-bypass/\">Ricochet-underhåll</a>, (3) verify Steam launcher health, (4) load only after rebuild is posted, (5) retune soft aim FOV if weapon balance changed.",
-								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a>.",
+								"Deep dives: <a href=\"/undetected-warzone-cheats/\">undetected guide</a> · <a href=\"/undetected-warzone-cheats-eac/\">Ricochet reality blog</a> · <a href=\"/cheats/\">Warzone Cheats-översikt</a>.",
 							],
 						},
 					],
@@ -26225,7 +26225,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Warzone Cheats 2026",
 					ctaPrimary: "Köp Warzone Cheats",
 					ctaSecondary: "Se funktioner",
-					ctaSecondaryHref: "/warzone-cheats/",
+					ctaSecondaryHref: "/cheats/",
 					sections: [
 						{
 							h2: "Why warzone cheats buyers choose Warzone Cheats in 2026",
@@ -26239,22 +26239,22 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Full feature stack for 2026 buyers",
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. 2026 warzone cheats checklist före checkout",
-								"Deep links: <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a>, <a href=\"/warzone-esp/\">ESP- och wallhack-guide</a>, <a href=\"/warzone-aimbot/\">Aimbot och soft aim</a>, <a href=\"/warzone-esp/\">ESP- och wallhack-guide</a>, <a href=\"/warzone-radar-hack/\">2D-radaroverlay</a>, <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a>.",
+								"Deep links: <a href=\"/cheats/\">Warzone Cheats-översikt</a>, <a href=\"/esp/\">ESP- och wallhack-guide</a>, <a href=\"/aimbot/\">Aimbot och soft aim</a>, <a href=\"/esp/\">ESP- och wallhack-guide</a>, <a href=\"/radar/\">2D-radaroverlay</a>, <a href=\"/cheats/\">Warzone Cheats-översikt</a>.",
 								"Kontrollera Updates ruster Ricochet-patchar. Ingen cheat garanterar permanent undetected status.",
 							],
 						},
 						{
 							h2: "Before you buy in 2026",
 							paragraphs: [
-								"Read the <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
-								"Also compare the <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
+								"Read the <a href=\"/cheats/\">Warzone Cheats-översikt</a> pillar, Features, Pricing, Setup, and Updates pages. Check undetected status notes after every major patch — responsible use and maintenance awareness matter.",
+								"Also compare the <a href=\"/cheats/\">Warzone Cheats-översikt</a> checklist, <a href=\"/warzone-cheats-2026-whats-new/\">2026 blog guide</a>, and <a href=\"/faq/\">FAQ</a>.",
 								"Support is available at support@cheatsforwarzone.com via the <a href=\"/support/\">Support</a>.",
 							],
 						},
 						{
 							h2: "Episode 10+ and Battle Royale meta in 2026",
 							paragraphs: [
-								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/warzone-aimbot/\">Aimbot och soft aim</a> and ESP toggles.",
+								"2026 Battle Royale play rewards information speed — ESP operator markers, radar flank cues, and soft aim tuned for assault rifle/SMG TTK windows. After each Act, revisit <a href=\"/aimbot/\">Aimbot och soft aim</a> and ESP toggles.",
 								"Compare against <a href=\"/\">Fullständig produkt</a> criteria and <a href=\"/undetected-warzone-cheats/\">undetected maintenance</a> before switching shops mid-season.",
 								"Blog: <a href=\"/warzone-cheats-2026-whats-new/\">what changed in 2026</a> · <a href=\"/warzone-cheats-complete-guide-2026/\">complete guide</a>.",
 							],
@@ -26301,9 +26301,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 								"Licenser med omedelbar digital leverans via checkout checkout. $35/mån och $150 lifetime inkl. Ricochet-underhåll.",
 							],
 							list: [
-								"<a href=\"/warzone-esp/\">ESP- och wallhack-guide</a>",
-								"<a href=\"/warzone-aimbot/\">Aimbot och soft aim</a>",
-								"<a href=\"/warzone-radar-hack/\">2D-radaroverlay</a>",
+								"<a href=\"/esp/\">ESP- och wallhack-guide</a>",
+								"<a href=\"/aimbot/\">Aimbot och soft aim</a>",
+								"<a href=\"/radar/\">2D-radaroverlay</a>",
 								"<a href=\"/features/\">Alla funktioner</a>",
 							],
 						},
@@ -26359,7 +26359,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. digital licensnedladdning efter betalning",
 								"Monthly ($35) and lifetime ($150) plans share the same feature stack — compare options on the <a href=\"/pricing/\">Butik</a>.",
-								"Feature detail: <a href=\"/features/\">Alla funktioner</a>. Module pages: <a href=\"/warzone-esp/\">ESP- och wallhack-guide</a>, <a href=\"/warzone-aimbot/\">Aimbot och soft aim</a>.",
+								"Feature detail: <a href=\"/features/\">Alla funktioner</a>. Module pages: <a href=\"/esp/\">ESP- och wallhack-guide</a>, <a href=\"/aimbot/\">Aimbot och soft aim</a>.",
 							],
 						},
 						{
@@ -26367,7 +26367,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Follow Setup to activate ESP wallhack and Aimbot on Windows 10 or 11. When Warzone or Ricochet patches ship, check the <a href=\"/updates/\">Undetected cheats-guide</a> for maintenance rebuilds.",
 								"Contact <a href=\"/support/\">Support</a> with your order ID if delivery or activation fails within 24 hours of purchase.",
-								"Also read <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a> so you know what “download ready” means after a patch.",
+								"Also read <a href=\"/cheats/\">Warzone Cheats-översikt</a> so you know what “download ready” means after a patch.",
 							],
 						},
 					],
@@ -26389,7 +26389,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. in-client ESP och soft aim-växlar",
 								"Licenser med omedelbar digital leverans via checkout checkout. $35/mån och $150 lifetime inkl. Ricochet-underhåll.",
-								"Control deep-dives: <a href=\"/warzone-esp/\">ESP- och wallhack-guide</a>, <a href=\"/warzone-aimbot/\">Aimbot och soft aim</a>, <a href=\"/warzone-radar-hack/\">2D-radaroverlay</a>.",
+								"Control deep-dives: <a href=\"/esp/\">ESP- och wallhack-guide</a>, <a href=\"/aimbot/\">Aimbot och soft aim</a>, <a href=\"/radar/\">2D-radaroverlay</a>.",
 							],
 						},
 						{
@@ -26397,7 +26397,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. in-client ESP och soft aim-växlar",
 								"Radar hack range and Aimbot smoothness adjust from the same mod menu — useful when <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> seasons change fight distances and mobility.",
-								"Soft tracking players should start with <a href=\"/warzone-aimbot/\">Aimbot och soft aim</a> profiles before aggressive FOV.",
+								"Soft tracking players should start with <a href=\"/aimbot/\">Aimbot och soft aim</a> profiles before aggressive FOV.",
 							],
 						},
 						{
@@ -26420,14 +26420,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Soft Aim",
 					ctaPrimary: "Köp Warzone Cheats",
 					ctaSecondary: "Se funktioner",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "What Warzone soft aim means",
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. mjuka soft aim-inställningar för Windows PC",
 								"Licenser med omedelbar digital leverans via checkout checkout. $35/mån och $150 lifetime inkl. Ricochet-underhåll.",
-								"Full Aimbot documentation: <a href=\"/warzone-aimbot/\">Aimbot och soft aim</a>. Alternate wording: <a href=\"/warzone-aimbot/\">Aimbot och soft aim</a>.",
+								"Full Aimbot documentation: <a href=\"/aimbot/\">Aimbot och soft aim</a>. Alternate wording: <a href=\"/aimbot/\">Aimbot och soft aim</a>.",
 							],
 						},
 						{
@@ -26435,7 +26435,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. mjuka soft aim-inställningar för Windows PC",
 								"Weapon TTKs shift with <a href=\"https://www.callofduty.com/warzone\" target=\"_blank\" rel=\"noopener noreferrer\">Call of Duty: Warzone</a> balance patches — retune smoothness after major combat updates.",
-								"Soft aim ships alongside <a href=\"/warzone-esp/\">ESP- och wallhack-guide</a> and <a href=\"/warzone-radar-hack/\">2D-radaroverlay</a> overlays.",
+								"Soft aim ships alongside <a href=\"/esp/\">ESP- och wallhack-guide</a> and <a href=\"/radar/\">2D-radaroverlay</a> overlays.",
 							],
 						},
 						{
@@ -26472,8 +26472,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Best warzone cheats feature checklist",
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. vad du ska jämföra innan du köper warzone cheats",
-								"Review <a href=\"/features/\">Alla funktioner</a>, <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a>, and <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
-								"Module pages worth opening: <a href=\"/warzone-esp/\">ESP- och wallhack-guide</a>, <a href=\"/warzone-aimbot/\">Aimbot och soft aim</a>, <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a>.",
+								"Review <a href=\"/features/\">Alla funktioner</a>, <a href=\"/cheats/\">Warzone Cheats-översikt</a>, and <a href=\"/cheats/\">Warzone Cheats-översikt</a> before checkout — monthly ($35) and lifetime ($150) plans available.",
+								"Module pages worth opening: <a href=\"/esp/\">ESP- och wallhack-guide</a>, <a href=\"/aimbot/\">Aimbot och soft aim</a>, <a href=\"/cheats/\">Warzone Cheats-översikt</a>.",
 							],
 						},
 						{
@@ -26489,7 +26489,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Budget stores often advertise $7 day keys with Discord-only status. Warzone Cheats ships ESP + radar + soft aim together with public <a href=\"/updates/\">Undetected cheats-guide</a> and email support.",
 								"Read named comparisons: <a href=\"/warzone-cheats-vs-cheatspike-comparison/\">vs budget ESP shops</a> · <a href=\"/warzone-cheats-vs-ghostware-features-pricing/\">vs minimal ESP tools</a> · hub <a href=\"/compare/\">Compare table</a>.",
-								"Still deciding? <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Butik</a>.",
+								"Still deciding? <a href=\"/cheats/\">Warzone Cheats-översikt</a> · <a href=\"/reviews/\">reviews</a> · <a href=\"/pricing/\">Butik</a>.",
 							],
 						},
 					],
@@ -26504,14 +26504,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone Aimbot Hack",
 					ctaPrimary: "Köp Warzone Cheats",
 					ctaSecondary: "Se funktioner",
-					ctaSecondaryHref: "/warzone-aimbot/",
+					ctaSecondaryHref: "/aimbot/",
 					sections: [
 						{
 							h2: "Warzone Aimbot hack vs visibility tools",
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. undetected Aimbot hack assist för Call of Duty: Warzone",
 								"Licenser med omedelbar digital leverans via checkout checkout. $35/mån och $150 lifetime inkl. Ricochet-underhåll.",
-								"Prefer softer tracking language? See <a href=\"/warzone-aimbot/\">Aimbot och soft aim</a>. Full settings: <a href=\"/warzone-aimbot/\">Aimbot och soft aim</a>.",
+								"Prefer softer tracking language? See <a href=\"/aimbot/\">Aimbot och soft aim</a>. Full settings: <a href=\"/aimbot/\">Aimbot och soft aim</a>.",
 							],
 						},
 						{
@@ -26527,7 +26527,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							paragraphs: [
 								"Aimbot hack signatures rebuild after Ricochet updates. Follow the <a href=\"/updates/\">Undetected cheats-guide</a> and <a href=\"/ricochet-bypass/\">Ricochet-underhåll</a> before loading in after patch days.",
 								"Checkout with instant digital delivery for Windows 10 and 11 — <a href=\"/pricing/\">Butik</a>.",
-								"Pair with <a href=\"/warzone-esp/\">ESP- och wallhack-guide</a> for the full information + assist loop.",
+								"Pair with <a href=\"/esp/\">ESP- och wallhack-guide</a> for the full information + assist loop.",
 							],
 						},
 					],
@@ -26542,14 +26542,14 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					galleryTitle: "Call of Duty: Warzone ESP Hack",
 					ctaPrimary: "Köp Warzone Cheats",
 					ctaSecondary: "Se funktioner",
-					ctaSecondaryHref: "/warzone-esp/",
+					ctaSecondaryHref: "/esp/",
 					sections: [
 						{
 							h2: "What a Warzone ESP hack shows",
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. ESP hack-boxar, kadaver-pins och avstånd",
 								"Licenser med omedelbar digital leverans via checkout checkout. $35/mån och $150 lifetime inkl. Ricochet-underhåll.",
-								"Canonical visibility guide: <a href=\"/warzone-esp/\">ESP- och wallhack-guide</a>. Wallhack wording: <a href=\"/warzone-esp/\">ESP- och wallhack-guide</a>.",
+								"Canonical visibility guide: <a href=\"/esp/\">ESP- och wallhack-guide</a>. Wallhack wording: <a href=\"/esp/\">ESP- och wallhack-guide</a>.",
 							],
 						},
 						{
@@ -26563,9 +26563,9 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 						{
 							h2: "Undetected ESP hack with Ricochet maintenance",
 							paragraphs: [
-								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected cheats-guide</a> before loading in — pair ESP hack awareness with <a href=\"/warzone-radar-hack/\">2D-radaroverlay</a> for flank reads.",
+								"ESP hack modules rebuild after Ricochet and Warzone patches. Check the <a href=\"/updates/\">Undetected cheats-guide</a> before loading in — pair ESP hack awareness with <a href=\"/radar/\">2D-radaroverlay</a> for flank reads.",
 								"Licenses deliver digitally after checkout on Windows PC — see <a href=\"/pricing/\">Butik</a>.",
-								"Install steps: <a href=\"/setup/\">Installationsguide</a>. Status questions: <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a>.",
+								"Install steps: <a href=\"/setup/\">Installationsguide</a>. Status questions: <a href=\"/cheats/\">Warzone Cheats-översikt</a>.",
 							],
 						},
 					],
@@ -26594,8 +26594,8 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 							h2: "Visibility tools vs unlock-all claims",
 							paragraphs: [
 								"Warzone Cheats kombinerar ESP wallhack, radar hack och Call of Duty: Warzone Aimbot som undetected paket för Call of Duty: Warzone på Windows PC. unlock-all-sökningar vs riktiga ESP- och Aimbot-verktyg",
-								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/warzone-esp/\">ESP- och wallhack-guide</a> and <a href=\"/features/\">Alla funktioner</a> pages for the full tool list.",
-								"Related: <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a> and <a href=\"/warzone-cheats/\">Warzone Cheats-översikt</a>.",
+								"For loadout planning during a match, weapon drops and operator markers speed map rotations — see the <a href=\"/esp/\">ESP- och wallhack-guide</a> and <a href=\"/features/\">Alla funktioner</a> pages for the full tool list.",
+								"Related: <a href=\"/cheats/\">Warzone Cheats-översikt</a> and <a href=\"/cheats/\">Warzone Cheats-översikt</a>.",
 							],
 						},
 						{
@@ -26654,7 +26654,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-07.webp",
 					ctaPrimary: "E-posta support",
 					ctaSecondary: "Läs integritet",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Digital leverans",
@@ -26689,7 +26689,7 @@ export const i18nContent: Record<LocaleCode, { ui: LocaleUi; pages: Record<PageI
 					heroImage: "/images/warzone-screenshot-03.webp",
 					ctaPrimary: "E-posta support",
 					ctaSecondary: "Läs integritet",
-					ctaSecondaryHref: "/privacy-policy/",
+					ctaSecondaryHref: "/privacy/",
 					sections: [
 						{
 							h2: "Godkännande av villkor",

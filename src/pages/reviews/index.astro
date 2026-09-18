@@ -136,8 +136,8 @@ const extraGraph: Record<string, unknown>[] = [
 							</div>
 							{review.tag ? <p class="reviews-index__tag">{review.tag}</p> : null}
 							<p class="reviews-index__text">{review.text}</p>
-							<a class="reviews-index__more" href={getReviewPath(review.slug)}>
-								Read full review
+							<a class="reviews-index__more" href={getReviewPath(review.slug)} title={`Full review by @${review.handle}`}>
+								@{review.handle} review
 								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
 									<path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 								</svg>

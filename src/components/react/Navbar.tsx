@@ -181,6 +181,7 @@ function NavbarInner({
 								currentLocale={locale}
 								locales={locales}
 								hrefForLocale={hrefForLocale}
+								useButtons
 							/>
 						</div>
 						<a href={checkoutUrl} className="site-panel__buy" rel="noopener noreferrer" data-nav-close>

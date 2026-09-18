@@ -109,13 +109,35 @@ const links = [
 		gap: 0.25rem;
 	}
 
+	.lang-switcher__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.65rem;
+		padding: 0.35rem 0.45rem;
+		border-radius: var(--radius-sm);
+	}
+
+	.lang-switcher__item:hover {
+		background: color-mix(in srgb, var(--magenta) 8%, transparent);
+	}
+
 	.lang-switcher__link {
-		display: grid;
-		gap: 0.1rem;
-		padding: 0.55rem 0.65rem;
+		display: inline-block;
+		padding: 0.2rem 0.25rem;
 		border-radius: var(--radius-sm);
 		color: var(--ink);
+		font-size: 0.86rem;
+		font-weight: 700;
 		transition: background 0.15s ease;
+	}
+
+	.lang-switcher__link--btn {
+		border: none;
+		background: transparent;
+		font: inherit;
+		cursor: pointer;
+		text-align: left;
 	}
 
 	.lang-switcher__native {
@@ -124,6 +146,7 @@ const links = [
 	}
 
 	.lang-switcher__region {
+		flex-shrink: 0;
 		font-size: 0.68rem;
 		color: var(--ink-muted);
 	}
